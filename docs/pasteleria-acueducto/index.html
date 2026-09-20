@@ -117,6 +117,71 @@ p{margin:0 0 var(--s-2);}
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
 }
 
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
 
 /* ---------- identidad: SOLO esta demo ---------- */
 :root{
