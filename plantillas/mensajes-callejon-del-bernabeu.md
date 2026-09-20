@@ -59,8 +59,13 @@ La dirección, el teléfono y el 4,8 de Google sí son los suyos.
 De hecho, el horario me lo he inventado porque no lo encontré escrito en ninguna
 parte. Si me dice el suyo, se lo corrijo hoy mismo.
 
-Es solo una muestra. La web final iría con sus fotos, su carta real y el pedido
-para llevar entrando por la página, que en día de partido es cuando más se nota.
+Para que se haga una idea del nivel del que hablo: shenxien.es, el sushi bar
+del Paseo de la Castellana 241. Es el tipo de web que hago.
+
+Lo que ha visto está hecho solo con lo que hay publicado de ustedes, que es muy
+poco. Si me pasa fotos del local y de los desayunos, o cualquier cosa que tenga
+a mano (la carta, el horario, el logo), adapto la página con su material y la
+dejo al nivel de shenxien.es o mejor. No cuesta nada y lo ve antes de decidir.
 
 ¿Le viene bien que le llame esta semana?
 
@@ -96,3 +101,20 @@ aparece una, se reutiliza el texto del WhatsApp añadiendo el pie de baja:
 
 > Si no desea recibir más comunicaciones, responda BAJA y su dirección no se
 > volverá a utilizar.
+
+
+---
+
+## ⚠ Antes de enviar: elegir la frase de la referencia
+
+El texto de arriba usa la **versión B** de `tono.md`: dice que shenxien.es es
+«el tipo de web que hago», sin atribuírsela. Es la versión segura, porque en las
+notas del proyecto consta que esa web **la hizo un amigo de Nacho**.
+
+Si Nacho sí la desarrolló, se cambia ese párrafo por:
+
+> Un ejemplo de web que he desarrollado es shenxien.es, el sushi bar del Paseo de
+> la Castellana 241.
+
+Lo que no se puede hacer es dejar la versión A sin estar seguro: el dueño de una
+cafetería de Chamartín está a una llamada del sushi bar de Castellana 241.

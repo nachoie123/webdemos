@@ -51,3 +51,40 @@ sobre eso se cae en la primera llamada.
 La demo sigue llevando sus cinco piezas obligatorias (barra amarilla, botón de
 "qué es de ejemplo", datos reales, quién eres, pie legal). Formal no es opaco:
 que la propuesta es una propuesta se dice igual de claro.
+
+---
+
+## Referencia y oferta de mejora (desde 20/09/2026, en TODOS los mensajes)
+
+A partir de ahora todo mensaje lleva dos párrafos más, después del enlace a la
+demo y antes del cierre.
+
+### 1. La referencia
+
+⚠ **Decidir antes de enviar cuál de las dos frases es verdad.** En
+`sistema/moldes/restaurante.md` está escrito que shenxien.es **la hizo un amigo
+de Nacho**. Si es así, la versión A es mentira y se cae en la primera llamada.
+
+**Versión A — solo si Nacho la desarrolló (o la desarrolló con su amigo):**
+
+> Un ejemplo de web que he desarrollado es shenxien.es, el sushi bar del Paseo de
+> la Castellana 241.
+
+**Versión B — si la hizo su amigo (esta es verdad y vende casi igual):**
+
+> Para que se haga una idea del nivel del que hablo: shenxien.es, el sushi bar
+> del Paseo de la Castellana 241. No la hice yo, pero es exactamente el tipo de
+> web que hago, y es el listón con el que trabajo.
+
+### 2. La oferta de mejora
+
+Va siempre, y siempre pidiendo material. Es la frase que convierte «qué bonito»
+en una conversación, porque le pide algo concreto y barato:
+
+> Lo que ha visto está hecho solo con lo que hay publicado de ustedes, que es muy
+> poco. Si me pasa fotos del local y de los platos, o cualquier cosa que tenga
+> (la carta, el horario, el logo), adapto la página con su material y la dejo al
+> nivel de shenxien.es o mejor. No cuesta nada y lo ve antes de decidir.
+
+**Por qué funciona:** pedir fotos no compromete a nada y es lo único que el dueño
+puede dar en treinta segundos desde el móvil. El que manda fotos ya está dentro.
