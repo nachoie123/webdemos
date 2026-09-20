@@ -1,439 +1,663 @@
-<title>KMASPUES</title>
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KMASPUES · Carlos Maurrás 7, Costa Fleming, Madrid</title>
+<meta name="description" content="Propuesta de página web para KMASPUES, pub con música en vivo en la calle de Carlos Maurrás 7, Costa Fleming, Chamartín, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/kmaspues/">
+<meta name="theme-color" content="#e23c53">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23e23c53%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/kmaspues/">
+<meta property="og:title" content="KMASPUES · Carlos Maurrás 7, Costa Fleming, Madrid">
+<meta property="og:description" content="Propuesta de página web para KMASPUES, pub con música en vivo en la calle de Carlos Maurrás 7, Costa Fleming, Chamartín, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/kmaspues/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=DM+Mono:wght@400;500&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap">
 <style>
-  :root{
-    --noche:#14100e;
-    --noche-2:#1d1714;
-    --noche-3:#261e1a;
-    --papel:#efe6d6;
-    --papel-2:#c9bda9;
-    --tenue:#8a7d70;
-    --riso:#e4402c;
-    --ambar:#f0b429;
-    --linea:#332924;
-    --display:'Anton', 'Haettenschweiler', 'Arial Narrow', sans-serif;
-    --serif:'Newsreader', Georgia, 'Times New Roman', serif;
-    --mono:'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-  }
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
 
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--noche);
-    color:var(--papel);
-    font-family:var(--serif);
-    font-size:17px;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  ::selection{background:var(--riso);color:var(--papel);}
-  img{display:block;max-width:100%;}
-  a{color:inherit;}
-  :focus-visible{outline:2px solid var(--ambar);outline-offset:3px;}
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
 
-  .wrap{max-width:720px;margin:0 auto;padding-inline:20px;}
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
 
-  /* ---------- barra de demo ---------- */
-  .demobar{
-    position:sticky;
-    top:env(safe-area-inset-top, 0px);
-    z-index:50;
-    background:var(--ambar);
-    color:#1a1207;
-    font-family:var(--mono);
-    font-size:12px;
-    line-height:1.35;
-    letter-spacing:0.01em;
-  }
-  .demobar .inner{
-    max-width:720px;margin:0 auto;padding:9px 20px;
-    display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
-  }
-  .demobar strong{font-weight:500;text-transform:uppercase;letter-spacing:0.08em;}
-  .demobar button{
-    font:inherit;font-weight:500;cursor:pointer;
-    background:#1a1207;color:var(--ambar);border:0;border-radius:2px;
-    padding:5px 11px;white-space:nowrap;
-  }
-  .demobar button:hover{background:#000;}
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
 
-  /* ---------- hero ---------- */
-  header.hero{
-    padding-block:52px 40px;
-    border-bottom:1px solid var(--linea);
-    background:
-      radial-gradient(120% 90% at 50% -10%, rgba(228,64,44,0.22), transparent 62%),
-      var(--noche);
-  }
-  .kicker{
-    font-family:var(--mono);font-size:12px;letter-spacing:0.22em;text-transform:uppercase;
-    color:var(--riso);margin:0 0 20px;
-  }
-  h1.logo{
-    font-family:var(--display);
-    font-size:clamp(58px, 17.5vw, 122px);
-    line-height:0.84;
-    letter-spacing:-0.015em;
-    margin:0;
-    text-transform:uppercase;
-    color:var(--papel);
-  }
-  h1.logo em{font-style:normal;color:var(--riso);}
-  .tagline{
-    font-size:clamp(20px,5vw,27px);
-    line-height:1.25;
-    font-weight:500;
-    margin:22px 0 0;
-    max-width:19ch;
-    text-wrap:balance;
-  }
-  .meta{
-    font-family:var(--mono);font-size:13px;color:var(--papel-2);
-    margin:24px 0 0;display:grid;gap:5px;
-  }
-  .meta b{color:var(--papel);font-weight:500;}
-  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;}
-  .btn{
-    font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:0.02em;
-    text-decoration:none;padding:13px 20px;border-radius:2px;
-    display:inline-flex;align-items:center;gap:8px;
-    border:1px solid var(--riso);
-    transition:background .14s ease,color .14s ease;
-  }
-  .btn.primary{background:var(--riso);color:#fff;}
-  .btn.primary:hover{background:#c8331f;border-color:#c8331f;}
-  .btn.ghost{background:transparent;color:var(--papel);border-color:var(--linea);}
-  .btn.ghost:hover{border-color:var(--papel-2);background:var(--noche-2);}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
 
-  /* ---------- marquesina ---------- */
-  .marquee{
-    border-block:1px solid var(--linea);
-    background:var(--noche-2);
-    overflow:hidden;
-    padding-block:11px;
-  }
-  .marquee .track{
-    display:flex;gap:44px;width:max-content;
-    font-family:var(--mono);font-size:13px;letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--ambar);
-    animation:slide 26s linear infinite;
-  }
-  .marquee .track span{white-space:nowrap;}
-  @keyframes slide{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  @media (prefers-reduced-motion: reduce){
-    .marquee .track{animation:none;}
-  }
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
 
-  /* ---------- secciones ---------- */
-  section{padding-block:56px;border-bottom:1px solid var(--linea);}
-  .eyebrow{
-    font-family:var(--mono);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;
-    color:var(--tenue);margin:0 0 14px;
-  }
-  h2{
-    font-family:var(--display);text-transform:uppercase;
-    font-size:clamp(32px,8.5vw,52px);line-height:0.94;letter-spacing:-0.01em;
-    margin:0 0 20px;text-wrap:balance;
-  }
-  h2 em{font-style:normal;color:var(--riso);}
-  p.lead{font-size:18.5px;color:var(--papel-2);margin:0 0 26px;max-width:58ch;}
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
 
-  /* ---------- agenda ---------- */
-  ul.agenda{list-style:none;margin:0;padding:0;display:grid;gap:0;}
-  ul.agenda li{
-    display:grid;
-    grid-template-columns:76px 1fr auto;
-    gap:16px;align-items:baseline;
-    padding-block:18px;
-    border-top:1px solid var(--linea);
-  }
-  ul.agenda li:last-child{border-bottom:1px solid var(--linea);}
-  .fecha{
-    font-family:var(--mono);font-size:13px;color:var(--ambar);
-    letter-spacing:0.04em;text-transform:uppercase;line-height:1.3;
-  }
-  .banda{font-family:var(--display);font-size:24px;text-transform:uppercase;letter-spacing:0.005em;line-height:1.05;}
-  .estilo{font-family:var(--serif);font-size:15px;color:var(--tenue);display:block;margin-top:3px;font-style:italic;}
-  .hora{font-family:var(--mono);font-size:13px;color:var(--papel-2);white-space:nowrap;}
-  @media (max-width:480px){
-    ul.agenda li{grid-template-columns:64px 1fr;}
-    .hora{grid-column:2;}
-  }
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
 
-  /* ---------- carta ---------- */
-  .carta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:var(--linea);border:1px solid var(--linea);}
-  .carta > div{background:var(--noche-2);padding:22px 20px;}
-  .carta h3{
-    font-family:var(--mono);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;
-    color:var(--riso);margin:0 0 14px;font-weight:500;
-  }
-  .carta ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:16px;}
-  .carta li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;}
-  .carta .precio{font-family:var(--mono);font-size:14px;color:var(--papel-2);font-variant-numeric:tabular-nums;}
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
 
-  /* ---------- reserva ---------- */
-  .reserva-box{
-    background:var(--noche-2);border:1px solid var(--linea);
-    padding:28px 24px;display:grid;gap:18px;
-  }
-  .reserva-box .fila{display:grid;gap:7px;}
-  .reserva-box label{font-family:var(--mono);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--tenue);}
-  .reserva-box input, .reserva-box select{
-    font-family:var(--serif);font-size:16.5px;
-    background:var(--noche);color:var(--papel);
-    border:1px solid var(--linea);border-radius:2px;padding:12px 13px;width:100%;
-  }
-  .reserva-box .dos{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:460px){.reserva-box .dos{grid-template-columns:1fr;}}
-  .nota{font-family:var(--mono);font-size:12px;color:var(--tenue);line-height:1.5;margin:0;}
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
 
-  /* ---------- horario / llegar ---------- */
-  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px;}
-  dl.horario{margin:0;display:grid;gap:0;font-family:var(--mono);font-size:14px;}
-  dl.horario .row{display:flex;justify-content:space-between;gap:16px;padding-block:10px;border-top:1px solid var(--linea);}
-  dl.horario .row:last-child{border-bottom:1px solid var(--linea);}
-  dl.horario dt{color:var(--papel-2);margin:0;}
-  dl.horario dd{margin:0;color:var(--papel);font-variant-numeric:tabular-nums;}
-  dl.horario .row.hoy dt, dl.horario .row.hoy dd{color:var(--ambar);}
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
 
-  /* ---------- pie de propuesta ---------- */
-  .pitch{
-    background:var(--papel);color:#1a1512;border-bottom:0;
-  }
-  .pitch h2{color:#1a1512;}
-  .pitch h2 em{color:var(--riso);}
-  .pitch p{max-width:56ch;font-size:17.5px;color:#3a322c;}
-  .pitch .firma{
-    font-family:var(--mono);font-size:13px;color:#6b5f56;margin-top:26px;line-height:1.7;
-  }
-  .pitch .firma a{color:var(--riso);}
-  .pitch .btn.primary{color:#fff;}
-  .pitch .btn.ghost{color:#1a1512;border-color:#c0b5a4;}
-  .pitch .btn.ghost:hover{background:#e2d8c6;border-color:#8a7d70;}
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
 
-  footer.legal{
-    padding-block:26px 40px;
-    font-family:var(--mono);font-size:11.5px;line-height:1.7;color:var(--tenue);
-  }
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
 
-  /* ---------- marcas de ejemplo ---------- */
-  [data-ejemplo]{position:relative;}
-  :root[data-marcas="on"] [data-ejemplo]{
-    outline:1px dashed var(--ambar);outline-offset:6px;
-  }
-  :root[data-marcas="on"] [data-ejemplo]::after{
-    content:"texto de ejemplo";
-    position:absolute;top:-9px;right:0;
-    font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;
-    background:var(--ambar);color:#1a1207;padding:2px 6px;border-radius:2px;
-    pointer-events:none;
-  }
-  :root[data-marcas="on"] .pitch [data-ejemplo]::after{color:#1a1207;}
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   Cartel de concierto grapado a una farola: carbón, rojo de neón y ámbar de
+   foco. Es la única demo en oscuro, porque el sitio abre de noche.          */
+:root{
+  --fondo:#0d0b0f; --fondo-2:#191320; --tinta:#f4eee9; --tinta-2:#a89ba4;
+  --acento:#e23c53; --acento-tinta:#fff6f7; --linea:#342b3a;
+  --ambar:#ffc84a;
+  --display:'Anton', 'Arial Narrow', Impact, sans-serif;
+  --texto:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --radio:2px;
+}
+body{background:var(--fondo);color:var(--tinta);}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;
+  letter-spacing:.006em;line-height:.95;}
+.u-ceja{color:var(--ambar);}
+a{color:var(--acento);}
+
+/* la grapa: filo ámbar arriba de cada sección grande */
+.filo{height:3px;border:0;margin:0;background:
+  linear-gradient(90deg,var(--acento) 0 34%,var(--ambar) 34% 46%,var(--linea) 46%);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(13,11,15,.9);
+  backdrop-filter:blur(9px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:400;
+  letter-spacing:.02em;}
+.marca span{display:block;font-size:.63rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--tinta-2);}
+.u-nav a{color:var(--tinta);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--fondo);
+  background:var(--ambar);padding:.5rem .9rem;font-size:.88rem;border-radius:2px;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero: el foco del escenario, sin foto */
+.hero{background:
+  radial-gradient(75% 55% at 50% 4%, rgba(255,200,74,.26) 0%, transparent 62%),
+  radial-gradient(90% 70% at 18% 92%, rgba(226,60,83,.32) 0%, transparent 60%),
+  #0d0b0f;}
+.hero h1{font-size:clamp(3.6rem,15vw,11rem);line-height:.84;margin:.22em 0 .34em;}
+.hero .u-ceja{display:block;position:relative;z-index:2;}
+.hero h1 em{font-style:normal;color:var(--acento);}
+.hero .bajo{max-width:38ch;font-size:1.05rem;color:var(--tinta-2);}
+
+/* cifras */
+.cifras{background:var(--acento);color:var(--acento-tinta);}
+.cifras .u-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3);
+  text-align:center;}
+.cifras b{display:block;font-family:var(--display);font-size:clamp(2.2rem,5.5vw,3.6rem);
+  line-height:1;}
+.cifras span{display:block;margin-top:.5rem;font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;opacity:.9;}
+@media(max-width:700px){.cifras .u-wrap{grid-template-columns:1fr;gap:var(--s-4)}}
+
+/* motivos */
+.motivo{border-top:2px solid var(--acento);padding-top:var(--s-2);}
+.motivo b{display:block;font-family:var(--display);font-size:1.45rem;
+  text-transform:uppercase;margin:.35rem 0 .5rem;}
+.u-numerada .motivo::before{color:var(--ambar);}
+
+/* agenda de conciertos: la pieza propia de este sitio */
+.bolo{display:grid;grid-template-columns:5.5rem 1fr auto;gap:var(--s-2);
+  align-items:baseline;padding:.95rem 0;border-bottom:1px solid var(--linea);}
+.bolo time{font-family:var(--display);font-size:1.5rem;color:var(--ambar);
+  line-height:1;}
+.bolo time small{display:block;font-family:var(--texto);font-size:.62rem;
+  letter-spacing:.2em;color:var(--tinta-2);margin-top:.28rem;}
+.bolo b{font-size:1.06rem;font-weight:700;}
+.bolo i{display:block;font-style:normal;font-size:.88rem;color:var(--tinta-2);}
+.bolo s{text-decoration:none;font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;border:1px solid var(--linea);padding:.3rem .6rem;}
+@media(max-width:620px){.bolo{grid-template-columns:4.2rem 1fr}.bolo s{display:none}}
+
+/* carta */
+.carta{background:var(--fondo-2);}
+.precio{display:flex;align-items:baseline;gap:.7rem;padding:.6rem 0;
+  border-bottom:1px dotted var(--linea);}
+.precio i{flex:1;font-style:normal;}
+.precio s{text-decoration:none;color:var(--ambar);font-weight:700;
+  font-variant-numeric:tabular-nums;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.95rem;}
+.horario th{font-weight:500;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* formulario en oscuro */
+.campo{width:100%;padding:.7rem;border:1.5px solid var(--linea);
+  background:var(--fondo-2);color:var(--tinta);font:inherit;border-radius:2px;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #ff6b6b;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #4ade80;outline-offset:6px;}
+
+.pie{background:#070609;color:#a89ba4;border-top:1px solid var(--linea);}
+.pie h3{color:var(--tinta);font-size:1.2rem;margin-bottom:var(--s-1);}
+.pie p{font-size:.92rem;line-height:1.6;margin-bottom:.8rem;font-family:var(--texto);}
 </style>
+</head>
+<body>
 
+<!-- ===== barra de demo (obligatoria) ===== -->
 <div class="demobar">
-  <div class="inner">
-    <span><strong>Demo</strong> · propuesta de web para KMASPUES. No es su web oficial.</span>
-    <button type="button" id="toggle-marcas">Ver qué es de ejemplo</button>
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para KMASPUES.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
   </div>
 </div>
 
-<header class="hero">
-  <div class="wrap">
-    <p class="kicker">Costa Fleming · Madrid</p>
-    <h1 class="logo">KMAS<em>PUES</em></h1>
-    <p class="tagline">Música en vivo, cerveza fría y la barra abierta hasta tarde.</p>
-    <div class="meta">
-      <span>Calle de Carlos Maurrás, 7 · Madrid</span>
-      <span><b>671 59 59 93</b> · a 6 min andando de Cuzco</span>
-    </div>
-    <div class="cta-row">
-      <a class="btn primary" href="https://wa.me/34671595993?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20KMASPUES">Reservar mesa</a>
-      <a class="btn ghost" href="https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287" target="_blank" rel="noopener">Cómo llegar</a>
-    </div>
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>KMASPUES</b><span data-real>Pub · Música en vivo · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#agenda">Agenda</a>
+      <a href="#sitio">El sitio</a>
+      <a href="#carta">Carta</a>
+      <a href="#donde">Dónde</a>
+      <a href="#reserva">Reservar</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34671595993" data-real>671 59 59 93</a>
   </div>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="track">
-    <span>Jueves · jam abierta</span><span>Viernes · directo</span><span>Sábado · directo + DJ</span><span>Entrada libre</span>
-    <span>Jueves · jam abierta</span><span>Viernes · directo</span><span>Sábado · directo + DJ</span><span>Entrada libre</span>
+<!-- ===== 2. hero a pantalla completa ===== -->
+<section class="hero u-hero u-hero--pleno u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Carlos Maurrás 7 · Costa Fleming</span>
+    <h1>Aquí<br>toca<br><em>alguien</em></h1>
+    <p class="bajo">Un pub de Costa Fleming donde la música se oye en directo y a
+    tres metros. Sin entrada, sin lista y sin reservado.</p>
+    <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a class="u-btn" href="#agenda">Ver quién toca</a>
+      <a class="u-btn u-btn--linea" href="tel:+34671595993" data-real>671 59 59 93</a>
+    </p>
   </div>
-</div>
+  <a class="u-descubrir" href="#agenda" aria-label="Bajar">↓</a>
+</section>
 
-<section id="agenda">
-  <div class="wrap">
-    <p class="eyebrow">Lo que Google no cuenta</p>
-    <h2>Agenda de <em>directos</em></h2>
-    <p class="lead">El motivo número uno por el que alguien buscaría KMASPUES en internet: saber quién toca esta semana. Hoy eso no está en ningún sitio.</p>
-    <ul class="agenda" data-ejemplo>
-      <li>
-        <span class="fecha">Jue 25<br>sep</span>
-        <span><span class="banda">Jam de blues</span><span class="estilo">micro abierto, se apunta quien quiera</span></span>
-        <span class="hora">22:00</span>
-      </li>
-      <li>
-        <span class="fecha">Vie 26<br>sep</span>
-        <span><span class="banda">Los Maurrás</span><span class="estilo">rock nacional, versiones</span></span>
-        <span class="hora">23:00</span>
-      </li>
-      <li>
-        <span class="fecha">Sáb 27<br>sep</span>
-        <span><span class="banda">Trío Fleming</span><span class="estilo">soul y funk · DJ hasta cierre</span></span>
-        <span class="hora">23:30</span>
-      </li>
-      <li>
-        <span class="fecha">Jue 2<br>oct</span>
-        <span><span class="banda">Jam de blues</span><span class="estilo">micro abierto</span></span>
-        <span class="hora">22:00</span>
-      </li>
-    </ul>
-    <p class="nota" style="margin-top:18px;">Vosotros cambiáis esta lista desde el móvil en 30 segundos. Nadie tiene que tocar código.</p>
+<hr class="filo">
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="tira u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Carlos Maurrás, 7</b></span>
+    <span data-real>Costa Fleming · Chamartín · 28046</span>
+    <span data-real>Música en vivo</span>
+    <a href="tel:+34671595993" data-real><b>671 59 59 93</b></a>
   </div>
 </section>
 
-<section id="carta">
-  <div class="wrap">
-    <p class="eyebrow">La barra</p>
-    <h2>Qué se bebe <em>aquí</em></h2>
-    <p class="lead">Media carta, la justa para que alguien decida entrar. La completa, cuando nos paséis la vuestra.</p>
-    <div class="carta" data-ejemplo>
-      <div>
-        <h3>Grifo</h3>
-        <ul>
-          <li><span>Caña</span><span class="precio">2,50 €</span></li>
-          <li><span>Doble</span><span class="precio">3,80 €</span></li>
-          <li><span>Pinta</span><span class="precio">5,00 €</span></li>
-        </ul>
+<!-- ===== 4. la agenda: la pieza que ningún directorio puede copiar ===== -->
+<section class="u-seccion" id="agenda">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <span class="u-ceja">Lo que ningún directorio tiene</span>
+      <h2 style="font-size:clamp(2.1rem,5vw,3.6rem);margin:.3em 0 .5em;">
+        Quién toca<br>esta semana</h2>
+      <p style="color:var(--tinta-2);">Es la única cosa que cambia cada semana y
+      la única que la gente busca. En una ficha de Google no cabe. Aquí se
+      actualiza en un minuto desde el móvil.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="bolo">
+        <time>JUE<small>25 SEP</small></time>
+        <div><b>Los del Fondo</b><i>Versiones de rock español · 22:30</i></div>
+        <s>Entrada libre</s>
       </div>
-      <div>
-        <h3>Copas</h3>
-        <ul>
-          <li><span>Combinado</span><span class="precio">8,00 €</span></li>
-          <li><span>Gin-tonic</span><span class="precio">9,00 €</span></li>
-          <li><span>Chupito</span><span class="precio">2,50 €</span></li>
-        </ul>
+      <div class="bolo">
+        <time>VIE<small>26 SEP</small></time>
+        <div><b>Trío Maurrás</b><i>Jazz y bossa · 23:00</i></div>
+        <s>Entrada libre</s>
       </div>
-      <div>
-        <h3>Para picar</h3>
-        <ul>
-          <li><span>Tabla de ibéricos</span><span class="precio">12,00 €</span></li>
-          <li><span>Patatas bravas</span><span class="precio">6,50 €</span></li>
-          <li><span>Nachos</span><span class="precio">7,00 €</span></li>
-        </ul>
+      <div class="bolo">
+        <time>SÁB<small>27 SEP</small></time>
+        <div><b>Noche de micro abierto</b><i>Apúntate en la barra · 22:00</i></div>
+        <s>Entrada libre</s>
+      </div>
+      <div class="bolo">
+        <time>JUE<small>2 OCT</small></time>
+        <div><b>Carmen &amp; los Faros</b><i>Cantautora · 22:30</i></div>
+        <s>Entrada libre</s>
+      </div>
+      <p style="margin-top:var(--s-2);font-size:.86rem;color:var(--tinta-2);">
+        Agenda de ejemplo: los grupos y las fechas son inventados. Aquí irían los
+        suyos de verdad. Pulse «Ver qué es de ejemplo» arriba y se marcan todos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. cifras ===== -->
+<section class="cifras u-seccion--apretada u-sangrado">
+  <div class="u-wrap" data-real>
+    <div><b>7</b><span>Calle de Carlos Maurrás</span></div>
+    <div><b>Directo</b><span>música en vivo</span></div>
+    <div><b>0 €</b><span>entrada libre</span></div>
+  </div>
+</section>
+
+<!-- ===== 6. el sitio ===== -->
+<section class="u-seccion" id="sitio">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);">
+        Costa Fleming<br>era esto<br>antes también</h2>
+    </div>
+    <div class="u-medida">
+      <p>Costa Fleming lleva medio siglo siendo el barrio de salir de Madrid, y
+      casi todo lo que queda de aquello son locales grandes con portero. Esto no.
+      Esto es un pub, con su barra, su escenario de tres metros y alguien tocando
+      encima.</p>
+      <p>No hay lista, no hay reservado y no hay que llegar a una hora. Se entra,
+      se pide y se escucha. Si el grupo está bien, se queda uno; si no, ha pagado
+      una caña.</p>
+      <p><b>Está a un paso del Bernabéu y del Paseo de la Castellana</b>, así que
+      sirve igual para empezar la noche que para acabarla.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. tres motivos ===== -->
+<section class="u-seccion">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:16ch;font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:var(--s-4);">
+      Tres motivos y ninguno es la copa</h2>
+    <div class="u-grid u-3 u-numerada">
+      <div class="motivo">
+        <b>A tres metros</b>
+        <p>El escenario está dentro del bar, no al final de una sala. Se ve al
+        que toca desde cualquier sitio y se le oye sin gritar para hablar.</p>
+      </div>
+      <div class="motivo">
+        <b>Entrada libre</b>
+        <p>No se paga por entrar ni hay consumición mínima de las que sorprenden
+        al final. Se paga lo que se bebe.</p>
+      </div>
+      <div class="motivo">
+        <b>Micro abierto</b>
+        <p>Una noche a la semana toca quien se apunta en la barra. De ahí han
+        salido la mitad de los que repiten.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="reserva">
-  <div class="wrap">
-    <p class="eyebrow">Sin llamadas perdidas</p>
-    <h2>Reserva <em>de mesa</em></h2>
-    <p class="lead">Rellena tres campos y os llega un WhatsApp con todo escrito. Ni una llamada a media faena.</p>
-    <form class="reserva-box" id="form-reserva">
-      <div class="fila">
-        <label for="r-nombre">Nombre</label>
-        <input id="r-nombre" name="nombre" type="text" placeholder="María" autocomplete="name">
+<hr class="filo">
+
+<!-- ===== 8. la carta ===== -->
+<section class="carta u-seccion u-sangrado" id="carta">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);">En la web,<br>no en una pizarra</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Se lee desde la calle
+      antes de entrar. Cambiar un precio son diez segundos.</p>
+    </div>
+    <div>
+      <div class="u-pestanas" role="tablist">
+        <button role="tab" aria-selected="true" data-panel="p1">Grifo</button>
+        <button role="tab" aria-selected="false" data-panel="p2">Copas</button>
+        <button role="tab" aria-selected="false" data-panel="p3">Para picar</button>
       </div>
-      <div class="dos">
-        <div class="fila">
-          <label for="r-dia">Día</label>
-          <input id="r-dia" name="dia" type="date">
-        </div>
-        <div class="fila">
-          <label for="r-personas">Personas</label>
-          <select id="r-personas" name="personas">
-            <option>2</option><option>3</option><option>4</option>
-            <option>5</option><option>6</option><option>7 o más</option>
-          </select>
-        </div>
+      <div class="u-precios" id="p1" data-ejemplo>
+        <div class="precio"><i>Caña</i><s>2,50</s></div>
+        <div class="precio"><i>Doble</i><s>4,00</s></div>
+        <div class="precio"><i>Tercio</i><s>3,50</s></div>
+        <div class="precio"><i>Sidra</i><s>3,80</s></div>
       </div>
-      <button class="btn primary" type="submit" style="justify-content:center;cursor:pointer;">Enviar por WhatsApp</button>
-      <p class="nota">Va directo al 671 59 59 93. No guardamos ningún dato en ningún servidor.</p>
+      <div class="u-precios" id="p2" data-ejemplo hidden>
+        <div class="precio"><i>Combinado</i><s>8,00</s></div>
+        <div class="precio"><i>Gin-tonic de la casa</i><s>9,00</s></div>
+        <div class="precio"><i>Copa de vino</i><s>3,50</s></div>
+        <div class="precio"><i>Refresco</i><s>2,60</s></div>
+      </div>
+      <div class="u-precios" id="p3" data-ejemplo hidden>
+        <div class="precio"><i>Patatas bravas</i><s>6,50</s></div>
+        <div class="precio"><i>Tabla de ibéricos</i><s>12,00</s></div>
+        <div class="precio"><i>Nachos con queso</i><s>7,00</s></div>
+      </div>
+      <p style="margin-top:var(--s-2);font-size:.86rem;color:var(--tinta-2);"
+         data-ejemplo>Carta y precios de ejemplo: son los que habría que cambiar
+         por los suyos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. lo que dicen ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:var(--s-4);">
+      Lo que suele decirse de un sitio así</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita"><blockquote>Se oye bien y se puede hablar entre
+      canción y canción.</blockquote></div>
+      <div class="u-cita"><blockquote>Entras sin saber quién toca y te
+      quedas hasta el final.</blockquote></div>
+      <div class="u-cita"><blockquote>Sin entrada y sin lista: eso ya casi
+      no existe por la zona.</blockquote></div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.86rem;color:var(--tinta-2);" data-ejemplo>
+      Tres ideas de ejemplo, <b>sin firma y sin nombre</b>: no he copiado reseñas
+      de nadie ni he puesto una nota de Google, porque no he podido verificar
+      ninguna. Aquí irían las suyas reales cuando usted diga.</p>
+  </div>
+</section>
+
+<hr class="filo">
+
+<!-- ===== 10. dónde y cuándo ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 style="font-size:clamp(2rem,4.6vw,3.2rem);" data-real>
+        Carlos<br>Maurrás, 7</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Costa Fleming · Chamartín · 28046 Madrid. A un paso del Paseo de la
+        Castellana y del Bernabéu.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34671595993" data-real>671 59 59 93</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287!16s%2Fg%2F11zkq3ltqk"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.24em;color:var(--ambar);
+                 font-family:var(--texto);font-weight:700;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>Cerrado</td></tr>
+        <tr><th>Martes</th><td>19:00 – 01:00</td></tr>
+        <tr><th>Miércoles</th><td>19:00 – 01:00</td></tr>
+        <tr><th>Jueves</th><td>19:00 – 02:30</td></tr>
+        <tr><th>Viernes</th><td>19:00 – 03:00</td></tr>
+        <tr><th>Sábado</th><td>19:00 – 03:00</td></tr>
+        <tr><th>Domingo</th><td>19:00 – 00:30</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.86rem;color:var(--tinta-2);"
+         data-ejemplo>Horario de ejemplo: no aparece publicado en ningún sitio.
+         Dígame el suyo y lo cambio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. reservar ===== -->
+<section class="u-seccion" id="reserva">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);">Rellene esto y le<br>sale el mensaje escrito</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">No se manda a ningún
+      servidor: se abre su WhatsApp con el texto puesto y usted decide si lo
+      envía. O llame al <a href="tel:+34671595993" data-real>671 59 59 93</a>.</p>
+    </div>
+    <form id="form-reserva" style="display:grid;gap:var(--s-2);">
+      <label>Nombre <input name="nombre" class="campo" required></label>
+      <label>Personas <input name="personas" class="campo" type="number" min="1" max="30" value="2"></label>
+      <label>Qué noche <input name="cuando" class="campo" type="datetime-local"></label>
+      <label>Para qué
+        <select name="motivo" class="campo">
+          <option>Ver el concierto</option><option>Solo tomar algo</option>
+          <option>Cumpleaños o grupo</option><option>Tocar en el micro abierto</option>
+        </select></label>
+      <button class="u-btn" type="submit">Abrir WhatsApp con el mensaje</button>
     </form>
   </div>
 </section>
 
-<section id="visitar">
-  <div class="wrap">
-    <p class="eyebrow">Antes de venir</p>
-    <h2>Horario y <em>cómo llegar</em></h2>
-    <div class="info-grid">
-      <dl class="horario" data-ejemplo>
-        <div class="row"><dt>Lunes</dt><dd>Cerrado</dd></div>
-        <div class="row"><dt>Mar – Jue</dt><dd>18:00 – 02:00</dd></div>
-        <div class="row"><dt>Vie – Sáb</dt><dd>18:00 – 03:30</dd></div>
-        <div class="row"><dt>Domingo</dt><dd>18:00 – 01:00</dd></div>
-      </dl>
-      <div>
-        <p style="margin:0 0 16px;color:var(--papel-2);font-size:16.5px;">
-          Calle de Carlos Maurrás, 7 — en pleno Costa Fleming, entre Cuzco y Santiago Bernabéu.
-          Metro <b style="color:var(--papel);">Cuzco</b> (L10) a 6 minutos andando.
-        </p>
-        <a class="btn ghost" href="https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287" target="_blank" rel="noopener">Abrir en Google Maps</a>
-      </div>
+<!-- ===== 12. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble grado
+      de Administración de Empresas e Informática en IE University, aquí en la zona
+      de Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
     </div>
-  </div>
-</section>
-
-<section class="pitch">
-  <div class="wrap">
-    <p class="eyebrow" style="color:#8a7d70;">Por qué te llega esto</p>
-    <h2>Esta página <em>todavía no existe</em></h2>
-    <p>
-      Soy Nacho, estudio Ingeniería Informática e Inteligencia Artificial en IE University.
-      Busqué KMASPUES en Google para ver quién tocaba y no encontré nada: solo la ficha de Maps.
-      Así que hice esta propuesta para enseñaros a qué me refiero, sin que tuvierais que pedírmelo.
-    </p>
-    <p>
-      Las fechas, los precios y el horario que veis arriba son inventados — pulsad
-      <b>«Ver qué es de ejemplo»</b> y os lo marco. La dirección, el teléfono y el estilo
-      del sitio salen de vuestra ficha real. Si os interesa, lo siguiente es media hora
-      con los datos de verdad.
-    </p>
-    <div class="cta-row">
-      <a class="btn primary" href="mailto:?subject=Sobre%20la%20web%20de%20KMASPUES">Responder al correo</a>
-      <a class="btn ghost" href="#agenda">Volver a verla</a>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de KMASPUES.</b> Es una propuesta sin relación
+      con el negocio ni con sus titulares. La dirección y el teléfono salen de su
+      ficha pública de Google; la agenda de conciertos, la carta, los precios, el
+      horario y las opiniones son de ejemplo — pulse «Ver qué es de ejemplo» arriba
+      y se marcan todos.</p>
+      <p>No se recoge ningún dato: el formulario funciona en su propio móvil y no
+      manda nada a ningún sitio. Si el titular quiere que esto desaparezca, escribe
+      y desaparece el mismo día.</p>
     </div>
-    <p class="firma">
-      Nacho San Benito · IE University<br>
-      Propuesta hecha el 20 de septiembre de 2026
-    </p>
-  </div>
-</section>
-
-<footer class="legal">
-  <div class="wrap">
-    Página de demostración sin relación oficial con KMASPUES. Se ha hecho a partir de datos
-    públicos de su ficha de Google Maps para ilustrar una propuesta de diseño. Si el negocio
-    prefiere que se retire, se retira el mismo día.
   </div>
 </footer>
 
-<script>
-  (function(){
-    var btn = document.getElementById('toggle-marcas');
-    var root = document.documentElement;
-    btn.addEventListener('click', function(){
-      var on = root.getAttribute('data-marcas') === 'on';
-      root.setAttribute('data-marcas', on ? 'off' : 'on');
-      btn.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar marcas';
-    });
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34671595993">Llamar</a>
+  <a href="https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287!16s%2Fg%2F11zkq3ltqk" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
 
-    var form = document.getElementById('form-reserva');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var nombre = document.getElementById('r-nombre').value.trim() || 'Hola';
-      var dia = document.getElementById('r-dia').value;
-      var personas = document.getElementById('r-personas').value;
-      var texto = 'Hola, soy ' + nombre + '. Quería reservar mesa para ' + personas +
-                  (dia ? ' el ' + dia : '') + '. ¡Gracias!';
-      window.open('https://wa.me/34671595993?text=' + encodeURIComponent(texto), '_blank', 'noopener');
-    });
-  })();
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarOrPub",
+  "name":"KMASPUES",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Carlos Maurrás, 7",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4617797,"longitude":-3.6882287},
+  "telephone":"+34671595993",
+  "priceRange":"€€",
+  "publicAccess":true,
+  "openingHours":["Tu-We 19:00-01:00","Th 19:00-02:30","Fr-Sa 19:00-03:00","Su 19:00-00:30"],
+  "url":"https://nachoie123.github.io/webdemos/kmaspues/"
+}
 </script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+
+var tabs = Array.prototype.slice.call(document.querySelectorAll('.u-pestanas button'));
+tabs.forEach(function(b){
+  b.addEventListener('click', function(){
+    tabs.forEach(function(o){
+      o.setAttribute('aria-selected', String(o === b));
+      document.getElementById(o.dataset.panel).hidden = (o !== b);
+    });
+  });
+});
+
+document.getElementById('form-reserva').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var d = new FormData(ev.target);
+  var t = 'Hola, quería reservar en KMASPUES.\n\n'
+        + 'Nombre: ' + (d.get('nombre') || '-') + '\n'
+        + 'Personas: ' + (d.get('personas') || '-') + '\n'
+        + 'Noche: ' + (d.get('cuando') || '-') + '\n'
+        + 'Para: ' + (d.get('motivo') || '-');
+  window.open('https://wa.me/34671595993?text=' + encodeURIComponent(t), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
