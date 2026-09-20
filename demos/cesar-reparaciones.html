@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cesar Reparaciones · Calle de Simancas 3, Almenara, Madrid</title>
+<meta name="description" content="Propuesta de página web para Cesar Reparaciones, taller de electrodomésticos y electrónica en la calle de Simancas 3, dentro de la galería de alimentación, Almenara, Tetuán, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/cesar-reparaciones/">
+<meta name="theme-color" content="#17233d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%2317233d%27/%3E%3Cpath d=%27M16 5 v22 M7 12 h18%27 stroke=%27%23f0eee8%27 stroke-width=%273%27/%3E%3Cpath d=%27M7 12 l-3 7 h6 z M25 12 l-3 7 h6 z%27 fill=%27%23e2571e%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/cesar-reparaciones/">
+<meta property="og:title" content="Cesar Reparaciones · Calle de Simancas 3, Almenara, Madrid">
+<meta property="og:description" content="Propuesta de página web para Cesar Reparaciones, taller de electrodomésticos y electrónica en la calle de Simancas 3, dentro de la galería de alimentación, Almenara, Tetuán, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/cesar-reparaciones/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Rubik:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Azul marino de mono de trabajo, gris acero y crema. El naranja señal
+   aparece solo donde se avisa de que algo NO compensa arreglarlo: es el color
+   de la advertencia, no de la marca.                                       */
+:root{
+  --fondo:#f0eee8; --fondo-2:#e2e0d8; --tinta:#17233d; --tinta-2:#5b6579;
+  --acento:#17233d; --acento-tinta:#f0eee8; --linea:#cdcbc2;
+  --acero:#8f9aa8; --senal:#e2571e;
+  --display:'Zilla Slab', Georgia, serif;
+  --texto:'Rubik', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;
+  line-height:1.05;}
+h2{font-size:clamp(2.1rem,4.7vw,3.5rem);}
+h3{font-size:1.45rem;}
+em.na{font-style:normal;color:var(--senal);}
+.u-ceja{color:var(--senal);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:var(--tinta);color:var(--fondo);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.4rem;font-weight:700;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;color:var(--acero);}
+.cab .u-nav a{color:var(--fondo);opacity:.85;}
+.tel-cab{font-weight:600;text-decoration:none;color:#fff;
+  background:var(--senal);padding:.5rem 1rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con la balanza */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:4px solid var(--tinta);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.5vw,3.7rem);line-height:1.04;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.balanza{width:100%;max-width:280px;margin-inline:auto;color:var(--tinta);}
+.balanza .eu{color:var(--senal);}
+
+/* la regla del 50% */
+.regla{background:var(--tinta);color:#ccd2dd;padding:var(--s-4);}
+.regla h2{color:#fff;}
+.regla .pc{font-family:var(--display);font-size:clamp(4rem,13vw,8rem);font-weight:700;
+  color:var(--senal);line-height:.85;display:block;}
+.tabla{width:100%;border-collapse:collapse;margin-top:var(--s-3);font-size:.95rem;}
+.tabla th{text-align:left;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--acero);font-weight:600;padding-bottom:.5rem;border-bottom:1px solid #2c3a55;}
+.tabla td{padding:.6rem 0;border-bottom:1px solid #2c3a55;}
+.tabla td:nth-child(2),.tabla td:nth-child(3){text-align:right;
+  font-variant-numeric:tabular-nums;white-space:nowrap;}
+.tabla td:nth-child(2){color:#fff;font-weight:600;}
+.tabla td:nth-child(3){color:var(--acero);}
+.tabla tr.no td{color:var(--senal);}
+.tabla tr.no td:nth-child(2){color:var(--senal);}
+
+/* qué se arregla */
+.ap{text-align:center;}
+.ap .dib{width:100%;max-width:106px;margin:0 auto var(--s-2);color:var(--tinta);}
+.ap b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:700;}
+.ap p{max-width:27ch;margin:.35rem auto 0;color:var(--tinta-2);}
+
+/* a casa o al taller */
+.vía{border-top:4px solid var(--tinta);padding-top:var(--s-3);}
+.vía > b:first-child{display:block;font-family:var(--display);font-size:1.45rem;
+  font-weight:700;margin-bottom:.35rem;}
+
+/* la galería */
+.gal{background:var(--fondo-2);border-left:6px solid var(--senal);padding:var(--s-3);}
+.gal > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:700;margin-bottom:.35rem;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* opiniones */
+.u-cita{border:0;border-top:4px solid var(--tinta);padding:var(--s-3) 0 0;}
+.u-cita blockquote{font-family:var(--display);font-weight:600;}
+.u-cita cite{color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--tinta);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:700;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--senal);color:#fff;font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#9aa4b5;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#ffab84;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, su horario y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Cesar Reparaciones</b><span data-real>Electrodomésticos · Simancas 3 · Tetuán</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#compensa">¿Compensa?</a>
+      <a href="#que">Qué se arregla</a>
+      <a href="#casa">¿Venís a casa?</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34646424480" data-real>646 42 44 80</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Electrodomésticos y electrónica · Calle de Simancas 3</span>
+      <h1>«¿Lo arreglo<br>o me compro<br><em class="na">uno nuevo?»</em></h1>
+      <p>Esa es la pregunta, y aquí se contesta de verdad — también cuando la
+      respuesta es que no compensa. Mándenos una foto de la placa de
+      características por WhatsApp y le decimos qué cuesta antes de que mueva
+      el aparato.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34646424480?text=Hola%2C%20se%20me%20ha%20estropeado%20"
+           target="_blank" rel="noopener" data-real>Preguntar por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#compensa">Ver cuándo compensa</a>
+      </p>
+    </div>
+    <svg class="balanza" viewBox="0 0 240 200" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M120 26 V150"/>
+      <path d="M84 166 h72" stroke-width="6"/>
+      <path d="M104 150 h32"/>
+      <path d="M44 44 h152" stroke-width="5"/>
+      <circle cx="120" cy="44" r="8" fill="currentColor" stroke="none"/>
+      <path d="M44 44 L22 92 h44 z"/>
+      <path d="M196 44 L174 92 h44 z" class="eu" stroke="currentColor"/>
+      <path d="M44 44 V34"/><path d="M196 44 V34"/>
+      <g stroke-width="3">
+        <path d="M36 70 h16 M44 62 v16"/>
+      </g>
+      <g class="eu" stroke="currentColor" stroke-width="3">
+        <path d="M204 62 a12 12 0 1 0 0 18"/>
+        <path d="M186 68 h16 M186 76 h16"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Simancas, 3</b></span>
+    <span data-real>En la galería · Almenara · Tetuán · 28029 Madrid</span>
+    <span data-ejemplo>L–V 9:30–14:00 y 17:00–20:00</span>
+    <a href="tel:+34646424480" data-real><b>646 42 44 80</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. la regla del 50% ===== -->
+<section class="u-seccion" id="compensa">
+  <div class="u-wrap u-revelar">
+    <div class="regla">
+      <span class="u-ceja">La regla de la casa</span>
+      <span class="pc">50%</span>
+      <h2 style="max-width:24ch;margin-top:var(--s-2);">Si el arreglo pasa de la mitad de uno nuevo, no compensa. Y se lo decimos.</h2>
+      <p style="max-width:54ch;">Perdemos esa reparación y ganamos la
+      siguiente. Aquí está lo que cuesta cada arreglo al lado de lo que cuesta
+      el aparato nuevo, para que la cuenta se vea sola.</p>
+      <table class="tabla" data-ejemplo>
+        <tr><th>Avería</th><th>Arreglo</th><th>Uno nuevo</th></tr>
+        <tr><td>Lavadora: goma de la puerta</td><td>60 €</td><td>350 €</td></tr>
+        <tr><td>Lavadora: bomba de desagüe</td><td>75 €</td><td>350 €</td></tr>
+        <tr><td>Lavavajillas: no calienta</td><td>85 €</td><td>320 €</td></tr>
+        <tr><td>Frigorífico: goma y termostato</td><td>90 €</td><td>450 €</td></tr>
+        <tr><td>Microondas, tostadora, aspirador</td><td>35 €</td><td>60 – 120 €</td></tr>
+        <tr class="no"><td>Lavadora: tambor o rodamientos</td><td>220 €</td><td>350 €</td></tr>
+        <tr class="no"><td>Frigorífico: motor compresor</td><td>260 €</td><td>450 €</td></tr>
+        <tr class="no"><td>Televisor grande: panel roto</td><td>—</td><td>No tiene arreglo</td></tr>
+      </table>
+      <p style="margin-top:var(--s-3);max-width:54ch;"><b style="color:#fff;">En
+      naranja, lo que no compensa.</b> Si su avería está ahí, se lo decimos por
+      teléfono y no hace falta que traiga nada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. qué se arregla ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="que">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Qué entra por la puerta.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="ap">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="18" y="14" width="84" height="94"/>
+          <circle cx="60" cy="68" r="24"/>
+          <circle cx="60" cy="68" r="13" stroke-width="3"/>
+          <path d="M18 38 h84"/>
+          <circle cx="30" cy="26" r="4" fill="currentColor" stroke="none"/>
+          <path d="M44 26 h46" stroke-width="3"/>
+        </svg>
+        <b>Lavadora y lavavajillas</b>
+        <p>No desagua, no calienta, hace ruido o no cierra.</p>
+      </div>
+
+      <div class="ap">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="22" y="10" width="76" height="100"/>
+          <path d="M22 48 h76"/>
+          <path d="M36 24 v14" stroke-width="3"/>
+          <path d="M36 62 v14" stroke-width="3"/>
+          <path d="M84 28 h6" stroke-width="3"/>
+        </svg>
+        <b>Frigorífico y congelador</b>
+        <p>Se escarcha, gotea, no enfría o no para de arrancar.</p>
+      </div>
+
+      <div class="ap">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="12" y="26" width="96" height="58"/>
+          <path d="M60 84 v14"/>
+          <path d="M38 98 h44" stroke-width="5"/>
+          <path d="M24 38 h58 v34 h-58 z" stroke-width="2.5" opacity=".5"/>
+        </svg>
+        <b>Televisión y pequeño aparato</b>
+        <p>Microondas, tostadora, aspirador, batidora y televisores.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ¿venís a casa? ===== -->
+<section class="u-seccion" id="casa">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Una lavadora<br>no se lleva<br>bajo el brazo.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Por eso hay dos
+      formas de hacer esto, y conviene saber cuál toca antes de llamar.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="vía" style="margin-bottom:var(--s-3);">
+        <b>Lo que se trae al taller</b>
+        <p>Microondas, tostadoras, aspiradores, batidoras, televisores
+        pequeños y cualquier cosa que quepa en el carro de la compra. Se deja y
+        se llama cuando está.</p>
+      </div>
+      <div class="vía">
+        <b>Lo que se mira en su casa</b>
+        <p>Lavadora, lavavajillas, frigorífico, horno y vitrocerámica. La
+        visita cuesta 25 € y <b>se descuenta del arreglo</b> si al final se
+        hace. Si no tiene arreglo, se le dice en el momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. dónde: la galería ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>Simancas, 3.<br>Dentro de la galería.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Almenara · Tetuán · 28029 Madrid. En la galería de alimentación, junto a
+        los puestos.</p>
+      <div class="gal" style="margin-top:var(--s-3);">
+        <b>Estar en la galería es la ventaja</b>
+        <p style="margin:0;">Nadie tiene que desviarse: se deja la tostadora al
+        bajar a por el pan. Lo que pasa es que una galería no tiene escaparate a
+        la calle, así que en Google no se ve. Para eso está esta página.</p>
+      </div>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34646424480?text=Hola%2C%20se%20me%20ha%20estropeado%20"
+           target="_blank" rel="noopener" data-real>WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34646424480" data-real>646 42 44 80</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Cesar+Reparaciones/data=!4m7!3m6!1s0xd4229057aa60ecb:0x82cc0c98c12c8097!8m2!3d40.4655716!4d-3.6948814"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--senal);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Martes</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>9:30 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Aquí irían las suyas.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Me dijo por teléfono que no compensaba arreglarla y no me
+        cobró la visita.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Dejé el microondas al ir a por el pan y lo recogí al día
+        siguiente.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«La lavadora tiene once años y sigue andando gracias a
+        él.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle con su
+      número y el teléfono. La tabla de precios, el horario, la visita de 25 € y
+      las opiniones están inventados: pulse el botón amarillo de arriba y se
+      marcan solos.</p>
+      <ul>
+        <li><b>Falta lo suyo:</b> sus precios reales, su horario y sus fotos.
+        Sobre todo la del puesto dentro de la galería, que es lo que nadie
+        encuentra.</li>
+        <li><b>La tabla del 50% es lo más importante de la página</b> y hay que
+        rehacerla con sus números. Tal cual está, no sirve: es un ejemplo de
+        cómo se vería.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado opiniones suyas, y una
+        nota sin recuento la penaliza Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del taller.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la dirección y el
+      teléfono salen de fichas públicas. Los precios, los plazos, el horario, la
+      visita a domicilio y las opiniones están inventados y marcados.</p>
+      <p><b>No se declara ninguna nota de Google</b> sin recuento verificado.
+      <b>No hay ninguna fotografía:</b> los cuatro dibujos están hechos a mano
+      para esta propuesta.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34646424480?text=Hola%2C%20se%20me%20ha%20estropeado%20" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/place/Cesar+Reparaciones/data=!4m7!3m6!1s0xd4229057aa60ecb:0x82cc0c98c12c8097!8m2!3d40.4655716!4d-3.6948814" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Cesar Reparaciones",
+  "description":"Reparación de electrodomésticos y electrónica en la calle de Simancas 3, Almenara, Tetuán, Madrid.",
+  "telephone":"+34646424480",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Simancas, 3",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28029",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4655716,"longitude":-3.6948814},
+  "openingHours":["Mo-Fr 09:30-14:00","Mo-Fr 17:00-20:00","Sa 09:30-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/cesar-reparaciones/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

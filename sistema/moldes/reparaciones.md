@@ -117,3 +117,34 @@ Tres cosas que hacen el look:
 ## El JS
 
 El mismo de `restaurante.md` (IntersectionObserver) más `#toggle-marcas`.
+
+---
+
+## Variante: electrodomésticos (añadida el 21/09/2026, demo 18)
+
+El molde de arriba está escrito para **móviles**, donde la primera pregunta es
+«¿cuánto tardas?». En **electrodomésticos la pregunta es otra**, y cambia la
+página entera:
+
+> **«¿Compensa arreglarlo o me compro uno nuevo?»**
+
+Nadie duda si merece la pena arreglar un móvil de 700 €. Todo el mundo duda con
+una lavadora de 300. Y esa duda es la que hace que el aparato acabe en el
+contenedor sin que nadie llame al taller.
+
+**Lo que hay que poner, y no pone nadie:**
+
+- **La regla del 50%**, escrita: si el arreglo pasa de la mitad de lo que cuesta
+  uno nuevo, no compensa. Decirlo en voz alta es lo que hace creíble el resto.
+- **Una tabla de doble columna**: lo que cuesta el arreglo **al lado** de lo que
+  cuesta el aparato nuevo. Es la única forma de que la cuenta se vea sola.
+- **Cuándo NO compensa**, con nombre y apellidos: tambor de lavadora, motor de
+  frigorífico, pantalla de televisor grande. Quien dice esto se gana la
+  llamada, aunque pierda esa reparación.
+- **¿Venís a casa?** Una lavadora no se lleva bajo el brazo. Hay que separar lo
+  que se trae de lo que se repara en el domicilio, y decir si la visita se
+  cobra o se descuenta.
+
+**Y lo que hay que respetar:** la promesa de «si no tiene arreglo, la revisión
+no se cobra» vale aquí igual que en móviles. Es lo que más trabajo trae y casi
+nadie la escribe.

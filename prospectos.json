@@ -424,9 +424,10 @@
     "web_actual": null,
     "gancho": "Sin web; landing simple con servicios y formulario de contacto.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/cesar-reparaciones/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web. Simancas 3, DENTRO de la galeria de alimentacion (el reverse identifica el edificio). Ese es el gancho: esta donde la gente ya va, pero una galeria no tiene escaparate y en Google no se ve. Ver datos/cesar-reparaciones.md"
   },
   {
     "slug": "asesoria-madrid-centro",
@@ -473,5 +474,39 @@
     "demo": null,
     "enviado": null,
     "respuesta": null
+  },
+  {
+    "slug": "pablo-albalate",
+    "nombre": "Pablo Albalate",
+    "categoria": "Servicios y comercio",
+    "tipo": "Tienda de ropa",
+    "telefono": "914586576",
+    "maps": null,
+    "estado_web": "por verificar",
+    "web_actual": null,
+    "gancho": "Del barrido OSM 21/09/2026: Calle Profesor Waksman 8, con telefono y sin website en OSM. VERIFICAR con tiene_web.py + WebSearch antes de gastar demo.",
+    "email": null,
+    "demo": null,
+    "enviado": null,
+    "respuesta": null,
+    "coords": "40.45592,-3.68901",
+    "nota_web": "Anadido por barrido de OpenStreetMap (Overpass) el 21/09/2026 para reponer candidatos. SIN verificar."
+  },
+  {
+    "slug": "la-morenita",
+    "nombre": "La Morenita",
+    "categoria": "Servicios y comercio",
+    "tipo": "Floristeria",
+    "telefono": "915702967",
+    "maps": null,
+    "estado_web": "por verificar",
+    "web_actual": null,
+    "gancho": "Del barrido OSM 21/09/2026: floristeria con telefono y sin website en OSM. VERIFICAR antes de gastar demo.",
+    "email": null,
+    "demo": null,
+    "enviado": null,
+    "respuesta": null,
+    "coords": "40.46538,-3.69034",
+    "nota_web": "Anadido por barrido de OpenStreetMap (Overpass) el 21/09/2026 para reponer candidatos. SIN verificar."
   }
 ]
