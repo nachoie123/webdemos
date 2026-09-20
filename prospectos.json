@@ -105,11 +105,14 @@
     "maps": "https://www.google.com/maps/place/Pasteler%C3%ADa+Acueducto/data=!4m7!3m6!1s0xd4229ab599c9d9b:0x501a07f564032557!8m2!3d40.4624062!4d-3.6949213!16s%2Fg%2F11sdp_h3m2",
     "estado_web": "err",
     "web_actual": "https://pasteleriaacueducto.com",
-    "gancho": "Su ficha enlaza la web de OTRA pastelería homónima en Segovia; les está mandando clientes a otro negocio.",
-    "email": null,
+    "gancho": "Misma empresa que la de Segovia (su IG: 'Situada en Segovia y ahora tambien en Madrid'), pero su web solo lista las dos tiendas de Segovia: la de Infanta Mercedes 89 no aparece por ningun lado.",
+    "email": "pasteleria_acueducto@hotmail.com",
     "demo": null,
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "direccion": "Calle de la Infanta Mercedes, 89, 28020 Madrid (Tetuán)",
+    "instagram": "https://www.instagram.com/pasteleria_acueducto_madrid/",
+    "nota_verificacion": "20/09/2026: DESCARTADO el gancho anterior ('web de otra pasteleria homonima'). Es la misma empresa. Verificado en instagram.com/pasteleria_acueducto_madrid y en pasteleriaacueducto.com/contacto (solo Ezequiel Gonzalez 25 y Cervantes 22, Segovia). Email sacado de su pagina de contacto."
   },
   {
     "slug": "panaderia-lacteos",
