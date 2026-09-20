@@ -1,0 +1,439 @@
+<title>KMASPUES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=DM+Mono:wght@400;500&display=swap">
+
+<style>
+  :root{
+    --noche:#14100e;
+    --noche-2:#1d1714;
+    --noche-3:#261e1a;
+    --papel:#efe6d6;
+    --papel-2:#c9bda9;
+    --tenue:#8a7d70;
+    --riso:#e4402c;
+    --ambar:#f0b429;
+    --linea:#332924;
+    --display:'Anton', 'Haettenschweiler', 'Arial Narrow', sans-serif;
+    --serif:'Newsreader', Georgia, 'Times New Roman', serif;
+    --mono:'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--noche);
+    color:var(--papel);
+    font-family:var(--serif);
+    font-size:17px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--riso);color:var(--papel);}
+  img{display:block;max-width:100%;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--ambar);outline-offset:3px;}
+
+  .wrap{max-width:720px;margin:0 auto;padding-inline:20px;}
+
+  /* ---------- barra de demo ---------- */
+  .demobar{
+    position:sticky;
+    top:env(safe-area-inset-top, 0px);
+    z-index:50;
+    background:var(--ambar);
+    color:#1a1207;
+    font-family:var(--mono);
+    font-size:12px;
+    line-height:1.35;
+    letter-spacing:0.01em;
+  }
+  .demobar .inner{
+    max-width:720px;margin:0 auto;padding:9px 20px;
+    display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  }
+  .demobar strong{font-weight:500;text-transform:uppercase;letter-spacing:0.08em;}
+  .demobar button{
+    font:inherit;font-weight:500;cursor:pointer;
+    background:#1a1207;color:var(--ambar);border:0;border-radius:2px;
+    padding:5px 11px;white-space:nowrap;
+  }
+  .demobar button:hover{background:#000;}
+
+  /* ---------- hero ---------- */
+  header.hero{
+    padding-block:52px 40px;
+    border-bottom:1px solid var(--linea);
+    background:
+      radial-gradient(120% 90% at 50% -10%, rgba(228,64,44,0.22), transparent 62%),
+      var(--noche);
+  }
+  .kicker{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--riso);margin:0 0 20px;
+  }
+  h1.logo{
+    font-family:var(--display);
+    font-size:clamp(58px, 17.5vw, 122px);
+    line-height:0.84;
+    letter-spacing:-0.015em;
+    margin:0;
+    text-transform:uppercase;
+    color:var(--papel);
+  }
+  h1.logo em{font-style:normal;color:var(--riso);}
+  .tagline{
+    font-size:clamp(20px,5vw,27px);
+    line-height:1.25;
+    font-weight:500;
+    margin:22px 0 0;
+    max-width:19ch;
+    text-wrap:balance;
+  }
+  .meta{
+    font-family:var(--mono);font-size:13px;color:var(--papel-2);
+    margin:24px 0 0;display:grid;gap:5px;
+  }
+  .meta b{color:var(--papel);font-weight:500;}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;}
+  .btn{
+    font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:0.02em;
+    text-decoration:none;padding:13px 20px;border-radius:2px;
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--riso);
+    transition:background .14s ease,color .14s ease;
+  }
+  .btn.primary{background:var(--riso);color:#fff;}
+  .btn.primary:hover{background:#c8331f;border-color:#c8331f;}
+  .btn.ghost{background:transparent;color:var(--papel);border-color:var(--linea);}
+  .btn.ghost:hover{border-color:var(--papel-2);background:var(--noche-2);}
+
+  /* ---------- marquesina ---------- */
+  .marquee{
+    border-block:1px solid var(--linea);
+    background:var(--noche-2);
+    overflow:hidden;
+    padding-block:11px;
+  }
+  .marquee .track{
+    display:flex;gap:44px;width:max-content;
+    font-family:var(--mono);font-size:13px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ambar);
+    animation:slide 26s linear infinite;
+  }
+  .marquee .track span{white-space:nowrap;}
+  @keyframes slide{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion: reduce){
+    .marquee .track{animation:none;}
+  }
+
+  /* ---------- secciones ---------- */
+  section{padding-block:56px;border-bottom:1px solid var(--linea);}
+  .eyebrow{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--tenue);margin:0 0 14px;
+  }
+  h2{
+    font-family:var(--display);text-transform:uppercase;
+    font-size:clamp(32px,8.5vw,52px);line-height:0.94;letter-spacing:-0.01em;
+    margin:0 0 20px;text-wrap:balance;
+  }
+  h2 em{font-style:normal;color:var(--riso);}
+  p.lead{font-size:18.5px;color:var(--papel-2);margin:0 0 26px;max-width:58ch;}
+
+  /* ---------- agenda ---------- */
+  ul.agenda{list-style:none;margin:0;padding:0;display:grid;gap:0;}
+  ul.agenda li{
+    display:grid;
+    grid-template-columns:76px 1fr auto;
+    gap:16px;align-items:baseline;
+    padding-block:18px;
+    border-top:1px solid var(--linea);
+  }
+  ul.agenda li:last-child{border-bottom:1px solid var(--linea);}
+  .fecha{
+    font-family:var(--mono);font-size:13px;color:var(--ambar);
+    letter-spacing:0.04em;text-transform:uppercase;line-height:1.3;
+  }
+  .banda{font-family:var(--display);font-size:24px;text-transform:uppercase;letter-spacing:0.005em;line-height:1.05;}
+  .estilo{font-family:var(--serif);font-size:15px;color:var(--tenue);display:block;margin-top:3px;font-style:italic;}
+  .hora{font-family:var(--mono);font-size:13px;color:var(--papel-2);white-space:nowrap;}
+  @media (max-width:480px){
+    ul.agenda li{grid-template-columns:64px 1fr;}
+    .hora{grid-column:2;}
+  }
+
+  /* ---------- carta ---------- */
+  .carta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:var(--linea);border:1px solid var(--linea);}
+  .carta > div{background:var(--noche-2);padding:22px 20px;}
+  .carta h3{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--riso);margin:0 0 14px;font-weight:500;
+  }
+  .carta ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:16px;}
+  .carta li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;}
+  .carta .precio{font-family:var(--mono);font-size:14px;color:var(--papel-2);font-variant-numeric:tabular-nums;}
+
+  /* ---------- reserva ---------- */
+  .reserva-box{
+    background:var(--noche-2);border:1px solid var(--linea);
+    padding:28px 24px;display:grid;gap:18px;
+  }
+  .reserva-box .fila{display:grid;gap:7px;}
+  .reserva-box label{font-family:var(--mono);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--tenue);}
+  .reserva-box input, .reserva-box select{
+    font-family:var(--serif);font-size:16.5px;
+    background:var(--noche);color:var(--papel);
+    border:1px solid var(--linea);border-radius:2px;padding:12px 13px;width:100%;
+  }
+  .reserva-box .dos{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:460px){.reserva-box .dos{grid-template-columns:1fr;}}
+  .nota{font-family:var(--mono);font-size:12px;color:var(--tenue);line-height:1.5;margin:0;}
+
+  /* ---------- horario / llegar ---------- */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px;}
+  dl.horario{margin:0;display:grid;gap:0;font-family:var(--mono);font-size:14px;}
+  dl.horario .row{display:flex;justify-content:space-between;gap:16px;padding-block:10px;border-top:1px solid var(--linea);}
+  dl.horario .row:last-child{border-bottom:1px solid var(--linea);}
+  dl.horario dt{color:var(--papel-2);margin:0;}
+  dl.horario dd{margin:0;color:var(--papel);font-variant-numeric:tabular-nums;}
+  dl.horario .row.hoy dt, dl.horario .row.hoy dd{color:var(--ambar);}
+
+  /* ---------- pie de propuesta ---------- */
+  .pitch{
+    background:var(--papel);color:#1a1512;border-bottom:0;
+  }
+  .pitch h2{color:#1a1512;}
+  .pitch h2 em{color:var(--riso);}
+  .pitch p{max-width:56ch;font-size:17.5px;color:#3a322c;}
+  .pitch .firma{
+    font-family:var(--mono);font-size:13px;color:#6b5f56;margin-top:26px;line-height:1.7;
+  }
+  .pitch .firma a{color:var(--riso);}
+  .pitch .btn.primary{color:#fff;}
+  .pitch .btn.ghost{color:#1a1512;border-color:#c0b5a4;}
+  .pitch .btn.ghost:hover{background:#e2d8c6;border-color:#8a7d70;}
+
+  footer.legal{
+    padding-block:26px 40px;
+    font-family:var(--mono);font-size:11.5px;line-height:1.7;color:var(--tenue);
+  }
+
+  /* ---------- marcas de ejemplo ---------- */
+  [data-ejemplo]{position:relative;}
+  :root[data-marcas="on"] [data-ejemplo]{
+    outline:1px dashed var(--ambar);outline-offset:6px;
+  }
+  :root[data-marcas="on"] [data-ejemplo]::after{
+    content:"texto de ejemplo";
+    position:absolute;top:-9px;right:0;
+    font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;
+    background:var(--ambar);color:#1a1207;padding:2px 6px;border-radius:2px;
+    pointer-events:none;
+  }
+  :root[data-marcas="on"] .pitch [data-ejemplo]::after{color:#1a1207;}
+</style>
+
+<div class="demobar">
+  <div class="inner">
+    <span><strong>Demo</strong> · propuesta de web para KMASPUES. No es su web oficial.</span>
+    <button type="button" id="toggle-marcas">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Costa Fleming · Madrid</p>
+    <h1 class="logo">KMAS<em>PUES</em></h1>
+    <p class="tagline">Música en vivo, cerveza fría y la barra abierta hasta tarde.</p>
+    <div class="meta">
+      <span>Calle de Carlos Maurrás, 7 · Madrid</span>
+      <span><b>671 59 59 93</b> · a 6 min andando de Cuzco</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="https://wa.me/34671595993?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20KMASPUES">Reservar mesa</a>
+      <a class="btn ghost" href="https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Jueves · jam abierta</span><span>Viernes · directo</span><span>Sábado · directo + DJ</span><span>Entrada libre</span>
+    <span>Jueves · jam abierta</span><span>Viernes · directo</span><span>Sábado · directo + DJ</span><span>Entrada libre</span>
+  </div>
+</div>
+
+<section id="agenda">
+  <div class="wrap">
+    <p class="eyebrow">Lo que Google no cuenta</p>
+    <h2>Agenda de <em>directos</em></h2>
+    <p class="lead">El motivo número uno por el que alguien buscaría KMASPUES en internet: saber quién toca esta semana. Hoy eso no está en ningún sitio.</p>
+    <ul class="agenda" data-ejemplo>
+      <li>
+        <span class="fecha">Jue 25<br>sep</span>
+        <span><span class="banda">Jam de blues</span><span class="estilo">micro abierto, se apunta quien quiera</span></span>
+        <span class="hora">22:00</span>
+      </li>
+      <li>
+        <span class="fecha">Vie 26<br>sep</span>
+        <span><span class="banda">Los Maurrás</span><span class="estilo">rock nacional, versiones</span></span>
+        <span class="hora">23:00</span>
+      </li>
+      <li>
+        <span class="fecha">Sáb 27<br>sep</span>
+        <span><span class="banda">Trío Fleming</span><span class="estilo">soul y funk · DJ hasta cierre</span></span>
+        <span class="hora">23:30</span>
+      </li>
+      <li>
+        <span class="fecha">Jue 2<br>oct</span>
+        <span><span class="banda">Jam de blues</span><span class="estilo">micro abierto</span></span>
+        <span class="hora">22:00</span>
+      </li>
+    </ul>
+    <p class="nota" style="margin-top:18px;">Vosotros cambiáis esta lista desde el móvil en 30 segundos. Nadie tiene que tocar código.</p>
+  </div>
+</section>
+
+<section id="carta">
+  <div class="wrap">
+    <p class="eyebrow">La barra</p>
+    <h2>Qué se bebe <em>aquí</em></h2>
+    <p class="lead">Media carta, la justa para que alguien decida entrar. La completa, cuando nos paséis la vuestra.</p>
+    <div class="carta" data-ejemplo>
+      <div>
+        <h3>Grifo</h3>
+        <ul>
+          <li><span>Caña</span><span class="precio">2,50 €</span></li>
+          <li><span>Doble</span><span class="precio">3,80 €</span></li>
+          <li><span>Pinta</span><span class="precio">5,00 €</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Copas</h3>
+        <ul>
+          <li><span>Combinado</span><span class="precio">8,00 €</span></li>
+          <li><span>Gin-tonic</span><span class="precio">9,00 €</span></li>
+          <li><span>Chupito</span><span class="precio">2,50 €</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Para picar</h3>
+        <ul>
+          <li><span>Tabla de ibéricos</span><span class="precio">12,00 €</span></li>
+          <li><span>Patatas bravas</span><span class="precio">6,50 €</span></li>
+          <li><span>Nachos</span><span class="precio">7,00 €</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva">
+  <div class="wrap">
+    <p class="eyebrow">Sin llamadas perdidas</p>
+    <h2>Reserva <em>de mesa</em></h2>
+    <p class="lead">Rellena tres campos y os llega un WhatsApp con todo escrito. Ni una llamada a media faena.</p>
+    <form class="reserva-box" id="form-reserva">
+      <div class="fila">
+        <label for="r-nombre">Nombre</label>
+        <input id="r-nombre" name="nombre" type="text" placeholder="María" autocomplete="name">
+      </div>
+      <div class="dos">
+        <div class="fila">
+          <label for="r-dia">Día</label>
+          <input id="r-dia" name="dia" type="date">
+        </div>
+        <div class="fila">
+          <label for="r-personas">Personas</label>
+          <select id="r-personas" name="personas">
+            <option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7 o más</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn primary" type="submit" style="justify-content:center;cursor:pointer;">Enviar por WhatsApp</button>
+      <p class="nota">Va directo al 671 59 59 93. No guardamos ningún dato en ningún servidor.</p>
+    </form>
+  </div>
+</section>
+
+<section id="visitar">
+  <div class="wrap">
+    <p class="eyebrow">Antes de venir</p>
+    <h2>Horario y <em>cómo llegar</em></h2>
+    <div class="info-grid">
+      <dl class="horario" data-ejemplo>
+        <div class="row"><dt>Lunes</dt><dd>Cerrado</dd></div>
+        <div class="row"><dt>Mar – Jue</dt><dd>18:00 – 02:00</dd></div>
+        <div class="row"><dt>Vie – Sáb</dt><dd>18:00 – 03:30</dd></div>
+        <div class="row"><dt>Domingo</dt><dd>18:00 – 01:00</dd></div>
+      </dl>
+      <div>
+        <p style="margin:0 0 16px;color:var(--papel-2);font-size:16.5px;">
+          Calle de Carlos Maurrás, 7 — en pleno Costa Fleming, entre Cuzco y Santiago Bernabéu.
+          Metro <b style="color:var(--papel);">Cuzco</b> (L10) a 6 minutos andando.
+        </p>
+        <a class="btn ghost" href="https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pitch">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#8a7d70;">Por qué te llega esto</p>
+    <h2>Esta página <em>todavía no existe</em></h2>
+    <p>
+      Soy Nacho, estudio Ingeniería Informática e Inteligencia Artificial en IE University.
+      Busqué KMASPUES en Google para ver quién tocaba y no encontré nada: solo la ficha de Maps.
+      Así que hice esta propuesta para enseñaros a qué me refiero, sin que tuvierais que pedírmelo.
+    </p>
+    <p>
+      Las fechas, los precios y el horario que veis arriba son inventados — pulsad
+      <b>«Ver qué es de ejemplo»</b> y os lo marco. La dirección, el teléfono y el estilo
+      del sitio salen de vuestra ficha real. Si os interesa, lo siguiente es media hora
+      con los datos de verdad.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:?subject=Sobre%20la%20web%20de%20KMASPUES">Responder al correo</a>
+      <a class="btn ghost" href="#agenda">Volver a verla</a>
+    </div>
+    <p class="firma">
+      Nacho San Benito · IE University<br>
+      Propuesta hecha el 20 de septiembre de 2026
+    </p>
+  </div>
+</section>
+
+<footer class="legal">
+  <div class="wrap">
+    Página de demostración sin relación oficial con KMASPUES. Se ha hecho a partir de datos
+    públicos de su ficha de Google Maps para ilustrar una propuesta de diseño. Si el negocio
+    prefiere que se retire, se retira el mismo día.
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('toggle-marcas');
+    var root = document.documentElement;
+    btn.addEventListener('click', function(){
+      var on = root.getAttribute('data-marcas') === 'on';
+      root.setAttribute('data-marcas', on ? 'off' : 'on');
+      btn.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar marcas';
+    });
+
+    var form = document.getElementById('form-reserva');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nombre = document.getElementById('r-nombre').value.trim() || 'Hola';
+      var dia = document.getElementById('r-dia').value;
+      var personas = document.getElementById('r-personas').value;
+      var texto = 'Hola, soy ' + nombre + '. Quería reservar mesa para ' + personas +
+                  (dia ? ' el ' + dia : '') + '. ¡Gracias!';
+      window.open('https://wa.me/34671595993?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+    });
+  })();
+</script>
