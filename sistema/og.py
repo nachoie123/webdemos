@@ -44,6 +44,15 @@ p{{font-size:32px;color:{token(h,'tinta-2','#5a5048')};line-height:1.35}}
 <div class="raya"></div>"""
 
 def main(destino):
+    f = pathlib.Path(destino)
+    if not f.exists():
+        if not pathlib.Path("demos").is_dir():
+            sys.exit("No veo la carpeta demos/. Estas fuera del proyecto:\n"
+                     "    cd ~/Projects/webdemos")
+        hay = sorted(x.name for x in pathlib.Path("demos").glob("*.html"))
+        sys.exit(f"No existe {destino}. La tarjeta se saca de la demo, asi que "
+                 f"primero hay que escribirla.\nDemos que si existen: "
+                 + ", ".join(hay))
     slug, html = tarjeta(destino)
     salida = pathlib.Path("docs") / slug / "og.png"
     salida.parent.mkdir(parents=True, exist_ok=True)
