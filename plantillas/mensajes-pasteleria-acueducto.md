@@ -131,3 +131,38 @@ WhatsApp. Opciones, en orden:
 Si aun así quiere probar el WhatsApp, el enlace está preparado en
 `out/wa-pasteleria-acueducto.txt`. Recuerde: **primero el texto y después la
 imagen**; si adjunta antes, el texto se convierte en pie de foto.
+
+---
+
+## Instagram DM (canal elegido, 20/09/2026)
+
+Enviado a mano desde la cuenta personal de Nacho a @pasteleria_acueducto_madrid.
+924 caracteres: cabe en un solo mensaje (el limite del DM son 1.000).
+
+Version acortada del texto de WhatsApp. Al escribirlo en el navegador hay que usar
+**shift+Enter** para los saltos de linea; un Enter normal envia el mensaje a trozos.
+
+```
+Buenos días:
+
+Me llamo Nacho San Benito y soy desarrollador web freelance, aquí en la zona de Cuzco.
+
+Entré en la web que aparece en su ficha de Google buscando el catálogo de la tienda de Infanta Mercedes, y en ella solo están las dos de Segovia. La de Madrid no aparece por ningún lado.
+
+He preparado una propuesta de página web para la pastelería de Madrid. Está publicada y funcionando, para que pueda verla antes de decidir nada:
+
+https://nachoie123.github.io/webdemos/pasteleria-acueducto/
+
+Es una propuesta, no su web oficial: los precios y el horario son de ejemplo, y la propia página lleva un botón que marca qué es inventado y qué no. La dirección, el teléfono y este Instagram sí son los suyos.
+
+Es solo una muestra. La web final iría con sus fotos y su catálogo real, y con los encargos entrando por la web.
+
+¿Le viene bien que le llame esta semana?
+
+Un saludo,
+Nacho San Benito
+Desarrollador web · 682 02 05 47
+```
+
+Despues del texto, adjuntar `out/pasteleria-acueducto-mockup.png`. Nunca antes:
+la imagen primero convierte el texto en pie de foto.
