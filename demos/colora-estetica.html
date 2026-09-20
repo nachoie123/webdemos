@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colora Estética · Paseo de la Castellana, Costa Fleming, Madrid</title>
+<meta name="description" content="Propuesta de página web para Colora Estética, manicura y pedicura en el Paseo de la Castellana, Costa Fleming, Chamartín, Madrid. Precios con la retirada incluida.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/colora-estetica/">
+<meta name="theme-color" content="#0f5c4f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f7f6f3%27/%3E%3Cpath d=%27M10 26 V12 a6 6 0 0 1 12 0 v14 z%27 fill=%27%230f5c4f%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/colora-estetica/">
+<meta property="og:title" content="Colora Estética · Paseo de la Castellana, Costa Fleming, Madrid">
+<meta property="og:description" content="Propuesta de página web para Colora Estética, manicura y pedicura en el Paseo de la Castellana, Costa Fleming, Chamartín, Madrid. Precios con la retirada incluida.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/colora-estetica/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Epilogue:wght@400;500;600;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Esmalte. Blanco tiza, topo y un jade profundo. El jade es un color de
+   esmalte de verdad, no un pastel de catálogo, y es exactamente lo contrario
+   del rosa-y-dorado que usa el sector entero. Sin tarjetas: filetes finos. */
+:root{
+  --fondo:#f7f6f3; --fondo-2:#eae6df; --tinta:#1a1b19; --tinta-2:#5f5d55;
+  --acento:#0f5c4f; --acento-tinta:#f2fbf8; --linea:#d8d2c9;
+  --topo:#b9ada1;
+  --display:'Gloock', Georgia, serif;
+  --texto:'Epilogue', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.01em;
+  line-height:1.05;}
+h2{font-size:clamp(2.1rem,4.8vw,3.5rem);}
+h3{font-size:1.5rem;}
+em.ja{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(247,246,243,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:400;}
+.marca span{display:block;font-size:.62rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.93rem;
+  white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--topo);}
+.hero h1{font-size:clamp(3rem,7.5vw,6rem);line-height:1.02;max-width:15ch;
+  margin:.16em 0 .34em;}
+.hero .bajo{max-width:46ch;font-size:1.12rem;color:var(--tinta-2);
+  margin-bottom:var(--s-3);}
+
+/* minutos y semanas: filetes, no tarjetas */
+.u-numerada > *{border:0;border-top:2px solid var(--tinta);padding:var(--s-3) 0 0;}
+.u-numerada > *::before{color:var(--acento);opacity:1;}
+.serv b{display:block;font-family:var(--display);font-size:1.7rem;
+  line-height:1.05;margin-bottom:.4rem;}
+.dos{display:flex;gap:var(--s-3);margin-top:var(--s-2);flex-wrap:wrap;}
+.dos span{display:block;}
+.dos b{display:block;font-family:var(--display);font-size:1.9rem;line-height:1;
+  color:var(--acento);margin:0;}
+.dos i{font-style:normal;font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--tinta-2);font-weight:600;}
+
+/* precios */
+.u-precios li{border-bottom-color:var(--topo);}
+.u-precios li{flex-wrap:wrap;}
+.u-precios .d{flex-basis:100%;order:3;margin-top:.15rem;}
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);color:var(--acento);}
+.incluye{margin-top:var(--s-3);border-top:2px solid var(--acento);
+  padding-top:var(--s-2);}
+.incluye > b:first-child{display:block;font-family:var(--display);font-size:1.4rem;
+  margin-bottom:.3rem;}
+.letra-chica{margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);}
+
+/* la pregunta muda: material */
+.mat{border-left:2px solid var(--topo);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.mat > b:first-child{display:block;font-family:var(--display);font-size:1.4rem;
+  margin-bottom:.25rem;}
+
+/* qué se hace */
+.lista{list-style:none;margin:0;padding:0;}
+.lista li{padding:.7rem 0;border-bottom:1px solid var(--linea);}
+.lista li b{font-weight:600;}
+.lista li i{font-style:normal;color:var(--tinta-2);font-size:.92rem;}
+
+/* el domingo */
+.domingo{background:var(--acento);color:var(--acento-tinta);padding:var(--s-3);
+  margin-top:var(--s-3);}
+.domingo b{display:block;font-family:var(--display);font-size:1.6rem;
+  margin-bottom:.3rem;color:#fff;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.58rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+.horario tr.dom th,.horario tr.dom td{color:var(--acento);font-weight:600;}
+
+/* opiniones */
+.u-cita{border:0;border-top:2px solid var(--topo);padding:var(--s-3) 0 0;}
+.u-cita cite{color:var(--acento);font-weight:600;}
+
+/* aviso */
+.ojo{background:#fff6e0;border-left:4px solid #c98a12;padding:var(--s-2);
+  font-size:.95rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#a09d93;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#7fd9c4;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para Colora Estética.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Colora Estética</b><span data-real>Manicura y pedicura · Costa Fleming · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#tiempo">Cuánto dura</a>
+      <a href="#precios">Precios</a>
+      <a href="#material">El material</a>
+      <a href="#donde">Cita</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34658436355" data-real>658 43 63 55</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Manicura y pedicura · Paseo de la Castellana · Costa Fleming</span>
+    <h1>El precio de aquí<br><em class="ja">ya lleva la retirada dentro.</em></h1>
+    <p class="bajo">Que es la queja de siempre: te dicen un precio por teléfono
+    y al llegar resulta que quitar el esmalte de la vez anterior se cobra
+    aparte. Aquí el número que ves es el que pagas, y debajo está escrito qué
+    incluye.</p>
+    <p style="display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a class="u-btn" href="https://wa.me/34658436355?text=Hola%2C%20quer%C3%ADa%20pedir%20cita.%20%C2%BFQu%C3%A9%20hueco%20ten%C3%A9is%3F"
+         target="_blank" rel="noopener" data-real>Pedir cita por WhatsApp</a>
+      <a class="u-btn u-btn--linea" href="#precios">Ver precios</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana</b></span>
+    <span data-real>Costa Fleming · Chamartín · 28046 Madrid</span>
+    <span data-ejemplo>Lunes a sábado 10:00–21:00 · Domingo 11:00–20:00</span>
+    <a href="tel:+34658436355" data-real><b>658 43 63 55</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. minutos y semanas ===== -->
+<section class="u-seccion" id="tiempo">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Los dos números que no pone nadie</span>
+    <h2 style="max-width:22ch;margin:.2em 0 .45em;">Cuánto tardas aquí<br>y cuánto te dura fuera.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Una manicura se mete entre dos cosas del día: la hora de comer, después de
+      dejar a los niños, el sábado antes de cenar. Si no se sabe cuánto dura la
+      cita, no se puede encajar; y si no se puede encajar, no se pide. Lo otro
+      —«larga duración»— no significa nada. Tres semanas sí.</p>
+    <div class="u-grid u-3 u-numerada" data-ejemplo>
+      <div class="serv">
+        <b>Manicura semipermanente</b>
+        <p>Limado, cutícula, esmaltado en color y secado en lámpara.</p>
+        <div class="dos">
+          <span><b>45′</b><i>de cita</i></span>
+          <span><b>3 sem.</b><i>te dura</i></span>
+        </div>
+      </div>
+      <div class="serv">
+        <b>Uñas de gel</b>
+        <p>Con el largo que quieras. Se rellenan cada tres semanas en vez de
+        quitarlas.</p>
+        <div class="dos">
+          <span><b>90′</b><i>de cita</i></span>
+          <span><b>4 sem.</b><i>hasta el relleno</i></span>
+        </div>
+      </div>
+      <div class="serv">
+        <b>Pedicura completa</b>
+        <p>Pies, durezas y esmaltado. En verano es la que más se pide.</p>
+        <div class="dos">
+          <span><b>60′</b><i>de cita</i></span>
+          <span><b>4 sem.</b><i>te dura</i></span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Los minutos y las semanas son de ejemplo. Dime los tuyos de
+       verdad y los pongo: es lo que convierte «a ver si un día voy» en una
+       cita.</p>
+  </div>
+</section>
+
+<!-- ===== 5. precios con la letra pequeña dentro ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="precios">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>El número<br>y lo que<br>lleva dentro.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">El pecado del
+      sector es poner la cifra suelta y cobrar la retirada aparte al llegar. Es
+      la queja número uno en las reseñas de uñas, sin discusión.</p>
+      <p style="color:var(--tinta-2);">Poner debajo qué incluye y qué no cuesta
+      cero y evita la reseña mala. Además deja subir el precio sin que nadie se
+      queje, porque ya se sabe lo que se está pagando.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Manicura semipermanente</span><span class="d">Retirada del esmalte anterior incluida.</span><span class="p">22 €</span></li>
+        <li><span class="n">Manicura normal</span><span class="d">Esmalte de toda la vida.</span><span class="p">14 €</span></li>
+        <li><span class="n">Uñas de gel, primera vez</span><span class="d">Con el largo que elijas.</span><span class="p">40 €</span></li>
+        <li><span class="n">Relleno de gel</span><span class="d">Cada tres o cuatro semanas.</span><span class="p">28 €</span></li>
+        <li><span class="n">Pedicura completa</span><span class="d">Durezas y esmaltado.</span><span class="p">28 €</span></li>
+        <li><span class="n">Solo retirada</span><span class="d">Si vienes de otro sitio y no sigues.</span><span class="p">8 €</span></li>
+      </ul>
+      <div class="incluye">
+        <b>Qué lleva dentro cada precio</b>
+        <p style="margin:0;">Quitar lo que traigas puesto, limar, cutícula y el
+        esmaltado. <b>La retirada no se cobra aparte.</b> Un diseño a mano o
+        pedrería sí se cobra, y se te dice el precio antes de empezar, no al
+        pagar.</p>
+      </div>
+      <p class="letra-chica">Precios de ejemplo, puestos para que se vea cómo
+      queda. Dime los tuyos y los cambio. Lo que no cambiaría es la ficha verde:
+      es lo que hace que esta página valga algo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. la pregunta muda: el material ===== -->
+<section class="u-seccion" id="material">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Lo que nadie<br>pregunta<br>en voz alta.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Todo el mundo mira
+      de reojo el material cuando se sienta, y casi nadie pregunta. Contarlo sin
+      que te lo pidan tranquiliza a quien viene por primera vez, que es
+      exactamente la clienta que buscas.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="mat">
+        <b>Lo que es de un solo uso</b>
+        <p>La lima, el palito de naranjo y la banda del pulidor se abren
+        delante de ti y se tiran al terminar.</p>
+      </div>
+      <div class="mat">
+        <b>Lo que se esteriliza</b>
+        <p>Los alicates y las gubias se lavan, se meten en bolsa y pasan por
+        autoclave entre una clienta y la siguiente.</p>
+      </div>
+      <div class="mat">
+        <b>Si traes algo tuyo</b>
+        <p>Hay quien prefiere traer su propia lima. Perfecto: se guarda con tu
+        nombre y se usa solo contigo.</p>
+      </div>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);">
+        Todo esto es de ejemplo y hay que cambiarlo por lo que hacéis de verdad,
+        palabra por palabra. Fíjate en que <b>en ningún sitio se promete que no
+        vaya a pasar nada</b>: se cuenta lo que se hace, y ya. En estética eso no
+        se promete.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. qué se hace ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="que">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Con el nombre que usa la clienta.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Nadie busca «esmaltado semipermanente de larga duración». Busca «uñas
+      semi» y su barrio. La palabra que ella escribe va delante; el nombre
+      técnico, detrás.</p>
+    <div class="u-grid u-2" data-ejemplo>
+      <div>
+        <ul class="lista">
+          <li><b>Uñas semi</b><br><i>(manicura semipermanente)</i></li>
+          <li><b>Uñas de gel, largas</b><br><i>(uñas esculpidas en gel)</i></li>
+          <li><b>Relleno</b><br><i>(mantenimiento a las 3–4 semanas)</i></li>
+          <li><b>Quitarme lo que llevo</b><br><i>(retirada de esmalte o gel)</i></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="lista">
+          <li><b>Pies</b><br><i>(pedicura completa con durezas)</i></li>
+          <li><b>Cejas</b><br><i>(depilación y diseño)</i></li>
+          <li><b>Limpieza de cara</b><br><i>(higiene facial)</i></li>
+          <li><b>Uñas para una boda</b><br><i>(diseño y prueba antes del día)</i></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Lista de ejemplo. Dime qué haces de verdad y qué no, y la
+       ajusto: poner algo que no haces es peor que no ponerlo.</p>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>En el Paseo<br>de la Castellana.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Costa Fleming · Nueva España · Chamartín · 28046 Madrid.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34658436355?text=Hola%2C%20quer%C3%ADa%20pedir%20cita.%20%C2%BFQu%C3%A9%20hueco%20ten%C3%A9is%3F"
+           target="_blank" rel="noopener" data-real>Pedir cita por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34658436355" data-real>658 43 63 55</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Colora+Estetica/data=!4m7!3m6!1s0xd4229d2a33818e7:0x93e76b11e4c0eaee!8m2!3d40.4615682!4d-3.6891565"
+           data-real>Cómo llegar</a>
+      </p>
+      <div class="ojo" style="margin-top:var(--s-3);">
+        <b>Falta el número del portal.</b> Un directorio dice Castellana 192,
+        pero es una sola fuente y no he podido contrastarlo. Prefiero dejarlo en
+        blanco antes que poner uno que no sea. Dímelo y lo pongo aquí, en el
+        mapa y en la ficha de Google.
+      </div>
+      <div class="domingo" data-ejemplo>
+        <b>Y abrimos el domingo.</b>
+        <p style="margin:0;">Casi ningún centro de uñas de la zona abre el
+        domingo. Quien busca a esa hora ya ha decidido que quiere ir y no
+        encuentra dónde: es la ventaja más barata que tienes, y ahora mismo no
+        está escrita en ningún sitio donde Google pueda leerla.</p>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 21:00</td></tr>
+        <tr><th>Martes</th><td>10:00 – 21:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 21:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 21:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 21:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 21:00</td></tr>
+        <tr class="dom"><th>Domingo</th><td>11:00 – 20:00</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Horario de ejemplo, sacado de un directorio y sin
+         confirmar. <b>Lo del domingo es justo lo que hay que comprobar</b>: si
+         es cierto, es lo más importante de toda tu ficha.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. opiniones ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Aquí irían las tuyas.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Estas tres son inventadas y están marcadas como tal, solo para que se vea
+      el hueco. <b>No he puesto tu nota</b> porque el único sitio donde la he
+      encontrado es un directorio que se copia de otros, y una nota sin recuento
+      verificado la penaliza Google. Confírmame el número y se pone: aquí el
+      dato pinta bien, lo que le falta es fuente.</p>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Me dijeron el precio por WhatsApp y fue exactamente ese.
+        Parece una tontería y es justo lo que buscaba.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Entré a las ocho de un domingo sin cita y me hicieron
+        hueco.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Tres semanas y no se me ha levantado ni una. Y sé lo que
+        voy a pagar antes de sentarme.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién te escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si te sirve,
+      hablamos. Si no, la borro y no vuelves a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del centro.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la calle, la zona
+      y el teléfono salen de fichas públicas; los precios, los minutos, las
+      semanas, el horario, lo del material, las listas y las tres opiniones son
+      de ejemplo — pulsa «Ver qué es de ejemplo» arriba y se marcan todos. El
+      número del portal no se pone porque solo lo da una fuente.</p>
+      <p><b>No se declara ninguna nota de Google</b> sin recuento verificado.
+      <b>Ningún texto de esta página promete un resultado sobre la piel ni sobre
+      las uñas</b>: la sección del material describe lo que se hace y no promete
+      que no vaya a pasar nada. <b>No hay ninguna fotografía</b>, ni de banco ni
+      recortada de la ficha de Google. No se recoge ningún dato: los botones
+      abren tu propio teléfono o WhatsApp. Si la titular quiere que esto
+      desaparezca, escribe y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34658436355?text=Hola%2C%20quer%C3%ADa%20pedir%20cita.%20%C2%BFQu%C3%A9%20hueco%20ten%C3%A9is%3F" target="_blank" rel="noopener">Pedir cita</a>
+  <a href="https://www.google.com/maps/place/Colora+Estetica/data=!4m7!3m6!1s0xd4229d2a33818e7:0x93e76b11e4c0eaee!8m2!3d40.4615682!4d-3.6891565" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"NailSalon",
+  "name":"Colora Estética",
+  "description":"Manicura y pedicura en el Paseo de la Castellana, Costa Fleming, Chamartín, Madrid.",
+  "telephone":"+34658436355",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4615682,"longitude":-3.6891565},
+  "openingHours":["Mo-Sa 10:00-21:00","Su 11:00-20:00"],
+  "url":"https://nachoie123.github.io/webdemos/colora-estetica/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

@@ -188,9 +188,10 @@
     "web_actual": null,
     "gancho": "Sin web; landing con catálogo de servicios/precios y botón de WhatsApp para pedir cita.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/colora-estetica/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web (solo agregadores). Castellana 192 la da UNA sola fuente: el portal no se pone. Nota 4,9/31 tambien de una sola fuente: NO declarada. Un directorio dice que abre DOMINGO 11-20: si es cierto es su mayor ventaja, preguntado en el mensaje. Ver datos/colora-estetica.md"
   },
   {
     "slug": "slay",
