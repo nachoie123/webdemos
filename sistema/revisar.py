@@ -96,6 +96,30 @@ def audita(p):
     chk(rejillas >= 3 or l.count("grid-template-columns") >= 4, f"{rejillas} maquetaciones",
         "Todas las secciones se maquetan igual. Alterna: partida, desigual, rejilla.", dur=False)
 
+    # --- lo que a shenxien.es le falta y aqui no puede faltar ---
+    # Auditada el 20/09/2026: sin description, sin Open Graph, sin JSON-LD,
+    # sin canonical, sin favicon y 415 KB. Copiamos su acabado, no sus huecos.
+    chk(re.search(r'name=["\']description', l) is not None, "meta description",
+        "FALTA la meta description. Sin ella Google se inventa el texto del resultado.")
+    chk("og:title" in l and "og:description" in l, "Open Graph",
+        "FALTAN las etiquetas og:. El enlace se manda por WhatsApp: sin ellas "
+        "llega pelado, sin titulo ni foto, justo cuando el dueno decide si pincha.")
+    chk("og:image" in l, "og:image",
+        "FALTA og:image. Es la miniatura del enlace en WhatsApp.")
+    chk(re.search(r'rel=["\'](?:[^"\']*\s)?canonical', l) is not None, "canonical",
+        "FALTA el canonical. Los directorios copian la pagina; el canonical dice "
+        "cual es la original.", dur=False)
+    chk(re.search(r'rel=["\'][^"\']*icon', l) is not None, "favicon",
+        "FALTA el favicon. Sin el, la pestana sale con un folio en blanco.", dur=False)
+    chk('name="theme-color"' in l, "theme-color",
+        "FALTA theme-color: la barra del navegador movil no se tine.", dur=False)
+
+    # --- lo que NUNCA se declara sin tenerlo verificado ---
+    tiene_nota = "aggregaterating" in l.replace(" ", "")
+    chk(not tiene_nota or "reviewcount" in l.replace(" ", ""), "nota con recuento",
+        "El JSON-LD declara aggregateRating sin reviewCount. Google penaliza una "
+        "nota sin numero de resenas: o van las dos, o no va ninguna.")
+
     # --- peso ---
     kb = len(h.encode()) / 1024
     chk(kb < 120, f"{kb:.0f} KB", f"Pesa {kb:.0f} KB. El argumento es que carga al instante.", dur=False)

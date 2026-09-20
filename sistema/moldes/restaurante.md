@@ -101,3 +101,26 @@ El auditor `revisar.py` la suspendería en tres cosas. Son regalo:
 - **Sin barra fija de móvil.** Tiene el teléfono en la tira de arriba, pero
   desaparece al bajar; en un restaurante, "Llamar / Cómo llegar" tiene que estar
   siempre a la vista.
+
+---
+
+## Lo que a shenxien.es le falta (auditada el 20/09/2026)
+
+Es el listón en escritura y maquetación, pero en cabecera está desnuda. Se copia
+su acabado, **no sus huecos**. `revisar.py` ya suspende una demo por cada uno:
+
+| Le falta | Qué pasa por eso |
+|---|---|
+| `meta description` | Google se inventa el texto del resultado de búsqueda. |
+| Open Graph (`og:*`) | **El más caro aquí.** La demo se manda por WhatsApp: sin `og:image` el enlace llega como una línea de texto pelada, justo en el segundo en que el dueño decide si pincha. |
+| JSON-LD | No sale la ficha con dirección, teléfono y horario. Nuestras demos sí lo llevan. |
+| `canonical` | Los directorios copian la página; el canonical dice cuál es la original. |
+| favicon y `theme-color` | La pestaña sale con un folio en blanco. |
+| Peso: 415 KB | Dos imágenes incrustadas en el propio HTML. Nuestras demos pesan ~35 KB, y «carga al instante» es un argumento de venta. |
+
+Su `<h1>` es solo «Shenxien»: no dice qué es ni dónde está. El nuestro lleva
+**nombre + qué es + calle**, que es lo que la gente teclea en Google.
+
+**La tarjeta de WhatsApp se genera sola:** `python3 sistema/og.py demos/<slug>.html`
+saca `docs/<slug>/og.png` (1200×630) con los colores y la tipografía de esa misma
+demo. Sin fotos: tipografía y color, como todo lo demás.
