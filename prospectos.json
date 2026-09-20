@@ -265,9 +265,10 @@
     "web_actual": null,
     "gancho": "Sin presencia online; landing con horarios/tarifas y calendario de reserva de sesiones.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/fitness-feda-madrid/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web propia (tiene_web.py + 4 búsquedas, 20/09/2026). «FEDA» es la federación feda.net, otra entidad: su delegación de Madrid está en Castellana 171. Ver datos/fitness-feda-madrid.md"
   },
   {
     "slug": "kushala-centro-de-yoga-y-bienestar",
