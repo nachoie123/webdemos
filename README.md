@@ -172,3 +172,27 @@ y menos texto. Las del montón son todas la misma plantilla con otro logo.
 
 Cambiar esos diez valores y elegir otro molde de hero (§2 de `patrones.md`) da una
 demo que no se parece a la anterior aunque comparta los huesos.
+
+## 21/09/2026 — un dibujo propio en cada demo
+
+Nacho, mirando las 13 primeras: «se están viendo muy genéricas y muy AI».
+Tenía razón, y la causa estaba localizada: **la página era un muro de texto y
+le hablaba al dueño en cada sección** («esto es de ejemplo, dime el tuyo»,
+hasta 13 veces en una sola demo). Eso es lo que igualaba a todas.
+
+Tres reglas nuevas, y las tres las audita `sistema/revisar.py`:
+
+1. **Un dibujo propio, mínimo.** Un `<svg>` con `viewBox` dentro del `<body>`,
+   dibujado a mano **para ese negocio**. No se pueden usar fotos —el copyright
+   es de quien las hizo y las de banco se huelen—, así que se dibuja. Si el
+   dibujo sirve para otra demo, no vale: es clipart.
+2. **Máximo 4 «de ejemplo» en el texto visible.** Marcar con `data-ejemplo` es
+   gratis y no molesta. Escribirlo en prosa después de cada sección convierte
+   la web del negocio en un correo dirigido al dueño. **Todas las salvedades
+   van juntas, una vez, en un solo bloque** al final.
+3. **Ningún párrafo por encima de 430 caracteres** (aviso). Se leen en
+   diagonal, o sea que no se leen.
+
+El listón sigue siendo shenxien.es: **más fotos, más fácil de leer, más
+personalizada**. Sin fotos propias, lo que acerca a ese listón es dibujo,
+color, cifras grandes y menos prosa.

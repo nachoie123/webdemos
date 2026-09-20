@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIGMA · Paseo de la Castellana, Cuzco, Madrid</title>
+<meta name="description" content="Propuesta de página web para SIGMA, bar en el Paseo de la Castellana, Cuzco, Madrid. Café por la mañana, menú al mediodía y caña por la tarde.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/sigma/">
+<meta name="theme-color" content="#101418">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23101418%27/%3E%3Cpath d=%27M24 7 H9 l9 9 -9 9 h15%27 fill=%27none%27 stroke=%27%23f2c14e%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/sigma/">
+<meta property="og:title" content="SIGMA · Paseo de la Castellana, Cuzco, Madrid">
+<meta property="og:description" content="Propuesta de página web para SIGMA, bar en el Paseo de la Castellana, Cuzco, Madrid. Café por la mañana, menú al mediodía y caña por la tarde.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/sigma/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   El nombre ES el diseño. SIGMA es Σ, el signo de sumar, y el bar está al pie
+   de las torres de oficinas de la Castellana: la página suma el día en tres
+   momentos. Tinta azul-negra, amarillo caña y hueso frío.                 */
+:root{
+  --fondo:#f0efe9; --fondo-2:#e2e1d8; --tinta:#101418; --tinta-2:#5b6169;
+  --acento:#f2c14e; --acento-tinta:#101418; --linea:#cbcabf;
+  --display:'Syne', 'Arial Black', sans-serif;
+  --texto:'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.035em;
+  line-height:.98;}
+h2{font-size:clamp(2.1rem,5vw,3.7rem);}
+h3{font-size:1.45rem;letter-spacing:-.02em;}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:var(--tinta);color:var(--fondo);
+  border-bottom:3px solid var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;display:flex;
+  align-items:center;gap:.6rem;}
+.marca svg{width:22px;height:25px;color:var(--acento);}
+.marca b{font-family:var(--display);font-size:1.5rem;font-weight:800;
+  letter-spacing:.08em;}
+.cab .u-nav a{color:var(--fondo);opacity:.85;}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.5rem 1rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero oscuro con la sigma grande */
+.hero{background:var(--tinta);color:var(--fondo);}
+.hero .u-wrap{display:grid;grid-template-columns:8fr 4fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.1vw,3.5rem);line-height:.98;max-width:none;
+  margin:.18em 0 .3em;}
+.hero h1 em{font-style:normal;color:var(--acento);}
+.hero p{color:#b6bcc4;max-width:40ch;}
+.sig{width:100%;max-width:300px;margin-inline:auto;color:var(--acento);}
+
+/* los tres momentos: cada uno con su dibujo */
+.momento{text-align:center;}
+.momento .dib{width:100%;max-width:186px;margin:0 auto var(--s-2);
+  color:var(--tinta);}
+.momento .hora{font-family:var(--display);font-size:2.4rem;font-weight:800;
+  letter-spacing:-.04em;display:block;line-height:1;}
+.momento b{display:block;font-size:.72rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);margin:.5rem 0 .6rem;}
+.momento p{max-width:30ch;margin-inline:auto;}
+
+/* el menú */
+.menu{background:var(--tinta);color:var(--fondo);padding:var(--s-4);}
+.menu h2{color:#fff;}
+.menu .euros{font-family:var(--display);font-size:clamp(3rem,8vw,5.5rem);
+  font-weight:800;color:var(--acento);line-height:.9;display:block;
+  letter-spacing:-.04em;}
+.menu ul{list-style:none;margin:var(--s-3) 0 0;padding:0;}
+.menu li{padding:.6rem 0;border-bottom:1px solid #2b3238;color:#cfd4d9;}
+.menu li b{color:#fff;font-weight:600;}
+
+/* la hora a la que hay sitio */
+.franjas{display:grid;gap:2px;margin-top:var(--s-3);}
+.franja{display:grid;grid-template-columns:5.5rem 1fr auto;gap:var(--s-2);
+  align-items:center;padding:.6rem var(--s-2);background:var(--fondo-2);}
+.franja .barra{height:10px;background:var(--linea);position:relative;}
+.franja .barra i{position:absolute;inset:0 auto 0 0;background:var(--acento);}
+.franja .et{font-size:.8rem;color:var(--tinta-2);white-space:nowrap;}
+.franja b{font-variant-numeric:tabular-nums;font-weight:600;}
+
+/* oficina */
+.tarj{border-top:3px solid var(--tinta);padding-top:var(--s-2);}
+.tarj > b:first-child{display:block;font-family:var(--display);font-size:1.35rem;
+  font-weight:800;letter-spacing:-.02em;margin-bottom:.3rem;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* opiniones */
+.u-cita{border:0;border-top:3px solid var(--acento);padding:var(--s-3) 0 0;}
+.u-cita blockquote{font-family:var(--display);font-weight:600;letter-spacing:-.02em;}
+.u-cita cite{color:var(--tinta-2);}
+
+/* la ÚNICA nota al dueño de toda la página */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);
+  padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:800;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#8c939b;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:var(--acento);}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para SIGMA. Está sin personalizar: falta su carta, sus fotos y sus datos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#">
+      <svg viewBox="0 0 120 136" fill="none" stroke="currentColor" stroke-width="16" aria-hidden="true"><path d="M102 12 H26 L70 68 L26 124 H102"/></svg>
+      <b>SIGMA</b></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#dia">El día</a>
+      <a href="#menu">El menú</a>
+      <a href="#oficina">Para la oficina</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34654597652" data-real>654 59 76 52</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Bar · Paseo de la Castellana · Cuzco</span>
+      <h1>El bar donde<br>acaba el día<br><em>de oficina.</em></h1>
+      <p>Σ es el signo de sumar. Aquí se suma el día entero: el café de las
+      ocho, el menú de las dos y la caña de las siete, en la misma barra.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34654597652?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20SIGMA."
+           target="_blank" rel="noopener" data-real>Reservar mesa</a>
+        <a class="u-btn u-btn--linea" href="tel:+34654597652" data-real>654 59 76 52</a>
+      </p>
+    </div>
+    <svg class="sig" viewBox="0 0 120 136" fill="none" stroke="currentColor" stroke-width="13" aria-hidden="true">
+      <path d="M102 12 H26 L70 68 L26 124 H102"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana</b></span>
+    <span data-real>Castillejos · Tetuán · 28046 Madrid</span>
+    <span data-ejemplo>Lunes a viernes 7:30–23:00</span>
+    <a href="tel:+34654597652" data-real><b>654 59 76 52</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. los tres momentos, con dibujo ===== -->
+<section class="u-seccion" id="dia">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:16ch;margin-bottom:var(--s-4);">Un sitio.<br>Tres horas distintas.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="momento">
+        <svg class="dib" viewBox="0 0 120 140" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M46 34 c0 -7 6 -7 6 -14 s-6 -7 -6 -14"/>
+          <path d="M60 34 c0 -7 6 -7 6 -14 s-6 -7 -6 -14"/>
+          <path d="M74 34 c0 -7 6 -7 6 -14 s-6 -7 -6 -14"/>
+          <path d="M32 52 h56 l-6 42 a12 12 0 0 1 -12 10 h-20 a12 12 0 0 1 -12 -10 z"/>
+          <path d="M88 60 a15 15 0 0 1 0 26"/>
+          <ellipse cx="60" cy="116" rx="40" ry="8"/>
+        </svg>
+        <span class="hora">08:00</span>
+        <b>El café de pie</b>
+        <p>Cinco minutos antes de subir a la torre. Con la tostada hecha antes
+        de que pidas.</p>
+      </div>
+
+      <div class="momento">
+        <svg class="dib" viewBox="0 0 120 140" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="60" cy="70" r="48"/>
+          <circle cx="60" cy="70" r="37"/>
+          <g stroke-width="2.4">
+            <ellipse cx="48" cy="56" rx="5" ry="2.4" transform="rotate(-25 48 56)"/>
+            <ellipse cx="66" cy="52" rx="5" ry="2.4" transform="rotate(15 66 52)"/>
+            <ellipse cx="76" cy="66" rx="5" ry="2.4" transform="rotate(-40 76 66)"/>
+            <ellipse cx="42" cy="74" rx="5" ry="2.4" transform="rotate(30 42 74)"/>
+            <ellipse cx="58" cy="84" rx="5" ry="2.4" transform="rotate(-10 58 84)"/>
+            <ellipse cx="72" cy="86" rx="5" ry="2.4" transform="rotate(45 72 86)"/>
+            <ellipse cx="56" cy="66" rx="5" ry="2.4" transform="rotate(60 56 66)"/>
+          </g>
+          <path d="M84 84 a13 13 0 0 1 -18 12 a13 13 0 0 0 18 -12 z"/>
+          <path d="M36 88 a11 11 0 0 0 16 6"/>
+          <path d="M44 52 l8 6"/>
+        </svg>
+        <span class="hora">14:00</span>
+        <b>El menú del día</b>
+        <p>Dos platos, pan y bebida. Y el arroz, que solo sale los jueves.</p>
+      </div>
+
+      <div class="momento">
+        <svg class="dib" viewBox="0 0 120 140" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M40 40 h40 l-5 74 a9 9 0 0 1 -9 8 h-12 a9 9 0 0 1 -9 -8 z"/>
+          <path d="M40 40 c2 -9 8 -13 20 -13 s18 4 20 13"/>
+          <path d="M43 62 h34"/>
+          <g stroke-width="2.4">
+            <circle cx="53" cy="80" r="3"/>
+            <circle cx="66" cy="90" r="2.4"/>
+            <circle cx="56" cy="100" r="2.4"/>
+            <circle cx="67" cy="72" r="2"/>
+          </g>
+          <ellipse cx="60" cy="126" rx="30" ry="6"/>
+        </svg>
+        <span class="hora">19:00</span>
+        <b>La caña de después</b>
+        <p>Cuando se apagan los pisos de arriba y baja media planta a la vez.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. el menú y la hora a la que hay sitio ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="menu">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div class="menu" data-ejemplo>
+      <span class="euros">13,50 €</span>
+      <h2 style="font-size:1.6rem;margin-top:.4rem;">Menú del día</h2>
+      <ul>
+        <li><b>Primero y segundo</b> · seis a elegir de cada</li>
+        <li><b>Pan y bebida</b> · incluidos</li>
+        <li><b>Postre o café</b> · los dos, +1,50 €</li>
+        <li><b>Arroz de los jueves</b> · +2 €, hay que pedirlo al llegar</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="max-width:16ch;">¿A las dos y cuarto hay mesa?</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Es la única pregunta
+      que se hace alguien que baja de una torre con cuarenta minutos. Contestarla
+      es más útil que cualquier foto de la barra.</p>
+      <div class="franjas" data-ejemplo>
+        <div class="franja"><b>13:00</b><span class="barra"><i style="width:25%"></i></span><span class="et">Vacío</span></div>
+        <div class="franja"><b>13:45</b><span class="barra"><i style="width:60%"></i></span><span class="et">Se llena</span></div>
+        <div class="franja"><b>14:15</b><span class="barra"><i style="width:100%"></i></span><span class="et">Lleno · reserva</span></div>
+        <div class="franja"><b>15:00</b><span class="barra"><i style="width:45%"></i></span><span class="et">Vuelve a haber</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. para la oficina ===== -->
+<section class="u-seccion" id="oficina">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;margin-bottom:var(--s-4);">Lo que pide la gente de las torres.</h2>
+    <div class="u-grid u-2" data-ejemplo>
+      <div class="tarj">
+        <b>Mesa para el equipo</b>
+        <p>De seis a veinte, avisando por la mañana. Se aparta la sala del
+        fondo y se come lo mismo que todos.</p>
+      </div>
+      <div class="tarj">
+        <b>Comida para llevar arriba</b>
+        <p>El mismo menú, en fiambrera, listo a la hora que digas. Se baja, se
+        recoge y se sube.</p>
+      </div>
+      <div class="tarj">
+        <b>Desayuno de reunión</b>
+        <p>Bandeja de tostadas y café para la sala de juntas, encargada el día
+        antes.</p>
+      </div>
+      <div class="tarj">
+        <b>Cuenta de empresa</b>
+        <p>Se apunta y se paga una vez al mes, con su factura. Sin sacar la
+        tarjeta cada día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>En la Castellana,<br>a pie de torre.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Castillejos · Tetuán · 28046 Madrid. A un paso del metro de Cuzco.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34654597652?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20SIGMA."
+           target="_blank" rel="noopener" data-real>Reservar por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34654597652" data-real>654 59 76 52</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/SIGMA/data=!4m7!3m6!1s0xd42296cee484a57:0xf1c3c09eeadec0!8m2!3d40.4581283!4d-3.6907625"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--tinta-2);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>07:30 – 23:00</td></tr>
+        <tr><th>Martes</th><td>07:30 – 23:00</td></tr>
+        <tr><th>Miércoles</th><td>07:30 – 23:00</td></tr>
+        <tr><th>Jueves</th><td>07:30 – 23:00</td></tr>
+        <tr><th>Viernes</th><td>07:30 – 00:30</td></tr>
+        <tr><th>Sábado</th><td>09:00 – 16:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Aquí irían las suyas.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Bajo a las ocho, me lo tienen puesto antes de llegar a la
+        barra.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«El arroz de los jueves es la razón por la que en mi planta
+        nadie hace reuniones a las dos.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Reservé para catorce con un WhatsApp por la mañana y no
+        hubo ni una pega.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota al dueño ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta, y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">De SIGMA no hay nada publicado en internet
+      fuera de su ficha de Google, así que la página está escrita sobre una
+      suposición: un bar de barrio en zona de oficinas. Si la suposición falla,
+      se tira y se hace otra. Lo que sí es suyo: el nombre, la calle y el
+      teléfono. Todo lo demás está inventado y marcado — pulse el botón amarillo
+      de arriba y se ve.</p>
+      <ul>
+        <li><b>Falta lo suyo:</b> su carta de verdad, su horario, sus precios y
+        sus fotos. Con eso la página cambia de arriba abajo.</li>
+        <li><b>El portal:</b> las coordenadas caen en el número 123, pero no lo
+        he podido confirmar en otra fuente y prefiero no ponerlo.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado el número de opiniones,
+        y una nota sin recuento la penaliza Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del bar.</b> Es una propuesta sin relación
+      con el negocio ni con sus titulares. El nombre, la calle y el teléfono
+      salen de fichas públicas. La carta, los precios, el horario, las horas de
+      afluencia, los servicios y las opiniones están inventados y marcados.</p>
+      <p><b>No hay ninguna fotografía en esta página.</b> Los tres dibujos están
+      hechos a mano para esta propuesta: no son de banco de imágenes ni
+      recortados de la ficha de Google, porque esas son de quien las hizo. No se
+      recoge ningún dato: los botones abren su propio teléfono o WhatsApp. Si el
+      titular quiere que esto desaparezca, escribe y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34654597652?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20SIGMA." target="_blank" rel="noopener">Reservar</a>
+  <a href="https://www.google.com/maps/place/SIGMA/data=!4m7!3m6!1s0xd42296cee484a57:0xf1c3c09eeadec0!8m2!3d40.4581283!4d-3.6907625" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarOrPub",
+  "name":"SIGMA",
+  "description":"Bar en el Paseo de la Castellana, Cuzco, Madrid. Café, menú del día y cañas.",
+  "telephone":"+34654597652",
+  "servesCuisine":"Española",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4581283,"longitude":-3.6907625},
+  "openingHours":["Mo-Th 07:30-23:00","Fr 07:30-00:30","Sa 09:00-16:00"],
+  "url":"https://nachoie123.github.io/webdemos/sigma/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

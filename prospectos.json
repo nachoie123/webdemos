@@ -10,9 +10,10 @@
     "web_actual": null,
     "gancho": "Solo ficha de Google; landing simple con carta de cócteles y ubicación.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/sigma/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web y sin NADA publicado fuera de la ficha: el prospecto con menos informacion del proyecto. Portal 123 solo por Nominatim (una fuente), no se pone. Ver datos/sigma.md"
   },
   {
     "slug": "bar-de-palmero",

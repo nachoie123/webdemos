@@ -81,3 +81,31 @@ en una conversación, porque le pide algo concreto y barato:
 
 **Por qué funciona:** pedir fotos no compromete a nada y es lo único que el dueño
 puede dar en treinta segundos desde el móvil. El que manda fotos ya está dentro.
+
+---
+
+## Añadido el 21/09/2026 — decir que es una maqueta
+
+Nacho: «indica en el mensaje que esto es simplemente una demo y que faltaría
+por personalizar muchísimo».
+
+**Obligatorio en todos los mensajes a partir de ahora**, y va *antes* de vender
+nada, no escondido al final:
+
+> Se la mando con una advertencia por delante: es una MAQUETA, no una web
+> terminada. Le falta todo lo suyo: su carta de verdad, sus precios, su horario
+> y sus fotos. Con su material la página cambia de arriba abajo.
+
+Por qué funciona y no resta:
+
+- **Quita la objeción antes de que la piense.** Si el dueño descubre solo que
+  los precios están inventados, el mensaje parece un truco. Si se lo dices tú
+  primero, parece honestidad.
+- **Convierte la petición de material en algo natural.** «Falta lo suyo» lleva
+  directo a «mándeme la carta y cuatro fotos».
+- **Y deja hueco para la comparación:** shenxien.es se cita como *web acabada*,
+  frente a la maqueta. «Esa es la diferencia, y se ve en las fotos.»
+
+La petición de fotos va **con la lista nombrada una a una** (la barra, el
+comedor, el menú, dos platos). «Mándame fotos» no lo hace nadie; «mándame estas
+cinco» sí.

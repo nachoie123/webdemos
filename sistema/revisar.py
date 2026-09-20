@@ -120,6 +120,36 @@ def audita(p):
         "El JSON-LD declara aggregateRating sin reviewCount. Google penaliza una "
         "nota sin numero de resenas: o van las dos, o no va ninguna.")
 
+    # --- dibujo propio: anadido 21/09/2026 ---
+    # Nacho: «se ven muy genericas y muy AI». La causa era que la pagina es un
+    # muro de texto. No se pueden usar fotos (el copyright es de quien las
+    # hizo), asi que cada demo lleva al menos un dibujo hecho a mano en SVG
+    # PARA ESE NEGOCIO. Un dibujo no es clipart: si sirve para otra demo, no
+    # vale.
+    cuerpo_svg = re.findall(r"<svg[^>]*viewbox", cuerpo)
+    chk(len(cuerpo_svg) >= 1, f"{len(cuerpo_svg)} dibujo(s) propio(s)",
+        "No hay ni un dibujo. Sin fotos y sin dibujo, la pagina es un muro de "
+        "texto y se parece a todas las demas. Un <svg> con viewBox dentro del "
+        "<body>, dibujado para ESTE negocio.")
+
+    # --- sermon: anadido 21/09/2026 ---
+    # Decirle al dueno «esto es de ejemplo, dime el tuyo» despues de CADA
+    # seccion es lo que hacia que las 13 primeras demos se parecieran entre si.
+    # Marcar con data-ejemplo es gratis y no molesta; escribirlo en prosa, si.
+    # Va una vez, junta, y no mas.
+    sermon = len(re.findall(r"de ejemplo", re.sub(r"<[^>]+>", " ", cuerpo)))
+    chk(sermon <= 4, f"{sermon} notas de ejemplo en prosa",
+        f"Dices «de ejemplo» {sermon} veces en el texto. Por encima de 4 la "
+        "pagina deja de ser la web del negocio y pasa a ser un correo dirigido "
+        "al dueno. Junta todas las salvedades en un sitio.")
+
+    # --- parrafos de ladrillo ---
+    largos = [t for t in re.findall(r"<p[^>]*>(.*?)</p>", cuerpo, re.S)
+              if len(re.sub(r"<[^>]+>", "", t)) > 430]
+    chk(not largos, "parrafos legibles",
+        f"Hay {len(largos)} parrafo(s) de mas de 430 caracteres. Se leen en "
+        "diagonal, o sea que no se leen.", dur=False)
+
     # --- peso ---
     kb = len(h.encode()) / 1024
     chk(kb < 120, f"{kb:.0f} KB", f"Pesa {kb:.0f} KB. El argumento es que carga al instante.", dur=False)
