@@ -40,8 +40,13 @@
     "web_actual": null,
     "gancho": "Tiene conciertos pero no web; landing con agenda de eventos y reserva de mesa.",
     "email": null,
-    "demo": null,
-    "enviado": null,
+    "demo": "https://nachoie123.github.io/webdemos/kmaspues/",
+    "enviado": {
+      "canal": "whatsapp",
+      "fecha": "2026-09-20",
+      "numero": "671595993",
+      "adjunto": "out/kmaspues-mockup.png"
+    },
     "respuesta": null
   },
   {
