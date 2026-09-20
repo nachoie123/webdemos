@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,50,1&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Karla:wght@400;500;700&display=swap">
 <style>
 /* ============================================================
    base.css — esqueleto de las demos de webdemos
@@ -185,7 +185,7 @@ p{margin:0 0 var(--s-2);}
 
 /* ---------- identidad: SOLO esta demo ---------- */
 :root{
-  --fondo:#f7f4ed; --fondo-2:#e9e3d6; --tinta:#10201a; --tinta-2:#5a6b61;
+  --fondo:#f7f4ed; --fondo-2:#e9e3d6; --tinta:#0d1a14; --tinta-2:#5a6b61;
   --acento:#2f6a4c; --acento-tinta:#f7f4ed; --linea:#d2cbba;
   --brasa:#c9611d;
   --display:'Fraunces', Georgia, serif;
@@ -199,7 +199,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
 .u-cita{border-radius:26px;}
 
 /* barra de demo (obligatoria) */
-.demobar{position:sticky;top:0;z-index:80;background:#f0b429;color:#1a1207;
+.demobar{position:sticky;top:0;z-index:90;background:#f0b429;color:#1a1207;
   font-size:12.5px;line-height:1.4;}
 .demobar .u-wrap{display:flex;gap:14px;align-items:center;justify-content:space-between;
   padding-block:9px;flex-wrap:wrap;}
@@ -211,76 +211,82 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
 [data-marcas="on"] [data-ejemplo]::before{content:"de ejemplo";position:absolute;
   top:-10px;left:0;background:var(--brasa);color:#fff;font-family:var(--texto);
   font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;z-index:5;}
-[data-marcas="on"] [data-real]{outline:2px solid var(--acento);outline-offset:6px;position:relative;}
+[data-marcas="on"] [data-real]{outline:2px solid #4c9c72;outline-offset:6px;position:relative;}
 [data-marcas="on"] [data-real]::before{content:"dato real suyo";position:absolute;
-  top:-10px;left:0;background:var(--acento);color:#fff;font-family:var(--texto);
+  top:-10px;left:0;background:#4c9c72;color:#06180f;font-family:var(--texto);
   font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;z-index:5;}
 
-/* cabecera */
-.cab{position:relative;z-index:30;background:var(--fondo);
-  border-bottom:1px solid var(--linea);}
+/* ---------- 1. cabecera pegajosa, encima del hero ---------- */
+.cab{position:sticky;top:34px;z-index:60;background:rgba(13,26,20,.82);
+  backdrop-filter:blur(9px);color:var(--fondo);border-bottom:1px solid rgba(247,244,237,.14);}
 .cab .u-wrap{display:flex;align-items:center;justify-content:space-between;
-  gap:20px;padding-block:14px;flex-wrap:wrap;}
-.marca{font-family:var(--display);font-size:1.3rem;letter-spacing:-.01em;
-  text-decoration:none;color:var(--tinta);}
-.marca i{font-style:normal;color:var(--brasa);}
+  gap:20px;padding-block:13px;flex-wrap:wrap;}
+.marca{text-decoration:none;color:inherit;line-height:1.05;}
+.marca b{display:block;font-family:var(--display);font-weight:400;font-size:1.22rem;}
+.marca span{display:block;font-size:10px;letter-spacing:.26em;text-transform:uppercase;
+  color:#9db8aa;margin-top:3px;}
+.cab .u-nav a{opacity:.82;letter-spacing:.14em;}
+.cab .u-nav a:hover{opacity:1;}
 .tel-cab{font-size:var(--t-s);text-decoration:none;background:var(--acento);
-  color:var(--acento-tinta);border-radius:999px;padding:.6em 1.15em;white-space:nowrap;}
+  color:#fff;border-radius:999px;padding:.6em 1.15em;white-space:nowrap;}
+@media(max-width:860px){.cab .u-nav{display:none;}}
 
-/* hero: claro, asimetrico, la nota de Google pegada a la promesa */
-.hero{background:var(--fondo);position:relative;overflow:hidden;
-  padding-block:clamp(3.5rem,9vw,7rem) clamp(2.5rem,5vw,4.5rem);}
-.hero::after{content:"";position:absolute;left:-18vw;bottom:-30vw;
-  width:56vw;height:56vw;border-radius:50%;background:var(--fondo-2);
-  opacity:.75;pointer-events:none;}
-.hero .u-wrap{position:relative;z-index:2;}
-.hero .u-desigual-inv{align-items:end;gap:var(--s-5);}
-.hero h1{font-size:var(--t-2xl);max-width:16ch;line-height:1.02;}
-.hero h1 em{font-style:italic;color:var(--brasa);}
-.hero .sub{font-size:var(--t-l);color:var(--tinta-2);max-width:30ch;
-  margin-top:var(--s-3);line-height:1.35;}
-.hero .botones{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--s-4);}
-.nota{background:var(--acento);color:var(--acento-tinta);border-radius:30px;
-  padding:var(--s-4);text-align:center;}
-.nota b{display:block;font-family:var(--display);font-size:clamp(3rem,7vw,4.6rem);
-  line-height:.9;}
-.nota .estrellas{font-size:1.1rem;letter-spacing:.35em;opacity:.85;margin-top:.5em;}
-.nota span{display:block;font-size:var(--t-xs);letter-spacing:.18em;
-  text-transform:uppercase;opacity:.8;margin-top:1em;}
+/* ---------- 2. hero a pantalla completa ---------- */
+.hero{background:var(--tinta);color:var(--fondo);margin-top:-72px;}
+.hero .u-hero__fondo{background:
+  radial-gradient(70% 55% at 22% 18%, #1e4030 0%, transparent 62%),
+  radial-gradient(60% 50% at 82% 82%, #37231a 0%, transparent 60%),
+  linear-gradient(160deg, #10241b 0%, #0a1510 58%, #0d1a14 100%);}
+.hero .u-hero__velo{background:
+  repeating-linear-gradient(90deg, rgba(247,244,237,.035) 0 1px, transparent 1px 78px),
+  linear-gradient(to bottom, rgba(5,12,9,.45), rgba(5,12,9,.15) 45%, rgba(5,12,9,.7));}
+.hero h1{font-size:clamp(3.1rem,11.5vw,8.4rem);font-weight:300;line-height:.94;}
+.hero h1 em{font-style:italic;color:#e5a06a;}
+.hero .bajo{font-size:var(--t-m);color:#c6d3ca;margin-top:var(--s-4);
+  letter-spacing:.04em;}
+.hero .botones{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
+  margin-top:var(--s-4);}
+.hero .u-btn--linea{color:var(--fondo);}
+.u-descubrir{color:#c6d3ca;}
 
-/* tira de datos */
-.tira{background:var(--tinta);color:#e4ded0;}
-.tira .u-tira{border:0;padding-block:var(--s-3);}
-.tira a{color:#e4ded0;}
-.tira b{color:#fff;font-weight:500;}
+/* ---------- 3. tira de datos ---------- */
+.tira{background:var(--fondo-2);}
+.tira .u-tira{border:0;padding-block:var(--s-3);color:var(--tinta-2);}
+.tira b{color:var(--tinta);font-weight:500;}
+.tira a{color:var(--acento);}
 
-/* cifras */
-.cifras{background:var(--fondo-2);}
-.u-cifras b{color:var(--acento);}
-.u-cifras span{color:var(--tinta-2);}
+/* ---------- 4. el concepto ---------- */
+.concepto h2{font-size:var(--t-xl);max-width:13ch;line-height:1.04;}
 
-/* banda de dia de partido, a sangre */
-.partido{background:var(--tinta);color:#e4ded0;}
-.partido .u-partida{min-height:min(58svh,480px);}
-.partido .txt{padding:var(--s-6) clamp(20px,5vw,64px);}
-.partido h2{color:var(--fondo);}
-.partido .gran{display:flex;align-items:center;justify-content:center;text-align:center;
-  padding:var(--s-6) clamp(20px,4vw,48px);min-height:300px;
-  background:var(--acento);color:#0c1b14;
-  font-family:var(--display);font-style:italic;line-height:.95;
-  font-size:clamp(2.4rem,6vw,4.4rem);}
+/* ---------- 5. cifras ---------- */
+.cifras{background:var(--tinta);color:var(--fondo);}
+.cifras .u-cifras b{color:#e5a06a;}
+.cifras .u-cifras span{color:#9db8aa;}
 
-/* lo que repiten las resenas */
-.repiten{background:var(--fondo);}
-.u-cita blockquote{font-style:italic;}
+/* ---------- 6. la cita suelta ---------- */
+.suelta{background:var(--acento);color:#eef6f1;}
+.suelta blockquote{font-family:var(--display);font-style:italic;font-weight:300;
+  font-size:clamp(1.7rem,4.4vw,3.2rem);line-height:1.18;margin:0;max-width:22ch;}
+.suelta cite{display:block;font-style:normal;font-size:var(--t-xs);letter-spacing:.2em;
+  text-transform:uppercase;opacity:.8;margin-top:var(--s-4);}
 
-/* la carta */
+/* ---------- 8. la carta ---------- */
 .carta{background:var(--fondo-2);}
 .carta .u-precios li{border-bottom:1px solid var(--linea);padding-block:var(--s-3);}
-.carta .u-pestanas button{color:var(--tinta-2);}
 .panel[hidden]{display:none;}
 
-/* pedido */
+/* ---------- 9. opiniones ---------- */
+.u-cita blockquote{font-style:italic;}
+
+/* ---------- 10. encuéntranos ---------- */
+.fila{display:flex;justify-content:space-between;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.fila dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);}
+.fila dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- 11. pedido ---------- */
+.pedido{background:var(--fondo-2);}
 .campo{display:block;margin-bottom:var(--s-3);}
 .campo span{display:block;font-size:var(--t-xs);letter-spacing:.14em;
   text-transform:uppercase;color:var(--tinta-2);margin-bottom:6px;}
@@ -289,24 +295,17 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
   color:var(--tinta);border-radius:16px;}
 .campo textarea{min-height:84px;resize:vertical;}
 #resumen{display:none;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;
-  font-size:14px;background:var(--tinta);color:#e4ded0;border-radius:20px;
+  font-size:14px;background:var(--tinta);color:#dfe8e2;border-radius:20px;
   padding:var(--s-3);margin-top:var(--s-3);}
 #resumen.visible{display:block;}
 #acciones{display:none;gap:12px;flex-wrap:wrap;margin-top:var(--s-3);}
 
-/* encuentranos */
-.fila{display:flex;justify-content:space-between;gap:var(--s-2);
-  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
-.fila dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
-  color:var(--tinta-2);}
-.fila dd{margin:0;font-size:var(--t-m);}
-
-/* pie */
-.pie{background:var(--tinta);color:#c4bfb2;font-size:var(--t-s);}
-.pie a{color:var(--brasa);}
+/* ---------- pie ---------- */
+.pie{background:var(--tinta);color:#b9c4bd;font-size:var(--t-s);}
+.pie a{color:#e5a06a;}
 .pie h3{color:var(--fondo);margin-bottom:var(--s-2);}
 
-/* barra movil */
+/* ---------- barra movil ---------- */
 .u-movil a:first-child{background:var(--acento);color:#fff;}
 .u-movil a:last-child{background:var(--brasa);color:#fff;}
 </style>
@@ -321,160 +320,120 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
   </div>
 </div>
 
+<!-- ===== 1. cabecera ===== -->
 <header class="cab">
   <div class="u-wrap">
-    <a class="marca" href="#">Callejón <i>del Bernabéu</i></a>
+    <a class="marca" href="#"><b>Callejón del Bernabéu</b><span data-real>Cafetería · Madrid</span></a>
     <nav class="u-nav" aria-label="Principal">
-      <a href="#partido">Día de partido</a>
-      <a href="#carta">La carta</a>
-      <a href="#pedido">Para llevar</a>
-      <a href="#visita">Dónde estamos</a>
+      <a href="#concepto">Nosotros</a>
+      <a href="#carta">Carta</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#pedido">Pedir</a>
     </nav>
     <a class="tel-cab" href="tel:+34636411817" data-real>636 41 18 17</a>
   </div>
 </header>
 
-<!-- ===== hero: promesa + prueba ===== -->
-<section class="hero u-sangrado">
-  <div class="u-wrap u-grid u-desigual-inv">
-    <div>
-      <span class="u-ceja" data-real>Cafetería · Travesía del Doctor Fleming 15 · Chamartín</span>
-      <h1>El callejón donde desayuna el <em>barrio</em>, no el estadio.</h1>
-      <p class="sub">A dos minutos del Santiago Bernabéu. Y a ninguno de casa.</p>
+<!-- ===== 2. hero a pantalla completa ===== -->
+<section class="hero u-hero u-hero--pleno u-sangrado">
+  <div class="u-hero__fondo" aria-hidden="true"></div>
+  <div class="u-hero__velo" aria-hidden="true"></div>
+  <div class="u-hero__txt">
+    <div class="u-wrap">
+      <span class="u-ceja" data-real>Cafetería · Desayunos · Chamartín</span>
+      <h1>Callejón<br><em>del Bernabéu</em></h1>
+      <p class="bajo" data-real>Travesía del Doctor Fleming, 15 · a dos minutos del estadio · 4,8 en Google</p>
       <div class="botones">
-        <a class="u-btn" href="tel:+34636411817">Llamar · 636 41 18 17</a>
+        <a class="u-btn" href="#pedido">Pedir para llevar</a>
         <a class="u-btn u-btn--linea" href="#carta">Ver la carta</a>
       </div>
     </div>
-    <div class="nota" data-real>
-      <b>4,8</b>
-      <div class="estrellas" aria-hidden="true">★★★★★</div>
-      <span>Valoración en Google</span>
-    </div>
   </div>
+  <a class="u-descubrir" href="#concepto">Bajar</a>
 </section>
 
-<!-- ===== tira de datos ===== -->
+<!-- ===== 3. tira de datos ===== -->
 <section class="tira u-sangrado">
   <div class="u-wrap u-tira">
     <span data-real><b>Travesía del Doctor Fleming, 15</b></span>
     <span data-real>Chamartín · 28036 Madrid</span>
-    <span data-ejemplo><b>Desde las 7:30</b> de la mañana</span>
+    <span data-ejemplo><b>7:30 – 17:00</b> de lunes a viernes</span>
+    <span data-real><b>4,8</b> en Google</span>
     <a href="tel:+34636411817" data-real><b>636 41 18 17</b></a>
   </div>
 </section>
 
-<!-- ===== el concepto ===== -->
-<section class="u-seccion" id="concepto">
+<!-- ===== 4. el concepto ===== -->
+<section class="concepto u-seccion" id="concepto">
   <div class="u-wrap u-grid u-desigual">
     <div>
-      <span class="u-ceja">La casa</span>
-      <h2>Café de barrio.<br>Con estadio al lado.</h2>
+      <span class="u-ceja">El concepto</span>
+      <h2>Ochenta mil pasan.<br>Aquí entra el barrio.</h2>
     </div>
     <div class="u-medida">
       <p style="font-size:var(--t-l);line-height:1.45;">
         Travesía del Doctor Fleming es una calle corta, de esas que la gente cruza
-        sin mirar. El Bernabéu está a la vuelta: ochenta mil personas pasan por
-        aquí los días de partido y ninguna sabe que existe esta puerta.
+        sin mirar. El Bernabéu está a la vuelta de la esquina: los días de partido
+        pasan por aquí ochenta mil personas y casi ninguna sabe que existe esta
+        puerta.
       </p>
       <p style="color:var(--tinta-2);">
-        El resto de la semana el sitio es otra cosa: oficinas de Fleming, vecinos
-        de Hispanoamérica, gente que viene con el portátil y se queda dos horas.
-        Es un café de los de todos los días, que además tiene el estadio enfrente.
+        El resto de la semana el sitio es otra cosa. Oficinas de Fleming, vecinos
+        de Hispanoamérica, gente que llega con el portátil a las nueve y se queda
+        hasta las once. Un café de todos los días que además tiene un estadio
+        enfrente.
       </p>
       <p style="color:var(--tinta-2);">
-        Esta página está para las dos cosas: para el que busca «desayunar cerca del
-        Bernabéu» a las ocho de la mañana, y para el que ya viene y quiere pedir
-        para llevar sin hacer cola.
+        Esta página está para las dos cosas: para el que busca en el móvil
+        «desayunar cerca del Bernabéu» y no encuentra nada, y para el habitual que
+        quiere pedir para llevar sin hacer cola.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ===== cifras ===== -->
+<!-- ===== 5. cifras ===== -->
 <section class="cifras u-seccion--apretada u-sangrado">
   <div class="u-wrap u-grid u-4 u-cifras">
     <div data-real><b>4,8</b><span>sobre 5 en Google</span></div>
     <div data-real><b>2 min</b><span>andando al Bernabéu</span></div>
-    <div data-ejemplo><b>7:30</b><span>abrimos entre semana</span></div>
     <div data-real><b>5 min</b><span>del metro Santiago Bernabéu</span></div>
+    <div data-ejemplo><b>7:30</b><span>abrimos entre semana</span></div>
   </div>
 </section>
 
-<!-- ===== día de partido: el detalle que solo puede decir este sitio ===== -->
-<section class="partido u-sangrado" id="partido">
-  <div class="u-grid u-partida">
-    <div class="txt">
-      <span class="u-ceja">Día de partido</span>
-      <h2>Los días que el barrio<br>se llena, aquí se cabe.</h2>
-      <p class="u-medida" style="margin-top:var(--s-3);">
-        Dos horas antes del pitido, las terrazas de Concha Espina no tienen un
-        hueco y los bares de Padre Damián cobran la caña a precio de estadio.
-        Esto es un callejón: está a la misma distancia y no se entera.
-      </p>
-      <p class="u-medida" style="opacity:.8;font-size:var(--t-s);">
-        En esta página iría, cada semana, el horario del día de partido. Una línea
-        que se cambia en diez segundos y que es exactamente lo que la gente busca
-        en el móvil de camino al estadio.
-      </p>
-      <p style="margin-top:var(--s-4);">
-        <a class="u-btn" href="#pedido">Pedir para llevar</a>
-      </p>
-    </div>
-    <div class="gran" aria-hidden="true">A dos<br>minutos<br>del pitido</div>
+<!-- ===== 6. una reseña suelta, grande ===== -->
+<section class="suelta u-seccion u-sangrado">
+  <div class="u-wrap" data-real>
+    <blockquote>El croissant con huevo y aguacate, con un zumo recién exprimido.</blockquote>
+    <cite>Lo que más se repite en sus reseñas</cite>
   </div>
 </section>
 
-<!-- ===== lo que repiten sus reseñas ===== -->
-<section class="repiten u-seccion" id="resenas">
-  <div class="u-wrap">
-    <span class="u-ceja">Lo que dicen</span>
-    <h2 style="max-width:18ch;margin-bottom:var(--s-4);">Tres cosas se repiten en sus reseñas.</h2>
-    <div class="u-grid u-3" data-real>
-      <div class="u-cita">
-        <blockquote>El croissant con huevo y aguacate, con un zumo recién exprimido.</blockquote>
-        <cite>Lo más nombrado de la carta</cite>
-      </div>
-      <div class="u-cita">
-        <blockquote>Limpio, y te atienden rápido sin que parezca que tienen prisa.</blockquote>
-        <cite>Servicio y limpieza</cite>
-      </div>
-      <div class="u-cita">
-        <blockquote>Se está a gusto: vale igual para un desayuno rápido que para quedarse a estudiar.</blockquote>
-        <cite>El ambiente</cite>
-      </div>
-    </div>
-    <p style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
-      Resumido de lo que ya escriben sus clientes en directorios públicos. Con la
-      ficha de Google conectada, aquí saldrían las reseñas de verdad, con nombre
-      y fecha, actualizándose solas.
-    </p>
-  </div>
-</section>
-
-<!-- ===== lo que nos diferencia ===== -->
+<!-- ===== 7. lo que nos diferencia ===== -->
 <section class="u-seccion" id="diferencia">
   <div class="u-wrap">
-    <span class="u-ceja">Por qué aquí</span>
+    <span class="u-ceja">Lo que nos diferencia</span>
     <h2 style="max-width:16ch;margin-bottom:var(--s-4);">Tres motivos y ninguno es el precio.</h2>
     <div class="u-grid u-3 u-numerada" data-ejemplo>
       <div>
         <h3>Desayuno hecho al momento</h3>
-        <p style="color:var(--tinta-2);">Nada de bandeja con el bollo de ayer. El huevo se hace cuando lo pide.</p>
+        <p style="color:var(--tinta-2);">Nada de bandeja con el bollo de ayer. El huevo se hace cuando usted lo pide.</p>
       </div>
       <div>
         <h3>Sitio para quedarse</h3>
-        <p style="color:var(--tinta-2);">Mesa, enchufe y nadie mirando el reloj. El café de la segunda taza cuesta menos.</p>
+        <p style="color:var(--tinta-2);">Mesa, enchufe y nadie mirando el reloj. La segunda taza de café cuesta menos.</p>
       </div>
       <div>
-        <h3>Para llevar sin cola</h3>
-        <p style="color:var(--tinta-2);">Se pide desde el móvil y se recoge en la barra. Día de partido incluido.</p>
+        <h3>Día de partido sin cola</h3>
+        <p style="color:var(--tinta-2);">Se pide desde el móvil y se recoge en barra. Las dos horas antes del pitido son las buenas.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== la carta ===== -->
+<!-- ===== 8. la carta ===== -->
 <section class="carta u-seccion u-sangrado" id="carta">
   <div class="u-wrap u-grid u-desigual">
     <div>
@@ -482,8 +441,8 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
       <h2>Escrita aquí,<br>no en un PDF.</h2>
       <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
         Una carta en PDF no la lee Google ni se lee bien en el móvil. Escrita en la
-        página se busca, se actualiza en un minuto y sale en los resultados cuando
-        alguien pone «tostada de aguacate cerca del Bernabéu».
+        página se busca, se actualiza en un minuto y aparece en los resultados
+        cuando alguien pone «tostada de aguacate cerca del Bernabéu».
       </p>
     </div>
     <div data-ejemplo>
@@ -519,20 +478,90 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
         <li><span class="n">Tarta de queso</span><span class="d">Por porciones, mientras quede.</span><span class="p">4,40 €</span></li>
         <li><span class="n">Palmera</span><span class="d">De las grandes.</span><span class="p">2,30 €</span></li>
       </ul>
+      <p style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
+        Carta y precios de ejemplo. Con la suya de verdad, esta sección se rellena
+        en una tarde y se cambia desde el móvil.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===== pedido para llevar ===== -->
-<section class="u-seccion" id="pedido">
+<!-- ===== 9. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap">
+    <span class="u-ceja">Opiniones</span>
+    <h2 style="max-width:18ch;margin-bottom:var(--s-4);">4,8 en Google. Tres cosas se repiten.</h2>
+    <div class="u-grid u-3" data-real>
+      <div class="u-cita">
+        <blockquote>El croissant con huevo y aguacate, con un zumo recién exprimido.</blockquote>
+        <cite>Lo más nombrado de la carta</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>Limpio, y atienden rápido sin que parezca que tienen prisa.</blockquote>
+        <cite>Servicio y limpieza</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>Se está a gusto: vale igual para un desayuno rápido que para quedarse a estudiar.</blockquote>
+        <cite>El ambiente</cite>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
+      Resumido de lo que ya escriben sus clientes en directorios públicos. No he
+      inventado ninguna reseña ni le he puesto nombre a nadie: con su ficha de
+      Google conectada, aquí saldrían las de verdad, con nombre y fecha,
+      actualizándose solas.
+    </p>
+  </div>
+</section>
+
+<!-- ===== 10. encuéntranos ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="ubicacion">
+  <div class="u-wrap u-grid u-desigual">
+    <div>
+      <span class="u-ceja">Encuéntranos</span>
+      <h2>Travesía del<br>Doctor Fleming, 15</h2>
+      <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
+        Chamartín, 28036 Madrid. Entre Doctor Fleming y Padre Damián, a dos minutos
+        andando de la esquina del Bernabéu. Metro Santiago Bernabéu y Cuzco, los dos
+        a cinco minutos.
+      </p>
+      <p style="margin-top:var(--s-3);display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34636411817">Llamar · 636 41 18 17</a>
+        <a class="u-btn u-btn--linea" href="https://www.google.com/maps/place/Callej%C3%B3n+del+Bernab%C3%A9u/data=!4m7!3m6!1s0xd42297fb21371fd:0x2cb6076d092da372!8m2!3d40.455584!4d-3.6875616!16s%2Fg%2F11mtfnp0v0" target="_blank" rel="noopener">Cómo llegar</a>
+      </p>
+    </div>
+    <div data-ejemplo>
+      <dl style="margin:0;">
+        <div class="fila"><dt>Lunes</dt><dd>07:30 – 17:00</dd></div>
+        <div class="fila"><dt>Martes</dt><dd>07:30 – 17:00</dd></div>
+        <div class="fila"><dt>Miércoles</dt><dd>07:30 – 17:00</dd></div>
+        <div class="fila"><dt>Jueves</dt><dd>07:30 – 17:00</dd></div>
+        <div class="fila"><dt>Viernes</dt><dd>07:30 – 17:00</dd></div>
+        <div class="fila"><dt>Sábado</dt><dd>08:30 – 17:00</dd></div>
+        <div class="fila"><dt>Domingo</dt><dd>09:00 – 15:00</dd></div>
+      </dl>
+      <p class="u-medida" style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
+        Este horario es inventado: en su ficha de Google no aparece escrito y no me
+        lo he querido sacar de la manga sin preguntar. Dígame el suyo y se corrige
+        en un minuto.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. pedido ===== -->
+<section class="pedido u-seccion u-sangrado" id="pedido">
   <div class="u-wrap u-grid u-desigual-inv">
     <div>
-      <span class="u-ceja">Para llevar</span>
+      <span class="u-ceja">Pedir para llevar</span>
       <h2>Rellene esto y le sale el mensaje escrito.</h2>
       <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
         No manda nada por su cuenta: prepara el texto y usted decide si lo envía por
         WhatsApp, lo copia o llama. El pedido llega con la hora y el nombre, y en
-        barra ya está hecho cuando llega.
+        barra ya está hecho cuando usted llega.
+      </p>
+      <p class="u-medida" style="color:var(--tinta-2);">
+        ¿Prefiere llamar? <a href="tel:+34636411817" style="color:var(--acento);">636 41 18 17</a>.
       </p>
       <div id="resumen" aria-live="polite"></div>
       <div id="acciones">
@@ -547,38 +576,6 @@ h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
       <label class="campo"><span>Qué quiere</span><textarea id="e-pedido" placeholder="Dos cafés con leche y un croissant con huevo y aguacate"></textarea></label>
       <button class="u-btn" type="submit">Preparar el mensaje</button>
     </form>
-  </div>
-</section>
-
-<!-- ===== encuéntranos ===== -->
-<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="visita">
-  <div class="u-wrap u-grid u-desigual">
-    <div>
-      <span class="u-ceja">Dónde estamos</span>
-      <h2>Travesía del<br>Doctor Fleming, 15</h2>
-      <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
-        Chamartín, 28036 Madrid. Entre Doctor Fleming y Padre Damián, a dos minutos
-        andando de la esquina del Bernabéu. Metro Santiago Bernabéu y Cuzco, los dos
-        a cinco minutos.
-      </p>
-      <p style="margin-top:var(--s-3);display:flex;gap:12px;flex-wrap:wrap;">
-        <a class="u-btn" href="tel:+34636411817">Llamar</a>
-        <a class="u-btn u-btn--linea" href="https://www.google.com/maps/place/Callej%C3%B3n+del+Bernab%C3%A9u/data=!4m7!3m6!1s0xd42297fb21371fd:0x2cb6076d092da372!8m2!3d40.455584!4d-3.6875616!16s%2Fg%2F11mtfnp0v0" target="_blank" rel="noopener">Cómo llegar</a>
-      </p>
-    </div>
-    <div data-ejemplo>
-      <dl style="margin:0;">
-        <div class="fila"><dt>Lunes a viernes</dt><dd>07:30 – 17:00</dd></div>
-        <div class="fila"><dt>Sábado</dt><dd>08:30 – 17:00</dd></div>
-        <div class="fila"><dt>Domingo</dt><dd>09:00 – 15:00</dd></div>
-        <div class="fila"><dt>Día de partido</dt><dd>Hasta el descanso</dd></div>
-      </dl>
-      <p class="u-medida" style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
-        Este horario es inventado: en su ficha de Google no aparece escrito y no me
-        lo he querido sacar de la manga sin preguntar. Dígame el suyo y se corrige
-        en un minuto.
-      </p>
-    </div>
   </div>
 </section>
 
