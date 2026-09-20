@@ -45,7 +45,9 @@
       "canal": "whatsapp",
       "fecha": "2026-09-20",
       "numero": "671595993",
-      "adjunto": "out/kmaspues-mockup.png"
+      "adjunto": "out/kmaspues-mockup.png",
+      "nota": "primer envío borrado por Nacho; reenviado con el texto formal",
+      "version": "formal"
     },
     "respuesta": null
   },

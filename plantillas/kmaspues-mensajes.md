@@ -7,6 +7,34 @@
 > plantilla es `generica-mensajes.md`. Lo de abajo se queda como registro de lo
 > que se mandó de verdad, no como modelo a copiar.
 
+## Versión formal (reenvío del 20/09/2026, tras borrar el primero)
+
+```
+Buenos días:
+
+Me llamo Nacho San Benito y soy desarrollador web freelance, aquí en la zona de Cuzco.
+
+Al buscar KMASPUES en internet solo aparece su ficha de Google: quien quiera saber quién toca este viernes antes de acercarse, no lo encuentra.
+
+He preparado una propuesta de página web para KMASPUES, con la agenda de conciertos como parte principal. Está publicada y funcionando, para que pueda verla antes de decidir nada:
+
+https://nachoie123.github.io/webdemos/kmaspues/
+
+Es una propuesta, no su web oficial: las fechas y los precios son de ejemplo y la propia página lleva un botón que señala qué es inventado. La dirección y el teléfono sí son los suyos.
+
+Trabajo por mi cuenta, así que trataría directamente con quien hace la web, sin intermediarios ni cuotas mensuales de agencia. El dominio se compra a su nombre y es suyo desde el primer día.
+
+Verla no compromete a nada. Si le interesa, me acerco un día al local y le preparo un presupuesto cerrado con sus contenidos reales.
+
+¿Le viene bien que le llame esta semana, o prefiere que le escriba a un correo?
+
+Un saludo,
+Nacho San Benito
+Desarrollador web · 682 02 05 47
+```
+
+---
+
 ## Seguimiento, si no contestan en 4-5 días
 
 ```
