@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flores Yohana Alonso · Paseo de la Castellana 133, Plaza de Cuzco, Madrid</title>
+<meta name="description" content="Propuesta de página web para Flores Yohana Alonso, la floristería del Paseo de la Castellana 133, en la Plaza de Cuzco, Madrid. Entrega el mismo día en el barrio.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/flores-yohana-alonso-s-l/">
+<meta name="theme-color" content="#8e1f4f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23eef1f2%27/%3E%3Ccircle cx=%2716%27 cy=%2712%27 r=%277%27 fill=%27%238e1f4f%27/%3E%3Crect x=%2715%27 y=%2716%27 width=%272%27 height=%2712%27 fill=%27%233f5d3a%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/flores-yohana-alonso-s-l/">
+<meta property="og:title" content="Flores Yohana Alonso · Paseo de la Castellana 133, Plaza de Cuzco, Madrid">
+<meta property="og:description" content="Propuesta de página web para Flores Yohana Alonso, la floristería del Paseo de la Castellana 133, en la Plaza de Cuzco, Madrid. Entrega el mismo día en el barrio.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/flores-yohana-alonso-s-l/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Familjen+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Cubo de zinc. El gris frío de los cubos del mercado de flores, frambuesa
+   profunda para lo que hay que pulsar y verde tallo solo en los filetes.
+   Nada de rosa pastel: el pastel es lo que hace que todas las floristerías
+   parezcan la misma plantilla.                                            */
+:root{
+  --fondo:#eef1f2; --fondo-2:#dfe5e7; --tinta:#141b1e; --tinta-2:#59666b;
+  --acento:#8e1f4f; --acento-tinta:#fdf2f6; --linea:#c3ccd0;
+  --tallo:#3f5d3a;
+  --display:'Instrument Serif', Georgia, serif;
+  --texto:'Familjen Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.015em;
+  line-height:1.02;}
+h2{font-size:clamp(2.2rem,5vw,3.8rem);}
+h3{font-size:1.6rem;}
+em.fl{font-style:italic;color:var(--acento);}
+.u-ceja{color:var(--tallo);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(238,241,242,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:400;}
+.marca span{display:block;font-size:.63rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.93rem;
+  white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero h1{font-size:clamp(3rem,8vw,6.5rem);line-height:1;max-width:15ch;
+  margin:.16em 0 .34em;}
+.hero .bajo{max-width:46ch;font-size:1.13rem;color:var(--tinta-2);
+  margin-bottom:var(--s-3);}
+.hero .corte{display:inline-block;margin-bottom:var(--s-3);
+  border-left:3px solid var(--tallo);padding-left:.9rem;font-size:1.02rem;}
+.hero .corte b{color:var(--acento);}
+
+/* tramos de entrega */
+.u-numerada > *{background:var(--fondo);border:1px solid var(--linea);}
+.u-numerada > *::before{color:var(--acento);opacity:1;}
+.tramo b{display:block;font-family:var(--display);font-size:1.75rem;
+  line-height:1.05;margin-bottom:.45rem;}
+.hora{display:inline-block;margin-top:var(--s-2);font-size:.74rem;
+  letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+  background:var(--tallo);color:#f0f4ee;padding:.33rem .8rem;}
+
+/* ocasiones */
+.oca{border-top:2px solid var(--tinta);padding-top:var(--s-2);}
+.oca b{display:block;font-family:var(--display);font-size:1.65rem;
+  line-height:1.05;margin-bottom:.4rem;}
+.oca .dice{color:var(--tinta-2);font-style:italic;}
+
+/* escaparate: marcos VACÍOS, rotulados. Nunca fotos ajenas. */
+.marco{aspect-ratio:4/5;border:1px solid var(--linea);background:var(--fondo-2);
+  display:grid;place-content:center;text-align:center;padding:var(--s-2);
+  position:relative;}
+.marco::after{content:"";position:absolute;inset:10px;border:1px dashed var(--linea);}
+.marco span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:600;color:var(--tinta-2);position:relative;z-index:1;}
+.marco i{display:block;font-family:var(--display);font-style:italic;
+  font-size:1.5rem;color:var(--acento);letter-spacing:0;text-transform:none;
+  margin-bottom:.4rem;}
+
+/* cómo se pide */
+.pide{border-left:3px solid var(--acento);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.pide b{display:block;font-family:var(--display);font-size:1.5rem;
+  margin-bottom:.25rem;}
+
+/* precios */
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);color:var(--acento);}
+.letra-chica{margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.58rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* opiniones */
+.u-cita{border-color:var(--linea);}
+.u-cita blockquote{font-style:italic;}
+.u-cita cite{color:var(--tallo);font-weight:600;}
+
+/* aviso */
+.ojo{background:#fff6e0;border-left:4px solid #c98a12;padding:var(--s-2);
+  font-size:.95rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#9aa8ad;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#e8a9c2;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para Flores Yohana Alonso.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Flores Yohana Alonso</b><span data-real>Plaza de Cuzco · Castellana 133 · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#hoy">¿Llega hoy?</a>
+      <a href="#ocasion">Por ocasión</a>
+      <a href="#pedir">Cómo se pide</a>
+      <a href="#donde">Dónde estamos</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34687429077" data-real>687 42 90 77</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Floristería · Plaza de Cuzco · Paseo de la Castellana 133</span>
+    <h1>Nadie compra flores con tiempo.<br><em class="fl">Se acuerda a las siete.</em></h1>
+    <p class="bajo">Y a las siete lo único que importa es si llega hoy. Estamos
+    en la Plaza de Cuzco, a pie de calle: se puede pasar, llamar o mandar un
+    WhatsApp diciendo para quién es y cuánto quieres gastarte.</p>
+    <p class="corte" data-ejemplo>Si nos lo dices <b>antes de las 17:00</b>,
+    sale hoy en el barrio.</p>
+    <p style="display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a class="u-btn" href="https://wa.me/34687429077?text=Hola%2C%20quer%C3%ADa%20un%20ramo.%20Es%20para%3A"
+         target="_blank" rel="noopener" data-real>Pedir por WhatsApp</a>
+      <a class="u-btn u-btn--linea" href="tel:+34687429077" data-real>Llamar · 687 42 90 77</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana, 133</b></span>
+    <span data-real>En la Plaza de Cuzco · 28046 Madrid</span>
+    <span data-ejemplo>Lunes a sábado 9:00–20:30</span>
+    <a href="tel:+34687429077" data-real><b>687 42 90 77</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. ¿llega hoy? ===== -->
+<section class="u-seccion" id="hoy">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">La única pregunta que importa</span>
+    <h2 style="max-width:18ch;margin:.22em 0 .45em;">¿Llega hoy?</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Ninguna floristería del barrio contesta a esto en ninguna parte, porque
+      ninguna tiene dónde. Y es lo primero que se pregunta quien está mirando el
+      móvil con prisa. Una hora concreta escrita vale más que diez fotos de
+      ramos.</p>
+    <div class="u-grid u-3 u-numerada">
+      <div class="tramo">
+        <b>Para hoy</b>
+        <p data-ejemplo>En Cuzco, Castillejos y alrededor. Se lleva a mano o se
+        deja en la recepción del edificio si no hay nadie.</p>
+        <span class="hora">Avísanos antes de las 17:00</span>
+      </div>
+      <div class="tramo">
+        <b>Para mañana</b>
+        <p data-ejemplo>Con hora elegida: primera hora de la mañana, mediodía o
+        tarde. Se confirma por WhatsApp cuando se entrega.</p>
+        <span class="hora">Hasta las 20:00 del día antes</span>
+      </div>
+      <div class="tramo">
+        <b>Por encargo</b>
+        <p data-ejemplo>Flor concreta, color concreto, o algo grande para una
+        boda, un bautizo o la entrada de una oficina.</p>
+        <span class="hora">Con dos o tres días</span>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Los tramos y las horas son de ejemplo. Dinos los vuestros de
+       verdad y los pongo: la hora de corte es el dato que hace que alguien
+       escriba en vez de seguir buscando.</p>
+  </div>
+</section>
+
+<!-- ===== 5. por ocasión, no por flor ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="ocasion">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;margin-bottom:var(--s-2);">Por ocasión,<br>no por flor.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Nadie busca «ramo de doce rosas». Busca «se me ha olvidado un cumpleaños»
+      o «se ha muerto el padre de un compañero». Rosas, lilium y gerberas es el
+      índice de un mayorista, no la cabeza de quien compra.</p>
+    <div class="u-grid u-2" data-ejemplo>
+      <div class="oca">
+        <b>Un cumpleaños que se te ha pasado</b>
+        <p class="dice">«Es hoy y no tengo nada.»</p>
+        <p>Algo alegre, de color, listo en un rato. Con tarjeta escrita a mano
+        si hace falta, que es lo que la salva.</p>
+      </div>
+      <div class="oca">
+        <b>Un pésame</b>
+        <p class="dice">«Hay que mandar algo al tanatorio antes de las ocho.»</p>
+        <p>Se te dice qué se suele mandar, qué pone la cinta y cuánto tarda.
+        Nadie quiere estar decidiendo esto con prisa.</p>
+      </div>
+      <div class="oca">
+        <b>Una oficina o un hotel</b>
+        <p class="dice">«Flores nuevas cada lunes en la entrada.»</p>
+        <p>Lo mismo cada semana, misma hora, una factura al mes. Es el cliente
+        que no se busca y es el que mejor se queda.</p>
+      </div>
+      <div class="oca">
+        <b>Porque sí</b>
+        <p class="dice">«Quiero llevar algo a casa.»</p>
+        <p>Lo que haya entrado esa mañana, montado en cinco minutos y por lo que
+        quieras gastarte. Sin ocasión ninguna.</p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Las cuatro son de ejemplo. Decidme cuáles son de verdad las
+       que más os piden y las cambio por ésas.</p>
+  </div>
+</section>
+
+<!-- ===== 6. el escaparate: marcos vacíos ===== -->
+<section class="u-seccion" id="escaparate">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-2);">Aquí van vuestras fotos, y solo las vuestras.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      He dejado los marcos vacíos a propósito. Podría haber puesto fotos de
+      banco de imágenes, o recortar las de vuestra ficha de Google, pero esas
+      son de quien las hizo y además se huelen a un metro. Una floristería se
+      vende con su trabajo o no se vende. <b>Mandadme seis fotos hechas con el
+      móvil</b> y esta sección se llena en una tarde.</p>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="marco"><span><i>01</i>Ramo de mano<br>para llevar</span></div>
+      <div class="marco"><span><i>02</i>Centro<br>para una mesa</span></div>
+      <div class="marco"><span><i>03</i>Planta<br>de interior</span></div>
+      <div class="marco"><span><i>04</i>Composición<br>de pésame</span></div>
+      <div class="marco"><span><i>05</i>El escaparate<br>de la tienda</span></div>
+      <div class="marco"><span><i>06</i>Quien atiende,<br>trabajando</span></div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>La sexta es la que más funciona y la que nunca pone nadie:
+       una foto de la persona montando un ramo. Vende más que el ramo acabado.</p>
+  </div>
+</section>
+
+<!-- ===== 7. cómo se pide ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="pedir">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Se pide<br>hablando.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Sin carrito, sin
+      registro y sin crear una cuenta para comprar un ramo. Para veinte pedidos
+      al día una tienda online es un estorbo: el pedido de verdad se hace
+      hablando, y WhatsApp es donde ya está el cliente.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="pide">
+        <b>1. Dices para quién es y cuánto quieres gastarte</b>
+        <p>Con eso basta. No hace falta saber de flores: para eso está quien
+        atiende.</p>
+      </div>
+      <div class="pide">
+        <b>2. Te mandamos una foto antes de cobrar</b>
+        <p>Del ramo montado, hecha con el móvil. Si no te convence, se cambia
+        ahí mismo.</p>
+      </div>
+      <div class="pide">
+        <b>3. Se entrega y te avisamos</b>
+        <p>Con la hora a la que se ha dejado y a quién. Si no había nadie, te lo
+        decimos antes de volver.</p>
+      </div>
+      <p class="letra-chica">Los tres pasos son de ejemplo, pero el del medio no
+      me lo he inventado del aire: mandar la foto antes de cobrar es lo que más
+      tranquiliza a quien compra algo que no ha visto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. precios por tramo ===== -->
+<section class="u-seccion" id="precios">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>Un tramo,<br>aunque no<br>haya precio.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">En flores el precio
+      exacto no existe: depende de lo que haya entrado esa mañana. Pero el tramo
+      sí existe, y es justo lo que no pone ninguna. Quien no encuentra una cifra
+      no llama a preguntar: se va a la que sí la tiene.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Ramo de mano</span><span class="d">Lo que haya entrado esa mañana.</span><span class="p">desde 20 €</span></li>
+        <li><span class="n">Ramo para regalar</span><span class="d">Envuelto, con tarjeta escrita a mano.</span><span class="p">desde 35 €</span></li>
+        <li><span class="n">Centro para mesa</span><span class="d">Bajo, para comer viéndose las caras.</span><span class="p">desde 45 €</span></li>
+        <li><span class="n">Composición de pésame</span><span class="d">Con cinta rotulada.</span><span class="p">desde 60 €</span></li>
+        <li><span class="n">Entrega en el barrio</span><span class="d">Cuzco, Castillejos y alrededor.</span><span class="p">5 €</span></li>
+      </ul>
+      <p class="letra-chica">Precios de ejemplo, puestos para que se vea cómo
+      queda la tabla. Lo que de verdad funciona es la frase de debajo: «dinos tu
+      tope y lo montamos ahí». Decidme los vuestros y los cambio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. dónde estamos ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 data-real>En la Plaza<br>de Cuzco.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Paseo de la Castellana, 133 · 28046 Madrid. En los bajos del hotel AC
+        Cuzco, enfrente de la boca de metro de Cuzco.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34687429077?text=Hola%2C%20quer%C3%ADa%20un%20ramo.%20Es%20para%3A"
+           target="_blank" rel="noopener" data-real>Pedir por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34687429077" data-real>687 42 90 77</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Flores+Yohana+Alonso+S.L./data=!4m7!3m6!1s0xd42291c8405485f:0x4cdd32073c5fa536!8m2!3d40.4587815!4d-3.690837"
+           data-real>Cómo llegar</a>
+      </p>
+      <div class="ojo" style="margin-top:var(--s-3);">
+        <b>Estar en un hotel es lo que más vende y no se lee en ninguna parte.</b>
+        Significa que hay gente pasando por delante todo el día, que se puede
+        entregar en las torres de la Castellana en diez minutos y que estáis
+        abiertos a horas a las que otras ya han cerrado. Eso, escrito, es medio
+        argumento de venta.
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--tallo);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>09:00 – 20:30</td></tr>
+        <tr><th>Martes</th><td>09:00 – 20:30</td></tr>
+        <tr><th>Miércoles</th><td>09:00 – 20:30</td></tr>
+        <tr><th>Jueves</th><td>09:00 – 20:30</td></tr>
+        <tr><th>Viernes</th><td>09:00 – 20:30</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Horario de ejemplo: no está publicado en ningún sitio.
+         Decidme el vuestro y lo pongo aquí y en la ficha que lee Google.</p>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);"
+         data-real>También figura un fijo, el 91 765 05 81. Lo he dejado fuera a
+         propósito: quien compra flores con prisa manda una foto, no llama.
+         Decidme si lo queréis y lo añado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Aquí irían las vuestras.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Estas tres son inventadas y están marcadas como tal. Las pongo solo para
+      que se vea el hueco: cuando queráis, van las de verdad de Google, con su
+      nombre y su fecha. <b>No he puesto vuestra nota</b> porque las fuentes no
+      coinciden y una nota sin el número de opiniones al lado la penaliza
+      Google.</p>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Se lo pedí a las seis y media y estaba en la oficina antes
+        de las ocho. No sé cómo lo hicieron.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Me mandaron la foto del ramo antes de cobrarme. Eso no lo
+        hace nadie.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Entré sin saber qué llevar a un tanatorio y salí en cinco
+        minutos con la cinta escrita.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién os escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si os sirve,
+      hablamos. Si no, la borro y no volvéis a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la floristería.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la dirección y los
+      teléfonos salen de fichas públicas; el horario, los precios, los tramos de
+      entrega, las listas y las tres opiniones son de ejemplo — pulsad «Ver qué
+      es de ejemplo» arriba y se marcan todos.</p>
+      <p><b>No se declara ninguna nota de Google</b>, porque las fuentes
+      consultadas no coinciden y una nota sin recuento verificado no se pone.
+      <b>No hay ni una sola fotografía en esta página</b>: los marcos están
+      vacíos a propósito, para no usar imágenes de banco ni recortar las de la
+      ficha de Google, que son de quien las hizo. No se recoge ningún dato: los
+      botones abren vuestro propio teléfono o WhatsApp. Si los titulares quieren
+      que esto desaparezca, escriben y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34687429077?text=Hola%2C%20quer%C3%ADa%20un%20ramo.%20Es%20para%3A" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/place/Flores+Yohana+Alonso+S.L./data=!4m7!3m6!1s0xd42291c8405485f:0x4cdd32073c5fa536!8m2!3d40.4587815!4d-3.690837" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Florist",
+  "name":"Flores Yohana Alonso S.L.",
+  "description":"Floristería en la Plaza de Cuzco, Paseo de la Castellana 133, Madrid. Entrega el mismo día en el barrio.",
+  "telephone":"+34687429077",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana, 133",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4587815,"longitude":-3.690837},
+  "openingHours":["Mo-Fr 09:00-20:30","Sa 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/flores-yohana-alonso-s-l/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
