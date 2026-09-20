@@ -199,13 +199,14 @@
     "tipo": "Tienda de ropa",
     "telefono": "685721491",
     "maps": "https://www.google.com/maps/place/SLAY/data=!4m7!3m6!1s0xd422945cd2e65bd:0xddcd6cd31c183dd7!8m2!3d40.4592762!4d-3.6891711!16s%2Fg%2F11ms3rvbkn",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "dudoso",
+    "web_actual": "http://slay.es",
     "gancho": "Sin reseñas ni web; landing de presentación con catálogo o Instagram embebido para darle visibilidad.",
     "email": null,
     "demo": null,
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "slay.es responde pero parece dominio aparcado. Mirar antes de nada."
   },
   {
     "slug": "flores-y-plantas-moreno",
@@ -335,13 +336,14 @@
     "tipo": "Podología",
     "telefono": "606344077",
     "maps": "https://www.google.com/maps/place/Podolog%C3%ADa+-+Milagros+Chana+Lopez/data=!4m7!3m6!1s0xd4229194a298bfd:0x5ee5fd979844697d!8m2!3d40.4594895!4d-3.6865587",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "caida",
+    "web_actual": "http://podologiamilagroschana.com/",
     "gancho": "4.5★ y sin web; landing sencilla con botón de reserva de cita.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/podologia-milagros-chana-lopez/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Google la sigue indexando pero el dominio NO resuelve: sin A, sin NS, ni http ni https conectan (20/09/2026). Quien pincha en Google no llega. Es el gancho."
   },
   {
     "slug": "talleres-j-l",

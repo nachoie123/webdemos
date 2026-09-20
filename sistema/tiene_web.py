@@ -25,7 +25,11 @@ def dominios(nombre):
     out = []
     for b in dict.fromkeys([base, corto]):
         if 4 <= len(b) <= 40:
-            out += [f"https://{b}.com", f"https://{b}.es"]
+            # http y www tambien: la web de la podologa solo salia por http
+            # sin S, y probando solo https daba un falso "no tiene web".
+            for d in (f"{b}.com", f"{b}.es"):
+                out += [f"https://{d}", f"https://www.{d}",
+                        f"http://{d}", f"http://www.{d}"]
     return out
 
 def vivo(u):
