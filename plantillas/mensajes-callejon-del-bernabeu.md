@@ -38,34 +38,19 @@ Y lo que sí es suyo y está verificado: la dirección (Travesía del Doctor Fle
 ```
 Buenos días:
 
-Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble
-grado de Administración de Empresas e Informática en IE University, aquí en la
-zona de Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, aquí en la zona de Cuzco.
 
-Busqué su cafetería en internet y me encontré con esto: las primeras páginas que
-salen del Callejón del Bernabéu no las ha hecho usted. Son directorios
-automáticos que han copiado su dirección y sus reseñas y se han montado una
-página con ellas. Web propia no tiene ninguna.
+Busqué su cafetería y las primeras páginas que salen del Callejón del Bernabéu no las ha hecho usted: son directorios automáticos que han copiado su dirección y sus reseñas. Web propia no tiene ninguna.
 
-He preparado una propuesta de página web para la cafetería. Está publicada y
-funcionando, para que pueda verla antes de decidir nada:
+Le he preparado una, publicada y funcionando, para que la vea antes de decidir nada:
 
 https://nachoie123.github.io/webdemos/callejon-del-bernabeu/
 
-Es una propuesta, no su web oficial: la carta, los precios y el horario son de
-ejemplo, y la propia página lleva un botón que marca qué es inventado y qué no.
-La dirección, el teléfono y el 4,8 de Google sí son los suyos.
+Es una propuesta, no su web oficial: la carta, los precios y el horario son de ejemplo, y la página lleva un botón que marca qué es inventado. La dirección, el teléfono y el 4,8 de Google sí son los suyos.
 
-De hecho, el horario me lo he inventado porque no lo encontré escrito en ninguna
-parte. Si me dice el suyo, se lo corrijo hoy mismo.
+Un ejemplo de web que he desarrollado es shenxien.es, el sushi bar del Paseo de la Castellana 241.
 
-Para que se haga una idea del nivel del que hablo: shenxien.es, el sushi bar
-del Paseo de la Castellana 241. Es el tipo de web que hago.
-
-Lo que ha visto está hecho solo con lo que hay publicado de ustedes, que es muy
-poco. Si me pasa fotos del local y de los desayunos, o cualquier cosa que tenga
-a mano (la carta, el horario, el logo), adapto la página con su material y la
-dejo al nivel de shenxien.es o mejor. No cuesta nada y lo ve antes de decidir.
+Si me pasa fotos del local y de los desayunos, o lo que tenga a mano (la carta, el horario, el logo), adapto la página con su material y la dejo al nivel de shenxien.es o mejor. No cuesta nada y lo ve antes de decidir.
 
 ¿Le viene bien que le llame esta semana?
 
@@ -104,17 +89,3 @@ aparece una, se reutiliza el texto del WhatsApp añadiendo el pie de baja:
 
 
 ---
-
-## ⚠ Antes de enviar: elegir la frase de la referencia
-
-El texto de arriba usa la **versión B** de `tono.md`: dice que shenxien.es es
-«el tipo de web que hago», sin atribuírsela. Es la versión segura, porque en las
-notas del proyecto consta que esa web **la hizo un amigo de Nacho**.
-
-Si Nacho sí la desarrolló, se cambia ese párrafo por:
-
-> Un ejemplo de web que he desarrollado es shenxien.es, el sushi bar del Paseo de
-> la Castellana 241.
-
-Lo que no se puede hacer es dejar la versión A sin estar seguro: el dueño de una
-cafetería de Chamartín está a una llamada del sushi bar de Castellana 241.

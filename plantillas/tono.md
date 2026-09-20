@@ -61,20 +61,13 @@ demo y antes del cierre.
 
 ### 1. La referencia
 
-⚠ **Decidir antes de enviar cuál de las dos frases es verdad.** En
-`sistema/moldes/restaurante.md` está escrito que shenxien.es **la hizo un amigo
-de Nacho**. Si es así, la versión A es mentira y se cae en la primera llamada.
-
-**Versión A — solo si Nacho la desarrolló (o la desarrolló con su amigo):**
+Nacho desarrolló shenxien.es (confirmado por él el 20/09/2026). Va tal cual:
 
 > Un ejemplo de web que he desarrollado es shenxien.es, el sushi bar del Paseo de
 > la Castellana 241.
 
-**Versión B — si la hizo su amigo (esta es verdad y vende casi igual):**
-
-> Para que se haga una idea del nivel del que hablo: shenxien.es, el sushi bar
-> del Paseo de la Castellana 241. No la hice yo, pero es exactamente el tipo de
-> web que hago, y es el listón con el que trabajo.
+Es la mejor prueba que tiene: un negocio real de la misma zona, del mismo sector
+y con el mismo nivel de acabado. Va siempre, en todos los mensajes.
 
 ### 2. La oferta de mejora
 

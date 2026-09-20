@@ -1,7 +1,7 @@
 # Molde: restaurante
 
 Sacado de **shenxien.es** (Sushi Bar & Poké, Paseo de la Castellana 241), la web
-que hizo un amigo de Nacho. Es el listón: 2.153 palabras, escrita a mano con
+que hizo el propio Nacho. Es el listón: 2.153 palabras, escrita a mano con
 variables CSS propias, y no se parece a ninguna plantilla de restaurante.
 
 Las clases `u-*` que se citan aquí ya están en `sistema/base.css`.
