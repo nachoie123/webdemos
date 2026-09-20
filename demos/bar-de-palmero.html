@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bar De Palmero · Paseo de la Castellana 190, Madrid</title>
+<meta name="description" content="Propuesta de página web para Bar De Palmero, bar con terraza en el Paseo de la Castellana 190, Chamartín, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/bar-de-palmero/">
+<meta name="theme-color" content="#1d4e89">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231d4e89%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/bar-de-palmero/">
+<meta property="og:title" content="Bar De Palmero · Paseo de la Castellana 190, Madrid">
+<meta property="og:description" content="Propuesta de página web para Bar De Palmero, bar con terraza en el Paseo de la Castellana 190, Chamartín, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/bar-de-palmero/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..400&family=Chivo:wght@400;500;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Azulejo de bar madrileño: blanco frío, añil y latón de barra.
+   Esquinas rectas (--radio:0) frente al 999px del Callejón.        */
+:root{
+  --fondo:#eceff1; --fondo-2:#dde3e7; --tinta:#0f161d; --tinta-2:#5a6873;
+  --acento:#1d4e89; --acento-tinta:#f3f6f8; --linea:#c3cdd4;
+  --laton:#a97c22;
+  --display:'Newsreader', Georgia, serif;
+  --texto:'Chivo', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+h1,h2,h3{font-weight:400;letter-spacing:-.018em;}
+.u-ceja{color:var(--laton);}
+
+/* el azulejo: una cenefa de 6px que separa las secciones grandes */
+.cenefa{height:6px;border:0;margin:0;
+  background:repeating-linear-gradient(90deg,var(--acento) 0 14px,transparent 14px 28px);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(236,239,241,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.15;}
+.marca b{display:block;font-family:var(--display);font-size:1.22rem;font-weight:500;}
+.marca span{display:block;font-size:.66rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento);
+  border:1.5px solid var(--acento);padding:.5rem .9rem;font-size:.9rem;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero: sin foto, degradado de barra al atardecer */
+.hero{background:
+  radial-gradient(120% 90% at 78% 8%, #2b6aa8 0%, transparent 58%),
+  linear-gradient(168deg, #10222f 0%, #16344b 46%, #0f1b25 100%);
+  color:#eef3f6;}
+.hero h1{font-size:clamp(3.2rem,11vw,7.6rem);line-height:.92;
+  font-weight:300;margin:.18em 0 .34em;}
+.hero .bajo{max-width:36ch;font-size:1.06rem;color:#b9c9d4;}
+.hero .u-ceja{color:#d9ab5a;}
+
+/* cifras */
+.cifras{background:var(--acento);color:var(--acento-tinta);}
+.cifras .u-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3);
+  text-align:center;}
+.cifras b{display:block;font-family:var(--display);font-size:clamp(2rem,5vw,3.1rem);
+  font-weight:300;line-height:1;}
+.cifras span{display:block;margin-top:.5rem;font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;opacity:.82;}
+@media(max-width:700px){.cifras .u-wrap{grid-template-columns:1fr;gap:var(--s-4)}}
+
+/* la barra: tres motivos numerados */
+.motivo{border-top:2px solid var(--acento);padding-top:var(--s-2);}
+.u-numerada .motivo::before{color:var(--laton);}
+.motivo b{display:block;font-family:var(--display);font-size:1.5rem;
+  font-weight:400;margin:.35rem 0 .5rem;}
+
+/* carta */
+.carta{background:var(--fondo-2);}
+.precio{display:flex;align-items:baseline;gap:.7rem;padding:.62rem 0;
+  border-bottom:1px dotted var(--linea);}
+.precio b{font-weight:500;}
+.precio i{flex:1;font-style:normal;}
+.precio s{text-decoration:none;color:var(--laton);font-weight:700;
+  font-variant-numeric:tabular-nums;}
+
+/* horario día a día */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.95rem;}
+.horario th{font-weight:500;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* barra de demo y marcas de ejemplo */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1d7a4c;outline-offset:6px;}
+
+.pie{background:var(--tinta);color:#c7d2da;}
+.pie h3{color:#fff;font-size:1.05rem;margin-bottom:var(--s-1);}
+.pie a{color:#9ec4e6;}
+.pie p{font-size:.92rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para Bar De Palmero.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Bar De Palmero</b><span data-real>Bar · Castellana · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#barra">La barra</a>
+      <a href="#carta">Carta</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#ubicacion">Dónde</a>
+      <a href="#reserva">Reservar</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34670339746" data-real>670 33 97 46</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero a pantalla completa ===== -->
+<section class="hero u-hero u-hero--pleno u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Bar · Terraza · Chamartín</span>
+    <h1>Castellana 190.<br>Aquí se para<br>el reloj.</h1>
+    <p class="bajo" data-real>Paseo de la Castellana, 190 · terraza en la acera de los árboles · 4,3 en Google</p>
+    <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a class="u-btn" href="tel:+34670339746" data-real>Llamar al 670 33 97 46</a>
+      <a class="u-btn u-btn--linea" href="#carta">Ver la carta</a>
+    </p>
+  </div>
+  <a class="u-descubrir" href="#barra" aria-label="Bajar">↓</a>
+</section>
+
+<hr class="cenefa">
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="tira u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana, 190</b></span>
+    <span data-real>Chamartín · 28046 Madrid</span>
+    <span data-real><b>4,3</b> en Google</span>
+    <span data-real>Terraza</span>
+    <a href="tel:+34670339746" data-real><b>670 33 97 46</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. el concepto ===== -->
+<section class="u-seccion" id="barra">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <span class="u-ceja">La calle más cara, el bar de siempre</span>
+      <h2 style="font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.06;margin:.3em 0 .6em;">
+        En la Castellana<br>todo son oficinas.<br>Menos esta barra.</h2>
+    </div>
+    <div class="u-medida">
+      <p>El Paseo de la Castellana a la altura del 190 es acera ancha, torres de
+      cristal y gente que anda deprisa con la tarjeta colgada del cuello. Entre
+      todo eso hay una puerta, y detrás de la puerta hay una barra de las de
+      siempre: café con leche a las ocho, caña a las dos, y alguien que ya sabe
+      lo que va a pedir usted antes de que lo diga.</p>
+      <p>No es un sitio de paso aunque esté en una calle de paso. Los que vienen
+      vuelven, y vuelven a la misma hora.</p>
+      <p><b>La terraza está en la acera de los árboles</b>, que en verano es la
+      diferencia entre comer fuera o no comer fuera.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. cifras ===== -->
+<section class="cifras u-seccion--apretada u-sangrado">
+  <div class="u-wrap" data-real>
+    <div><b>4,3</b><span>sobre 5 en Google</span></div>
+    <div><b>190</b><span>Paseo de la Castellana</span></div>
+    <div><b>Terraza</b><span>en el censo del Ayuntamiento</span></div>
+  </div>
+</section>
+
+<!-- ===== 6. tres motivos ===== -->
+<section class="u-seccion" id="motivos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:17ch;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:var(--s-4);">
+      Tres motivos, y ninguno es el precio.</h2>
+    <div class="u-grid u-3 u-numerada">
+      <div class="motivo">
+        <b>La barra, no la mesa</b>
+        <p>Se puede desayunar de pie en cuatro minutos o sentarse dos horas. El
+        sitio aguanta las dos cosas sin que nadie le meta prisa.</p>
+      </div>
+      <div class="motivo">
+        <b>Terraza a la sombra</b>
+        <p>La acera de los árboles del Paseo de la Castellana. En julio, a la
+        hora de comer, es el único argumento que hace falta.</p>
+      </div>
+      <div class="motivo">
+        <b>Del barrio, en la Castellana</b>
+        <p>Rodeado de oficinas y sin parecerse a ninguna de sus cafeterías.
+        Aquí se cobra en la barra y se saluda por el nombre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="cenefa">
+
+<!-- ===== 7. la carta ===== -->
+<section class="carta u-seccion u-sangrado" id="carta">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.08;">
+        En la web,<br>no en un PDF.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Se lee en el móvil
+      sin ampliar con dos dedos. Cambiar un precio son diez segundos.</p>
+    </div>
+    <div>
+      <div class="u-pestanas" role="tablist">
+        <button role="tab" aria-selected="true" data-panel="p1">Barra</button>
+        <button role="tab" aria-selected="false" data-panel="p2">Raciones</button>
+        <button role="tab" aria-selected="false" data-panel="p3">Bocadillos</button>
+        <button role="tab" aria-selected="false" data-panel="p4">Del día</button>
+      </div>
+
+      <div class="u-precios" id="p1" data-ejemplo>
+        <div class="precio"><i>Café con leche</i><s>1,60</s></div>
+        <div class="precio"><i>Tostada con tomate y aceite</i><s>2,20</s></div>
+        <div class="precio"><i>Porra con chocolate</i><s>3,10</s></div>
+        <div class="precio"><i>Caña</i><s>1,80</s></div>
+        <div class="precio"><i>Vermú de grifo</i><s>2,60</s></div>
+      </div>
+
+      <div class="u-precios" id="p2" data-ejemplo hidden>
+        <div class="precio"><i>Tortilla de patata, pincho</i><s>2,80</s></div>
+        <div class="precio"><i>Croquetas caseras (6 u.)</i><s>7,50</s></div>
+        <div class="precio"><i>Calamares</i><s>9,80</s></div>
+        <div class="precio"><i>Pimientos de Padrón</i><s>6,50</s></div>
+        <div class="precio"><i>Ensaladilla</i><s>6,90</s></div>
+      </div>
+
+      <div class="u-precios" id="p3" data-ejemplo hidden>
+        <div class="precio"><i>Bocadillo de calamares</i><s>5,80</s></div>
+        <div class="precio"><i>Bocadillo de tortilla</i><s>4,50</s></div>
+        <div class="precio"><i>Mixto a la plancha</i><s>4,20</s></div>
+        <div class="precio"><i>Lomo con pimientos</i><s>6,20</s></div>
+      </div>
+
+      <div class="u-precios" id="p4" data-ejemplo hidden>
+        <div class="precio"><b>Menú del día</b><i>primero, segundo, pan, bebida y postre</i><s>14,50</s></div>
+        <div class="precio"><i>Solo primero o segundo</i><s>9,50</s></div>
+        <div class="precio"><i>Menú de la terraza, fin de semana</i><s>17,00</s></div>
+      </div>
+
+      <p style="margin-top:var(--s-2);font-size:.86rem;color:var(--tinta-2);"
+         data-ejemplo>Carta y precios de ejemplo: son los que habría que cambiar
+         por los suyos. Pulse «Ver qué es de ejemplo» arriba y se marcan todos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. lo que dicen ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:var(--s-4);">
+      4,3 en Google. Tres cosas se repiten.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita"><blockquote>Las raciones salen generosas para lo que se
+      paga.</blockquote></div>
+      <div class="u-cita"><blockquote>La terraza a la sombra es lo mejor que tiene
+      en verano.</blockquote></div>
+      <div class="u-cita"><blockquote>Trato cercano; te reconocen a la segunda
+      vez.</blockquote></div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.86rem;color:var(--tinta-2);" data-ejemplo>
+      Tres ideas resumidas de lo que suele decirse de un sitio así, <b>sin firma y
+      sin nombre</b>: no he copiado reseñas de nadie. Aquí irían las suyas reales,
+      con nombre y fecha, cuando usted diga.</p>
+  </div>
+</section>
+
+<hr class="cenefa">
+
+<!-- ===== 9. encuéntranos ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="ubicacion">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.06;" data-real>
+        Paseo de la<br>Castellana, 190</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Chamartín · 28046 Madrid. En Costa Fleming, en la acera de los árboles.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34670339746" data-real>670 33 97 46</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Bar+De+Palmero/data=!4m7!3m6!1s0xd42291bb51509fd:0xba9801ae6922cfc1!8m2!3d40.4615015!4d-3.6889349!16s%2Fg%2F11gcysm0c5"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+                 color:var(--laton);">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>07:00 – 17:00</td></tr>
+        <tr><th>Martes</th><td>07:00 – 17:00</td></tr>
+        <tr><th>Miércoles</th><td>07:00 – 17:00</td></tr>
+        <tr><th>Jueves</th><td>07:00 – 17:00</td></tr>
+        <tr><th>Viernes</th><td>07:00 – 17:00</td></tr>
+        <tr><th>Sábado</th><td>09:00 – 16:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.86rem;color:var(--tinta-2);"
+         data-ejemplo>Horario de ejemplo: no aparece publicado en ningún sitio.
+         Dígame el suyo y lo cambio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. reservar ===== -->
+<section class="u-seccion" id="reserva">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.08;">
+        Rellene esto y le<br>sale el mensaje escrito.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">No se manda a ningún
+      servidor: se abre su WhatsApp con el texto puesto y usted decide si lo
+      envía. O llame al <a href="tel:+34670339746" data-real>670 33 97 46</a>.</p>
+    </div>
+    <form id="form-reserva" style="display:grid;gap:var(--s-2);">
+      <label>Nombre <input name="nombre" required style="width:100%;padding:.7rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;"></label>
+      <label>Personas <input name="personas" type="number" min="1" max="30" value="2" style="width:100%;padding:.7rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;"></label>
+      <label>Día y hora <input name="cuando" type="datetime-local" style="width:100%;padding:.7rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;"></label>
+      <label>Terraza o dentro
+        <select name="sitio" style="width:100%;padding:.7rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;">
+          <option>Me da igual</option><option>Terraza</option><option>Dentro</option>
+        </select></label>
+      <button class="u-btn" type="submit">Abrir WhatsApp con el mensaje</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble grado
+      de Administración de Empresas e Informática en IE University, aquí en la zona
+      de Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de Bar De Palmero.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. La dirección, el teléfono y la
+      valoración salen de su ficha pública de Google; la carta, los precios, el
+      horario y las opiniones son de ejemplo — pulse «Ver qué es de ejemplo» arriba
+      y se marcan todos.</p>
+      <p>No se recoge ningún dato: el formulario funciona en su propio móvil y no
+      manda nada a ningún sitio. Si el titular quiere que esto desaparezca, escribe
+      y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34670339746">Llamar</a>
+  <a href="https://www.google.com/maps/place/Bar+De+Palmero/data=!4m7!3m6!1s0xd42291bb51509fd:0xba9801ae6922cfc1!8m2!3d40.4615015!4d-3.6889349!16s%2Fg%2F11gcysm0c5" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarOrPub",
+  "name":"Bar De Palmero",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana, 190",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4615015,"longitude":-3.6889349},
+  "telephone":"+34670339746",
+  "servesCuisine":"Española",
+  "priceRange":"€",
+  "publicAccess":true,
+  "smokingAllowed":false,
+  "openingHours":["Mo-Fr 07:00-17:00","Sa 09:00-16:00"],
+  "url":"https://nachoie123.github.io/webdemos/bar-de-palmero/"
+}
+</script>
+
+<script>
+/* revelado al bajar */
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+/* marcar qué es de ejemplo */
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+
+/* pestañas de la carta */
+var tabs = Array.prototype.slice.call(document.querySelectorAll('.u-pestanas button'));
+tabs.forEach(function(b){
+  b.addEventListener('click', function(){
+    tabs.forEach(function(o){
+      o.setAttribute('aria-selected', String(o === b));
+      document.getElementById(o.dataset.panel).hidden = (o !== b);
+    });
+  });
+});
+
+/* el formulario escribe el WhatsApp, no manda nada */
+document.getElementById('form-reserva').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var d = new FormData(ev.target);
+  var t = 'Hola, quería reservar en Bar De Palmero.\n\n'
+        + 'Nombre: ' + (d.get('nombre') || '-') + '\n'
+        + 'Personas: ' + (d.get('personas') || '-') + '\n'
+        + 'Cuándo: ' + (d.get('cuando') || '-') + '\n'
+        + 'Sitio: ' + (d.get('sitio') || '-');
+  window.open('https://wa.me/34670339746?text=' + encodeURIComponent(t), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
