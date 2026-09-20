@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kushala Yoga · General Ramírez de Madrid 14, Cuatro Caminos, Madrid</title>
+<meta name="description" content="Propuesta de página web para Kushala, centro de yoga y bienestar en la calle del General Ramírez de Madrid 14, Cuatro Caminos, Tetuán, Madrid. Yoga, pilates y yoga aéreo.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/kushala-centro-de-yoga-y-bienestar/">
+<meta name="theme-color" content="#2d3a8c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23efece6%27/%3E%3Cpath d=%27M7 6 v8 a9 9 0 0 0 18 0 v-8%27 fill=%27none%27 stroke=%27%232d3a8c%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/kushala-centro-de-yoga-y-bienestar/">
+<meta property="og:title" content="Kushala Yoga · General Ramírez de Madrid 14, Cuatro Caminos, Madrid">
+<meta property="og:description" content="Propuesta de página web para Kushala, centro de yoga y bienestar en la calle del General Ramírez de Madrid 14, Cuatro Caminos, Tetuán, Madrid. Yoga, pilates y yoga aéreo.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/kushala-centro-de-yoga-y-bienestar/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Índigo y cobre sobre crudo. Ni beige-con-salvia ni tipografía manuscrita:
+   eso es el uniforme del sector y hace que todos los centros parezcan el
+   mismo. El dibujo grande es la hamaca de yoga aéreo, que es lo que este
+   centro tiene y el de al lado no.                                        */
+:root{
+  --fondo:#efece6; --fondo-2:#e0dbd1; --tinta:#16181d; --tinta-2:#5e6068;
+  --acento:#2d3a8c; --acento-tinta:#eef0ff; --linea:#cec7bb;
+  --cobre:#b5793f;
+  --display:'Marcellus', Georgia, serif;
+  --texto:'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.005em;
+  line-height:1.08;}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+h3{font-size:1.45rem;}
+em.in{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--cobre);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(239,236,230,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:400;
+  letter-spacing:.06em;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con la hamaca */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.7rem);line-height:1.06;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.hamaca{width:100%;max-width:330px;margin-inline:auto;color:var(--acento);}
+.hamaca .techo{color:var(--tinta);}
+
+/* los tres miedos */
+.miedo{border-top:3px solid var(--cobre);padding-top:var(--s-3);}
+.miedo > b:first-child{display:block;font-family:var(--display);font-size:1.5rem;
+  line-height:1.15;margin-bottom:.5rem;}
+.miedo .resp{color:var(--tinta-2);}
+
+/* las clases, con dibujo */
+.clase{text-align:center;}
+.clase .dib{width:100%;max-width:120px;margin:0 auto var(--s-2);color:var(--tinta);}
+.clase b{display:block;font-family:var(--display);font-size:1.45rem;line-height:1.1;}
+.clase i{display:block;font-style:normal;font-size:.78rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--cobre);font-weight:600;margin:.3rem 0 .5rem;}
+.clase p{max-width:28ch;margin-inline:auto;color:var(--tinta-2);}
+
+/* horario de clases */
+.rejilla{display:grid;grid-template-columns:5.5rem repeat(5,1fr);gap:2px;
+  margin-top:var(--s-3);font-size:.84rem;}
+.rejilla > *{background:var(--fondo-2);padding:.55rem .5rem;}
+.rejilla .cab2{background:var(--tinta);color:var(--fondo);font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;text-align:center;}
+.rejilla .h{background:transparent;font-weight:600;font-variant-numeric:tabular-nums;}
+.rejilla .c{background:var(--acento);color:var(--acento-tinta);font-weight:600;
+  text-align:center;line-height:1.2;}
+.rejilla .c.ae{background:var(--cobre);}
+.rejilla .v{background:var(--fondo-2);}
+@media(max-width:760px){.rejilla{grid-template-columns:4rem repeat(5,1fr);font-size:.66rem;}}
+
+/* precios */
+.u-precios li{flex-wrap:wrap;border-bottom-color:var(--linea);}
+.u-precios .d{flex-basis:100%;order:3;margin-top:.15rem;}
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);color:var(--acento);}
+
+/* la casa propia */
+.casa{background:var(--tinta);color:#ccc9c3;padding:var(--s-4);}
+.casa h2{color:#fff;}
+.casa .dato{display:grid;grid-template-columns:auto 1fr;gap:var(--s-2) var(--s-3);
+  align-items:baseline;margin-top:var(--s-3);}
+.casa .dato b{font-family:var(--display);font-size:1.9rem;color:var(--cobre);
+  line-height:1;white-space:nowrap;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* opiniones */
+.u-cita{border:0;border-top:3px solid var(--acento);padding:var(--s-3) 0 0;}
+.u-cita blockquote{font-family:var(--display);}
+.u-cita cite{color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--cobre);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#95939a;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#b9c0ff;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus horarios, sus precios y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>KUSHALA</b><span data-real>Yoga y bienestar · Cuatro Caminos</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#miedos">Nunca he hecho yoga</a>
+      <a href="#clases">Las clases</a>
+      <a href="#horario">Horario</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34658501344" data-real>658 50 13 44</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Yoga, pilates y yoga aéreo · General Ramírez de Madrid 14</span>
+      <h1>«Es que yo no soy<br>nada flexible.»<br><em class="in">Nadie lo es el primer día.</em></h1>
+      <p>Es la frase que más se oye en la puerta, y es exactamente el motivo por
+      el que se viene. Aquí se empieza por donde esté cada uno, en grupos
+      pequeños y sin que nadie mire.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34658501344?text=Hola%2C%20nunca%20he%20hecho%20yoga%20y%20quer%C3%ADa%20probar%20una%20clase."
+           target="_blank" rel="noopener" data-real>Probar una clase</a>
+        <a class="u-btn u-btn--linea" href="#horario">Ver el horario</a>
+      </p>
+    </div>
+    <svg class="hamaca" viewBox="0 0 240 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+      <g class="techo" stroke="currentColor">
+        <path d="M10 16 L230 16" stroke-width="5"/>
+        <circle cx="66" cy="26" r="7"/>
+        <circle cx="174" cy="26" r="7"/>
+        <path d="M66 16 L66 19"/><path d="M174 16 L174 19"/>
+      </g>
+      <path d="M62 33 C50 86 58 130 96 148"/>
+      <path d="M178 33 C190 86 182 130 144 148"/>
+      <path d="M96 148 C110 156 130 156 144 148"/>
+      <path d="M70 33 C62 88 72 126 100 141" stroke-width="2" opacity=".55"/>
+      <path d="M170 33 C178 88 168 126 140 141" stroke-width="2" opacity=".55"/>
+      <path d="M96 148 C104 172 136 172 144 148" stroke-width="2" opacity=".55"/>
+      <path d="M104 186 L136 186" stroke-width="2" opacity=".35"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>General Ramírez de Madrid, 14</b></span>
+    <span data-real>Cuatro Caminos · Tetuán · 28020 Madrid</span>
+    <span data-ejemplo>L–J 10:00–21:30 · V 10:00–19:00</span>
+    <a href="tel:+34658501344" data-real><b>658 50 13 44</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. los tres miedos ===== -->
+<section class="u-seccion" id="miedos">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que de verdad frena a la gente</span>
+    <h2 style="max-width:24ch;margin:.2em 0 var(--s-4);">No es el precio. Es el ridículo.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="miedo">
+        <b>«No llego ni a los pies.»</b>
+        <p class="resp">Casi nadie llega el primer día. Cada postura tiene su
+        versión fácil y se empieza por ésa.</p>
+      </div>
+      <div class="miedo">
+        <b>«Me van a mirar.»</b>
+        <p class="resp">Los grupos son de ocho o diez. Todos están mirando su
+        propia esterilla y pensando lo mismo que usted.</p>
+      </div>
+      <div class="miedo">
+        <b>«No tengo ropa ni esterilla.»</b>
+        <p class="resp">Con un pantalón cómodo basta. La esterilla está aquí y
+        se presta, y se va descalzo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. las clases, con dibujo ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="clases">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-4);">En castellano,<br>y el nombre técnico detrás.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="clase">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 76 h62 a16 16 0 0 0 0 -32 h-62 a16 16 0 0 0 0 32 z"/>
+          <circle cx="84" cy="60" r="9"/>
+          <path d="M22 44 v32" stroke-width="2.5"/>
+          <path d="M40 46 v28" stroke-width="2" opacity=".5"/>
+          <path d="M58 46 v28" stroke-width="2" opacity=".5"/>
+        </svg>
+        <b>Empezar de cero</b>
+        <i>Hatha suave</i>
+        <p>Para quien no ha hecho nada en años. Despacio y explicando cada
+        postura.</p>
+      </div>
+
+      <div class="clase">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M14 18 L106 18" stroke-width="5"/>
+          <path d="M34 22 C26 58 32 82 58 94"/>
+          <path d="M86 22 C94 58 88 82 62 94"/>
+          <path d="M58 94 C60 100 60 100 62 94"/>
+          <path d="M40 22 C34 60 42 80 60 89" stroke-width="2" opacity=".5"/>
+          <path d="M80 22 C86 60 78 80 60 89" stroke-width="2" opacity=".5"/>
+        </svg>
+        <b>Yoga aéreo</b>
+        <i>En hamaca</i>
+        <p>Colgado de una tela. Descarga la espalda y es lo que más engancha.</p>
+      </div>
+
+      <div class="clase">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 54 a40 26 0 0 0 80 0 z"/>
+          <ellipse cx="60" cy="54" rx="40" ry="11"/>
+          <path d="M92 26 v22" stroke-width="4"/>
+          <circle cx="92" cy="20" r="7" fill="currentColor" stroke="none"/>
+          <path d="M34 90 a30 10 0 0 0 52 0" stroke-width="2" opacity=".45"/>
+        </svg>
+        <b>Respirar y parar</b>
+        <i>Mindfulness</i>
+        <p>Una hora sin móvil, sin hacer nada y sin ponerse en ninguna postura
+        rara.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. el horario de clases ===== -->
+<section class="u-seccion" id="horario">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-2);">El horario, aquí. Sin PDF y sin app.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Es lo que más se busca y
+    lo que peor se enseña en todo el sector: casi todos lo esconden detrás de una
+    descarga. Aquí se ve y ya está.</p>
+    <div class="rejilla" data-ejemplo>
+      <span class="cab2"></span>
+      <span class="cab2">Lunes</span><span class="cab2">Martes</span>
+      <span class="cab2">Miérc.</span><span class="cab2">Jueves</span><span class="cab2">Viernes</span>
+
+      <span class="h">10:00</span>
+      <span class="c">Hatha suave</span><span class="v"></span>
+      <span class="c">Hatha suave</span><span class="v"></span><span class="c">Hatha suave</span>
+
+      <span class="h">12:00</span>
+      <span class="v"></span><span class="c ae">Aéreo</span>
+      <span class="v"></span><span class="c ae">Aéreo</span><span class="v"></span>
+
+      <span class="h">18:00</span>
+      <span class="c">Pilates</span><span class="c">Espalda</span>
+      <span class="c">Pilates</span><span class="c">Espalda</span><span class="v"></span>
+
+      <span class="h">19:30</span>
+      <span class="c ae">Aéreo</span><span class="c">Vinyasa</span>
+      <span class="c ae">Aéreo</span><span class="c">Vinyasa</span><span class="v"></span>
+
+      <span class="h">20:45</span>
+      <span class="c">Mindfulness</span><span class="v"></span>
+      <span class="c">Embarazo</span><span class="v"></span><span class="v"></span>
+    </div>
+    <p style="margin-top:var(--s-3);color:var(--tinta-2);font-size:.92rem;">
+      En azul, esterilla. En cobre, hamaca. Todas duran una hora.</p>
+  </div>
+</section>
+
+<!-- ===== 7. precios ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="precios">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>La primera,<br>para probar.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Si la primera clase
+      se puede probar sin pagar, eso no es una promoción: es el titular. Es lo
+      único que convierte a alguien que lleva dos años diciendo «tengo que
+      apuntarme a algo».</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Primera clase</span><span class="d">Para ver si le encaja. Sin compromiso.</span><span class="p">gratis</span></li>
+        <li><span class="n">Clase suelta</span><span class="d">Cualquiera del horario.</span><span class="p">14 €</span></li>
+        <li><span class="n">Bono de 8</span><span class="d">Dos al mes. Caducan a los dos meses.</span><span class="p">95 €</span></li>
+        <li><span class="n">Mensual, 2 días</span><span class="d">Los que elija del horario.</span><span class="p">55 €</span></li>
+        <li><span class="n">Mensual, sin límite</span><span class="d">Todas las clases, incluida la hamaca.</span><span class="p">78 €</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. su casa, no la de la plataforma ===== -->
+<section class="u-seccion" id="casa">
+  <div class="u-wrap u-revelar">
+    <div class="casa">
+      <span class="u-ceja" style="color:var(--cobre);">Lo que le cambia el negocio</span>
+      <h2 style="max-width:24ch;">Su web vive en casa de otro. Y pesa setenta veces más que ésta.</h2>
+      <div class="dato">
+        <b>2 MB</b>
+        <p style="margin:0;">Es lo que ocupa hoy su página. Esta que está
+        viendo ocupa unos 30 KB. En el móvil con datos, ésa es la diferencia
+        entre cargar al instante y que alguien se vaya.</p>
+      </div>
+      <div class="dato">
+        <b>404</b>
+        <p style="margin:0;">Es lo que devuelve <b>kushala.ueni.com</b>, la
+        dirección que tengo apuntada suya. Cero bytes. Conviene mirar a dónde
+        apunta el enlace de su ficha de Google.</p>
+      </div>
+      <div class="dato">
+        <b>×3</b>
+        <p style="margin:0;">Está en Fresha, ClassPass y Urban Sports Club.
+        Están bien para llenar huecos, pero la puerta de casa debería ser suya.
+        Los botones pueden seguir llevando allí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>General Ramírez<br>de Madrid, 14.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Cuatro Caminos · Tetuán · 28020 Madrid. Entre Cuatro Caminos y
+        Nuevos Ministerios.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34658501344?text=Hola%2C%20nunca%20he%20hecho%20yoga%20y%20quer%C3%ADa%20probar%20una%20clase."
+           target="_blank" rel="noopener" data-real>Probar una clase</a>
+        <a class="u-btn u-btn--linea" href="tel:+34658501344" data-real>658 50 13 44</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Kushala+Centro+De+Yoga+Y+Bienestar/data=!4m7!3m6!1s0xd42290220243f85:0x1b26d0fe6016998e!8m2!3d40.4551742!4d-3.6976849"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Centro abierto</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 21:30</td></tr>
+        <tr><th>Martes</th><td>10:00 – 21:30</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 21:30</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 21:30</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 19:00</td></tr>
+        <tr><th>Sábado</th><td>Cerrado</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Aquí irían las suyas.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Llegué diciendo que yo no valía para esto y llevo dos años
+        viniendo.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Somos nueve en clase. Se sabe cómo te llamas y qué te
+        duele.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Probé la hamaca por curiosidad y ya no me bajo de
+        ella.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      número, el teléfono y las clases que imparte. El horario de la rejilla, los
+      precios y las opiniones están inventados: pulse el botón amarillo de arriba
+      y se marcan solos.</p>
+      <ul>
+        <li><b>Falta lo suyo:</b> su horario real de clases, sus precios y sus
+        fotos. Sobre todo la de la sala y la de la hamaca colgada.</li>
+        <li><b>Sin nota de Google:</b> he encontrado dos recuentos distintos de
+        opiniones, 64 y 72. Una nota sin el número correcto la penaliza Google.</li>
+        <li><b>Ningún texto promete un resultado de salud.</b> Ni dolores que se
+        van, ni posturas que se corrigen. En bienestar eso no se firma.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del centro.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares, ni con Fresha, ClassPass o
+      Urban Sports Club, que se nombran solo porque el centro aparece en ellas.
+      Los datos de contacto salen de fichas públicas.</p>
+      <p><b>No se declara ninguna nota de Google</b> sin recuento verificado, y
+      <b>ningún texto promete un resultado de salud</b>. <b>No hay ninguna
+      fotografía:</b> los cuatro dibujos están hechos a mano para esta
+      propuesta.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si la titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34658501344?text=Hola%2C%20nunca%20he%20hecho%20yoga%20y%20quer%C3%ADa%20probar%20una%20clase." target="_blank" rel="noopener">Probar clase</a>
+  <a href="https://www.google.com/maps/place/Kushala+Centro+De+Yoga+Y+Bienestar/data=!4m7!3m6!1s0xd42290220243f85:0x1b26d0fe6016998e!8m2!3d40.4551742!4d-3.6976849" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"YogaStudio",
+  "name":"Kushala Centro de Yoga y Bienestar",
+  "description":"Centro de yoga, pilates y yoga aéreo en Cuatro Caminos, Tetuán, Madrid.",
+  "telephone":"+34658501344",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle del General Ramírez de Madrid, 14",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28020",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4551742,"longitude":-3.6976849},
+  "openingHours":["Mo-Th 10:00-21:30","Fr 10:00-19:00"],
+  "url":"https://nachoie123.github.io/webdemos/kushala-centro-de-yoga-y-bienestar/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
