@@ -130,3 +130,45 @@ además queda mejor. Las fotos reales llegan cuando firman.
 - [ ] Segunda demo: **Pastelería Acueducto** — su ficha enlaza a la pastelería
       homónima de Segovia, o sea que llevan meses mandándole clientes a otro
       negocio. Es el correo más fácil de escribir de los 30.
+
+---
+
+## El sistema (desde 20/09/2026)
+
+Tres piezas en `sistema/`. Nacidas de comparar **19 webs de pastelería premiadas**
+con las **66 webs de barrio** del barrido (`plantillas/patrones.md`).
+
+| Fichero | Qué hace |
+|---|---|
+| `sistema/base.css` | Los huesos: rejilla, escala tipográfica, hero a sangre, barra de móvil. **Sin identidad visual.** Cada demo redefine 9 tokens y sale distinta. |
+| `sistema/montar.py` | Mete `base.css` dentro de la demo y la escribe en `docs/<slug>/index.html`. Mata la trampa de copiar a mano. |
+| `sistema/revisar.py` | Audita la demo contra 20 reglas. Si hay un fallo, no se envía. |
+
+Bucle nuevo:
+
+```bash
+python3 sistema/montar.py demos/<slug>.html && python3 sistema/revisar.py docs/<slug>/index.html
+```
+
+### Lo que separa una web buena de una del montón
+
+Dato del barrido, no opinión:
+
+| | 19 premiadas | 66 de barrio |
+|---|---|---|
+| Google Fonts del top 5 (Poppins, Roboto…) | **casi ninguna** | mayoría |
+| Reserva / pedido online | 63 % | 27 % |
+| JSON-LD para Google | 36 % | 6 % |
+| Palabras de portada (mediana) | 2.825 | 3.507 |
+
+Las buenas **no son más grandes, son más raras**: tipografía que no viene del top 5,
+una sección a sangre, un titular con voz («Our Happy Place», «Real bread, no shortcuts»)
+y menos texto. Las del montón son todas la misma plantilla con otro logo.
+
+### Los 9 tokens que define cada demo
+
+`--fondo --fondo-2 --tinta --tinta-2 --acento --acento-tinta --linea --display --texto`
+(+ `--radio`: 0 para editorial, 999px para amable).
+
+Cambiar esos diez valores y elegir otro molde de hero (§2 de `patrones.md`) da una
+demo que no se parece a la anterior aunque comparta los huesos.
