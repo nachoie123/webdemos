@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barbería Cholo · Avenida de Asturias, Plaza de Castilla, Madrid</title>
+<meta name="description" content="Propuesta de página web para Barbería Cholo y Peluquería de Caballero, en la Avenida de Asturias, junto a Plaza de Castilla, Tetuán, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/barberia-cholo-y-peluqueria-de-caballero/">
+<meta name="theme-color" content="#5c1f2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%235c1f2b%27/%3E%3Cpath d=%27M8 26 L16 6 L24 26%27 fill=%27none%27 stroke=%27%23f2f0ec%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/barberia-cholo-y-peluqueria-de-caballero/">
+<meta property="og:title" content="Barbería Cholo · Avenida de Asturias, Plaza de Castilla, Madrid">
+<meta property="og:description" content="Propuesta de página web para Barbería Cholo y Peluquería de Caballero, en la Avenida de Asturias, junto a Plaza de Castilla, Tetuán, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/barberia-cholo-y-peluqueria-de-caballero/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600;800&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Se llama «peluquería de caballero», no «barber shop». No es una barbería de
+   moda: es la de toda la vida, y eso es lo que hay que escribir. Burdeos,
+   crema tiza y acero. Ni poste de rayas ni neón: eso es de la otra clase de
+   barbería.                                                                */
+:root{
+  --fondo:#f2f0ec; --fondo-2:#e4e0d8; --tinta:#1c1418; --tinta-2:#6b6167;
+  --acento:#5c1f2b; --acento-tinta:#f8ece9; --linea:#d5cec4;
+  --acero:#8a949c;
+  --display:'Vollkorn', Georgia, serif;
+  --texto:'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.018em;
+  line-height:1.04;}
+h2{font-size:clamp(2.1rem,4.8vw,3.5rem);}
+h3{font-size:1.5rem;}
+em.bu{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(242,240,236,.95);
+  backdrop-filter:blur(8px);border-bottom:3px double var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.45rem;font-weight:800;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con las torres */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.2vw,3.6rem);line-height:1.02;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.torres{width:100%;color:var(--acero);}
+.torres .ob{color:var(--acento);}
+
+/* los tres servicios, con su herramienta dibujada */
+.serv{text-align:center;border-top:3px double var(--acento);padding-top:var(--s-3);}
+.serv .dib{width:100%;max-width:108px;margin:0 auto var(--s-2);color:var(--tinta);}
+.serv b{display:block;font-family:var(--display);font-size:1.55rem;font-weight:800;
+  line-height:1.05;}
+.serv .min{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);font-weight:600;margin:.4rem 0 .5rem;}
+.serv .eur{font-family:var(--display);font-size:2.2rem;font-weight:800;
+  color:var(--acento);line-height:1;}
+
+/* la puerta / fresha */
+.puerta{background:var(--tinta);color:#ddd6d2;padding:var(--s-4);}
+.puerta h2{color:#fff;}
+.puerta .frente{display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  margin-top:var(--s-3);}
+.puerta .frente div{background:#2a2025;padding:var(--s-3);}
+.puerta .frente b{display:block;font-family:var(--display);font-size:1.25rem;
+  color:#fff;margin-bottom:.3rem;}
+.puerta .frente.mal div:first-child{border-top:4px solid var(--acero);}
+.puerta .frente.mal div:last-child{border-top:4px solid var(--acento);}
+@media(max-width:620px){.puerta .frente{grid-template-columns:1fr;}}
+
+/* cómo se viene */
+.modo{border-left:3px solid var(--acento);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.modo > b:first-child{display:block;font-family:var(--display);font-size:1.4rem;
+  font-weight:800;margin-bottom:.25rem;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* opiniones */
+.u-cita{border:0;border-top:3px double var(--acento);padding:var(--s-3) 0 0;}
+.u-cita blockquote{font-family:var(--display);font-weight:600;}
+.u-cita cite{color:var(--tinta-2);}
+
+/* la ÚNICA nota al dueño */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:800;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#9a9095;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#e8a9b4;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, su horario y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Barbería Cholo</b><span data-real>Peluquería de caballero · Plaza de Castilla</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#servicios">Corte y barba</a>
+      <a href="#puerta">Reservar</a>
+      <a href="#como">Cómo se viene</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34640862327" data-real>640 86 23 27</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Avenida de Asturias · Plaza de Castilla · Madrid</span>
+      <h1>No es un <em class="bu">barber shop</em>.<br>Es una peluquería<br>de caballero.</h1>
+      <p>Y la diferencia se nota en la silla. Aquí se corta el pelo de siempre,
+      bien, en el tiempo de siempre y por el precio de siempre. Sin música alta
+      y sin que le hagan una foto para Instagram.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34640862327?text=Hola%2C%20quer%C3%ADa%20hora%20para%20cortarme%20el%20pelo."
+           target="_blank" rel="noopener" data-real>Pedir hora</a>
+        <a class="u-btn u-btn--linea" href="tel:+34640862327" data-real>640 86 23 27</a>
+      </p>
+    </div>
+    <svg class="torres" viewBox="0 0 240 150" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">
+      <path d="M28 132 L62 26 L100 26 L66 132 Z"/>
+      <path d="M212 132 L178 26 L140 26 L174 132 Z"/>
+      <g stroke-width="1.6" opacity=".7">
+        <path d="M40 98 L82 98"/><path d="M46 78 L88 78"/><path d="M52 58 L94 58"/>
+        <path d="M200 98 L158 98"/><path d="M194 78 L152 78"/><path d="M188 58 L146 58"/>
+      </g>
+      <g class="ob" stroke="currentColor">
+        <path d="M120 132 L120 52"/>
+        <path d="M114 62 L120 40 L126 62"/>
+      </g>
+      <path d="M8 132 L232 132" stroke-width="4"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Avenida de Asturias</b></span>
+    <span data-real>Junto a Plaza de Castilla · 28029 Madrid</span>
+    <span data-ejemplo>L–V 9:30–14:00 y 16:30–20:00</span>
+    <a href="tel:+34640862327" data-real><b>640 86 23 27</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. tres servicios con su herramienta ===== -->
+<section class="u-seccion" id="servicios">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:18ch;margin-bottom:var(--s-4);">Tres cosas,<br>bien hechas.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="serv">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true">
+          <circle cx="28" cy="94" r="15"/>
+          <circle cx="92" cy="94" r="15"/>
+          <path d="M38 84 L92 16"/>
+          <path d="M82 84 L28 16"/>
+          <circle cx="60" cy="56" r="3.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <b>Corte</b>
+        <span class="min">Unos 25 minutos</span>
+        <span class="eur">14 €</span>
+      </div>
+
+      <div class="serv">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 46 h62 v22 h-62 a11 11 0 0 1 0 -22 z"/>
+          <path d="M80 48 h20 a9 9 0 0 1 0 18 h-20 z"/>
+          <path d="M22 68 h50" stroke-width="2.5"/>
+          <path d="M30 84 c10 8 24 10 34 4" stroke-width="2.5"/>
+        </svg>
+        <b>Barba a navaja</b>
+        <span class="min">Unos 20 minutos</span>
+        <span class="eur">11 €</span>
+      </div>
+
+      <div class="serv">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true">
+          <rect x="16" y="34" width="88" height="17" rx="4"/>
+          <path d="M24 51 v26"/><path d="M36 51 v32"/><path d="M48 51 v26"/>
+          <path d="M60 51 v32"/><path d="M72 51 v26"/><path d="M84 51 v32"/>
+          <path d="M96 51 v26"/>
+        </svg>
+        <b>Corte y barba</b>
+        <span class="min">Unos 45 minutos</span>
+        <span class="eur">22 €</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. la puerta es suya, no de Fresha ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="puerta">
+  <div class="u-wrap u-revelar">
+    <div class="puerta">
+      <span class="u-ceja" style="color:var(--acero);">Lo que de verdad le cambia el negocio</span>
+      <h2 style="max-width:22ch;">Tiene reservas. Lo que no tiene es puerta propia.</h2>
+      <p style="max-width:52ch;margin-top:var(--s-2);">Su barbería se reserva por
+      Fresha, y eso funciona bien. El problema es lo que ve quien le busca en
+      Google antes de llegar ahí.</p>
+      <div class="frente mal">
+        <div>
+          <b>Hoy</b>
+          <p style="margin:0;">Google le lleva a una ficha dentro de Fresha. El
+          nombre grande de arriba es el de Fresha, la foto es de Fresha y al
+          lado aparecen las otras barberías de Tetuán.</p>
+        </div>
+        <div>
+          <b>Con página propia</b>
+          <p style="margin:0;">Google le lleva a su casa. Su nombre, su calle,
+          sus precios, nadie al lado. Y el botón de reservar sigue llevando a
+          Fresha, que ya funciona.</p>
+        </div>
+      </div>
+      <p style="margin:var(--s-3) 0 0;max-width:52ch;"><b style="color:#fff;">No
+      se trata de irse de Fresha.</b> Se trata de que la puerta sea suya y el
+      mostrador siga donde está.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. cómo se viene ===== -->
+<section class="u-seccion" id="como">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Con hora<br>o sin ella.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">La mitad del barrio
+      entra sin avisar y la otra mitad quiere saber si va a esperar. Las dos
+      cosas caben, pero hay que decirlo.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="modo">
+        <b>Sin hora, de toda la vida</b>
+        <p>Se entra, se pregunta quién es el último y se espera. A primera hora
+        de la mañana casi nunca hay cola.</p>
+      </div>
+      <div class="modo">
+        <b>Con hora, por WhatsApp</b>
+        <p>Un mensaje con el día y la hora que quiere. Se contesta cuando hay un
+        hueco entre cliente y cliente.</p>
+      </div>
+      <div class="modo">
+        <b>Con hora, por Fresha</b>
+        <p>Si prefiere elegir el hueco usted mismo y que le llegue el
+        recordatorio, el botón de arriba lleva directo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>Debajo de<br>las torres.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Avenida de Asturias, junto a Plaza de Castilla. Almenara · Tetuán ·
+        28029 Madrid. Metro y autobuses de Plaza de Castilla a un paso.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34640862327?text=Hola%2C%20quer%C3%ADa%20hora%20para%20cortarme%20el%20pelo."
+           target="_blank" rel="noopener" data-real>Pedir hora</a>
+        <a class="u-btn u-btn--linea" href="tel:+34640862327" data-real>640 86 23 27</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Barber%C3%ADa+Cholo+y+Peluqueria+de+Caballero/data=!4m7!3m6!1s0xd4229d0e5f12405:0x287fda430f4e28e7!8m2!3d40.4664671!4d-3.6907783"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>9:30 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Martes</th><td>9:30 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>9:30 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>9:30 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>9:30 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>9:30 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Aquí irían las suyas.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Llevo doce años cortándome aquí y nunca he tenido que
+        explicar cómo lo quiero.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Entré sin hora un martes a las diez y salí cortado en
+        media hora.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«La barba a navaja como se hacía antes. Ya no queda casi
+        nadie que la haga.»</blockquote>
+        <cite>Opinión inventada · no es real</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota al dueño ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle y el
+      teléfono. Todo lo demás está inventado y marcado: pulse el botón amarillo
+      de arriba y se señala solo. Con su material esta página cambia entera.</p>
+      <ul>
+        <li><b>Falta lo suyo:</b> sus precios, sus tiempos y sus fotos. Sobre
+        todo la de la silla y la del escaparate.</li>
+        <li><b>El portal:</b> su página de Fresha dice el número 3, pero el mapa
+        me lleva al 7. Prefiero no poner ninguno hasta que me lo diga.</li>
+        <li><b>El horario</b> lo he copiado de su propia página de Fresha, así
+        que puede estar bien; confírmemelo.</li>
+        <li><b>Sin nota de Google:</b> no he podido contrastar el número de
+        opiniones, y una nota sin recuento la penaliza Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la barbería.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares, y tampoco con Fresha, que se
+      nombra solo porque la barbería aparece allí. El nombre, la calle y el
+      teléfono salen de fichas públicas. Los precios, los tiempos y las
+      opiniones están inventados y marcados.</p>
+      <p><b>No se declara ninguna nota de Google</b> sin recuento verificado.
+      <b>No hay ninguna fotografía:</b> los cuatro dibujos —las torres de Plaza
+      de Castilla, las tijeras, la navaja y el peine— están hechos a mano para
+      esta propuesta.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34640862327?text=Hola%2C%20quer%C3%ADa%20hora%20para%20cortarme%20el%20pelo." target="_blank" rel="noopener">Pedir hora</a>
+  <a href="https://www.google.com/maps/place/Barber%C3%ADa+Cholo+y+Peluqueria+de+Caballero/data=!4m7!3m6!1s0xd4229d0e5f12405:0x287fda430f4e28e7!8m2!3d40.4664671!4d-3.6907783" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Barbería Cholo y Peluquería de Caballero",
+  "description":"Peluquería de caballero y barbería en la Avenida de Asturias, junto a Plaza de Castilla, Tetuán, Madrid.",
+  "telephone":"+34640862327",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Avenida de Asturias",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28029",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4664671,"longitude":-3.6907783},
+  "openingHours":["Mo-Fr 09:30-14:00","Mo-Fr 16:30-20:00","Sa 09:30-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/barberia-cholo-y-peluqueria-de-caballero/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

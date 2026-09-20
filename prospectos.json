@@ -67,7 +67,7 @@
     "demo": null,
     "enviado": null,
     "respuesta": null,
-    "nota_web": "Web a medio hacer, con «+34 000 000 000» e «info@example.com» sin sustituir. SIN CONFIRMAR que sea la misma Atenea."
+    "nota_web": "VERIFICADO 21/09/2026: cafeteriaatenea.com es un WordPress real y vivo («Cafeteria Atenea Bocateria»), ya no tiene los datos de ejemplo. Sus telefonos no coinciden con el 619405869 del prospecto, asi que o es homonimo o cambio de numero. DESCARTADO hasta aclararlo."
   },
   {
     "slug": "cafeteria-el-espinar",
@@ -174,9 +174,10 @@
     "web_actual": null,
     "gancho": "5.0★ con 121 opiniones y cero web; landing con reserva online que capitaliza el boca a boca.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/barberia-cholo-y-peluqueria-de-caballero/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web PERO con Fresha (reserva online): el gancho es que Google lleva a la casa de Fresha, no a la suya. Portal en disputa: Fresha dice 3, Nominatim cae en el 7. Horario sacado de su Fresha. Ver datos/barberia-cholo-y-peluqueria-de-caballero.md"
   },
   {
     "slug": "colora-estetica",
@@ -201,14 +202,14 @@
     "tipo": "Tienda de ropa",
     "telefono": "685721491",
     "maps": "https://www.google.com/maps/place/SLAY/data=!4m7!3m6!1s0xd422945cd2e65bd:0xddcd6cd31c183dd7!8m2!3d40.4592762!4d-3.6891711!16s%2Fg%2F11ms3rvbkn",
-    "estado_web": "dudoso",
+    "estado_web": "none",
     "web_actual": "http://slay.es",
     "gancho": "Sin reseñas ni web; landing de presentación con catálogo o Instagram embebido para darle visibilidad.",
     "email": null,
     "demo": null,
     "enviado": null,
     "respuesta": null,
-    "nota_web": "slay.es responde pero parece dominio aparcado. Mirar antes de nada."
+    "nota_web": "VERIFICADO 21/09/2026: slay.es es solo la pagina de aparcamiento del registrador («busca tu dominio», contacto rfeliu@slay.es). NO es una web. Candidato limpio, y con gancho propio: tiene dominio pagado apuntando a publicidad ajena."
   },
   {
     "slug": "flores-y-plantas-moreno",
@@ -440,7 +441,7 @@
     "demo": null,
     "enviado": null,
     "respuesta": null,
-    "nota_web": "«Asesoría Centro», Madrid y Segovia. Puede ser un homónimo: confirmar por teléfono antes de nada."
+    "nota_web": "VERIFICADO 21/09/2026: asesoriacentro.es existe pero sus telefonos (724xxx, 787xxx) NO coinciden con el 645488951 del prospecto. Es un HOMONIMO. El prospecto sigue sin web, pero confirmar antes de mandar."
   },
   {
     "slug": "imprime-y-mas-s-l",

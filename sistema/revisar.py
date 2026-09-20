@@ -144,7 +144,8 @@ def audita(p):
         "al dueno. Junta todas las salvedades en un sitio.")
 
     # --- parrafos de ladrillo ---
-    largos = [t for t in re.findall(r"<p[^>]*>(.*?)</p>", cuerpo, re.S)
+    # ojo: `<p[^>]*>` tambien casa con `<path ...>` de los SVG. El \b lo evita.
+    largos = [t for t in re.findall(r"<p\b[^>]*>(.*?)</p>", cuerpo, re.S)
               if len(re.sub(r"<[^>]+>", "", t)) > 430]
     chk(not largos, "parrafos legibles",
         f"Hay {len(largos)} parrafo(s) de mas de 430 caracteres. Se leen en "
