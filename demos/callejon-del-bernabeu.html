@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Callejón del Bernabéu · Travesía del Doctor Fleming 15, Madrid</title>
+<meta name="description" content="Propuesta de página web para Callejón del Bernabéu, cafetería en Travesía del Doctor Fleming 15, Chamartín, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,50,1&family=Karla:wght@400;500;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ---------- */
+:root{
+  --fondo:#f7f4ed; --fondo-2:#e9e3d6; --tinta:#10201a; --tinta-2:#5a6b61;
+  --acento:#2f6a4c; --acento-tinta:#f7f4ed; --linea:#d2cbba;
+  --brasa:#c9611d;
+  --display:'Fraunces', Georgia, serif;
+  --texto:'Karla', 'Helvetica Neue', Arial, sans-serif;
+  --radio:999px;
+}
+h1,h2,h3{font-weight:400;letter-spacing:-.015em;}
+.u-ceja{color:var(--brasa);}
+.u-btn{border-radius:var(--radio);}
+.u-numerada > *{border-radius:26px;}
+.u-cita{border-radius:26px;}
+
+/* barra de demo (obligatoria) */
+.demobar{position:sticky;top:0;z-index:80;background:#f0b429;color:#1a1207;
+  font-size:12.5px;line-height:1.4;}
+.demobar .u-wrap{display:flex;gap:14px;align-items:center;justify-content:space-between;
+  padding-block:9px;flex-wrap:wrap;}
+.demobar b{font-weight:700;}
+.demobar button{font:inherit;font-weight:700;background:#1a1207;color:#f0b429;
+  border:0;border-radius:999px;padding:7px 15px;cursor:pointer;letter-spacing:.04em;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed var(--brasa);outline-offset:6px;
+  position:relative;background:rgba(201,97,29,.06);}
+[data-marcas="on"] [data-ejemplo]::before{content:"de ejemplo";position:absolute;
+  top:-10px;left:0;background:var(--brasa);color:#fff;font-family:var(--texto);
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;z-index:5;}
+[data-marcas="on"] [data-real]{outline:2px solid var(--acento);outline-offset:6px;position:relative;}
+[data-marcas="on"] [data-real]::before{content:"dato real suyo";position:absolute;
+  top:-10px;left:0;background:var(--acento);color:#fff;font-family:var(--texto);
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;z-index:5;}
+
+/* cabecera */
+.cab{position:relative;z-index:30;background:var(--fondo);
+  border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding-block:14px;flex-wrap:wrap;}
+.marca{font-family:var(--display);font-size:1.3rem;letter-spacing:-.01em;
+  text-decoration:none;color:var(--tinta);}
+.marca i{font-style:normal;color:var(--brasa);}
+.tel-cab{font-size:var(--t-s);text-decoration:none;background:var(--acento);
+  color:var(--acento-tinta);border-radius:999px;padding:.6em 1.15em;white-space:nowrap;}
+
+/* hero: claro, asimetrico, la nota de Google pegada a la promesa */
+.hero{background:var(--fondo);position:relative;overflow:hidden;
+  padding-block:clamp(3.5rem,9vw,7rem) clamp(2.5rem,5vw,4.5rem);}
+.hero::after{content:"";position:absolute;left:-18vw;bottom:-30vw;
+  width:56vw;height:56vw;border-radius:50%;background:var(--fondo-2);
+  opacity:.75;pointer-events:none;}
+.hero .u-wrap{position:relative;z-index:2;}
+.hero .u-desigual-inv{align-items:end;gap:var(--s-5);}
+.hero h1{font-size:var(--t-2xl);max-width:16ch;line-height:1.02;}
+.hero h1 em{font-style:italic;color:var(--brasa);}
+.hero .sub{font-size:var(--t-l);color:var(--tinta-2);max-width:30ch;
+  margin-top:var(--s-3);line-height:1.35;}
+.hero .botones{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--s-4);}
+.nota{background:var(--acento);color:var(--acento-tinta);border-radius:30px;
+  padding:var(--s-4);text-align:center;}
+.nota b{display:block;font-family:var(--display);font-size:clamp(3rem,7vw,4.6rem);
+  line-height:.9;}
+.nota .estrellas{font-size:1.1rem;letter-spacing:.35em;opacity:.85;margin-top:.5em;}
+.nota span{display:block;font-size:var(--t-xs);letter-spacing:.18em;
+  text-transform:uppercase;opacity:.8;margin-top:1em;}
+
+/* tira de datos */
+.tira{background:var(--tinta);color:#e4ded0;}
+.tira .u-tira{border:0;padding-block:var(--s-3);}
+.tira a{color:#e4ded0;}
+.tira b{color:#fff;font-weight:500;}
+
+/* cifras */
+.cifras{background:var(--fondo-2);}
+.u-cifras b{color:var(--acento);}
+.u-cifras span{color:var(--tinta-2);}
+
+/* banda de dia de partido, a sangre */
+.partido{background:var(--tinta);color:#e4ded0;}
+.partido .u-partida{min-height:min(58svh,480px);}
+.partido .txt{padding:var(--s-6) clamp(20px,5vw,64px);}
+.partido h2{color:var(--fondo);}
+.partido .gran{display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:var(--s-6) clamp(20px,4vw,48px);min-height:300px;
+  background:var(--acento);color:#0c1b14;
+  font-family:var(--display);font-style:italic;line-height:.95;
+  font-size:clamp(2.4rem,6vw,4.4rem);}
+
+/* lo que repiten las resenas */
+.repiten{background:var(--fondo);}
+.u-cita blockquote{font-style:italic;}
+
+/* la carta */
+.carta{background:var(--fondo-2);}
+.carta .u-precios li{border-bottom:1px solid var(--linea);padding-block:var(--s-3);}
+.carta .u-pestanas button{color:var(--tinta-2);}
+.panel[hidden]{display:none;}
+
+/* pedido */
+.campo{display:block;margin-bottom:var(--s-3);}
+.campo span{display:block;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);margin-bottom:6px;}
+.campo input,.campo textarea,.campo select{width:100%;font:inherit;font-size:var(--t-m);
+  padding:.8em 1em;border:1px solid var(--linea);background:var(--fondo);
+  color:var(--tinta);border-radius:16px;}
+.campo textarea{min-height:84px;resize:vertical;}
+#resumen{display:none;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;
+  font-size:14px;background:var(--tinta);color:#e4ded0;border-radius:20px;
+  padding:var(--s-3);margin-top:var(--s-3);}
+#resumen.visible{display:block;}
+#acciones{display:none;gap:12px;flex-wrap:wrap;margin-top:var(--s-3);}
+
+/* encuentranos */
+.fila{display:flex;justify-content:space-between;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.fila dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);}
+.fila dd{margin:0;font-size:var(--t-m);}
+
+/* pie */
+.pie{background:var(--tinta);color:#c4bfb2;font-size:var(--t-s);}
+.pie a{color:var(--brasa);}
+.pie h3{color:var(--fondo);margin-bottom:var(--s-2);}
+
+/* barra movil */
+.u-movil a:first-child{background:var(--acento);color:#fff;}
+.u-movil a:last-child{background:var(--brasa);color:#fff;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para Callejón del Bernabéu.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#">Callejón <i>del Bernabéu</i></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#partido">Día de partido</a>
+      <a href="#carta">La carta</a>
+      <a href="#pedido">Para llevar</a>
+      <a href="#visita">Dónde estamos</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34636411817" data-real>636 41 18 17</a>
+  </div>
+</header>
+
+<!-- ===== hero: promesa + prueba ===== -->
+<section class="hero u-sangrado">
+  <div class="u-wrap u-grid u-desigual-inv">
+    <div>
+      <span class="u-ceja" data-real>Cafetería · Travesía del Doctor Fleming 15 · Chamartín</span>
+      <h1>El callejón donde desayuna el <em>barrio</em>, no el estadio.</h1>
+      <p class="sub">A dos minutos del Santiago Bernabéu. Y a ninguno de casa.</p>
+      <div class="botones">
+        <a class="u-btn" href="tel:+34636411817">Llamar · 636 41 18 17</a>
+        <a class="u-btn u-btn--linea" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+    <div class="nota" data-real>
+      <b>4,8</b>
+      <div class="estrellas" aria-hidden="true">★★★★★</div>
+      <span>Valoración en Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== tira de datos ===== -->
+<section class="tira u-sangrado">
+  <div class="u-wrap u-tira">
+    <span data-real><b>Travesía del Doctor Fleming, 15</b></span>
+    <span data-real>Chamartín · 28036 Madrid</span>
+    <span data-ejemplo><b>Desde las 7:30</b> de la mañana</span>
+    <a href="tel:+34636411817" data-real><b>636 41 18 17</b></a>
+  </div>
+</section>
+
+<!-- ===== el concepto ===== -->
+<section class="u-seccion" id="concepto">
+  <div class="u-wrap u-grid u-desigual">
+    <div>
+      <span class="u-ceja">La casa</span>
+      <h2>Café de barrio.<br>Con estadio al lado.</h2>
+    </div>
+    <div class="u-medida">
+      <p style="font-size:var(--t-l);line-height:1.45;">
+        Travesía del Doctor Fleming es una calle corta, de esas que la gente cruza
+        sin mirar. El Bernabéu está a la vuelta: ochenta mil personas pasan por
+        aquí los días de partido y ninguna sabe que existe esta puerta.
+      </p>
+      <p style="color:var(--tinta-2);">
+        El resto de la semana el sitio es otra cosa: oficinas de Fleming, vecinos
+        de Hispanoamérica, gente que viene con el portátil y se queda dos horas.
+        Es un café de los de todos los días, que además tiene el estadio enfrente.
+      </p>
+      <p style="color:var(--tinta-2);">
+        Esta página está para las dos cosas: para el que busca «desayunar cerca del
+        Bernabéu» a las ocho de la mañana, y para el que ya viene y quiere pedir
+        para llevar sin hacer cola.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== cifras ===== -->
+<section class="cifras u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-4 u-cifras">
+    <div data-real><b>4,8</b><span>sobre 5 en Google</span></div>
+    <div data-real><b>2 min</b><span>andando al Bernabéu</span></div>
+    <div data-ejemplo><b>7:30</b><span>abrimos entre semana</span></div>
+    <div data-real><b>5 min</b><span>del metro Santiago Bernabéu</span></div>
+  </div>
+</section>
+
+<!-- ===== día de partido: el detalle que solo puede decir este sitio ===== -->
+<section class="partido u-sangrado" id="partido">
+  <div class="u-grid u-partida">
+    <div class="txt">
+      <span class="u-ceja">Día de partido</span>
+      <h2>Los días que el barrio<br>se llena, aquí se cabe.</h2>
+      <p class="u-medida" style="margin-top:var(--s-3);">
+        Dos horas antes del pitido, las terrazas de Concha Espina no tienen un
+        hueco y los bares de Padre Damián cobran la caña a precio de estadio.
+        Esto es un callejón: está a la misma distancia y no se entera.
+      </p>
+      <p class="u-medida" style="opacity:.8;font-size:var(--t-s);">
+        En esta página iría, cada semana, el horario del día de partido. Una línea
+        que se cambia en diez segundos y que es exactamente lo que la gente busca
+        en el móvil de camino al estadio.
+      </p>
+      <p style="margin-top:var(--s-4);">
+        <a class="u-btn" href="#pedido">Pedir para llevar</a>
+      </p>
+    </div>
+    <div class="gran" aria-hidden="true">A dos<br>minutos<br>del pitido</div>
+  </div>
+</section>
+
+<!-- ===== lo que repiten sus reseñas ===== -->
+<section class="repiten u-seccion" id="resenas">
+  <div class="u-wrap">
+    <span class="u-ceja">Lo que dicen</span>
+    <h2 style="max-width:18ch;margin-bottom:var(--s-4);">Tres cosas se repiten en sus reseñas.</h2>
+    <div class="u-grid u-3" data-real>
+      <div class="u-cita">
+        <blockquote>El croissant con huevo y aguacate, con un zumo recién exprimido.</blockquote>
+        <cite>Lo más nombrado de la carta</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>Limpio, y te atienden rápido sin que parezca que tienen prisa.</blockquote>
+        <cite>Servicio y limpieza</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>Se está a gusto: vale igual para un desayuno rápido que para quedarse a estudiar.</blockquote>
+        <cite>El ambiente</cite>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
+      Resumido de lo que ya escriben sus clientes en directorios públicos. Con la
+      ficha de Google conectada, aquí saldrían las reseñas de verdad, con nombre
+      y fecha, actualizándose solas.
+    </p>
+  </div>
+</section>
+
+<!-- ===== lo que nos diferencia ===== -->
+<section class="u-seccion" id="diferencia">
+  <div class="u-wrap">
+    <span class="u-ceja">Por qué aquí</span>
+    <h2 style="max-width:16ch;margin-bottom:var(--s-4);">Tres motivos y ninguno es el precio.</h2>
+    <div class="u-grid u-3 u-numerada" data-ejemplo>
+      <div>
+        <h3>Desayuno hecho al momento</h3>
+        <p style="color:var(--tinta-2);">Nada de bandeja con el bollo de ayer. El huevo se hace cuando lo pide.</p>
+      </div>
+      <div>
+        <h3>Sitio para quedarse</h3>
+        <p style="color:var(--tinta-2);">Mesa, enchufe y nadie mirando el reloj. El café de la segunda taza cuesta menos.</p>
+      </div>
+      <div>
+        <h3>Para llevar sin cola</h3>
+        <p style="color:var(--tinta-2);">Se pide desde el móvil y se recoge en la barra. Día de partido incluido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== la carta ===== -->
+<section class="carta u-seccion u-sangrado" id="carta">
+  <div class="u-wrap u-grid u-desigual">
+    <div>
+      <span class="u-ceja">La carta</span>
+      <h2>Escrita aquí,<br>no en un PDF.</h2>
+      <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
+        Una carta en PDF no la lee Google ni se lee bien en el móvil. Escrita en la
+        página se busca, se actualiza en un minuto y sale en los resultados cuando
+        alguien pone «tostada de aguacate cerca del Bernabéu».
+      </p>
+    </div>
+    <div data-ejemplo>
+      <div class="u-pestanas" role="tablist">
+        <button role="tab" aria-selected="true" aria-controls="p-desayunos" id="t-desayunos">Desayunos</button>
+        <button role="tab" aria-selected="false" aria-controls="p-cafe" id="t-cafe">Café</button>
+        <button role="tab" aria-selected="false" aria-controls="p-bocadillos" id="t-bocadillos">Bocadillos</button>
+        <button role="tab" aria-selected="false" aria-controls="p-dulce" id="t-dulce">Dulce</button>
+      </div>
+
+      <ul class="u-precios panel" id="p-desayunos" role="tabpanel" aria-labelledby="t-desayunos">
+        <li><span class="n">Croissant con huevo y aguacate</span><span class="d">El que más nombran en las reseñas. Con zumo recién exprimido.</span><span class="p">7,50 €</span></li>
+        <li><span class="n">Tostada de pan de masa madre</span><span class="d">Tomate y aceite, o mantequilla y mermelada.</span><span class="p">3,20 €</span></li>
+        <li><span class="n">Huevos revueltos con jamón</span><span class="d">Con pan tostado al lado.</span><span class="p">6,80 €</span></li>
+        <li><span class="n">Desayuno completo</span><span class="d">Café, zumo natural y tostada.</span><span class="p">5,90 €</span></li>
+      </ul>
+
+      <ul class="u-precios panel" id="p-cafe" role="tabpanel" aria-labelledby="t-cafe" hidden>
+        <li><span class="n">Café solo</span><span class="d">Espresso de la casa.</span><span class="p">1,50 €</span></li>
+        <li><span class="n">Café con leche</span><span class="d">Vaso o taza, como lo pida.</span><span class="p">1,90 €</span></li>
+        <li><span class="n">Flat white</span><span class="d">Doble de café, poca leche.</span><span class="p">2,60 €</span></li>
+        <li><span class="n">Zumo de naranja natural</span><span class="d">Exprimido delante.</span><span class="p">2,80 €</span></li>
+      </ul>
+
+      <ul class="u-precios panel" id="p-bocadillos" role="tabpanel" aria-labelledby="t-bocadillos" hidden>
+        <li><span class="n">Bocadillo de tortilla</span><span class="d">Jugosa por dentro, del día.</span><span class="p">4,50 €</span></li>
+        <li><span class="n">Serranito</span><span class="d">Lomo, jamón y pimiento verde.</span><span class="p">6,20 €</span></li>
+        <li><span class="n">Vegetal con pollo</span><span class="d">Lechuga, tomate, huevo y mayonesa.</span><span class="p">5,80 €</span></li>
+      </ul>
+
+      <ul class="u-precios panel" id="p-dulce" role="tabpanel" aria-labelledby="t-dulce" hidden>
+        <li><span class="n">Napolitana de chocolate</span><span class="d">Recién sacada por la mañana.</span><span class="p">2,10 €</span></li>
+        <li><span class="n">Tarta de queso</span><span class="d">Por porciones, mientras quede.</span><span class="p">4,40 €</span></li>
+        <li><span class="n">Palmera</span><span class="d">De las grandes.</span><span class="p">2,30 €</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== pedido para llevar ===== -->
+<section class="u-seccion" id="pedido">
+  <div class="u-wrap u-grid u-desigual-inv">
+    <div>
+      <span class="u-ceja">Para llevar</span>
+      <h2>Rellene esto y le sale el mensaje escrito.</h2>
+      <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
+        No manda nada por su cuenta: prepara el texto y usted decide si lo envía por
+        WhatsApp, lo copia o llama. El pedido llega con la hora y el nombre, y en
+        barra ya está hecho cuando llega.
+      </p>
+      <div id="resumen" aria-live="polite"></div>
+      <div id="acciones">
+        <a class="u-btn" id="wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        <button class="u-btn u-btn--linea" type="button" id="copiar">Copiar el texto</button>
+      </div>
+    </div>
+    <form id="form-pedido">
+      <label class="campo"><span>Su nombre</span><input id="e-nombre" type="text" autocomplete="name"></label>
+      <label class="campo"><span>Teléfono</span><input id="e-tel" type="tel" autocomplete="tel"></label>
+      <label class="campo"><span>Hora de recogida</span><input id="e-hora" type="time"></label>
+      <label class="campo"><span>Qué quiere</span><textarea id="e-pedido" placeholder="Dos cafés con leche y un croissant con huevo y aguacate"></textarea></label>
+      <button class="u-btn" type="submit">Preparar el mensaje</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== encuéntranos ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="visita">
+  <div class="u-wrap u-grid u-desigual">
+    <div>
+      <span class="u-ceja">Dónde estamos</span>
+      <h2>Travesía del<br>Doctor Fleming, 15</h2>
+      <p class="u-medida" style="margin-top:var(--s-3);color:var(--tinta-2);">
+        Chamartín, 28036 Madrid. Entre Doctor Fleming y Padre Damián, a dos minutos
+        andando de la esquina del Bernabéu. Metro Santiago Bernabéu y Cuzco, los dos
+        a cinco minutos.
+      </p>
+      <p style="margin-top:var(--s-3);display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34636411817">Llamar</a>
+        <a class="u-btn u-btn--linea" href="https://www.google.com/maps/place/Callej%C3%B3n+del+Bernab%C3%A9u/data=!4m7!3m6!1s0xd42297fb21371fd:0x2cb6076d092da372!8m2!3d40.455584!4d-3.6875616!16s%2Fg%2F11mtfnp0v0" target="_blank" rel="noopener">Cómo llegar</a>
+      </p>
+    </div>
+    <div data-ejemplo>
+      <dl style="margin:0;">
+        <div class="fila"><dt>Lunes a viernes</dt><dd>07:30 – 17:00</dd></div>
+        <div class="fila"><dt>Sábado</dt><dd>08:30 – 17:00</dd></div>
+        <div class="fila"><dt>Domingo</dt><dd>09:00 – 15:00</dd></div>
+        <div class="fila"><dt>Día de partido</dt><dd>Hasta el descanso</dd></div>
+      </dl>
+      <p class="u-medida" style="margin-top:var(--s-3);font-size:var(--t-s);color:var(--tinta-2);">
+        Este horario es inventado: en su ficha de Google no aparece escrito y no me
+        lo he querido sacar de la manga sin preguntar. Dígame el suyo y se corrige
+        en un minuto.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== quién soy + pie legal (obligatorios) ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble grado
+      de Administración de Empresas e Informática en IE University, aquí en la zona
+      de Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de Callejón del Bernabéu.</b> Es una propuesta
+      sin relación con el negocio ni con sus titulares. La dirección, el teléfono y
+      la valoración salen de su ficha pública de Google; la carta, los precios y el
+      horario son de ejemplo — pulse «Ver qué es de ejemplo» arriba y se marcan
+      todos.</p>
+      <p>No se recoge ningún dato: el formulario funciona en su propio móvil y no
+      manda nada a ningún sitio. Si el titular quiere que esto desaparezca, escribe
+      y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34636411817">Llamar</a>
+  <a href="https://www.google.com/maps/place/Callej%C3%B3n+del+Bernab%C3%A9u/data=!4m7!3m6!1s0xd42297fb21371fd:0x2cb6076d092da372!8m2!3d40.455584!4d-3.6875616!16s%2Fg%2F11mtfnp0v0" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"Callejón del Bernabéu",
+  "url":"https://nachoie123.github.io/webdemos/callejon-del-bernabeu/",
+  "telephone":"+34636411817",
+  "priceRange":"€",
+  "servesCuisine":"Cafetería, desayunos",
+  "address":{"@type":"PostalAddress","streetAddress":"Travesía del Doctor Fleming, 15",
+    "addressLocality":"Madrid","addressRegion":"Madrid","postalCode":"28036","addressCountry":"ES"},
+  "geo":{"@type":"GeoCoordinates","latitude":40.455584,"longitude":-3.6875616},
+  "hasMap":"https://www.google.com/maps/place/Callej%C3%B3n+del+Bernab%C3%A9u/data=!4m7!3m6!1s0xd42297fb21371fd:0x2cb6076d092da372!8m2!3d40.455584!4d-3.6875616!16s%2Fg%2F11mtfnp0v0",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:30","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"15:00"}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('toggle-marcas');
+  btn.addEventListener('click',function(){
+    var on=root.getAttribute('data-marcas')==='on';
+    root.setAttribute('data-marcas',on?'off':'on');
+    btn.textContent=on?'Ver qué es de ejemplo':'Ocultar marcas';
+  });
+
+  // pestañas de la carta
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.u-pestanas button'));
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(o){
+        var sel=o===t;
+        o.setAttribute('aria-selected',sel?'true':'false');
+        document.getElementById(o.getAttribute('aria-controls')).hidden=!sel;
+      });
+    });
+  });
+
+  var form=document.getElementById('form-pedido'),
+      resumen=document.getElementById('resumen'),
+      acciones=document.getElementById('acciones'), texto='';
+  function v(id){return (document.getElementById(id).value||'').trim();}
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var l=['PEDIDO PARA LLEVAR — Callejón del Bernabéu','',
+      'Nombre: '+(v('e-nombre')||'(sin indicar)'),
+      'Teléfono: '+(v('e-tel')||'(sin indicar)'),
+      'Recogida: '+(v('e-hora')||'lo antes posible'),
+      '','Pedido:','  '+(v('e-pedido')||'(sin indicar)')];
+    texto=l.join('\n');
+    resumen.textContent=texto; resumen.classList.add('visible');
+    acciones.style.display='flex';
+    document.getElementById('wa').href='https://wa.me/?text='+encodeURIComponent(texto);
+    resumen.scrollIntoView({block:'center',behavior:'smooth'});
+  });
+  document.getElementById('copiar').addEventListener('click',function(){
+    if(!texto)return;
+    navigator.clipboard.writeText(texto).then(function(){
+      var b=document.getElementById('copiar'), t=b.textContent;
+      b.textContent='Copiado'; setTimeout(function(){b.textContent=t;},1600);
+    });
+  });
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+      io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

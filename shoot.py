@@ -29,11 +29,11 @@ ALTO_GIF = 620             # px del gif final
 FONDO_MOCKUP = (243, 240, 234)
 
 
-def capturar(html: Path):
+def capturar(html: Path, slug: str = None):
     from playwright.sync_api import sync_playwright
 
     url = html.resolve().as_uri()
-    slug = html.stem
+    slug = slug or html.stem
     SALIDA.mkdir(exist_ok=True)
 
     with sync_playwright() as p:
@@ -140,8 +140,18 @@ def main():
     html = Path(sys.argv[1])
     if not html.exists():
         sys.exit(f"No existe: {html}")
+    slug = html.parent.name if html.stem == "index" else html.stem
 
-    slug, entera, frames = capturar(html)
+    # La demo de demos/ todavia no tiene base.css dentro: sale sin estilos.
+    # Se fotografia siempre la version montada.
+    montada = RAIZ / "docs" / html.stem / "index.html"
+    if html.parent.name == "demos" and montada.exists():
+        html = montada
+        print(f"(fotografiando la version montada: {montada.relative_to(RAIZ)})")
+    elif html.parent.name == "demos":
+        sys.exit(f"Falta {montada.relative_to(RAIZ)} — corre antes sistema/montar.py")
+
+    slug, entera, frames = capturar(html, slug)
     mockup = marco_movil(entera, SALIDA / f"{slug}-mockup.png")
     gif = hacer_gif(frames, SALIDA / f"{slug}-scroll.gif")
 
