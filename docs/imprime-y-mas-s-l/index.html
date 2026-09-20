@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imprime y Más · Copistería en Avenida de Asturias, Tetuán, Madrid</title>
+<meta name="description" content="Propuesta de página web para Imprime y Más, copistería, imprenta y papelería en la Avenida de Asturias, Almenara, Tetuán, Madrid. Entrega el mismo día.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/imprime-y-mas-s-l/">
+<meta name="theme-color" content="#1f3fa8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231f3fa8%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/imprime-y-mas-s-l/">
+<meta property="og:title" content="Imprime y Más · Copistería en Avenida de Asturias, Tetuán, Madrid">
+<meta property="og:description" content="Propuesta de página web para Imprime y Más, copistería, imprenta y papelería en la Avenida de Asturias, Almenara, Tetuán, Madrid. Entrega el mismo día.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/imprime-y-mas-s-l/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   La página es papel: fondo hueso, azul de tóner y el rojo de registro solo
+   como acento. Una copistería con una web oscura se contradice.          */
+:root{
+  --fondo:#f7f6f3; --fondo-2:#eae7e0; --tinta:#191713; --tinta-2:#615c53;
+  --acento:#1f3fa8; --acento-tinta:#f2f4fd; --linea:#d3cec4;
+  --marca:#e0483a;
+  --display:'Lora', Georgia, serif;
+  --texto:'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  --radio:2px;
+}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;
+  line-height:1.06;}
+.u-ceja{color:var(--marca);}
+
+/* la franja CMYK: el único guiño al oficio */
+.cmyk{height:6px;border:0;margin:0;background:linear-gradient(90deg,
+  #00a7e1 0 25%,#e6007e 25% 50%,#ffd400 50% 75%,var(--tinta) 75% 100%);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(247,246,243,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca-n{margin-right:auto;text-decoration:none;color:inherit;line-height:1.14;}
+.marca-n b{display:block;font-family:var(--display);font-size:1.28rem;font-weight:600;}
+.marca-n span{display:block;font-size:.65rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1rem;font-size:.94rem;
+  border-radius:var(--radio);white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(172deg,var(--fondo-2) 0%,var(--fondo) 55%);
+  border-bottom:1px solid var(--linea);}
+.hero h1{font-size:clamp(2.3rem,6.6vw,4.8rem);max-width:16ch;margin:.2em 0 .36em;}
+.hero h1 em{font-style:normal;color:var(--acento);}
+.hero .bajo{max-width:46ch;font-size:1.12rem;color:var(--tinta-2);
+  margin-bottom:var(--s-3);}
+
+/* los tres caminos */
+.camino{background:var(--fondo-2);padding:var(--s-3);border-radius:var(--radio);
+  border-top:4px solid var(--acento);}
+.camino b{display:block;font-family:var(--display);font-size:1.35rem;
+  margin-bottom:.45rem;}
+.camino .plazo{display:inline-block;margin-top:var(--s-2);font-weight:700;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--acento);}
+
+/* precios */
+.precio{display:flex;align-items:baseline;gap:.8rem;padding:.8rem 0;
+  border-bottom:1px solid var(--linea);}
+.precio i{flex:1;font-style:normal;font-weight:600;}
+.precio s{text-decoration:none;font-family:var(--display);color:var(--acento);
+  font-size:1.35rem;font-weight:600;font-variant-numeric:tabular-nums;}
+
+/* qué se imprime */
+.que{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:var(--s-2);}
+.que span{border:1.5px solid var(--linea);padding:.5rem 1rem;
+  border-radius:999px;font-weight:600;font-size:.95rem;background:var(--fondo);}
+
+/* consejos */
+.truco{border-left:4px solid var(--marca);padding:var(--s-2) var(--s-3);
+  background:var(--fondo-2);border-radius:var(--radio);}
+.truco b{display:block;font-family:var(--display);font-size:1.2rem;
+  margin-bottom:.35rem;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.58rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* aviso sobre el número de portal */
+.ojo{background:#fff6e6;border-left:4px solid #c98a12;padding:var(--s-2);
+  font-size:.95rem;border-radius:var(--radio);}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.pie{background:var(--tinta);color:#b6b0a5;}
+.pie h3{color:#fff;font-size:1.15rem;margin-bottom:var(--s-1);}
+.pie a{color:#9db4ee;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para Imprime y Más.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca-n" href="#"><b>Imprime y Más</b><span data-real>Copistería · Imprenta · Papelería</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#caminos">Cómo funciona</a>
+      <a href="#precios">Precios</a>
+      <a href="#que">Qué imprimimos</a>
+      <a href="#trucos">Mandar el archivo</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34655941398" data-real>655 94 13 98</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Avenida de Asturias · Tetuán · 4,9 en Google</span>
+    <h1>Mándelo ahora.<br><em>Recójalo hoy.</em></h1>
+    <p class="bajo">No hace falta que venga a traerlo. Mande el archivo por
+    WhatsApp y le decimos el precio y para cuándo está. Si no puede pasar, se lo
+    llevamos a casa.</p>
+    <p style="display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a class="u-btn" href="https://wa.me/34655941398?text=Hola%2C%20le%20mando%20un%20archivo%20para%20imprimir.%20%C2%BFMe%20dice%20precio%20y%20para%20cu%C3%A1ndo%20estar%C3%ADa%3F"
+         target="_blank" rel="noopener" data-real>Mandar el archivo por WhatsApp</a>
+      <a class="u-btn u-btn--linea" href="tel:+34655941398" data-real>655 94 13 98</a>
+    </p>
+  </div>
+</section>
+
+<hr class="cmyk">
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="tira u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Avenida de Asturias</b></span>
+    <span data-real>Almenara · Tetuán · 28029 Madrid</span>
+    <span data-real><b>4,9</b> en Google</span>
+    <span data-real>Entrega el mismo día</span>
+    <span data-real>Envío a domicilio</span>
+    <a href="tel:+34655941398" data-real><b>655 94 13 98</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. los tres caminos ===== -->
+<section class="u-seccion" id="caminos">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que casi nadie sabe que ya hacen</span>
+    <h2 style="max-width:22ch;font-size:clamp(1.9rem,4.6vw,3.2rem);margin:.3em 0 .5em;">
+      Se puede hacer entero sin venir.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Entrega el mismo día y envío a domicilio ya los hacen. Lo que no había
+      hasta ahora es un sitio donde leerlo, ni un botón para mandar el PDF.</p>
+    <div class="u-grid u-3">
+      <div class="camino">
+        <b>Mándelo y recójalo</b>
+        <p>Manda el archivo por WhatsApp, le decimos precio y hora, y pasa a
+        recogerlo cuando le venga bien.</p>
+        <span class="plazo" data-real>El mismo día</span>
+      </div>
+      <div class="camino">
+        <b>Mándelo y se lo llevamos</b>
+        <p>Si no puede pasar, se lo llevamos a casa o a la oficina. Útil cuando
+        son muchas copias o pesa.</p>
+        <span class="plazo" data-real>Envío a domicilio</span>
+      </div>
+      <div class="camino">
+        <b>Venga en persona</b>
+        <p>Con el pendrive, con el móvil o con el papel. Y si trae dudas de
+        acabado, mejor verlo aquí.</p>
+        <span class="plazo" data-real>Tarjeta y móvil</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. precios de lo que se pide de verdad ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="precios">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.6vw,3rem);">Cuatro precios,<br>no un catálogo.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Lo que pide el 90 %
+      de la gente. El resto —gran formato, planos, acabados— se presupuesta con
+      el archivo delante, que es como se hace bien.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="precio"><i>Copia A4 en blanco y negro</i><s>0,05 €</s></div>
+      <div class="precio"><i>Copia A4 en color</i><s>0,25 €</s></div>
+      <div class="precio"><i>Encuadernado en espiral</i><s>2,50 €</s></div>
+      <div class="precio"><i>Plastificado A4</i><s>1,20 €</s></div>
+      <div class="precio"><i>Tarjetas de visita (100 u.)</i><s>19 €</s></div>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);">
+        Precios de ejemplo: son los que habría que cambiar por los suyos. Pulse
+        «Ver qué es de ejemplo» arriba y se marcan todos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. qué se imprime aquí ===== -->
+<section class="u-seccion" id="que">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.6vw,3rem);">Escrito por<br>lo que es.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Nadie busca
+      «impresión digital de alta resolución». Busca «encuadernar un trabajo».</p>
+    </div>
+    <div>
+      <div class="que" data-ejemplo>
+        <span>Trabajos y TFG</span><span>Temarios de oposición</span>
+        <span>Apuntes</span><span>Tarjetas de visita</span>
+        <span>Carteles y A3</span><span>Planos</span>
+        <span>Sellos</span><span>Encuadernados</span>
+        <span>Plastificados</span><span>Fotocopias de toda la vida</span>
+      </div>
+      <p style="margin-top:var(--s-3);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Lista de ejemplo: dígame qué hace de verdad y qué no, y la
+         ajusto. También sirve quitar cosas.</p>
+      <p style="margin-top:var(--s-2);font-size:.95rem;" data-real>
+        Imprenta, copistería y papelería. Se paga con tarjeta o con el móvil, y
+        hay aparcamiento accesible.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="cmyk">
+
+<!-- ===== 7. cómo mandar el archivo bien ===== -->
+<section class="u-seccion" id="trucos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:var(--s-4);">
+      Tres cosas que le ahorran un viaje.</h2>
+    <div class="u-grid u-3">
+      <div class="truco">
+        <b>Mándelo en PDF</b>
+        <p>Si lo manda en Word, al abrirlo aquí se puede mover todo: las fuentes
+        cambian y las páginas bailan. En PDF llega tal cual lo ve usted.</p>
+      </div>
+      <div class="truco">
+        <b>A tamaño real</b>
+        <p>Si es un A3, que el PDF sea A3. Escalar al imprimir es de donde salen
+        la mitad de los sustos con los planos.</p>
+      </div>
+      <div class="truco">
+        <b>Deje margen</b>
+        <p>Un centímetro por el lado que se encuaderna. Si el texto llega al
+        borde, el espiral se come las palabras.</p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Consejos de ejemplo, pero del oficio. Cuestan cero, evitan
+       que alguien vuelva enfadado, y son la razón por la que se guarda una
+       página en favoritos.</p>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.6vw,3rem);" data-real>
+        Avenida de<br>Asturias</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Almenara · Tetuán · 28029 Madrid</p>
+      <div class="ojo" style="margin-top:var(--s-3);">
+        <b>Una cosa que quiero preguntarle:</b> el número de portal no me cuadra
+        —una fuente dice el 3 y las coordenadas caen junto al 7—, así que
+        <b>prefiero dejarlo en blanco a poner uno mal.</b> Dígame el bueno y lo
+        pongo.
+      </div>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34655941398" data-real>655 94 13 98</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Imprime+y+M%C3%A1s,+s.l./data=!4m7!3m6!1s0xd422910515a733d:0x391d69b97f4d6126!8m2!3d40.4665089!4d-3.6908398"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:700;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>09:00 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Martes</th><td>09:00 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>09:00 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>09:00 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>09:00 – 14:00 · 16:30 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Horario de ejemplo. En una copistería es el dato más
+         buscado, porque se cierra a mediodía y el que llega a las tres se va
+         con el trabajo sin imprimir. Dígame el suyo y lo pongo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:var(--s-4);">
+      <span data-real>4,9 en Google.</span> Tres cosas se repiten.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita"><blockquote>Lo mandé por la mañana y lo tenía por la
+      tarde.</blockquote></div>
+      <div class="u-cita"><blockquote>Me avisaron de un fallo del archivo antes
+      de imprimir 200 copias.</blockquote></div>
+      <div class="u-cita"><blockquote>Precio claro y sin sorpresas al
+      recoger.</blockquote></div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.9rem;color:var(--tinta-2);" data-ejemplo>
+      El <b data-real>4,9</b> es real y coincide en dos fuentes. El número de
+      opiniones no lo declaro: una fuente dice 95 y otra 119, y prefiero no poner
+      una cifra que no puedo comprobar. Estas tres frases son de ejemplo,
+      <b>sin firma y sin nombre</b>: aquí irían sus reseñas reales.</p>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble grado
+      de Administración de Empresas e Informática en IE University, aquí en la zona
+      de Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de Imprime y Más.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la calle, el
+      teléfono, la nota de Google y los servicios salen de sus fichas públicas;
+      los precios, el horario, las listas y las opiniones son de ejemplo — pulse
+      «Ver qué es de ejemplo» arriba y se marcan todos. <b>El número de portal no
+      se declara</b> porque las fuentes no coinciden.</p>
+      <p>No se recoge ningún dato: los botones abren su propio WhatsApp o su
+      teléfono y no mandan nada a ningún sitio. Si el titular quiere que esto
+      desaparezca, escribe y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34655941398?text=Hola%2C%20le%20mando%20un%20archivo%20para%20imprimir." target="_blank" rel="noopener">Mandar archivo</a>
+  <a href="tel:+34655941398">Llamar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"PrintShop",
+  "name":"Imprime y Más, s.l.",
+  "telephone":"+34655941398",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Avenida de Asturias",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28029",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4665089,"longitude":-3.6908398},
+  "openingHours":["Mo-Fr 09:00-14:00","Mo-Fr 16:30-20:00","Sa 10:00-14:00"],
+  "priceRange":"€",
+  "paymentAccepted":"Tarjeta, pago por móvil",
+  "url":"https://nachoie123.github.io/webdemos/imprime-y-mas-s-l/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
