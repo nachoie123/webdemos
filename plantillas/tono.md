@@ -4,9 +4,21 @@
 oportunidad.** El que lee tiene que pensar "esto me cuesta dinero y merece la
 pena", no "qué maja la criatura".
 
-Esto **sustituye** el ángulo anterior de "estudiante de IE que ha hecho cosas".
-La carrera ya no abre el mensaje. Puede aparecer al final, como una línea de
-credibilidad más, o no aparecer.
+Esto **sustituye** el ángulo anterior de "estudiante de IE que ha hecho cosas"
+como *petición*. La carrera no pide nada: acompaña.
+
+**Actualizado el 20/09/2026:** IE University sí va en todos los mensajes, pero
+como segunda cláusula de la misma frase, nunca como apertura:
+
+> Me llamo Nacho San Benito, soy desarrollador web freelance **y estudio el doble
+> grado de Administración de Empresas e Informática en IE University**, aquí en la
+> zona de Cuzco.
+
+Primero lo que eres (proveedor), después de dónde sales (IE). En ese orden dice
+"sé lo que hago y además me pillas cerca". Al revés diría "soy un chaval de
+prácticas". Y el nombre de la carrera es el bueno: **doble grado de Administración
+de Empresas e Informática**, no "Ingeniería Informática e IA" — eso estaba mal en
+las plantillas viejas.
 
 ## Qué eres
 

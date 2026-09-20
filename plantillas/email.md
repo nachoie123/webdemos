@@ -27,8 +27,9 @@ Todo lo que no quepa en esos 15 segundos sobra.
 ```
 Hola{coma_nombre}:
 
-Soy Nacho San Benito, estudio Ingeniería Informática e Inteligencia
-Artificial en IE University, aquí al lado, en Castellana.
+Soy Nacho San Benito, desarrollador web freelance. Estudio el doble grado de
+Administración de Empresas e Informática en IE University, aquí al lado en
+Castellana.
 
 {el_problema_en_una_frase}
 
@@ -71,8 +72,9 @@ Nada de `cid:` ni base64: los dos huelen a spam.
 ```
 Hola:
 
-Soy Nacho San Benito, estudio Ingeniería Informática e Inteligencia
-Artificial en IE University, aquí al lado en Castellana.
+Soy Nacho San Benito, desarrollador web freelance. Estudio el doble grado de
+Administración de Empresas e Informática en IE University, aquí al lado en
+Castellana.
 
 El jueves quise ver quién tocaba en KMASPUES antes de acercarme y no
 encontré nada: solo la ficha de Google. Eso es un cliente que no entra.

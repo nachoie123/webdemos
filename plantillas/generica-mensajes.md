@@ -11,8 +11,8 @@ horario, que hacen conciertos, lo que sea).
 ```
 Buenos días:
 
-Me llamo Nacho San Benito y soy desarrollador web freelance, aquí en la zona
-de Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University,
+aquí en la zona de Cuzco.
 
 Al buscar {NEGOCIO} en internet solo aparece su ficha de Google. {GANCHO}
 
@@ -50,8 +50,8 @@ Desarrollador web · 682 02 05 47
 ```
 Buenos días:
 
-Me llamo Nacho San Benito y soy desarrollador web freelance en Madrid, en la
-zona de Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, en
+Madrid, zona de Cuzco.
 
 Al buscar {NEGOCIO} en internet solo aparece su ficha de Google. {GANCHO}
 

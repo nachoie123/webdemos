@@ -12,7 +12,7 @@
 ```
 Buenos días:
 
-Me llamo Nacho San Benito y soy desarrollador web freelance, aquí en la zona de Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, aquí en la zona de Cuzco.
 
 Al buscar KMASPUES en internet solo aparece su ficha de Google: quien quiera saber quién toca este viernes antes de acercarse, no lo encuentra.
 
@@ -120,8 +120,9 @@ y en un chat frío parece publicidad.
 ```
 Hola:
 
-Soy Nacho San Benito, estudio Ingeniería Informática e Inteligencia
-Artificial en IE University, aquí al lado en Castellana.
+Soy Nacho San Benito, desarrollador web freelance. Estudio el doble grado de
+Administración de Empresas e Informática en IE University, aquí al lado en
+Castellana.
 
 El otro día quise ver quién tocaba en KMASPUES antes de acercarme y no
 encontré nada: solo vuestra ficha de Google. Ese soy yo, pero también es

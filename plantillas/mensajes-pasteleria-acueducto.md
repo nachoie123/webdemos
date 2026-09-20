@@ -28,8 +28,8 @@ dos direcciones de Segovia y pensará que en Madrid no hay nada.
 ```
 Buenos días:
 
-Me llamo Nacho San Benito y soy desarrollador web freelance, aquí en la zona de
-Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, aquí
+en la zona de Cuzco.
 
 Entré en la web que aparece en su ficha de Google buscando el catálogo de la
 tienda de Infanta Mercedes. En ella solo están las dos tiendas de Segovia: la de
@@ -71,8 +71,8 @@ Desarrollador web · 682 02 05 47
 ```
 Buenos días:
 
-Me llamo Nacho San Benito y soy desarrollador web freelance en Madrid, en la zona
-de Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, en
+Madrid, zona de Cuzco.
 
 Les escribo por la tienda de la calle Infanta Mercedes. Entré en su web buscando
 el catálogo y vi que en ella solo constan las dos tiendas de Segovia, Paseo
@@ -145,7 +145,7 @@ Version acortada del texto de WhatsApp. Al escribirlo en el navegador hay que us
 ```
 Buenos días:
 
-Me llamo Nacho San Benito y soy desarrollador web freelance, aquí en la zona de Cuzco.
+Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, aquí en la zona de Cuzco.
 
 Entré en la web que aparece en su ficha de Google buscando el catálogo de la tienda de Infanta Mercedes, y en ella solo están las dos de Segovia. La de Madrid no aparece por ningún lado.
 
