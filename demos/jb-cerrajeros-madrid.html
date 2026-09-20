@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JB Cerrajeros · Cerrajero en Tetuán y Chamartín, Madrid</title>
+<meta name="description" content="Propuesta de página web para JB Cerrajeros Madrid, cerrajería de urgencias en Tetuán, Castillejos y Chamartín. Sin intermediarios.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/jb-cerrajeros-madrid/">
+<meta name="theme-color" content="#0b5d3b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230b5d3b%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/jb-cerrajeros-madrid/">
+<meta property="og:title" content="JB Cerrajeros · Cerrajero en Tetuán y Chamartín, Madrid">
+<meta property="og:description" content="Propuesta de página web para JB Cerrajeros Madrid, cerrajería de urgencias en Tetuán, Castillejos y Chamartín. Sin intermediarios.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/jb-cerrajeros-madrid/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Sector inundado de webs de captación en rojo y negro que meten prisa.
+   Aquí: papel claro, verde de oficio y el naranja SOLO en el teléfono.
+   Cuerpo grande, porque se lee en un rellano a oscuras con una mano.    */
+:root{
+  --fondo:#f6f4f1; --fondo-2:#e7e3dd; --tinta:#16181c; --tinta-2:#5e646d;
+  --acento:#0b5d3b; --acento-tinta:#f4f8f5; --linea:#cfc9c0;
+  --alerta:#d4622a;
+  --display:'Source Serif 4', Georgia, serif;
+  --texto:'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  --radio:4px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-weight:600;letter-spacing:-.015em;}
+.u-ceja{color:var(--acento);}
+
+/* el teléfono: el elemento más grande de la página */
+.tel-grande{display:inline-flex;align-items:center;gap:.7rem;
+  background:var(--alerta);color:#fff;text-decoration:none;
+  font-size:clamp(1.5rem,4.6vw,2.4rem);font-weight:800;letter-spacing:-.02em;
+  padding:1rem 1.6rem;border-radius:var(--radio);
+  box-shadow:0 6px 0 #a84a1e;}
+.tel-grande small{font-size:.5em;font-weight:600;opacity:.92;letter-spacing:0;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(246,244,241,.95);
+  backdrop-filter:blur(8px);border-bottom:2px solid var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.15;}
+.marca b{display:block;font-family:var(--display);font-size:1.25rem;font-weight:600;}
+.marca span{display:block;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:800;text-decoration:none;color:#fff;background:var(--alerta);
+  padding:.55rem 1rem;font-size:1rem;border-radius:var(--radio);}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero: sin animación, el teléfono visible sin bajar */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.04;
+  max-width:16ch;margin:.25em 0 .4em;}
+.hero .bajo{max-width:44ch;font-size:1.13rem;color:var(--tinta-2);
+  margin-bottom:var(--s-3);}
+.hero .letra{margin-top:var(--s-2);font-size:.95rem;color:var(--tinta-2);
+  max-width:48ch;}
+
+/* precios: la sección que el sector nunca enseña */
+.tarifa{display:flex;align-items:baseline;gap:.8rem;padding:.9rem 0;
+  border-bottom:1px solid var(--linea);}
+.tarifa i{flex:1;font-style:normal;font-weight:600;}
+.tarifa s{text-decoration:none;font-weight:800;color:var(--acento);
+  font-size:1.15rem;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.recargo{margin-top:var(--s-2);padding:var(--s-2);background:var(--fondo);
+  border-left:4px solid var(--alerta);font-size:.95rem;}
+
+/* qué sí y qué no */
+.si-no{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-4);}
+.si-no ul{list-style:none;padding:0;margin:0;}
+.si-no li{padding:.55rem 0 .55rem 1.9rem;position:relative;
+  border-bottom:1px solid var(--linea);}
+.si-no li::before{position:absolute;left:0;top:.55rem;font-weight:800;}
+.si li::before{content:"✓";color:var(--acento);}
+.no li::before{content:"✕";color:var(--tinta-2);}
+.no li{color:var(--tinta-2);}
+@media(max-width:700px){.si-no{grid-template-columns:1fr;gap:var(--s-3)}}
+
+/* zona de cobertura */
+.zona{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:var(--s-2);}
+.zona span{border:1.5px solid var(--acento);color:var(--acento);
+  padding:.45rem .9rem;border-radius:999px;font-weight:600;font-size:.95rem;}
+
+/* horario día a día */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* mientras llego */
+.consejo{background:var(--fondo-2);padding:var(--s-3);border-radius:var(--radio);}
+.consejo b{display:block;font-family:var(--display);font-size:1.25rem;
+  margin-bottom:.4rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #0b5d3b;outline-offset:6px;}
+
+.pie{background:var(--tinta);color:#b8bec7;}
+.pie h3{color:#fff;font-size:1.1rem;margin-bottom:var(--s-1);}
+.pie a{color:#8fd0ae;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para JB Cerrajeros Madrid.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>JB Cerrajeros</b><span data-real>Tetuán · Chamartín · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#precios">Precios</a>
+      <a href="#quien">Quién soy</a>
+      <a href="#zona">Zona</a>
+      <a href="#mientras">Si está fuera</a>
+      <a href="#presupuesto">Presupuesto</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34675259819" data-real>675 25 98 19</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero: el teléfono es lo más grande. Sin animación. ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja">Cerrajero de Tetuán · sin intermediarios</span>
+    <h1>Se ha quedado fuera de casa.</h1>
+    <p class="bajo">Le coge el teléfono el mismo que va a ir. Le digo el precio
+    cerrado antes de salir, y es el que paga.</p>
+    <a class="tel-grande" href="tel:+34675259819" data-real>
+      675 25 98 19 <small>Llamar ahora</small></a>
+    <p class="letra" data-ejemplo>Apertura de puerta <b>desde 60 €</b> ·
+    normalmente en 20–30 minutos dentro de la zona · recargo de noche y festivos
+    dicho por teléfono, nunca al llegar.</p>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="tira u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Tetuán · Castillejos · Chamartín</b></span>
+    <span data-ejemplo>24 horas, todos los días</span>
+    <span data-real>Sin intermediarios</span>
+    <a href="tel:+34675259819" data-real><b>675 25 98 19</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. el precio, dicho antes de ir ===== -->
+<section class="u-seccion" id="precios">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <span class="u-ceja">Lo que nadie más enseña</span>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.06;margin:.3em 0 .5em;">
+        El precio, antes<br>de salir de casa.</h2>
+      <p style="color:var(--tinta-2);">En este oficio el miedo no es la puerta:
+      es la factura. Por eso el precio se dice por teléfono, con el recargo
+      incluido, antes de que yo me mueva. Si al llegar es más caro, no se paga.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="tarifa"><i>Apertura de puerta, resbalón</i><s>desde 60 €</s></div>
+      <div class="tarifa"><i>Apertura con bombín roto o forzado</i><s>desde 90 €</s></div>
+      <div class="tarifa"><i>Cambio de bombín de seguridad</i><s>desde 120 €</s></div>
+      <div class="tarifa"><i>Apertura de persiana o trastero</i><s>desde 70 €</s></div>
+      <div class="tarifa"><i>Presupuesto y desplazamiento</i><s>0 €</s></div>
+      <div class="recargo">
+        <b>La letra pequeña, aquí y no al final:</b> de 22:00 a 8:00, domingos y
+        festivos hay un recargo de 20 €. Se lo digo al teléfono antes de salir.
+        El precio incluye IVA y mano de obra; si hace falta material, se lo digo
+        con su precio antes de ponerlo.
+      </div>
+      <p style="margin-top:var(--s-2);font-size:.88rem;color:var(--tinta-2);">
+        Precios de ejemplo: son los que habría que cambiar por los suyos. Pulse
+        «Ver qué es de ejemplo» arriba y se marcan todos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. quién soy ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="quien">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.06;">
+        Un nombre,<br>un teléfono,<br>una persona.</h2>
+    </div>
+    <div class="u-medida">
+      <p>Busque «cerrajero Tetuán» y le saldrán veinte páginas iguales, cada una
+      con un número distinto y ninguna con un nombre. <b>Casi ninguna es un
+      cerrajero:</b> cogen la llamada, se llevan una comisión y mandan a un
+      tercero que le cobra lo que quiere cuando ya le ha abierto.</p>
+      <p>Esto no es eso. Es un cerrajero del barrio: el número que marca es un
+      móvil, y el que lo coge es el que se presenta en su portal.</p>
+      <p data-ejemplo><b>Aquí irían su nombre, su foto y sus años en el barrio.</b>
+      Es lo único que las webs de captación no pueden copiar, y por eso es lo
+      primero que hay que poner.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. qué hago y qué no ===== -->
+<section class="u-seccion" id="servicios">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:var(--s-4);">
+      Lo que hago y lo que no.</h2>
+    <div class="si-no" data-ejemplo>
+      <div class="si">
+        <h3 style="color:var(--acento);margin-bottom:var(--s-1);">Sí</h3>
+        <ul>
+          <li>Aperturas de puerta sin romper, cuando se puede</li>
+          <li>Cambio de bombín y de cerradura</li>
+          <li>Bombines antibumping y de alta seguridad</li>
+          <li>Puertas de trastero, garaje y persianas</li>
+          <li>Cerraduras de local y de comunidad</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3 style="margin-bottom:var(--s-1);">No</h3>
+        <ul>
+          <li>Coches: no abro vehículos</li>
+          <li>Cajas fuertes</li>
+          <li>Trabajos sin que el cliente acredite que vive ahí</li>
+          <li>Presupuestos por teléfono que luego cambian al llegar</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.9rem;color:var(--tinta-2);" data-ejemplo>
+      Lista de ejemplo. Decir lo que <b>no</b> se hace da más confianza que una
+      lista de treinta servicios, y ninguna web del sector lo hace.</p>
+  </div>
+</section>
+
+<!-- ===== 7. zona de cobertura ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="zona">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.06;">
+        ¿Viene<br>a mi calle?</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Es la pregunta de
+      verdad, y «Madrid» no la responde. Estos son los barrios, con su nombre.</p>
+    </div>
+    <div>
+      <div class="zona" data-ejemplo>
+        <span>Tetuán</span><span>Castillejos</span><span>Cuatro Caminos</span>
+        <span>Bellas Vistas</span><span>Berruguete</span><span>Valdeacederas</span>
+        <span>Chamartín</span><span>Costa Fleming</span><span>Nueva España</span>
+        <span>Plaza de Castilla</span><span>Cuzco</span><span>Prosperidad</span>
+      </div>
+      <p style="margin-top:var(--s-3);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Zona de ejemplo: dígame hasta dónde llega y la ajusto.
+         Fuera de estos barrios, se lo digo por teléfono antes de salir.</p>
+
+      <h3 style="margin-top:var(--s-4);font-size:.72rem;letter-spacing:.24em;
+                 text-transform:uppercase;color:var(--acento);">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>24 h · 00:00 – 23:59</td></tr>
+        <tr><th>Martes</th><td>24 h · 00:00 – 23:59</td></tr>
+        <tr><th>Miércoles</th><td>24 h · 00:00 – 23:59</td></tr>
+        <tr><th>Jueves</th><td>24 h · 00:00 – 23:59</td></tr>
+        <tr><th>Viernes</th><td>24 h · 00:00 – 23:59</td></tr>
+        <tr><th>Sábado</th><td>24 h · 00:00 – 23:59</td></tr>
+        <tr><th>Domingo y festivos</th><td>24 h · 00:00 – 23:59</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Escrito día a día a propósito: «24h» lo pone todo el mundo,
+         pero la duda real es si coge el teléfono un domingo de agosto. Dígame su
+         horario de verdad y lo pongo tal cual.</p>
+      <p style="margin-top:var(--s-3);">
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/JB+Cerrajeros+Madrid/data=!4m7!3m6!1s0xd4229c92773044b:0xce32dba3c914eb5a!8m2!3d40.4587419!4d-3.6940099"
+           data-real>Su ficha en Google Maps</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. qué hacer mientras llego ===== -->
+<section class="u-seccion" id="mientras">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:var(--s-4);">
+      Qué hacer mientras llego.</h2>
+    <div class="u-grid u-3">
+      <div class="consejo">
+        <b>No fuerce la cerradura</b>
+        <p>Ni tarjetas, ni alambres, ni destornilladores. Una apertura limpia
+        cuesta 60 €; un bombín reventado por intentarlo, el doble.</p>
+      </div>
+      <div class="consejo">
+        <b>Mire si hay llave puesta por dentro</b>
+        <p>Cambia el trabajo por completo y el precio también. Dígamelo por
+        teléfono y le doy el precio bueno a la primera.</p>
+      </div>
+      <div class="consejo">
+        <b>Tenga a mano algo que le acredite</b>
+        <p>DNI con la dirección, un recibo o un vecino que le conozca. No abro
+        una puerta a quien no puede demostrar que vive ahí.</p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.9rem;color:var(--tinta-2);" data-ejemplo>
+      Consejos de ejemplo, pero del oficio. Cuestan cero y ninguna web de la
+      competencia los da: son la razón por la que alguien guarda esta página.</p>
+  </div>
+</section>
+
+<!-- ===== 9. opiniones ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:var(--s-4);">
+      Lo que suele decirse de un cerrajero bueno.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita"><blockquote>Me dijo el precio por teléfono y fue
+      exactamente ese.</blockquote></div>
+      <div class="u-cita"><blockquote>Abrió sin romper nada y en diez
+      minutos.</blockquote></div>
+      <div class="u-cita"><blockquote>Vino él mismo, no mandó a
+      otro.</blockquote></div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.9rem;color:var(--tinta-2);" data-ejemplo>
+      Tres frases de ejemplo, <b>sin firma y sin nombre</b>: no he copiado reseñas
+      de nadie ni he puesto nota de Google, porque no he podido verificar ninguna.
+      Aquí irían las suyas reales cuando usted diga.</p>
+  </div>
+</section>
+
+<!-- ===== 10. urgencia o presupuesto ===== -->
+<section class="u-seccion" id="presupuesto">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.06;">
+        ¿Tiene prisa<br>o no la tiene?</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Si está en la calle,
+      llame: es más rápido que escribir.</p>
+      <p style="margin-top:var(--s-2);">
+        <a class="tel-grande" href="tel:+34675259819" data-real>
+          675 25 98 19 <small>Llamar ahora</small></a></p>
+      <p style="margin-top:var(--s-3);color:var(--tinta-2);">Si es para cambiar un
+      bombín con calma o para un local, pida presupuesto sin prisa. No se manda a
+      ningún servidor: se abre su WhatsApp con el texto puesto.</p>
+    </div>
+    <form id="form-presupuesto" style="display:grid;gap:var(--s-2);">
+      <label>Qué necesita
+        <select name="que" style="width:100%;padding:.75rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;border-radius:var(--radio);">
+          <option>Cambiar un bombín</option>
+          <option>Cambiar la cerradura entera</option>
+          <option>Puerta de local o comunidad</option>
+          <option>Persiana o trastero</option>
+          <option>Otra cosa</option>
+        </select></label>
+      <label>Barrio <input name="barrio" style="width:100%;padding:.75rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;border-radius:var(--radio);"></label>
+      <label>Cuándo le viene bien <input name="cuando" style="width:100%;padding:.75rem;border:1.5px solid var(--linea);background:var(--fondo);font:inherit;border-radius:var(--radio);" placeholder="Esta semana por la tarde"></label>
+      <button class="u-btn" type="submit">Abrir WhatsApp con el mensaje</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble grado
+      de Administración de Empresas e Informática en IE University, aquí en la zona
+      de Cuzco. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de JB Cerrajeros Madrid.</b> Es una propuesta
+      sin relación con el negocio ni con sus titulares. El nombre y el teléfono
+      salen de su ficha pública de Google; los precios, el horario, la zona de
+      cobertura, la lista de servicios y las opiniones son de ejemplo — pulse
+      «Ver qué es de ejemplo» arriba y se marcan todos.</p>
+      <p>No se recoge ningún dato: el formulario funciona en su propio móvil y no
+      manda nada a ningún sitio. Si el titular quiere que esto desaparezca, escribe
+      y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34675259819">Llamar ahora</a>
+  <a href="https://wa.me/34675259819" target="_blank" rel="noopener">WhatsApp</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Locksmith",
+  "name":"JB Cerrajeros Madrid",
+  "telephone":"+34675259819",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "addressCountry":"ES"
+  },
+  "areaServed":[
+    {"@type":"Place","name":"Tetuán, Madrid"},
+    {"@type":"Place","name":"Castillejos, Madrid"},
+    {"@type":"Place","name":"Cuatro Caminos, Madrid"},
+    {"@type":"Place","name":"Chamartín, Madrid"},
+    {"@type":"Place","name":"Plaza de Castilla, Madrid"}
+  ],
+  "openingHours":["Mo-Su 00:00-23:59"],
+  "priceRange":"€€",
+  "url":"https://nachoie123.github.io/webdemos/jb-cerrajeros-madrid/"
+}
+</script>
+
+<script>
+/* el hero NO se revela: medio segundo en blanco es medio segundo perdido */
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+
+document.getElementById('form-presupuesto').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var d = new FormData(ev.target);
+  var t = 'Hola, quería un presupuesto.\n\n'
+        + 'Qué necesito: ' + (d.get('que') || '-') + '\n'
+        + 'Barrio: ' + (d.get('barrio') || '-') + '\n'
+        + 'Cuándo: ' + (d.get('cuando') || '-');
+  window.open('https://wa.me/34675259819?text=' + encodeURIComponent(t), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
