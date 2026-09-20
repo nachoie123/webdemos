@@ -36,8 +36,8 @@
     "tipo": "Pub con música en vivo",
     "telefono": "671595993",
     "maps": "https://www.google.com/maps/place/KMASPUES/data=!4m7!3m6!1s0xd42298142bae3fb:0x78844051e0dc47a5!8m2!3d40.4617797!4d-3.6882287!16s%2Fg%2F11zkq3ltqk",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "dominio_vacio",
+    "web_actual": "https://kmaspues.com",
     "gancho": "Tiene conciertos pero no web; landing con agenda de eventos y reserva de mesa.",
     "email": null,
     "demo": "https://nachoie123.github.io/webdemos/kmaspues/",
@@ -49,7 +49,8 @@
       "nota": "primer envío borrado por Nacho; reenviado con el texto formal",
       "version": "formal"
     },
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Dominio aparcado en Hostinger, nunca llegó a haber web. Ya quiso tenerla."
   },
   {
     "slug": "cafeteria-atenea",
@@ -58,13 +59,14 @@
     "tipo": "Cafetería",
     "telefono": "619405869",
     "maps": "https://www.google.com/maps/place/Cafeteria+Atenea/data=!4m7!3m6!1s0xd42291c906f5bf5:0x2fb071c88c81d1cc!8m2!3d40.4583014!4d-3.6910153!16s%2Fg%2F11c1nxmfrd",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "dudoso",
+    "web_actual": "https://cafeteriaatenea.com",
     "gancho": "4.5★ de barrio, ninguna presencia web; landing con carta de desayunos y menú del día.",
     "email": null,
     "demo": null,
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Web a medio hacer, con «+34 000 000 000» e «info@example.com» sin sustituir. SIN CONFIRMAR que sea la misma Atenea."
   },
   {
     "slug": "cafeteria-el-espinar",
@@ -151,13 +153,14 @@
     "tipo": "Barbería",
     "telefono": "657098873",
     "maps": "https://www.google.com/maps/place/Kali+BARBER+SHOP/data=!4m7!3m6!1s0xd422948a6e69d49:0xe73890fa24b7ba38!8m2!3d40.464698!4d-3.6958229!16s%2Fg%2F11h3c4w6hl",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "dominio_vacio",
+    "web_actual": "https://kalibarbershop.com",
     "gancho": "190 opiniones (4.3★) sin reserva online; landing con calendario de citas y galería de cortes.",
     "email": null,
     "demo": "https://nachoie123.github.io/webdemos/kali-barber-shop/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Compró el dominio y sigue en «Próximamente. En construcción». Ya quiso tener web."
   },
   {
     "slug": "barberia-cholo-y-peluqueria-de-caballero",
@@ -226,13 +229,14 @@
     "tipo": "Floristería",
     "telefono": "689518971",
     "maps": "https://www.google.com/maps/place/la+fioreria+madrid/data=!4m7!3m6!1s0xd42292322b3fb23:0x47f2bb287f9f69be!8m2!3d40.4613737!4d-3.6880101",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "tienda",
+    "web_actual": "https://lafioreriamadrid.com",
     "gancho": "Floristería de barrio con 4.9★ y sin web; landing con catálogo de ramos y botón de encargo.",
     "email": null,
     "demo": null,
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Shopify completa y funcionando: carrito, catálogo, novias. NO es candidata."
   },
   {
     "slug": "flores-yohana-alonso-s-l",
@@ -346,13 +350,14 @@
     "tipo": "Taller mecánico",
     "telefono": "913152730",
     "maps": "https://www.google.com/maps/place/Talleres+J.L./data=!4m7!3m6!1s0xd42290ee618b051:0xfc0f1c82cddb9b44!8m2!3d40.4671186!4d-3.6963461",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "propia",
+    "web_actual": "https://www.talleresjl.es/",
     "gancho": "4.8★ sin web; landing con servicios, horarios y formulario de \"pide cita para tu coche\".",
     "email": null,
     "demo": null,
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Web propia real, anticuada pero suya. Replantear el gancho antes de ofrecer nada."
   },
   {
     "slug": "autonorte-saez",
@@ -421,13 +426,14 @@
     "tipo": "Asesoría / gestoría",
     "telefono": "645488951",
     "maps": "https://www.google.com/maps/place/Asesoria+Madrid+Centro/data=!4m7!3m6!1s0xd42291b70efffff:0x7fc99550e308697!8m2!3d40.4598186!4d-3.6906525",
-    "estado_web": "none",
-    "web_actual": null,
+    "estado_web": "dudoso",
+    "web_actual": "https://www.asesoriacentro.es/",
     "gancho": "Negocio nuevo sin web todavía; landing corporativa con formulario de solicitud de cita.",
     "email": null,
     "demo": null,
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "«Asesoría Centro», Madrid y Segovia. Puede ser un homónimo: confirmar por teléfono antes de nada."
   },
   {
     "slug": "imprime-y-mas-s-l",

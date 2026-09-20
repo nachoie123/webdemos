@@ -2,9 +2,15 @@
 
 **Canal:** WhatsApp al **657 09 88 73** · **Demo:** https://nachoie123.github.io/webdemos/kali-barber-shop/
 
-El gancho NO es «no tiene web»: es que **su trabajo ya está fotografiado en
-Instagram (@barber_shop_kali, verificado) y nadie lo encuentra desde Google**.
-Se le reconoce lo que ya hace bien antes de ofrecerle nada.
+El gancho NO es «no tiene web». Son dos cosas, las dos verificadas:
+1. **Su trabajo ya está fotografiado** en Instagram (@barber_shop_kali) y nadie
+   lo encuentra desde Google.
+2. **Ya compró el dominio `kalibarbershop.com`** y lleva en «Próximamente, en
+   construcción». O sea: no hay que convencerle de que quiere una web — ya la
+   quiso. Solo hay que terminársela.
+
+Se le reconoce lo que ya hace bien antes de ofrecerle nada, y se menciona el
+dominio sin retintín: se quedó a medias, le pasa a todo el mundo.
 
 Y se le pregunta el número de portal: las fuentes dicen 6, 39 y Bravo Murillo.
 Preguntar en vez de inventar es, además, la mejor prueba de cómo se trabaja.
@@ -17,7 +23,9 @@ Buenas:
 
 Me llamo Nacho San Benito, soy desarrollador web freelance y estudio el doble grado de Administración de Empresas e Informática en IE University, aquí al lado, en la zona de Cuzco.
 
-Me puse a mirar barberías de Tetuán y llegué a su Instagram. El trabajo está muy bien fotografiado, pero ahí hay un problema que no es suyo: la gente no busca barbería en Instagram, busca «barbería Tetuán» en Google, y ahí su perfil no sale. Y desde un mensaje directo nadie pide hora a las once de la noche.
+Me puse a mirar barberías de Tetuán y llegué a su Instagram. El trabajo está muy bien fotografiado. Y vi que kalibarbershop.com es suyo, pero sigue en «Próximamente, en construcción», así que imagino que esto ya se lo planteó en algún momento y se quedó a medias.
+
+El problema no es suyo: la gente no busca barbería en Instagram, busca «barbería Tetuán» en Google, y ahí su perfil no sale. Y desde un mensaje directo nadie pide hora a las once de la noche.
 
 Le he preparado una página, publicada y funcionando, para que la vea antes de decidir nada:
 
