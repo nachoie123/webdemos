@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reparaciones El Experto · Bravo Murillo 355, Tetuán, Madrid</title>
+<meta name="description" content="Propuesta de página web para Reparaciones El Experto, reparación de móviles y ordenadores en la calle de Bravo Murillo 355, barrio de Almenara, Tetuán, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/reparaciones-el-experto/">
+<meta name="theme-color" content="#4b31e8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%234b31e8%27/%3E%3Crect x=%2711%27 y=%276%27 width=%2710%27 height=%2720%27 rx=%272%27 fill=%27%23f3f1ff%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/reparaciones-el-experto/">
+<meta property="og:title" content="Reparaciones El Experto · Bravo Murillo 355, Tetuán, Madrid">
+<meta property="og:description" content="Propuesta de página web para Reparaciones El Experto, reparación de móviles y ordenadores en la calle de Bravo Murillo 355, barrio de Almenara, Tetuán, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/reparaciones-el-experto/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Spline+Sans:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   Mostrador. Blanco azulado de tienda con buena luz, violeta eléctrico para lo
+   que se pulsa y ámbar en una sola ficha, la del presupuesto. Nada de negro
+   con circuitos de fondo, que es el uniforme de todo el sector.            */
+:root{
+  --fondo:#f4f4f7; --fondo-2:#e7e7ee; --tinta:#14141c; --tinta-2:#5c5c6b;
+  --acento:#4b31e8; --acento-tinta:#f3f1ff; --linea:#d2d2de;
+  --ambar:#e8930c;
+  --display:'Bricolage Grotesque', 'Arial Narrow', sans-serif;
+  --texto:'Spline Sans', 'Helvetica Neue', Arial, sans-serif;
+  --radio:6px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;
+  line-height:1.0;}
+h2{font-size:clamp(2.1rem,5vw,3.6rem);}
+h3{font-size:1.45rem;}
+em.ok{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(244,244,247,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.72rem;padding-bottom:.72rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:800;
+  letter-spacing:-.03em;}
+.marca span{display:block;font-size:.62rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.93rem;
+  border-radius:var(--radio);white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(170deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.0;max-width:17ch;
+  margin:.2em 0 .38em;}
+.hero .bajo{max-width:47ch;font-size:1.12rem;color:var(--tinta-2);
+  margin-bottom:var(--s-3);}
+
+/* tramos de tiempo */
+.u-numerada > *{background:var(--fondo);border:1px solid var(--linea);
+  border-radius:var(--radio);}
+.u-numerada > *::before{color:var(--acento);opacity:1;font-weight:800;}
+.tramo b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:700;
+  letter-spacing:-.02em;line-height:1.05;margin-bottom:.45rem;}
+.reloj{display:inline-block;margin-top:var(--s-2);font-size:.74rem;
+  letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  background:var(--acento);color:var(--acento-tinta);padding:.34rem .8rem;
+  border-radius:999px;}
+
+/* la sección muda: privacidad */
+.muda{background:var(--fondo);border:1px solid var(--linea);
+  border-radius:var(--radio);padding:var(--s-3);margin-bottom:var(--s-2);}
+.muda > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;font-weight:700;
+  letter-spacing:-.02em;margin-bottom:.3rem;}
+
+/* la única ficha ámbar de la página */
+.presu{background:#fff8ec;border:1px solid var(--ambar);border-left:6px solid var(--ambar);
+  border-radius:var(--radio);padding:var(--s-3);}
+.presu b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:700;
+  letter-spacing:-.02em;margin-bottom:.4rem;}
+
+/* precios */
+.u-precios li{flex-wrap:wrap;}
+.u-precios .d{flex-basis:100%;order:3;margin-top:.2rem;}
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);font-weight:700;color:var(--acento);}
+.letra-chica{margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);}
+
+/* original vs compatible */
+.pieza{border:1px solid var(--linea);border-radius:var(--radio);padding:var(--s-3);
+  background:var(--fondo);}
+.pieza h3{margin-bottom:.4rem;}
+.pieza .eti{display:inline-block;font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:600;padding:.28rem .7rem;border-radius:999px;
+  background:var(--fondo-2);color:var(--tinta-2);margin-bottom:var(--s-2);}
+
+/* qué se arregla */
+.lista{list-style:none;margin:0;padding:0;}
+.lista li{padding:.65rem 0 .65rem 1.5rem;border-bottom:1px solid var(--linea);
+  position:relative;}
+.lista li::before{content:"";position:absolute;left:0;top:1.15rem;
+  width:.55rem;height:.55rem;border-radius:2px;background:var(--acento);}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.58rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* opiniones */
+.u-cita{border-color:var(--linea);border-radius:var(--radio);background:var(--fondo);}
+.u-cita cite{color:var(--acento);font-weight:600;}
+
+/* aviso */
+.ojo{background:#fff8ec;border-left:4px solid var(--ambar);padding:var(--s-2);
+  font-size:.95rem;border-radius:var(--radio);}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#9c9cae;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#b7a8ff;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito para Reparaciones El Experto.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Reparaciones El Experto</b><span data-real>Móviles y ordenadores · Bravo Murillo 355</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#tiempo">¿Cuánto tarda?</a>
+      <a href="#datos">Tus fotos</a>
+      <a href="#precios">Precios</a>
+      <a href="#donde">Dónde estamos</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34634139301" data-real>634 13 93 01</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Reparación de móviles y ordenadores · Bravo Murillo 355</span>
+    <h1>Se te acaba de caer.<br><em class="ok">Puedes tenerlo esta tarde.</em></h1>
+    <p class="bajo">Mándanos una foto de cómo ha quedado por WhatsApp y te
+    decimos qué tiene, cuánto vale y cuánto tarda, antes de que te muevas de
+    casa. Estamos en Bravo Murillo 355, a pie de calle.</p>
+    <p style="display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a class="u-btn" href="https://wa.me/34634139301?text=Hola%2C%20os%20mando%20una%20foto%3A%20se%20me%20ha%20roto%20"
+         target="_blank" rel="noopener" data-real>Mandar una foto por WhatsApp</a>
+      <a class="u-btn u-btn--linea" href="tel:+34634139301" data-real>Llamar · 634 13 93 01</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Bravo Murillo, 355</b></span>
+    <span data-real>Almenara · Tetuán · 28029 Madrid</span>
+    <span data-ejemplo>Lunes a viernes 10:00–20:00</span>
+    <a href="tel:+34634139301" data-real><b>634 13 93 01</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. ¿cuánto tarda? ===== -->
+<section class="u-seccion" id="tiempo">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">La primera pregunta, siempre</span>
+    <h2 style="max-width:20ch;margin:.22em 0 .45em;">¿Cuánto tarda?<br>No: ¿cuánto cuesta?</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Nadie entra en una tienda de reparaciones de buen humor. Se llega con el
+      móvil roto en la mano y con prisa, y lo primero que se quiere saber es si
+      se puede vivir sin él hasta mañana. El precio viene después.</p>
+    <div class="u-grid u-3 u-numerada">
+      <div class="tramo">
+        <b>Se hace en el momento</b>
+        <p data-ejemplo>Pantalla, batería, cristal de la cámara, altavoz o
+        conector de carga. Te esperas y te lo llevas.</p>
+        <span class="reloj">30 – 60 minutos</span>
+      </div>
+      <div class="tramo">
+        <b>Se hace en el día</b>
+        <p data-ejemplo>Ordenadores: cambio de disco, limpieza, ventiladores,
+        reinstalar el sistema con los archivos donde estaban.</p>
+        <span class="reloj">Si entra antes de las 12:00</span>
+      </div>
+      <div class="tramo">
+        <b>Hay que pedir pieza</b>
+        <p data-ejemplo>Modelos raros, placa base o mojados. Se te dice el día
+        exacto en cuanto se abre y se mira.</p>
+        <span class="reloj">2 – 4 días</span>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Los tiempos son de ejemplo. Dinos los tuyos de verdad y los
+       pongo: un plazo escrito es lo que hace que alguien se acerque en vez de
+       seguir mirando tiendas.</p>
+  </div>
+</section>
+
+<!-- ===== 5. lo que nadie pregunta en voz alta ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="datos">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Lo que nadie<br>pregunta<br>en voz alta.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Todo el mundo lo
+      piensa al dejar el móvil en un mostrador y casi nadie se atreve a
+      decirlo. Contestarlo <b>sin que te lo pregunten</b> es lo que diferencia
+      esta página de las doscientas webs de reparación que hay.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="muda">
+        <b>¿Pierdo las fotos?</b>
+        <p>En una pantalla o una batería no se toca nada de dentro: se abre, se
+        cambia y se cierra. Si es la placa o está mojado, puede haber datos que
+        no se salven — y eso se te dice <b>antes</b> de empezar, no después.</p>
+      </div>
+      <div class="muda">
+        <b>¿Vais a ver lo que tengo dentro?</b>
+        <p>No. Solo se abre lo imprescindible para probar que funciona: la
+        cámara, el micro, el táctil. Nada de fotos, mensajes ni cuentas.</p>
+      </div>
+      <div class="muda">
+        <b>¿Tengo que dar la clave?</b>
+        <p>Solo para comprobar que la pantalla nueva responde al tacto por toda
+        la superficie. Si prefieres no darla, se prueba de otra manera: tarda
+        diez minutos más y ya está.</p>
+      </div>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);">
+        Las tres respuestas son de ejemplo y son la sección más importante de
+        esta página. Dime cómo lo haces tú de verdad y las cambio palabra por
+        palabra: aquí es donde se gana la reparación.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. precios ===== -->
+<section class="u-seccion" id="precios">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>Una cifra,<br>aunque sea<br>«desde».</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">El precio exacto
+      depende del modelo, claro. Pero quien no encuentra ninguna cifra no llama
+      a preguntar: se va a la tienda que sí la tiene puesta. Un «desde» es
+      suficiente para que alguien se acerque.</p>
+      <div class="presu" style="margin-top:var(--s-3);">
+        <b>Presupuesto antes de tocar nada</b>
+        <p style="margin:0;">Se mira, se te dice lo que vale y tú decides. Si no
+        tiene arreglo, la revisión no se cobra.</p>
+      </div>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Cambio de pantalla</span><span class="d">Según modelo. En el momento.</span><span class="p">desde 45 €</span></li>
+        <li><span class="n">Cambio de batería</span><span class="d">Con garantía por escrito.</span><span class="p">desde 30 €</span></li>
+        <li><span class="n">Conector de carga</span><span class="d">Si carga mal o solo en una postura.</span><span class="p">desde 35 €</span></li>
+        <li><span class="n">Móvil mojado</span><span class="d">Se abre, se limpia y se te dice qué se salva.</span><span class="p">desde 40 €</span></li>
+        <li><span class="n">Ordenador: disco o limpieza</span><span class="d">Los archivos se quedan donde estaban.</span><span class="p">desde 55 €</span></li>
+        <li><span class="n">Revisión</span><span class="d">Gratis si al final no tiene arreglo.</span><span class="p">0 €</span></li>
+      </ul>
+      <p class="letra-chica">Precios de ejemplo, puestos para que se vea cómo
+      queda la tabla. Dime los tuyos y los cambio. La última fila es la que más
+      trabajo trae de todas y casi nadie la pone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. original o compatible ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="piezas">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Original o compatible, dicho de frente.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Casi todas las tiendas montan pieza compatible y no lo dicen. Luego el
+      cliente lo descubre y escribe la reseña mala. Ponerlo delante, con su
+      precio y su garantía al lado, cuesta cero y evita justo eso.</p>
+    <div class="u-grid u-2" data-ejemplo>
+      <div class="pieza">
+        <span class="eti">Lo que sale más barato</span>
+        <h3>Pieza compatible</h3>
+        <p>La misma función y se ve igual. Puede cambiar algo el brillo o el
+        color, y en algún modelo el móvil avisa de que la pieza no es de
+        fábrica. <b>Garantía de 6 meses.</b></p>
+      </div>
+      <div class="pieza">
+        <span class="eti">Lo que sale más caro</span>
+        <h3>Pieza original</h3>
+        <p>La del fabricante. Cuesta bastante más y a veces hay que pedirla, así
+        que tarda unos días. Se monta si la pides tú.
+        <b>Garantía de 12 meses.</b></p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Las garantías son de ejemplo. Dime las de verdad y las pongo:
+       una garantía escrita en la página vale más que diez frases de calidad.</p>
+  </div>
+</section>
+
+<!-- ===== 8. qué se arregla ===== -->
+<section class="u-seccion" id="que">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Y no solo<br>móviles.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>En los
+      directorios pone «reparación de móviles <b>y ordenadores</b>», pero eso no
+      se lee en ninguna parte y es el trabajo que mejor se paga.</p>
+      <p style="color:var(--tinta-2);">Quien tiene el portátil muerto la víspera
+      de entregar algo no busca «reparaciones»: busca «arreglar portátil» y su
+      calle. Si no está escrito, no aparece.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="lista">
+        <li><b>Pantalla rota o con manchas</b> — móvil y tablet.</li>
+        <li><b>La batería no aguanta el día</b> — móvil y portátil.</li>
+        <li><b>No carga, o carga solo en una postura</b> — conector.</li>
+        <li><b>Se ha mojado</b> — cuanto antes se abra, más se salva.</li>
+        <li><b>El portátil va muy lento o hace ruido</b> — disco, limpieza, ventiladores.</li>
+        <li><b>No enciende</b> — se mira y se te dice si compensa arreglarlo.</li>
+        <li><b>Pasar todo a un móvil nuevo</b> — fotos, contactos y aplicaciones.</li>
+      </ul>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);">
+        Lista de ejemplo, escrita con las palabras que usa el cliente y no con
+        las del taller. Dime qué haces de verdad y qué no, y la ajusto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>Bravo Murillo,<br>355.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Almenara · Tetuán · 28029 Madrid. Subiendo Bravo Murillo, pasado Plaza
+        de Castilla.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34634139301?text=Hola%2C%20os%20mando%20una%20foto%3A%20se%20me%20ha%20roto%20"
+           target="_blank" rel="noopener" data-real>Mandar foto por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34634139301" data-real>634 13 93 01</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/REPARACIONES+EL+EXPERTO/data=!4m7!3m6!1s0xd4229cb8a36a77f:0x44fcb6964ee64e2f!8m2!3d40.4649457!4d-3.6942308"
+           data-real>Cómo llegar</a>
+      </p>
+      <div class="ojo" style="margin-top:var(--s-3);">
+        <b>Tienes Facebook, y eso no es lo mismo que tener página.</b> Quien
+        busca «arreglar pantalla Bravo Murillo» en Google no llega a una página
+        de Facebook: Google la enseña poco y muchas veces pide entrar. Una
+        página propia sí sale, y además puede decirle a Google tu horario y tu
+        dirección en el formato que él lee. Esta la lleva puesta.
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 20:00</td></tr>
+        <tr><th>Martes</th><td>10:00 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+      <p style="margin-top:var(--s-2);font-size:.9rem;color:var(--tinta-2);"
+         data-ejemplo>Horario de ejemplo: no está publicado en ningún sitio.
+         Dime el tuyo y lo pongo aquí y en la ficha que lee Google.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. opiniones ===== -->
+<section class="u-seccion" id="opiniones">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Aquí irían las tuyas.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Estas tres son inventadas y están marcadas como tal, solo para que se vea
+      el hueco. <b>No he puesto tu nota</b>, y esto te interesa: una fuente dice
+      que tienes 426 opiniones y otra dice 51. No sé cuál es la buena, y una
+      nota sin el número correcto al lado la penaliza Google. Dime el recuento
+      real y se pone.</p>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="u-cita">
+        <blockquote>«Le mandé una foto de la pantalla a las diez y a la una lo
+        tenía arreglado.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Me dijo antes de empezar que la placa podía no salvarse.
+        Salió bien, pero agradecí que me avisara.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+      <div class="u-cita">
+        <blockquote>«Miró el portátil, me dijo que no compensaba arreglarlo y no
+        me cobró nada.»</blockquote>
+        <cite>Opinión de ejemplo</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién te escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si te sirve,
+      hablamos. Si no, la borro y no vuelves a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la tienda.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la dirección con
+      su portal y el teléfono salen de fichas públicas; el horario, los precios,
+      los plazos, las garantías, las listas y las tres opiniones son de ejemplo
+      — pulsa «Ver qué es de ejemplo» arriba y se marcan todos.</p>
+      <p><b>No se declara ninguna nota de Google</b>, porque las fuentes dan
+      recuentos que no se parecen (426 frente a 51) y una nota sin recuento
+      verificado no se pone. <b>No hay ni una sola fotografía ni ningún logotipo
+      de marca</b>: ni de banco de imágenes ni recortada de la ficha de Google.
+      No se recoge ningún dato: los botones abren tu propio teléfono o WhatsApp.
+      Si el titular quiere que esto desaparezca, escribe y desaparece el mismo
+      día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34634139301?text=Hola%2C%20os%20mando%20una%20foto%3A%20se%20me%20ha%20roto%20" target="_blank" rel="noopener">Mandar foto</a>
+  <a href="https://www.google.com/maps/place/REPARACIONES+EL+EXPERTO/data=!4m7!3m6!1s0xd4229cb8a36a77f:0x44fcb6964ee64e2f!8m2!3d40.4649457!4d-3.6942308" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MobilePhoneStore",
+  "name":"Reparaciones El Experto",
+  "description":"Reparación de móviles y ordenadores en Bravo Murillo 355, Almenara, Tetuán, Madrid.",
+  "telephone":"+34634139301",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Bravo Murillo, 355",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28029",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4649457,"longitude":-3.6942308},
+  "openingHours":["Mo-Fr 10:00-20:00","Sa 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/reparaciones-el-experto/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

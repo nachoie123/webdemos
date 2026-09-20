@@ -404,9 +404,10 @@
     "web_actual": null,
     "gancho": "4.7★ (426 opiniones) y sin web; landing con catálogo de reparaciones y presupuesto online.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/reparaciones-el-experto/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web, pero SI tiene Facebook (facebook.com/p/Reparaciones-el-Experto-100063623410560): es el gancho del mensaje. Bravo Murillo 355 confirmado por Nominatim (house_number) + esopiniones. Nota NO declarada: 426 vs 51 opiniones segun la fuente. Ver datos/reparaciones-el-experto.md"
   },
   {
     "slug": "cesar-reparaciones",
