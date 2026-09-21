@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talleres Jurado y López · Electricidad del automóvil en Infanta María Teresa 12, Madrid</title>
+<meta name="description" content="Propuesta de página web para Talleres Jurado y López, electricidad, mecánica y neumáticos en la Calle de la Infanta María Teresa 12, Hispanoamérica, Chamartín, Madrid. Qué significa cada testigo y qué cuesta la diagnosis.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/talleres-jurado-y-lopez/">
+<meta name="theme-color" content="#15181d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%2315181d%27/%3E%3Crect x=%276%27 y=%2711%27 width=%2720%27 height=%2712%27 rx=%272%27 fill=%27none%27 stroke=%27%23ffb020%27 stroke-width=%272.5%27/%3E%3Crect x=%2710%27 y=%278%27 width=%274%27 height=%273%27 fill=%27%23ffb020%27/%3E%3Crect x=%2718%27 y=%278%27 width=%274%27 height=%273%27 fill=%27%23ffb020%27/%3E%3Cpath d=%27M10 17h4M20 17h4M22 15v4%27 stroke=%27%2315181d%27 stroke-width=%272%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/talleres-jurado-y-lopez/">
+<meta property="og:title" content="Talleres Jurado y López · Electricidad del automóvil en Infanta María Teresa 12, Madrid">
+<meta property="og:description" content="Propuesta de página web para Talleres Jurado y López, electricidad, mecánica y neumáticos en Hispanoamérica, Chamartín. Qué significa cada testigo y qué cuesta la diagnosis.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/talleres-jurado-y-lopez/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Commissioner:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   El salpicadero de noche. Grafito, una luz ambar y las medidas en
+   monoespaciada. Ningun azul marino con engranaje: eso lo tiene el sector
+   entero y no dice nada de un electricista del automovil.              */
+:root{
+  --fondo:#15181d; --fondo-2:#1e232b; --tinta:#eef1f4; --tinta-2:#98a2ad;
+  --acento:#ffb020; --acento-tinta:#15181d; --linea:#2c333c;
+  --rojo:#e4483d; --verde:#35c07a; --azulinfo:#5aa9e6;
+  --display:'Kanit','Helvetica Neue',Arial,sans-serif;
+  --texto:'Commissioner','Helvetica Neue',Arial,sans-serif;
+  --med:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radio:2px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;
+  line-height:1.04;}
+h1{font-size:clamp(2.3rem,5.2vw,4.1rem);}
+h2{font-size:clamp(1.9rem,3.8vw,2.9rem);}
+h3{font-size:1.3rem;font-weight:500;}
+em.se{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:700;font-family:var(--texto);}
+.med{font-family:var(--med);font-variant-numeric:tabular-nums;font-weight:700;}
+.apag{color:var(--tinta-2);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(21,24,29,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca > b:first-child{display:block;font-family:var(--display);font-size:1.22rem;
+  font-weight:600;letter-spacing:-.01em;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:700;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.5rem 1rem;font-size:.9rem;white-space:nowrap;
+  border-radius:var(--radio);font-family:var(--med);}
+@media(max-width:900px){.cab nav{display:none}}
+@media(max-width:560px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:
+  radial-gradient(70% 90% at 78% 40%,rgba(255,176,32,.13),transparent 62%),
+  var(--fondo);border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:6fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:900px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{margin:.2em 0 .4em;}
+.hero p{color:var(--tinta-2);max-width:46ch;}
+.cuadro{display:block;width:100%;max-width:440px;margin-inline:auto;}
+
+/* los tres testigos */
+.lampara{display:block;width:100%;max-width:620px;margin:var(--s-4) auto;}
+.testigo{border:1px solid var(--linea);border-top-width:5px;padding:var(--s-3);
+  background:var(--fondo-2);border-radius:var(--radio);}
+.testigo > b:first-child{display:block;font-family:var(--display);font-weight:600;
+  font-size:1.22rem;margin-bottom:.45rem;}
+.testigo p{margin-bottom:0;font-size:.97rem;color:var(--tinta-2);}
+.t-rojo{border-top-color:var(--rojo);} .t-rojo > b:first-child{color:var(--rojo);}
+.t-ambar{border-top-color:var(--acento);} .t-ambar > b:first-child{color:var(--acento);}
+.t-info{border-top-color:var(--azulinfo);} .t-info > b:first-child{color:var(--azulinfo);}
+
+/* diagnosis */
+.tarifa{border:1px solid var(--acento);padding:var(--s-4);border-radius:var(--radio);
+  background:linear-gradient(160deg,rgba(255,176,32,.09),transparent 70%);}
+.tarifa .cifra{display:block;font-family:var(--med);font-weight:700;
+  font-size:clamp(2.6rem,7vw,4rem);line-height:1;color:var(--acento);}
+.tarifa .pie-cifra{display:block;font-size:.72rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--tinta-2);font-weight:700;margin-top:.5rem;}
+.tarifa ul{list-style:none;margin:var(--s-3) 0 0;padding:0;font-size:.97rem;}
+.tarifa li{padding:.45rem 0;border-top:1px solid var(--linea);}
+.tarifa li::before{content:"";display:inline-block;width:.6em;height:.6em;
+  margin-right:.6em;background:var(--verde);border-radius:50%;}
+
+/* las tres piezas del arranque */
+.pieza{border-left:3px solid var(--acento);padding:.15rem 0 .15rem var(--s-3);
+  margin-bottom:var(--s-3);}
+.pieza > b:first-child{display:block;font-family:var(--display);font-size:1.22rem;
+  font-weight:600;margin-bottom:.25rem;}
+.pieza p{margin-bottom:0;color:var(--tinta-2);font-size:.97rem;}
+.circuito{display:block;width:100%;max-width:460px;margin-inline:auto;}
+
+/* pasos del intermitente */
+.u-numerada > *{background:var(--fondo-2);border-color:var(--linea);
+  border-radius:var(--radio);}
+.u-numerada h3{margin-bottom:.5rem;}
+.u-numerada p{color:var(--tinta-2);font-size:.97rem;margin-bottom:0;}
+.pinza{display:block;width:100%;max-width:420px;margin-inline:auto;}
+
+/* neumaticos */
+.neu{display:block;width:100%;max-width:430px;margin-inline:auto;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.96rem;}
+.horario th{font-weight:500;}
+.horario td{text-align:right;font-family:var(--med);font-size:.86rem;
+  font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la nota unica */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);
+  padding:var(--s-3);border-radius:var(--radio);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:600;margin-bottom:.5rem;}
+.nota ul{margin:.5rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.4rem;color:var(--tinta-2);}
+.nota li b{color:var(--tinta);}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.87rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #ff6b5e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid var(--verde);outline-offset:6px;}
+
+.u-tira{color:var(--tinta-2);}
+.u-tira b{color:var(--tinta);}
+/* base.css pone el flex en la <section>, y dentro va un solo .u-wrap: sin esto
+   los cuatro datos salen pegados en una linea corrida. */
+.u-tira .u-wrap{display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:center;gap:.5rem 1rem;}
+.u-tira .u-wrap > *+*{padding-left:1rem;border-left:1px solid var(--linea);}
+@media(max-width:620px){
+  .u-tira .u-wrap{justify-content:flex-start;gap:.35rem 1rem;}
+  .u-tira .u-wrap > *+*{padding-left:0;border-left:0;}
+}
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:700;}
+.u-movil a+a{background:var(--fondo-2);color:var(--tinta);
+  border-top:1px solid var(--linea);}
+
+.pie{background:#0f1216;color:var(--tinta-2);border-top:1px solid var(--linea);}
+.pie h3{color:var(--tinta);margin-bottom:var(--s-1);}
+.pie a{color:var(--acento);}
+.pie p{font-size:.94rem;line-height:1.62;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta de web para Talleres Jurado y López, hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios y su horario.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Talleres Jurado y López</b><span data-real>Infanta María Teresa 12 · Hispanoamérica</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#testigos">El testigo</a>
+      <a href="#diagnosis">La diagnosis</a>
+      <a href="#arranque">No arranca</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34699638306" data-real>699 63 83 06</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Electricidad, mecánica y neumáticos · Chamartín</span>
+      <h1>Lo que solo falla<br><em class="se">a veces.</em></h1>
+      <p>El testigo que se enciende y se apaga. La mañana que no arranca de cada
+      diez. La batería que se muere cuando el coche lleva tres días parado. Eso
+      es electricidad del automóvil, y es lo que se busca aquí.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="u-btn" href="https://wa.me/34699638306?text=Hola%2C%20se%20me%20ha%20encendido%20un%20testigo%20en%20el%20coche.%20Le%20mando%20la%20foto."
+           target="_blank" rel="noopener" data-real>Mandar la foto del testigo</a>
+        <a class="u-btn u-btn--linea" href="#diagnosis">Qué cuesta la diagnosis</a>
+      </p>
+    </div>
+
+    <!-- DIBUJO 1: el cuadro de mandos con un testigo encendido -->
+    <svg class="cuadro" viewBox="0 0 300 200" fill="none" aria-label="Dibujo del cuadro de mandos de un coche con un testigo ámbar encendido" role="img">
+      <path d="M18 62 C18 34 44 20 150 20 C256 20 282 34 282 62 L282 158 C282 176 268 184 246 184 L54 184 C32 184 18 176 18 158 Z"
+            stroke="#3a434e" stroke-width="3" fill="#1b2027"/>
+      <g stroke="#6c7783" stroke-width="2.5">
+        <circle cx="84" cy="92" r="42"/>
+        <circle cx="216" cy="92" r="42"/>
+      </g>
+      <g stroke="#4b5561" stroke-width="3" stroke-linecap="round">
+        <path d="M84 54 v8"/><path d="M57 65 l5 6"/><path d="M46 92 h8"/>
+        <path d="M57 119 l5 -6"/><path d="M84 130 v-8"/><path d="M111 119 l-5 -6"/>
+        <path d="M122 92 h-8"/><path d="M111 65 l-5 6"/>
+        <path d="M216 54 v8"/><path d="M189 65 l5 6"/><path d="M178 92 h8"/>
+        <path d="M189 119 l5 -6"/><path d="M216 130 v-8"/><path d="M243 119 l-5 -6"/>
+        <path d="M254 92 h-8"/><path d="M243 65 l-5 6"/>
+      </g>
+      <path d="M84 92 L62 70" stroke="#eef1f4" stroke-width="4" stroke-linecap="round"/>
+      <path d="M216 92 L216 62" stroke="#eef1f4" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="84" cy="92" r="5" fill="#6c7783"/>
+      <circle cx="216" cy="92" r="5" fill="#6c7783"/>
+      <rect x="126" y="76" width="48" height="30" rx="3" stroke="#4b5561" stroke-width="2.5"/>
+      <path d="M134 98 h32M134 90 h22" stroke="#6c7783" stroke-width="2.5" stroke-linecap="round"/>
+      <g>
+        <rect x="112" y="142" width="26" height="18" rx="3" fill="#232a33"/>
+        <rect x="146" y="142" width="26" height="18" rx="3" fill="#ffb020"/>
+        <rect x="180" y="142" width="26" height="18" rx="3" fill="#232a33"/>
+        <path d="M152 151 h5 l2 -4 l3 8 l2 -4 h4" stroke="#15181d" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="159" cy="151" r="21" fill="#ffb020" opacity=".16"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de la Infanta María Teresa, 12</b></span>
+    <span data-real>Hispanoamérica · Chamartín · 28016 Madrid</span>
+    <span data-ejemplo>Lunes a viernes</span>
+    <a href="tel:+34914577637" data-real><b>91 457 76 37</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. el testigo: la seccion regalada ===== -->
+<section class="u-seccion" id="testigos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;margin-bottom:var(--s-2);">Se ha encendido una luz. ¿Sigo o paro?</h2>
+    <p class="u-medida apag">Esto no hace falta ser cliente para leerlo. El color
+    de la luz ya dice mucho antes de que nadie mire el coche. Mire cuál de las
+    tres se le ha encendido.</p>
+
+    <!-- DIBUJO 2: la tira de testigos del salpicadero, tres encendidos -->
+    <svg class="lampara" viewBox="0 0 560 120" fill="none" aria-label="Dibujo de la tira de testigos del salpicadero con tres luces encendidas: roja, ámbar y azul" role="img">
+      <rect x="6" y="28" width="548" height="64" rx="8" fill="#1b2027" stroke="#3a434e" stroke-width="2.5"/>
+      <g>
+        <circle cx="110" cy="60" r="34" fill="#e4483d" opacity=".14"/>
+        <rect x="86" y="46" width="48" height="28" rx="4" fill="#e4483d"/>
+        <path d="M96 52 h12M114 52 h12M120 46 v12" stroke="#15181d" stroke-width="3" stroke-linecap="round"/>
+        <rect x="94" y="40" width="10" height="6" fill="#e4483d"/>
+        <rect x="116" y="40" width="10" height="6" fill="#e4483d"/>
+      </g>
+      <g>
+        <circle cx="280" cy="60" r="34" fill="#ffb020" opacity=".14"/>
+        <path d="M254 76 v-20 h12 v-10 h18 l8 -8 h22 v16 h10 v22 z" fill="#ffb020"/>
+        <path d="M266 66 v10M278 58 v18M290 58 v18M302 62 v14"
+              stroke="#15181d" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M254 64 h-10M316 70 h10" stroke="#ffb020" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <g>
+        <circle cx="450" cy="60" r="34" fill="#5aa9e6" opacity=".14"/>
+        <path d="M428 60 a22 16 0 0 1 44 0 a22 16 0 0 1 -44 0 z" fill="#5aa9e6"/>
+        <path d="M472 48 l14 -8M472 60 h16M472 72 l14 8" stroke="#5aa9e6" stroke-width="3.5" stroke-linecap="round"/>
+      </g>
+    </svg>
+
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="testigo t-rojo">
+        <b>Roja</b>
+        <p>Pare en cuanto pueda hacerlo con seguridad y llame antes de seguir.
+        Rojo suele ser presión de aceite, temperatura o carga: son las tres
+        cosas que en diez minutos de marcha pasan de avería a motor roto.</p>
+      </div>
+      <div class="testigo t-ambar">
+        <b>Ámbar</b>
+        <p>Puede llegar, pero no lo deje. El coche ha guardado el fallo en la
+        memoria aunque la luz se apague sola, y esa memoria es justo lo que se
+        lee aquí. Si además pierde fuerza o tira a tirones, trátela como roja.</p>
+      </div>
+      <div class="testigo t-info">
+        <b>Azul o verde</b>
+        <p>No es avería: es información. Largas, intermitentes, control de
+        velocidad. Si una de éstas se queda encendida cuando no debería, el
+        problema no es el motor, es un contacto.</p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;" class="apag">Esto es
+    orientación general, no un diagnóstico. Cada marca coloca sus símbolos a su
+    manera: hágale una foto al salpicadero y mándela por WhatsApp.</p>
+  </div>
+</section>
+
+<!-- ===== 5. la diagnosis: lo que nadie publica ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="diagnosis">
+  <div class="u-wrap u-grid u-desigual u-revelar" style="align-items:center;">
+    <div class="tarifa" data-ejemplo>
+      <span class="cifra">35 €</span>
+      <span class="pie-cifra">Diagnosis · se descuenta si se repara aquí</span>
+      <ul>
+        <li>Lectura de la memoria de averías</li>
+        <li>Medida de batería, alternador y consumo en reposo</li>
+        <li>Prueba en carretera si el fallo aparece andando</li>
+        <li>Se le dice qué se ha medido, aunque no salga</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="max-width:18ch;">Saber qué pasa también tiene precio. Aquí está escrito.</h2>
+      <p class="apag" style="margin-top:var(--s-2);">Nadie en el sector lo pone,
+      y es lo primero que quiere saber quien llama. Un coche que falla a veces
+      obliga a buscar, y buscar lleva tiempo. Cobrarlo es honrado; esconderlo,
+      no.</p>
+      <p class="apag">Lo que cambia la conversación es la segunda línea: <b>si la
+      reparación se hace aquí, la diagnosis no se cobra dos veces</b>. Así el
+      cliente no paga por preguntar.</p>
+      <p style="margin-top:var(--s-3);">
+        <a class="u-btn" href="mailto:antoniojurado56@gmail.com?subject=Consulta%20sobre%20una%20aver%C3%ADa%20el%C3%A9ctrica" data-real>Escribir un correo</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. las tres piezas del arranque ===== -->
+<section class="u-seccion" id="arranque">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Cuando no arranca, casi siempre es una de estas tres.</h2>
+    <p class="u-medida apag">Son las tres piezas del mismo circuito y se
+    confunden entre ellas todo el rato. Distinguirlas por el síntoma ahorra
+    cambiar la que estaba bien.</p>
+    <div class="u-grid u-desigual-inv" style="margin-top:var(--s-4);align-items:center;">
+      <div data-ejemplo>
+        <div class="pieza">
+          <b>La batería</b>
+          <p>Gira despacio, la radio se apaga al dar contacto, empeora con el
+          frío. En reposo una batería sana marca <span class="med">12,6 V</span>;
+          por debajo de <span class="med">12,0 V</span> ya va a medias.</p>
+        </div>
+        <div class="pieza">
+          <b>El alternador</b>
+          <p>Arranca bien con pinzas y a los pocos kilómetros se apaga todo. Con
+          el motor en marcha tiene que dar entre <span class="med">13,8</span> y
+          <span class="med">14,6 V</span>. Si da 12, no está cargando.</p>
+        </div>
+        <div class="pieza">
+          <b>El motor de arranque</b>
+          <p>Un chasquido seco y nada más, con las luces del cuadro fuertes. La
+          batería está bien: lo que no gira es el motor que mueve el volante del
+          motor.</p>
+        </div>
+      </div>
+
+      <!-- DIBUJO 3: el circuito de carga de este taller -->
+      <svg class="circuito" viewBox="0 0 400 200" fill="none" aria-label="Dibujo del circuito de carga: el alternador con su correa, la batería y el motor de arranque unidos por los cables" role="img">
+        <path d="M62 60 C96 34 126 24 148 21 M62 124 C104 130 136 78 150 52"
+              stroke="#4b5561" stroke-width="5" stroke-linecap="round"/>
+        <g stroke="#6c7783" stroke-width="3">
+          <circle cx="62" cy="92" r="32"/>
+          <circle cx="62" cy="92" r="13"/>
+          <circle cx="146" cy="36" r="15"/>
+        </g>
+        <rect x="158" y="66" width="104" height="56" rx="3" stroke="#6c7783" stroke-width="3"/>
+        <path d="M176 66 v-10 h14 v10 M230 66 v-10 h14 v10" stroke="#6c7783" stroke-width="3"/>
+        <path d="M176 98 h16 M228 98 h16 M236 90 v16" stroke="#98a2ad" stroke-width="3" stroke-linecap="round"/>
+        <path d="M192 66 v56 M228 66 v56" stroke="#3a434e" stroke-width="2"/>
+        <rect x="302" y="70" width="88" height="48" rx="24" stroke="#6c7783" stroke-width="3"/>
+        <path d="M302 82 h-18 v24 h18" stroke="#6c7783" stroke-width="3"/>
+        <path d="M284 88 l-11 -7 M284 100 l-11 7 M284 94 h-13"
+              stroke="#6c7783" stroke-width="3" stroke-linecap="round"/>
+        <g stroke="#ffb020" stroke-width="4" stroke-linecap="round">
+          <path d="M96 94 h54"/><path d="M150 94 l-9 -6 M150 94 l-9 6"/>
+          <path d="M262 94 h20"/><path d="M282 94 l-9 -6 M282 94 l-9 6"/>
+        </g>
+        <g fill="#98a2ad" font-family="Commissioner,Arial,sans-serif" font-size="15" font-weight="700">
+          <text x="62" y="158" text-anchor="middle">Alternador</text>
+          <text x="210" y="158" text-anchor="middle">Batería</text>
+          <text x="346" y="158" text-anchor="middle">Arranque</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. el fallo intermitente, paso a paso ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="intermitente">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-2);">La batería se descarga sola y el coche está parado.</h2>
+    <p class="u-medida apag">Se llama fuga de corriente: algo se queda despierto
+    con el coche cerrado. No se encuentra probando piezas, se encuentra midiendo
+    y quitando fusibles de uno en uno.</p>
+    <div class="u-grid u-2" style="margin-top:var(--s-4);align-items:center;">
+
+      <!-- DIBUJO 4: la pinza amperimetrica sobre el cable negativo -->
+      <svg class="pinza" viewBox="0 0 340 200" fill="none" aria-label="Dibujo de una pinza amperimétrica midiendo el consumo en reposo sobre el cable negativo de la batería" role="img">
+        <rect x="18" y="96" width="96" height="58" rx="3" stroke="#6c7783" stroke-width="3"/>
+        <path d="M38 96 v-10 h14 v10 M82 96 v-10 h14 v10" stroke="#6c7783" stroke-width="3"/>
+        <path d="M52 124 h-14 M96 124 h-14 M89 117 v14" stroke="#98a2ad" stroke-width="3" stroke-linecap="round"/>
+        <path d="M45 86 C45 62 96 58 150 58 C206 58 214 66 214 66"
+              stroke="#4b5561" stroke-width="7" stroke-linecap="round"/>
+        <g stroke="#ffb020" stroke-width="5" stroke-linecap="round">
+          <path d="M150 34 a26 26 0 0 0 -26 26 a26 26 0 0 0 26 26"/>
+          <path d="M150 34 a26 26 0 0 1 22 12"/>
+        </g>
+        <rect x="168" y="80" width="96" height="102" rx="8" stroke="#6c7783" stroke-width="3" fill="#1b2027"/>
+        <path d="M168 92 l-4 -14 M264 92 l6 -12" stroke="#6c7783" stroke-width="3" stroke-linecap="round"/>
+        <rect x="180" y="94" width="72" height="34" rx="3" fill="#232a33" stroke="#3a434e" stroke-width="2"/>
+        <text x="216" y="118" text-anchor="middle" fill="#ffb020"
+              font-family="'JetBrains Mono',monospace" font-size="19" font-weight="700">0,03 A</text>
+        <g stroke="#4b5561" stroke-width="3" stroke-linecap="round">
+          <path d="M188 146 h16M212 146 h16M236 146 h10"/>
+          <path d="M188 164 h16M212 164 h16M236 164 h10"/>
+        </g>
+        <text x="216" y="196" text-anchor="middle" fill="#98a2ad"
+              font-family="Commissioner,Arial,sans-serif" font-size="14" font-weight="700">Consumo en reposo</text>
+      </svg>
+
+      <div class="u-grid u-numerada" data-ejemplo>
+        <div>
+          <h3>Se deja el coche dormido</h3>
+          <p>Cerrado y en reposo, el tiempo que tarde la centralita en apagarse
+          del todo. Medir antes de eso da una cifra falsa y manda a cambiar
+          piezas sanas.</p>
+        </div>
+        <div>
+          <h3>Se mide lo que consume</h3>
+          <p>Con la pinza en el cable negativo. Parado, un coche corriente debería
+          quedarse por debajo de <span class="med">0,05 A</span>. Si marca medio
+          amperio, hay algo despierto.</p>
+        </div>
+        <div>
+          <h3>Se busca quitando fusibles</h3>
+          <p>Uno a uno, mirando cuál hace bajar la cifra. Ahí aparece el circuito
+          culpable: casi siempre una luz de maletero, una alarma o una radio mal
+          puesta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. neumaticos ===== -->
+<section class="u-seccion" id="neumaticos">
+  <div class="u-wrap u-grid u-partida u-revelar" style="gap:var(--s-4);">
+    <div>
+      <span class="u-ceja">Lo único que puede mirar usted</span>
+      <h2 style="max-width:18ch;margin-bottom:var(--s-2);">Un neumático avisa antes de suspender la ITV.</h2>
+      <p class="apag">Dentro de las ranuras hay unos resaltes pequeños, los
+      testigos de desgaste. Cuando el dibujo baja hasta quedar a su altura, queda
+      <span class="med">1,6 mm</span>, que es el mínimo legal en España. A esa
+      altura ya no se espera al cambio: se hace.</p>
+      <p class="apag">La presión es la otra mitad. Se mira en frío y aparece en
+      una pegatina dentro de la puerta del conductor. Aquí se comprueba de paso
+      cuando el coche entra por otra cosa.</p>
+    </div>
+
+    <!-- DIBUJO 5: seccion del neumatico con el testigo de desgaste -->
+    <svg class="neu" viewBox="0 0 360 210" fill="none" aria-label="Dibujo de una sección de neumático: dos tacos del dibujo, la ranura con el testigo de desgaste y la cota de 1,6 milímetros hasta el suelo" role="img">
+      <rect x="120" y="44" width="220" height="54" fill="#2f3741" stroke="#6c7783" stroke-width="3"/>
+      <g fill="#2f3741" stroke="#6c7783" stroke-width="3">
+        <path d="M120 98 h92 v78 h-92 z"/>
+        <path d="M250 98 h90 v78 h-90 z"/>
+      </g>
+      <rect x="216" y="98" width="30" height="62" fill="#ffb020"/>
+      <path d="M231 40 v62" stroke="#ffb020" stroke-width="2" stroke-dasharray="5 5"/>
+      <text x="231" y="30" text-anchor="middle" fill="#ffb020"
+            font-family="Commissioner,Arial,sans-serif" font-size="15" font-weight="700">testigo de desgaste</text>
+      <path d="M100 160 h116 M100 176 h20" stroke="#ffb020" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <g stroke="#ffb020" stroke-width="2.5" stroke-linecap="round">
+        <path d="M104 156 v24"/>
+        <path d="M96 160 h16 M96 176 h16"/>
+      </g>
+      <text x="88" y="174" text-anchor="end" fill="#ffb020"
+            font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700">1,6 mm</text>
+      <path d="M40 176 h312" stroke="#98a2ad" stroke-width="4" stroke-linecap="round"/>
+      <g stroke="#3a434e" stroke-width="3" stroke-linecap="round">
+        <path d="M48 190 l10 -10 M78 190 l10 -10 M108 190 l10 -10 M138 190 l10 -10
+                 M168 190 l10 -10 M198 190 l10 -10 M228 190 l10 -10 M258 190 l10 -10
+                 M288 190 l10 -10 M318 190 l10 -10"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 9. donde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-revelar">
+    <div class="u-grid u-desigual">
+      <div>
+        <span class="u-ceja" data-real>Chamartín · Hispanoamérica</span>
+        <h2 style="max-width:16ch;" data-real>Infanta María Teresa, 12.</h2>
+        <p class="apag" data-real>Entre Príncipe de Vergara y Alfonso XIII, a
+        dos calles del Paseo de La Habana. Taller asociado a ASETRA, la
+        asociación de talleres de Madrid.</p>
+        <p style="margin-top:var(--s-3);display:flex;gap:.7rem;flex-wrap:wrap;">
+          <a class="u-btn" href="https://wa.me/34699638306?text=Hola%2C%20se%20me%20ha%20encendido%20un%20testigo%20en%20el%20coche.%20Le%20mando%20la%20foto."
+             target="_blank" rel="noopener" data-real>WhatsApp</a>
+          <a class="u-btn u-btn--linea" href="tel:+34914577637" data-real>91 457 76 37</a>
+          <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Talleres%20Jurado%20y%20L%C3%B3pez%2C%20Calle%20de%20la%20Infanta%20Mar%C3%ADa%20Teresa%2012%2C%2028016%20Madrid"
+             data-real>Cómo llegar</a>
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                   color:var(--acento);font-family:var(--texto);font-weight:700;">Horario</h3>
+        <table class="horario" data-ejemplo>
+          <tr><th>Lunes</th><td>8:30–13:30 · 15:30–19:00</td></tr>
+          <tr><th>Martes</th><td>8:30–13:30 · 15:30–19:00</td></tr>
+          <tr><th>Miércoles</th><td>8:30–13:30 · 15:30–19:00</td></tr>
+          <tr><th>Jueves</th><td>8:30–13:30 · 15:30–19:00</td></tr>
+          <tr><th>Viernes</th><td>8:30–14:30</td></tr>
+          <tr><th>Sábado</th><td>Cerrado</td></tr>
+          <tr><th>Domingo</th><td>Cerrado</td></tr>
+        </table>
+        <p style="margin-top:var(--s-2);font-size:.92rem;" class="apag">Para dejar
+        el coche por la mañana conviene avisar el día antes por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. la unica nota ===== -->
+<section class="u-seccion--apretada">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;" class="apag">Suyos son el nombre, la calle
+      con su número, los dos teléfonos, el correo y los tres servicios. Lo demás
+      lo he escrito yo para enseñar la forma: pulse el botón amarillo de arriba y
+      se marca solo.</p>
+      <ul>
+        <li><b>Los 35 € de la diagnosis son inventados.</b> Es la cifra más
+        importante de la página y hay que poner la suya antes de enseñársela a
+        nadie.</li>
+        <li><b>El horario también.</b> No aparece publicado en ningún sitio, así
+        que me lo he inventado entero, aquí y en los datos que lee Google.</li>
+        <li><b>Los voltajes y el 1,6 mm sí son reales</b> y de uso común en el
+        oficio, pero revíselos: van con su nombre encima, no con el mío.</li>
+        <li><b>Sin opiniones y sin nota de Google:</b> no he encontrado un
+        recuento fiable, y una nota sin número de reseñas la penaliza Google.</li>
+        <li><b>No hay ninguna fotografía.</b> Los cinco dibujos están hechos a
+        mano para esta página.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. quien eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí al
+      lado. Hago páginas para negocios del barrio: una escrita a mano para cada
+      sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera, porque un taller
+      de electricidad es de los pocos negocios donde la web puede explicar algo
+      útil antes de vender nada. Si le sirve, hablamos. Si no, la borro.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Ésta no es la web oficial del taller.</b> Es una propuesta sin
+      relación con Talleres Jurado y López ni con sus titulares, y tampoco con
+      ningún otro taller de nombre parecido, en Madrid o fuera. El nombre, la
+      dirección, los teléfonos y el correo salen de fichas públicas del sector.</p>
+      <p><b>Nada de lo escrito aquí es un diagnóstico</b> ni sustituye a que
+      alguien mire el coche, y <b>no se promete encontrar ninguna avería</b>.
+      Los precios y el horario son inventados y están marcados. <b>No se declara
+      ninguna nota de Google</b> y <b>no hay ninguna fotografía.</b></p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono, su
+      WhatsApp o su correo. Si el titular prefiere que esto se retire, escribe y
+      se retira hoy mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de movil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34699638306?text=Hola%2C%20se%20me%20ha%20encendido%20un%20testigo%20en%20el%20coche.%20Le%20mando%20la%20foto." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Talleres%20Jurado%20y%20L%C3%B3pez%2C%20Calle%20de%20la%20Infanta%20Mar%C3%ADa%20Teresa%2012%2C%2028016%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"Talleres Jurado y López, C.B.",
+  "description":"Taller de electricidad del automóvil, mecánica y neumáticos en la Calle de la Infanta María Teresa 12, Hispanoamérica, Chamartín, Madrid.",
+  "telephone":"+34699638306",
+  "email":"antoniojurado56@gmail.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de la Infanta María Teresa, 12",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28016",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4540336,"longitude":-3.6808036},
+  "openingHours":["Mo-Th 08:30-13:30","Mo-Th 15:30-19:00","Fr 08:30-14:30"],
+  "areaServed":"Chamartín, Madrid",
+  "url":"https://nachoie123.github.io/webdemos/talleres-jurado-y-lopez/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

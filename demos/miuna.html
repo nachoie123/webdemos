@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miuna · Moda y complementos · Mauricio Legendre 3, Chamartín, Madrid</title>
+<meta name="description" content="Propuesta de página web para Miuna, tienda de moda y complementos en la Calle de Mauricio Legendre 3, Chamartín, Madrid. Qué ha entrado esta semana, en qué tallas queda y cómo se aparta por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/miuna/">
+<meta name="theme-color" content="#8c3b4e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f7f2ec%27/%3E%3Cpath d=%27M16 9 c0-3.4 -5.2-3.4 -5.2 .4%27 fill=%27none%27 stroke=%27%238c3b4e%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M16 9 v3.6 l-9.4 8.4 h18.8 z%27 fill=%27none%27 stroke=%27%238c3b4e%27 stroke-width=%272.4%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/miuna/">
+<meta property="og:title" content="Miuna · Moda y complementos · Mauricio Legendre 3, Chamartín, Madrid">
+<meta property="og:description" content="Propuesta de página web para Miuna: qué ha entrado esta semana, en qué tallas queda y cómo se aparta por WhatsApp.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/miuna/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=Karla:wght@400;500;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Papel de seda, cartón de caja y carmín oscuro. La didona de las revistas de
+   moda, pero sobre el color de una caja de tienda, no sobre rosa ni dorado.
+   El motivo que cose la página es la etiqueta colgante: la tiene una tienda
+   de ropa y no la tiene nadie más.                                          */
+:root{
+  --fondo:#f7f2ec; --fondo-2:#e9dfd2; --tinta:#26201d; --tinta-2:#6f625a;
+  --acento:#8c3b4e; --acento-tinta:#fdf4f1; --linea:#d9cec0;
+  --laton:#a9803c;
+  --display:'Bodoni Moda', Didot, Georgia, serif;
+  --texto:'Karla', 'Helvetica Neue', Arial, sans-serif;
+  --radio:2px;
+}
+body{font-size:17px;}
+/* la Bodoni tiene comas y tildes muy largas: por debajo de 1.12 se tocan
+   entre renglones. Nada de apretarlo mas. */
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.005em;
+  line-height:1.12;}
+h2{font-size:clamp(2rem,4.3vw,3.1rem);}
+h3{font-size:1.32rem;}
+em.ca{font-style:italic;color:var(--acento);}
+.u-ceja{color:var(--laton);font-weight:700;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(247,242,236,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.05;}
+.marca > b:first-child{display:block;font-family:var(--display);font-size:1.5rem;
+  font-weight:600;letter-spacing:.06em;}
+.marca span{display:block;font-size:.58rem;letter-spacing:.2em;font-weight:700;
+  text-transform:uppercase;color:var(--tinta-2);margin-top:.12rem;}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.5rem 1rem;font-size:.9rem;white-space:nowrap;
+  border-radius:var(--radio);}
+@media(max-width:900px){.tel-cab{display:none}}
+/* en pantalla estrecha el menu no cabe: se quita y vuelve el telefono, que es
+   lo unico que se pulsa de verdad desde la calle. */
+@media(max-width:620px){
+  .cab .u-nav{display:none;}
+  .tel-cab{display:inline-block;margin-left:auto;}
+}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:900px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.04;margin:.18em 0 .36em;}
+.hero p{color:var(--tinta-2);max-width:46ch;}
+.burro{width:100%;max-width:330px;margin-inline:auto;color:var(--tinta);}
+.burro .et{color:var(--acento);}
+
+/* piezas de la semana */
+.pieza{border:1px solid var(--linea);background:var(--fondo);padding:var(--s-3);
+  display:flex;flex-direction:column;gap:.5rem;}
+.pieza h3{margin-bottom:.1rem;min-height:2.2em;}
+.pieza .prec{font-family:var(--display);font-size:2.1rem;font-weight:600;
+  line-height:1;color:var(--acento);}
+.pieza .tallas{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:700;color:var(--laton);border-top:1px solid var(--linea);
+  padding-top:.6rem;margin-top:auto;}
+.pieza p{margin:0;font-size:.96rem;color:var(--tinta-2);}
+
+/* pasos de apartado */
+.etiqueta{width:100%;max-width:210px;margin:var(--s-4) 0 0;color:var(--tinta-2);}
+.etiqueta .se{color:var(--acento);}
+.u-numerada > *{background:var(--fondo);}
+.u-numerada h3{margin-bottom:.4rem;}
+.u-numerada p{margin:0;color:var(--tinta-2);font-size:.98rem;}
+
+/* medidas */
+.medida-dib{width:100%;max-width:290px;margin-inline:auto;color:var(--tinta);}
+.medida-dib .co{color:var(--acento);}
+.regla{border-left:4px solid var(--laton);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.regla > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:600;margin-bottom:.22rem;}
+.regla p{margin:0;color:var(--tinta-2);font-size:.98rem;}
+
+/* dónde */
+.donde{background:var(--acento);color:var(--acento-tinta);padding:var(--s-4);}
+.donde h2{color:#fff;margin-bottom:var(--s-2);}
+.plano{width:100%;max-width:360px;margin:var(--s-3) auto 0;color:var(--tinta-2);}
+.plano .aqui{color:var(--acento);}
+
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.52rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:700;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+.horario tr:last-child th,.horario tr:last-child td{color:var(--acento);}
+
+/* la única nota */
+.nota{background:var(--fondo);border-left:6px solid var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:600;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:700;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#a0938b;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#e8b7a8;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus prendas, sus precios y sus condiciones.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Miuna</b><span data-real>Moda y complementos · Mauricio Legendre 3</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#semana">Esta semana</a>
+      <a href="#apartar">Te lo aparto</a>
+      <a href="#medidas">Las tallas</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34688488933" data-real>688 48 89 33</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Moda y complementos · Galería de Mauricio Legendre 3 · Chamartín</span>
+      <h1>Lo bueno entra el martes y<br>el sábado <em class="ca">ya no está.</em></h1>
+      <p>Doce metros de escaparate no ganan a un catálogo infinito, y no lo
+      intentan. Aquí entran pocas piezas y se acaban. Así que esta página
+      empieza por lo único que decide si merece la pena bajar: qué hay,
+      en qué tallas queda y cómo se aparta sin moverse de casa.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34688488933?text=Hola%2C%20he%20visto%20la%20p%C3%A1gina%20y%20quer%C3%ADa%20preguntar%20si%20queda%20mi%20talla."
+           target="_blank" rel="noopener" data-real>Preguntar por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#semana">Ver lo de esta semana</a>
+      </p>
+    </div>
+
+    <!-- dibujo 1: el burro con las tres perchas y la etiqueta de apartado -->
+    <svg class="burro" viewBox="0 0 300 230" fill="none" stroke="currentColor"
+         stroke-width="3" stroke-linejoin="round" stroke-linecap="round"
+         role="img" aria-label="Dibujo de un perchero con tres prendas; una lleva colgada una etiqueta de apartado.">
+      <!-- barra -->
+      <path d="M14 46 H286" stroke-width="4"/>
+      <path d="M14 38 v16"/><path d="M286 38 v16"/>
+      <!-- percha 1 -->
+      <path d="M68 46 v8"/>
+      <path d="M68 54 L42 76 H94 Z"/>
+      <path d="M40 74 L28 98 L40 106 L46 92 V172 H90 V92 L96 106 L108 98 L96 74 L80 74 Q68 86 56 74 Z"/>
+      <!-- percha 2 -->
+      <path d="M150 46 v8"/>
+      <path d="M150 54 L124 76 H176 Z"/>
+      <path d="M122 74 L110 98 L122 106 L128 92 V150 L172 150 V92 L178 106 L190 98 L178 74 L162 74 Q150 86 138 74 Z"/>
+      <path d="M128 150 L128 190 H172 V150" stroke-width="2.4"/>
+      <!-- percha 3 -->
+      <path d="M232 46 v8"/>
+      <path d="M232 54 L206 76 H258 Z"/>
+      <path d="M204 74 L192 98 L204 106 L210 92 V164 H254 V92 L260 106 L272 98 L260 74 L244 74 Q232 86 220 74 Z"/>
+      <!-- etiqueta colgante: el motivo de la tienda -->
+      <g class="et" stroke="currentColor">
+        <path d="M232 54 Q246 66 250 92" stroke-width="2.2" fill="none"/>
+        <path d="M258 96 H296 V140 H250 V104 Z" fill="#f7f2ec" stroke-width="2.6"/>
+        <circle cx="258" cy="104" r="3.4" stroke-width="2.2" fill="none"/>
+        <path d="M258 116 H288" stroke-width="2.2"/>
+        <path d="M258 126 H280" stroke-width="2.2"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Mauricio Legendre, 3 · local 7</b></span>
+    <span data-real>Castilla · Chamartín · 28046 Madrid</span>
+    <span data-real>Domingo por la mañana, abierto</span>
+    <a href="tel:+34688488933" data-real><b>688 48 89 33</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. lo que ha entrado esta semana ===== -->
+<section class="u-seccion" id="semana">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-2);">Lo que ha entrado esta semana.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Tres o cuatro piezas, con
+    el precio y con las tallas que quedan. Es la pregunta que trae a alguien
+    desde tres calles más allá, y es justo la que ninguna tienda del barrio
+    contesta en internet.</p>
+    <div class="u-grid u-3" style="margin-top:var(--s-4);" data-ejemplo>
+      <div class="pieza">
+        <h3>Blusa de lino</h3>
+        <span class="prec">34 €</span>
+        <p>Cuello redondo, lino lavado y sin forro. En crudo y en verde oliva.</p>
+        <span class="tallas">Quedan dos: una M y una L</span>
+      </div>
+      <div class="pieza">
+        <h3>Pantalón recto de pinzas</h3>
+        <span class="prec">42 €</span>
+        <p>Tiro alto y caída recta. Da bien con zapato plano.</p>
+        <span class="tallas">Queda una: la 40</span>
+      </div>
+      <div class="pieza">
+        <h3>Pañuelo de seda estampado</h3>
+        <span class="prec">18 €</span>
+        <p>Noventa por noventa. Cuatro estampados distintos.</p>
+        <span class="tallas">Quedan cinco · se repone</span>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.93rem;color:var(--tinta-2);">
+      La remesa entra los martes. Lo que se acaba se quita de aquí el mismo día:
+      una página que enseña algo que ya no está hace más daño que no tener página.</p>
+  </div>
+</section>
+
+<!-- ===== 5. te lo aparto ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="apartar">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Te lo<br>aparto.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Esto es lo único
+      que una tienda de dos unidades por talla puede hacer y una cadena no.
+      Conviene decirlo en voz alta, con su plazo y sin señal.</p>
+
+      <!-- dibujo 2: la etiqueta de apartado, el motivo de la tienda -->
+      <svg class="etiqueta" viewBox="0 0 220 190" fill="none" stroke="currentColor"
+           stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"
+           role="img" aria-label="Dibujo de la etiqueta de cartón que se ata a la percha cuando una prenda queda apartada."
+           data-ejemplo>
+        <!-- hilo -->
+        <path d="M18 8 Q44 26 58 52" stroke-width="2"/>
+        <!-- cartón -->
+        <path d="M74 34 H198 V172 H50 V58 Z" fill="#f7f2ec" stroke-width="3.2"/>
+        <circle cx="66" cy="50" r="5.5" stroke-width="2.6"/>
+        <!-- renglones escritos a mano -->
+        <g stroke-width="2.4" opacity=".9">
+          <path d="M74 88 H180"/>
+          <path d="M74 116 H164"/>
+          <path d="M74 144 H186"/>
+        </g>
+        <g class="se" stroke="currentColor" stroke-width="2.2" opacity=".75">
+          <path d="M74 80 H108" stroke-width="3"/>
+          <path d="M74 108 H96" stroke-width="3"/>
+          <path d="M74 136 H130" stroke-width="3"/>
+        </g>
+      </svg>
+    </div>
+    <div class="u-grid u-numerada" style="grid-template-columns:1fr;gap:2px;" data-ejemplo>
+      <div>
+        <h3>Manda la foto por WhatsApp</h3>
+        <p>La del escaparate o la de esta página. Con decir cuál es y qué talla
+        usas ya vale; no hace falta registrarse en ningún sitio.</p>
+      </div>
+      <div>
+        <h3>Se mira y se descuelga</h3>
+        <p>Si queda, se aparta y se le pone tu nombre en la etiqueta. Y si no
+        queda, se contesta igual en el momento: aquí nadie se queda en visto.</p>
+      </div>
+      <div>
+        <h3>Aguanta hasta el sábado a las dos</h3>
+        <p>Ese es el plazo. Pasado, vuelve al perchero. Sin señal y sin
+        compromiso: si al final no puedes venir, no pasa absolutamente nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. las tallas y los cambios ===== -->
+<section class="u-seccion" id="medidas">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar" style="align-items:center;">
+    <div>
+      <h2 style="max-width:18ch;">Una 40 no es una 40 en todas partes.</h2>
+      <p style="color:var(--tinta-2);margin:var(--s-2) 0 var(--s-3);">Por eso
+      aquí van los centímetros de la prenda, no solo la etiqueta. Se mide en un
+      minuto y ahorra el viaje de vuelta.</p>
+      <div data-ejemplo>
+        <div class="regla">
+          <b>Se dan las medidas por WhatsApp</b>
+          <p>Pecho, largo y manga de la prenda concreta que te interesa, medida
+          encima del mostrador. No la tabla genérica de la marca.</p>
+        </div>
+        <div class="regla">
+          <b>Catorce días para cambiar</b>
+          <p>Con el tique y la prenda sin usar. Se cambia por otra cosa o queda
+          el vale; en rebajas y en ropa interior no hay cambio.</p>
+        </div>
+        <div class="regla">
+          <b>El probador está libre siempre</b>
+          <p>Y no hay límite de prendas. Probarse seis cosas y no llevarse
+          ninguna está perfectamente bien.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- dibujo 3: las tres medidas sobre la prenda -->
+    <svg class="medida-dib" viewBox="0 0 260 226" fill="none" stroke="currentColor"
+         stroke-width="3" stroke-linejoin="round" stroke-linecap="round"
+         role="img" aria-label="Dibujo de una blusa con las tres medidas marcadas: pecho, largo y manga.">
+      <!-- prenda -->
+      <path d="M74 40 L52 74 L66 84 L74 68 V180 H134 V68 L142 84 L156 74 L134 40 L116 40 Q104 54 92 40 Z" stroke-width="3.2"/>
+      <!-- medida del pecho -->
+      <g class="co" stroke="currentColor" stroke-width="2.2">
+        <path d="M74 104 H134"/>
+        <path d="M80 99 L74 104 L80 109"/>
+        <path d="M128 99 L134 104 L128 109"/>
+        <text x="104" y="96" text-anchor="middle" fill="currentColor" stroke="none"
+              style="font-family:var(--texto);font-size:13px;font-weight:700;letter-spacing:.04em;">96 cm</text>
+      </g>
+      <!-- medida del largo -->
+      <g class="co" stroke="currentColor" stroke-width="2.2">
+        <path d="M178 40 V180"/>
+        <path d="M173 46 L178 40 L183 46"/>
+        <path d="M173 174 L178 180 L183 174"/>
+        <path d="M134 40 H182" stroke-width="1.6" opacity=".55"/>
+        <path d="M134 180 H182" stroke-width="1.6" opacity=".55"/>
+        <text x="192" y="115" fill="currentColor" stroke="none"
+              style="font-family:var(--texto);font-size:13px;font-weight:700;letter-spacing:.04em;">62 cm</text>
+      </g>
+      <!-- medida de la manga -->
+      <g class="co" stroke="currentColor" stroke-width="2.2">
+        <path d="M70 30 L44 70"/>
+        <path d="M70 37 L70 30 L64 33"/>
+        <path d="M44 63 L44 70 L50 67"/>
+        <text x="30" y="24" fill="currentColor" stroke="none"
+              style="font-family:var(--texto);font-size:13px;font-weight:700;letter-spacing:.04em;">manga 22</text>
+      </g>
+      <!-- etiqueta cosida en el bajo -->
+      <path d="M112 180 h16 v14 h-16 z" stroke-width="2.2"/>
+      <path d="M116 185 h8" stroke-width="1.6"/>
+      <path d="M116 190 h8" stroke-width="1.6"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 7. dónde está de verdad ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-revelar">
+    <div class="donde">
+      <span class="u-ceja" style="color:#f0c08a;">El último tramo es donde se pierde la venta</span>
+      <h2 style="max-width:22ch;" data-real>No está a pie de calle: está dentro de la galería.</h2>
+      <p style="max-width:54ch;" data-real>Calle de Mauricio Legendre, 3, en el
+      barrio de Castilla. Es la calle que baja detrás de Plaza de Castilla hacia
+      el Bernabéu, a un paso de Chamartín. Miuna está en el local 7, dentro del
+      pasaje comercial del número 3.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" style="background:#fff;color:var(--acento);border-color:#fff;"
+           href="https://wa.me/34688488933?text=Hola%2C%20he%20visto%20la%20p%C3%A1gina%20y%20quer%C3%ADa%20preguntar%20si%20queda%20mi%20talla."
+           target="_blank" rel="noopener" data-real>WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34688488933" data-real>688 48 89 33</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&amp;query=40.4689916%2C-3.6870263"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+
+    <!-- dibujo 4: el plano del pasaje, con el local 7 marcado -->
+    <svg class="plano" viewBox="0 0 340 236" fill="none" stroke="currentColor"
+         stroke-width="2.4" stroke-linejoin="round"
+         role="img" aria-label="Plano dibujado del pasaje comercial: la entrada desde la calle, el pasillo y los locales numerados, con el 7 marcado."
+         data-ejemplo>
+      <!-- caja del pasaje -->
+      <path d="M22 18 H318 V182 H22 Z" stroke-width="3"/>
+      <!-- locales de la izquierda -->
+      <path d="M30 26 H152 V70 H30 Z"/>
+      <path d="M30 78 H152 V122 H30 Z"/>
+      <path d="M30 130 H152 V174 H30 Z"/>
+      <!-- locales de la derecha -->
+      <path d="M188 26 H310 V70 H188 Z"/>
+      <path d="M188 78 H310 V122 H188 Z"/>
+      <!-- el local 7: Miuna -->
+      <g class="aqui" stroke="currentColor">
+        <path d="M188 130 H310 V174 H188 Z" fill="#f7f2ec" stroke-width="4"/>
+        <text x="249" y="149" text-anchor="middle" fill="currentColor" stroke="none"
+              style="font-family:var(--display);font-size:19px;font-weight:600;">Miuna</text>
+        <text x="249" y="164" text-anchor="middle" fill="currentColor" stroke="none"
+              style="font-family:var(--texto);font-size:11px;font-weight:700;letter-spacing:.16em;">LOCAL 7</text>
+      </g>
+      <!-- números de los otros locales -->
+      <g stroke="none" fill="currentColor" opacity=".6"
+         style="font-family:var(--texto);font-size:13px;font-weight:700;">
+        <text x="91" y="53" text-anchor="middle">2</text>
+        <text x="91" y="105" text-anchor="middle">4</text>
+        <text x="91" y="157" text-anchor="middle">6</text>
+        <text x="249" y="53" text-anchor="middle">3</text>
+        <text x="249" y="105" text-anchor="middle">5</text>
+      </g>
+      <!-- pasillo -->
+      <path d="M170 18 V182" stroke-width="1.6" stroke-dasharray="7 7" opacity=".7"/>
+      <!-- entrada y calle -->
+      <path d="M152 182 H188" stroke="#f7f2ec" stroke-width="6"/>
+      <path d="M170 224 V190" stroke-width="3"/>
+      <path d="M163 198 L170 190 L177 198" stroke-width="3"/>
+      <path d="M22 212 H318" stroke-width="1.6" opacity=".45"/>
+      <text x="22" y="232" fill="currentColor" stroke="none" opacity=".75"
+            style="font-family:var(--texto);font-size:10px;font-weight:700;letter-spacing:.14em;">CALLE DE MAURICIO LEGENDRE</text>
+    </svg>
+
+    <div class="u-grid u-desigual" style="margin-top:var(--s-5);">
+      <div>
+        <h3 style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+                   color:var(--acento);font-family:var(--texto);font-weight:700;">Horario</h3>
+        <table class="horario" data-real>
+          <tr><th>Lunes</th><td>10:00 – 21:00</td></tr>
+          <tr><th>Martes</th><td>10:00 – 21:00</td></tr>
+          <tr><th>Miércoles</th><td>10:00 – 21:00</td></tr>
+          <tr><th>Jueves</th><td>10:00 – 21:00</td></tr>
+          <tr><th>Viernes</th><td>10:00 – 21:00</td></tr>
+          <tr><th>Sábado</th><td>10:00 – 20:00</td></tr>
+          <tr><th>Domingo</th><td>11:00 – 14:00</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2 style="font-size:1.75rem;">Once horas<br>seguidas, y el<br>domingo también.</h2>
+        <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>De diez
+        de la mañana a nueve de la noche sin cerrar a mediodía, y el domingo de
+        once a dos. Media calle está cerrada a esas horas: es un argumento y
+        merece estar arriba, no en el pie de página.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle, el número,
+      el móvil y el horario de los siete días. Todo lo demás lo he inventado
+      para enseñar la forma: pulse el botón amarillo de arriba y se marca solo.</p>
+      <ul>
+        <li><b>Las tres prendas, sus precios y sus tallas están inventados.</b>
+        Son el corazón de la página y hay que cambiarlos por los suyos antes de
+        enseñársela a nadie.</li>
+        <li><b>El plazo del sábado, los catorce días de cambio y las medidas
+        son invención mía.</b> Cada tienda tiene sus condiciones; dígame las
+        suyas y las pongo.</li>
+        <li><b>El plano del pasaje está dibujado a ojo</b> y seguramente no
+        coincide con la realidad. Lo que sí he comprobado es la calle y el
+        número; el «local 7» sale de un directorio y conviene que lo confirme.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado opiniones suyas, y una
+        nota sin recuento de reseñas la penaliza Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una escrita a mano para
+      cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la tienda.</b> Es una propuesta sin
+      relación con Miuna ni con sus titulares, y tampoco con ninguna otra tienda
+      de nombre parecido. El nombre, la dirección, el teléfono y el horario
+      salen de fichas públicas de OpenStreetMap y de directorios.</p>
+      <p>Las prendas, los precios, las tallas, los plazos y el plano del pasaje
+      son inventados y están marcados. <b>No se declara ninguna nota de
+      Google</b> y <b>no hay ninguna fotografía:</b> los cuatro dibujos están
+      hechos a mano para esta página.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si la titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34688488933?text=Hola%2C%20he%20visto%20la%20p%C3%A1gina%20y%20quer%C3%ADa%20preguntar%20si%20queda%20mi%20talla." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=40.4689916%2C-3.6870263" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ClothingStore",
+  "name":"Miuna",
+  "description":"Tienda de moda y complementos en la Calle de Mauricio Legendre 3, barrio de Castilla, Chamartín, Madrid.",
+  "telephone":"+34688488933",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Mauricio Legendre, 3, local 7",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4689916,"longitude":-3.6870263},
+  "openingHours":["Mo-Fr 10:00-21:00","Sa 10:00-20:00","Su 11:00-14:00"],
+  "currenciesAccepted":"EUR",
+  "url":"https://nachoie123.github.io/webdemos/miuna/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

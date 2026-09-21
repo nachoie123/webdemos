@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reparación de Calzado J.T. · Mercado de Maravillas, Bravo Murillo 122, Madrid</title>
+<meta name="description" content="Propuesta de página web para Reparación de Calzado y Complementos J.T., zapatero en el Mercado de Maravillas, Bravo Murillo 122, Cuatro Caminos, Madrid. Manda una foto por WhatsApp y te dice si tiene arreglo.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/reparacion-calzado-jt/">
+<meta name="theme-color" content="#7b3a1f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f0e8dd%27/%3E%3Cpath d=%27M4 20 C4 16 8 15 12 14 C17 13 21 10 25 10 L27 10 L27 20 Z%27 fill=%27none%27 stroke=%27%237b3a1f%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M4 20 h23%27 stroke=%27%237b3a1f%27 stroke-width=%273%27/%3E%3Cpath d=%27M22 23 h5%27 stroke=%27%23b4352a%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/reparacion-calzado-jt/">
+<meta property="og:title" content="Reparación de Calzado J.T. · Mercado de Maravillas, Madrid">
+<meta property="og:description" content="Zapatero en el Mercado de Maravillas, Bravo Murillo 122. Manda una foto del zapato por WhatsApp y te dice si tiene arreglo, cuánto cuesta y qué día lo tienes.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/reparacion-calzado-jt/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   Cartón de caja de zapatos, betún y un hilo rojo de pespunte. El material
+   de este oficio ya tiene color: no hace falta ni gris taller ni azul. */
+:root{
+  --fondo:#f0e8dd; --fondo-2:#e1d2bd; --tinta:#211710; --tinta-2:#6d5c49;
+  --acento:#7b3a1f; --acento-tinta:#f7ece0; --linea:#c8b295;
+  --hilo:#b4352a;
+  --display:'Domine', Georgia, serif;
+  --texto:'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+  --radio:2px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;
+  line-height:1.12;}
+h2{font-size:clamp(1.9rem,4.1vw,2.9rem);}
+h3{font-size:1.32rem;line-height:1.2;}
+em.hl{font-style:normal;color:var(--hilo);}
+.u-ceja{color:var(--acento);font-weight:700;}
+.gris{color:var(--tinta-2);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(240,232,221,.96);
+  backdrop-filter:blur(7px);border-bottom:2px solid var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.16rem;font-weight:700;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.18em;font-weight:700;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1rem;font-size:.92rem;white-space:nowrap;
+  border-radius:var(--radio);}
+@media(max-width:900px){.tel-cab{display:none}}
+@media(max-width:1020px){.cab .u-nav{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(175deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:6fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:900px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.06;margin:.18em 0 .36em;}
+.hero p{max-width:45ch;}
+.zap{width:100%;max-width:400px;margin-inline:auto;color:var(--acento);}
+.zap .rojo{color:var(--hilo);}
+
+/* los tres pasos */
+.paso{background:var(--fondo);}
+.paso h3{margin-bottom:.4rem;}
+.paso p{margin:0;font-size:.97rem;color:var(--tinta-2);}
+
+/* sí y no */
+.veredicto{padding:var(--s-4);border:2px solid var(--linea);background:var(--fondo);}
+.veredicto.si{border-color:var(--acento);}
+.veredicto.no{background:var(--fondo-2);}
+.veredicto h3{margin-bottom:var(--s-2);}
+.veredicto ul{list-style:none;margin:0;padding:0;}
+.veredicto li{padding:.62rem 0;border-top:1px solid var(--linea);font-size:.99rem;}
+.veredicto li:first-child{border-top:0;}
+.veredicto li b{font-weight:700;}
+
+/* precios */
+.comparo{border:2px dashed var(--hilo);padding:var(--s-3);background:var(--fondo);
+  margin-top:var(--s-3);}
+.comparo > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:700;margin-bottom:.35rem;}
+.comparo p{margin:0;color:var(--tinta-2);font-size:.97rem;}
+
+/* despiece */
+.piezas{list-style:none;margin:0;padding:0;counter-reset:z;}
+.piezas li{counter-increment:z;padding:.72rem 0 .72rem 2.6rem;position:relative;
+  border-bottom:1px solid var(--linea);font-size:.99rem;}
+.piezas li::before{content:counter(z);position:absolute;left:0;top:.62rem;
+  width:1.75rem;height:1.75rem;display:grid;place-items:center;
+  background:var(--acento);color:var(--acento-tinta);font-family:var(--display);
+  font-weight:700;font-size:.92rem;border-radius:var(--radio);}
+.piezas li b{display:block;font-family:var(--display);font-size:1.06rem;}
+.corte{width:100%;max-width:440px;color:var(--acento);}
+.corte .rojo{color:var(--hilo);}
+
+/* plazos */
+.plazo{border-top:6px solid var(--acento);padding:var(--s-3) 0 0;}
+.plazo b{display:block;font-family:var(--display);font-size:2.3rem;font-weight:700;
+  line-height:1;color:var(--acento);}
+.plazo span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:700;margin:.34rem 0 .5rem;}
+.plazo p{margin:0;font-size:.96rem;color:var(--tinta-2);}
+
+/* cómo llegar */
+.donde{background:var(--tinta);color:#d9cbb8;}
+.donde h2,.donde h3{color:#fff;}
+.donde a{color:#e8a58c;}
+.croquis{width:100%;max-width:380px;color:#d9cbb8;}
+.croquis .rojo{color:#e0685a;}
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.5rem 0;
+  border-bottom:1px solid #4a3c30;font-size:.97rem;}
+.horario th{font-weight:700;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:#b6a48f;}
+
+/* la única nota */
+.nota{background:var(--fondo);border-left:7px solid var(--hilo);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.28rem;
+  font-weight:700;margin-bottom:.45rem;}
+.nota ul{margin:.45rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.4rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:700;}
+.u-movil a+a{background:var(--tinta);color:#e7dbc9;}
+
+.pie{background:var(--fondo-2);border-top:2px solid var(--acento);}
+.pie h3{margin-bottom:var(--s-1);}
+.pie p{font-size:.96rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, su horario y el número de su puesto.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Calzado J.T.</b><span data-real>Mercado de Maravillas · Bravo Murillo 122</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#foto">Manda una foto</a>
+      <a href="#arreglo">Qué tiene arreglo</a>
+      <a href="#precios">Precios</a>
+      <a href="#donde">Dónde estoy</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34677129450" data-real>677 12 94 50</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Zapatero · Mercado de Maravillas · Cuatro Caminos</span>
+      <h1>Antes de tirarlos,<br><em class="hl">mándeme una foto.</em></h1>
+      <p>Le contesto si tiene arreglo, cuánto cuesta y qué día lo tiene. Si no
+      merece la pena, se lo digo igual y no ha perdido el viaje.</p>
+      <p class="gris" style="font-size:.97rem;">Zapatos, botas, bolsos, cinturones
+      y cremalleras. Y lo que lleve meses en el armario porque no sabía si se
+      podía salvar.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="u-btn" href="https://wa.me/34677129450?text=Hola%2C%20le%20mando%20una%20foto%3A%20%C2%BFesto%20tiene%20arreglo%20y%20cu%C3%A1nto%20costar%C3%ADa%3F"
+           target="_blank" rel="noopener" data-real>Mandar la foto por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#precios">Ver precios</a>
+      </p>
+    </div>
+    <svg class="zap" viewBox="0 0 320 210" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <!-- zapato de perfil: corte, suela, tacón y tapa -->
+      <path d="M22 150 C20 126 34 116 58 110 C86 103 108 96 130 84 C158 69 182 58 214 58 L242 58 C256 58 262 68 262 82 L262 150 Z"/>
+      <path d="M22 150 h240" stroke-width="7"/>
+      <path d="M22 150 v10 h240 v-10" stroke-width="4"/>
+      <path d="M214 160 v22 h48 v-22" stroke-width="5"/>
+      <path d="M214 182 h48" class="rojo" stroke="currentColor" stroke-width="9"/>
+      <!-- pespunte del corte -->
+      <path d="M62 112 C92 104 116 94 138 82" stroke-width="3" stroke-dasharray="7 7" class="rojo" stroke="currentColor"/>
+      <!-- cordones -->
+      <path d="M168 76 l30 12 M198 70 l30 12 M168 92 l30 12" stroke-width="3.4"/>
+      <!-- lengüeta y talón -->
+      <path d="M242 58 C236 74 238 96 246 112" stroke-width="3.4" opacity=".7"/>
+      <path d="M22 150 C24 138 32 130 44 126" stroke-width="3.4" opacity=".7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Mercado de Maravillas</b></span>
+    <span data-real>Bravo Murillo 122 · planta 1</span>
+    <span data-ejemplo>Lunes a viernes 9:30–14:00 y 17:00–20:00</span>
+    <a href="tel:+34677129450" data-real><b>677 12 94 50</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. la foto por WhatsApp ===== -->
+<section class="u-seccion" id="foto">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;">La duda se resuelve en un mensaje.</h2>
+    <p class="u-medida gris" style="margin-top:var(--s-2);">Casi nadie se acerca
+    a preguntar por un zapato: le da pereza cargar con él para que le digan que
+    no. Con una foto se sabe el 90 % de las veces.</p>
+    <div class="u-grid u-3 u-numerada" style="margin-top:var(--s-4);">
+      <div class="paso">
+        <h3>Hace la foto</h3>
+        <p>De la zona rota y otra del zapato entero. Con luz de día vale de sobra.</p>
+      </div>
+      <div class="paso">
+        <h3>Le contesto</h3>
+        <p data-ejemplo>Si tiene arreglo, qué se le haría, el precio y el día que lo tendría. Suele ser el mismo día.</p>
+      </div>
+      <div class="paso">
+        <h3>Lo trae</h3>
+        <p>Ya sabe lo que va a pagar antes de subir la escalera del mercado. Sin sorpresas al recoger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. qué tiene arreglo y qué no ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="arreglo">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;">Lo que se salva y lo que no.</h2>
+    <p class="u-medida gris" style="margin-top:var(--s-2);">Un zapatero que dice
+    a todo que sí le cobra el arreglo y le devuelve el problema. Prefiero perder
+    el trabajo y decirlo antes.</p>
+    <div class="u-grid u-2" style="margin-top:var(--s-4);" data-ejemplo>
+      <div class="veredicto si">
+        <h3>Tiene arreglo</h3>
+        <ul>
+          <li><b>Suela gastada o abierta.</b> Media suela nueva y el zapato aguanta otros dos inviernos.</li>
+          <li><b>Tacón comido por fuera.</b> Tapas nuevas. Es el arreglo más barato y el que más se pide.</li>
+          <li><b>Cremallera de bota o de bolso.</b> Se cambia entera, no se remienda.</li>
+          <li><b>Descosido del corte.</b> Si el cuero está sano, se vuelve a coser a máquina.</li>
+          <li><b>Aprietan de ancho.</b> Se da de sí en la horma, un par de milímetros de verdad.</li>
+          <li><b>Forro del talón roto.</b> Se pone un parche interior y deja de comerse el calcetín.</li>
+        </ul>
+      </div>
+      <div class="veredicto no">
+        <h3>No merece la pena</h3>
+        <ul>
+          <li><b>Zapatilla de tela con la puntera abierta.</b> La costura nueva descose la de al lado.</li>
+          <li><b>Suela inyectada partida por la mitad.</b> Pegada aguanta semanas, no meses. Se lo digo antes de cobrárselo.</li>
+          <li><b>Cuero cuarteado por dentro.</b> Si al doblarlo se agrieta, no hay tinte que lo tape.</li>
+          <li><b>Zapato de 25 € con tres arreglos.</b> Suman más que uno nuevo. Ese cálculo se lo hago yo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. precios ===== -->
+<section class="u-seccion" id="precios">
+  <div class="u-wrap u-revelar">
+    <div class="u-grid u-desigual-inv">
+      <div>
+        <h2 style="max-width:20ch;">Precios, y al lado lo que cuesta no arreglarlo.</h2>
+        <ul class="u-precios" style="margin-top:var(--s-3);" data-ejemplo>
+          <li><span class="n">Tapas de tacón</span><span class="d">señora y caballero, en el momento</span><span class="p">desde 9 €</span></li>
+          <li><span class="n">Media suela</span><span class="d">goma o cuero, se elige al traerlo</span><span class="p">desde 18 €</span></li>
+          <li><span class="n">Suela entera</span><span class="d">con material encargado</span><span class="p">desde 32 €</span></li>
+          <li><span class="n">Cremallera de bota</span><span class="d">cambiada entera, no remendada</span><span class="p">desde 20 €</span></li>
+          <li><span class="n">Asa de bolso descosida</span><span class="d">cosida a máquina</span><span class="p">desde 12 €</span></li>
+          <li><span class="n">Ensanchar de horma</span><span class="d">un par de milímetros reales</span><span class="p">desde 8 €</span></li>
+          <li><span class="n">Tinte y limpieza</span><span class="d">negro, marrón y burdeos</span><span class="p">desde 10 €</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="comparo">
+          <b>18 € contra 90 €</b>
+          <p>Eso es una media suela frente a unos zapatos de piel nuevos. Y los
+          viejos ya están dados de sí, que es lo único que no se compra.</p>
+        </div>
+        <div class="comparo" style="border-style:solid;border-color:var(--linea);">
+          <b>El precio, antes de tocar nada</b>
+          <p>Se mira el zapato delante de usted y se dice el precio. Si al abrirlo
+          aparece algo peor, se para y se llama. Nunca se sube un arreglo por su
+          cuenta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. el zapato por dentro ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:23ch;">Por dónde se rompe un zapato.</h2>
+    <p class="u-medida gris" style="margin-top:var(--s-2);">Cinco capas. Se
+    gastan por orden, y cuando una cede arrastra a la siguiente. Por eso unas
+    tapas de 9 € a tiempo evitan un tacón entero.</p>
+    <div class="u-grid u-desigual" style="margin-top:var(--s-4);align-items:center;">
+      <svg class="corte" viewBox="0 0 300 260" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <!-- despiece por capas, separadas para verlas -->
+        <g>
+          <path d="M40 46 C38 28 54 20 78 18 C120 15 160 12 196 12 C222 12 240 22 240 40 L240 46 Z"/>
+          <text x="256" y="40" font-size="26" font-family="Georgia,serif" fill="currentColor" stroke="none">1</text>
+        </g>
+        <g opacity=".92">
+          <path d="M42 84 C40 72 52 68 76 66 C122 62 168 60 200 60 C222 60 236 68 236 82 L236 84 Z" stroke-dasharray="9 7"/>
+          <text x="256" y="84" font-size="26" font-family="Georgia,serif" fill="currentColor" stroke="none">2</text>
+        </g>
+        <g>
+          <path d="M44 122 h186 c8 0 12 6 12 12 v6 H44 z"/>
+          <path d="M60 134 h150" stroke-width="2.6" opacity=".6"/>
+          <text x="256" y="140" font-size="26" font-family="Georgia,serif" fill="currentColor" stroke="none">3</text>
+        </g>
+        <g>
+          <path d="M40 176 h196 v22 H40 z" stroke-width="5"/>
+          <path d="M52 187 h30 M96 187 h30 M140 187 h30 M184 187 h30" stroke-width="3" opacity=".55"/>
+          <text x="256" y="196" font-size="26" font-family="Georgia,serif" fill="currentColor" stroke="none">4</text>
+        </g>
+        <g class="rojo" stroke="currentColor">
+          <path d="M168 224 h68 v22 h-68 z" stroke-width="5"/>
+          <path d="M168 235 h68" stroke-width="3" opacity=".6"/>
+          <text x="256" y="244" font-size="26" font-family="Georgia,serif" fill="currentColor" stroke="none">5</text>
+        </g>
+      </svg>
+      <ol class="piezas">
+        <li><b>El corte</b>La piel de fuera. Si está sana, el zapato se salva casi seguro.</li>
+        <li><b>El forro</b>Lo que roza el talón. Se rompe el primero y nadie lo mira.</li>
+        <li><b>La plantilla y el cambrillón</b>El esqueleto. Si cede, el zapato se tuerce al andar.</li>
+        <li><b>La suela</b>Se gasta en la punta y en el borde de fuera. Media suela llega hasta la mitad.</li>
+        <li><b>La tapa del tacón</b>La pieza que se come el suelo. Nueve euros, diez minutos.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. cuánto tarda ===== -->
+<section class="u-seccion">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;">Cuánto tarda, de verdad.</h2>
+    <div class="u-grid u-3" style="margin-top:var(--s-4);" data-ejemplo>
+      <div class="plazo">
+        <b>10 min</b>
+        <span>Mientras espera</span>
+        <p>Tapas, una costura suelta, cambiar unos cordones o un ojal. Se sienta y se lo lleva puesto.</p>
+      </div>
+      <div class="plazo">
+        <b>Mismo día</b>
+        <span>Lo deja y lo recoge</span>
+        <p>Media suela, tinte, ensanchar de horma. Si lo trae por la mañana, sale por la tarde.</p>
+      </div>
+      <div class="plazo">
+        <b>3 o 4 días</b>
+        <span>Con material encargado</span>
+        <p>Suela entera, cremallera de color raro, piel que hay que pedir. Se le dice el día al dejarlo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. cómo llegar al puesto ===== -->
+<section class="donde u-seccion u-sangrado" id="donde">
+  <div class="u-wrap u-revelar">
+    <div class="u-grid u-desigual-inv" style="align-items:center;">
+      <div>
+        <span class="u-ceja" style="color:#e8a58c;">El problema de estar dentro de un mercado</span>
+        <h2 style="max-width:22ch;">Maps le lleva al mercado. Yo estoy dentro.</h2>
+        <p style="max-width:46ch;">El Mercado de Maravillas tiene dos plantas y
+        más de doscientos puestos. Quien entra por la puerta grande y no sabe
+        adónde va, se da la vuelta. Por eso esto está escrito aquí.</p>
+        <p data-ejemplo style="max-width:46ch;">Se entra por Bravo Murillo 122,
+        se sube a la planta 1 y el puesto está en el pasillo de los arreglos,
+        al fondo. Si se pierde, llame y le saco.</p>
+        <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.3rem;">
+          <a class="u-btn" style="background:var(--hilo);border-color:var(--hilo);color:#fff;"
+             href="https://wa.me/34677129450?text=Hola%2C%20le%20mando%20una%20foto%3A%20%C2%BFesto%20tiene%20arreglo%20y%20cu%C3%A1nto%20costar%C3%ADa%3F"
+             target="_blank" rel="noopener" data-real>WhatsApp</a>
+          <a class="u-btn u-btn--linea" href="tel:+34677129450" data-real>677 12 94 50</a>
+          <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=40.448495%2C-3.7025736" data-real>Cómo llegar</a>
+        </p>
+      </div>
+      <svg class="croquis" viewBox="0 0 300 250" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" aria-hidden="true">
+        <!-- croquis del mercado: calle, puerta, escalera y puesto -->
+        <path d="M14 226 h272" stroke-width="2.5" opacity=".45"/>
+        <text x="14" y="244" font-size="15" font-family="Georgia,serif" fill="currentColor" stroke="none">Calle de Bravo Murillo</text>
+        <rect x="34" y="34" width="232" height="168" stroke-width="4.5"/>
+        <path d="M130 202 h40" stroke-width="9" class="rojo" stroke="currentColor"/>
+        <text x="122" y="222" font-size="14" font-family="Georgia,serif" fill="currentColor" stroke="none">entrada 122</text>
+        <!-- escalera a la planta 1 -->
+        <path d="M150 196 v-22 h18 v-16 h18 v-16 h18 v-16" stroke-width="4"/>
+        <text x="196" y="118" font-size="15" font-family="Georgia,serif" fill="currentColor" stroke="none">planta 1</text>
+        <!-- pasillos de puestos -->
+        <g opacity=".4" stroke-width="3">
+          <path d="M52 64 h60 M52 90 h60 M52 116 h60 M52 142 h60"/>
+          <path d="M132 64 h40 M132 90 h40"/>
+        </g>
+        <!-- el puesto -->
+        <g class="rojo" stroke="currentColor">
+          <rect x="196" y="62" width="54" height="32" stroke-width="5"/>
+          <path d="M204 102 v-8 M242 102 v-8" stroke-width="3.5" opacity=".7"/>
+          <text x="188" y="54" font-size="15" font-family="Georgia,serif" fill="currentColor" stroke="none">el puesto</text>
+        </g>
+      </svg>
+    </div>
+    <div class="u-grid u-desigual" style="margin-top:var(--s-5);">
+      <div>
+        <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                   color:#e8a58c;font-family:var(--texto);font-weight:700;">Horario</h3>
+        <table class="horario" data-ejemplo>
+          <tr><th>Lunes</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+          <tr><th>Martes</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+          <tr><th>Miércoles</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+          <tr><th>Jueves</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+          <tr><th>Viernes</th><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+          <tr><th>Sábado</th><td>9:30 – 14:30</td></tr>
+          <tr><th>Domingo</th><td>Cerrado</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Deje el zapato y váyase a la compra.</h3>
+        <p style="margin-top:var(--s-2);">Está dentro del mercado: se deja el
+        par, se hace la compra y se recoge de vuelta. Eso no lo puede ofrecer
+        ninguna tienda de la calle, y es el mejor argumento que tiene este
+        puesto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta, y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, el portal 122 del
+      Mercado de Maravillas y el móvil. Todo lo demás lo he escrito yo para
+      enseñar la forma: pulse el botón amarillo de arriba y se marca solo lo
+      inventado.</p>
+      <ul>
+        <li><b>Los precios y los plazos son inventados.</b> Son la pieza que más
+        vende de la página, así que hay que poner los suyos antes de enseñársela
+        a nadie.</li>
+        <li><b>El horario también.</b> He puesto el que suele tener un puesto de
+        mercado; dígame el suyo y lo cambio.</li>
+        <li><b>Falta el número de puesto.</b> Es lo único que impide que alguien
+        le encuentre a la primera. Con ese dato, el croquis deja de ser un dibujo
+        y pasa a ser una indicación.</li>
+        <li><b>Sin nota de Google y sin opiniones.</b> No he encontrado reseñas
+        suyas con recuento fiable, y una nota sin número de reseñas la penaliza
+        Google. Prefiero dejarlo vacío a inventarlo.</li>
+        <li><b>No hay ninguna fotografía.</b> Los tres dibujos están hechos a
+        mano para este puesto.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance. Estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado, en Cuzco. Hago páginas para negocios del barrio: una escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera, después de ver
+      que el puesto no aparece en internet más que en una línea de un
+      directorio. Si le sirve, hablamos. Si no, la borro.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del negocio.</b> Es una propuesta sin
+      relación oficial con el puesto, con sus titulares ni con el Mercado de
+      Maravillas, y tampoco con los otros arreglos de calzado del mismo edificio.
+      El nombre, la dirección y el teléfono salen de fichas públicas.</p>
+      <p>Los precios, los plazos, el horario y la ubicación dentro del mercado
+      están inventados y marcados. <b>No se declara ninguna nota de Google</b> y
+      <b>no hay ninguna fotografía:</b> los dibujos están hechos a mano.</p>
+      <p>No se recoge ningún dato: los botones abren el teléfono o WhatsApp del
+      propio visitante. Si el titular prefiere que esto se retire, escribe y se
+      retira hoy mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34677129450?text=Hola%2C%20le%20mando%20una%20foto%3A%20%C2%BFesto%20tiene%20arreglo%20y%20cu%C3%A1nto%20costar%C3%ADa%3F" target="_blank" rel="noopener">Mandar foto</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=40.448495%2C-3.7025736" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Reparación de Calzado y Complementos J.T.",
+  "description":"Arreglo de calzado, bolsos y cremalleras en un puesto del Mercado de Maravillas, Bravo Murillo 122, Cuatro Caminos, Tetuán, Madrid.",
+  "isicV4":"9523",
+  "telephone":"+34677129450",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Bravo Murillo, 122 (Mercado de Maravillas)",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28020",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.448495,"longitude":-3.7025736},
+  "openingHours":["Mo-Fr 09:30-14:00","Mo-Fr 17:00-20:00","Sa 09:30-14:30"],
+  "url":"https://nachoie123.github.io/webdemos/reparacion-calzado-jt/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ocultar las marcas' : 'Ver las marcas';
+});
+</script>
+</body>
+</html>

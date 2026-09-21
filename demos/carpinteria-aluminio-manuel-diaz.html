@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manuel Díaz Carpintería de Aluminio · Costa Rica 20, Hispanoamérica, Madrid</title>
+<meta name="description" content="Propuesta de página web para Manuel Díaz Carpintería de Aluminio, taller de ventanas, puertas y cerramientos de terraza en la Calle de Costa Rica 20, Hispanoamérica, Madrid. El día de obra hora a hora y qué entra en el precio.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/carpinteria-aluminio-manuel-diaz/">
+<meta name="theme-color" content="#374b55">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f1f1ef%27/%3E%3Crect x=%275%27 y=%275%27 width=%2722%27 height=%2722%27 fill=%27none%27 stroke=%27%23374b55%27 stroke-width=%273%27/%3E%3Cpath d=%27M16 5v22%27 stroke=%27%23374b55%27 stroke-width=%273%27/%3E%3Cpath d=%27M5 27 27 5%27 stroke=%27%23b0562a%27 stroke-width=%272%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/carpinteria-aluminio-manuel-diaz/">
+<meta property="og:title" content="Manuel Díaz Carpintería de Aluminio · Costa Rica 20, Hispanoamérica, Madrid">
+<meta property="og:description" content="Propuesta de página web para Manuel Díaz Carpintería de Aluminio, taller de ventanas, puertas y cerramientos de terraza en la Calle de Costa Rica 20, Hispanoamérica, Madrid. El día de obra hora a hora y qué entra en el precio.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/carpinteria-aluminio-manuel-diaz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Urbanist:wght@400;500;600;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Aluminio crudo y cinta de obra. Gris sin azul, ángulo recto en todo y una
+   condensada de rótulo de persiana. Ni degradados de cristal ni azul
+   corporativo: ese es el uniforme de las marcas de perfil, y este taller
+   compite justo por ser el de la calle de al lado.                         */
+:root{
+  --fondo:#f1f1ef; --fondo-2:#e2e4e0; --tinta:#191a18; --tinta-2:#5b5f5a;
+  --acento:#374b55; --acento-tinta:#eef2f3; --linea:#c9ccc6;
+  --cobre:#b0562a;
+  --display:'Antonio', 'Arial Narrow', sans-serif;
+  --texto:'Urbanist', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.005em;
+  line-height:1.16;text-transform:uppercase;}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+h3{font-size:1.3rem;letter-spacing:.02em;}
+em.cu{font-style:normal;color:var(--cobre);}
+.u-ceja{color:var(--cobre);font-weight:700;}
+
+/* parche: en base.css los <svg> son elementos en linea — ni se centran con
+   margin:auto ni respetan la caja. Y el flex de .u-tira vive en la <section>,
+   cuyo unico hijo es el .u-wrap, asi que los datos salen en linea corrida. */
+svg{display:block;}
+.u-tira{display:block;}
+.u-tira .u-wrap{display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:baseline;gap:var(--s-2) var(--s-4);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(241,241,239,.95);
+  backdrop-filter:blur(8px);border-bottom:3px solid var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.05;}
+.marca b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.01em;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:700;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.5rem 1rem;font-size:.9rem;white-space:nowrap;}
+@media(max-width:920px){.tel-cab{display:none}}
+/* en movil la nav de 4 apartados parte cada enlace en tres lineas y aplasta
+   la marca: fuera, que abajo esta la barra fija de Escribir / Llamar. */
+@media(max-width:780px){.cab .u-nav{display:none}}
+
+/* hero */
+.hero{background:var(--fondo-2);border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:920px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1.16;margin:.14em 0 .3em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.perfil{width:100%;max-width:330px;margin-inline:auto;color:var(--acento);}
+.leyenda{list-style:none;margin:var(--s-2) 0 0;padding:0;font-size:.85rem;
+  color:var(--tinta-2);}
+.leyenda li{display:flex;gap:.6rem;align-items:baseline;padding:.16rem 0;}
+.leyenda b{font-family:var(--display);font-weight:700;color:var(--cobre);
+  min-width:1.2em;}
+
+/* el dia de la obra */
+.hora{border-top:4px solid var(--acento);padding-top:var(--s-2);}
+.hora .h{display:block;font-family:var(--display);font-size:2.3rem;font-weight:700;
+  line-height:1;color:var(--cobre);letter-spacing:.01em;}
+.hora svg{width:100%;max-width:150px;margin:var(--s-2) 0;color:var(--acento);}
+.hora > b{display:block;font-family:var(--display);font-size:1.15rem;
+  font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.2rem;}
+.hora p{margin:0;font-size:.92rem;color:var(--tinta-2);}
+
+/* que entra en el precio */
+.entra{list-style:none;margin:0;padding:0;}
+.entra li{display:flex;gap:var(--s-2);align-items:baseline;padding:.7rem 0;
+  border-bottom:1px solid var(--linea);font-size:1rem;}
+.entra li::before{content:"";flex:0 0 14px;height:14px;
+  border:3px solid var(--cobre);transform:translateY(2px);}
+.entra li:last-child{border-bottom:0;}
+.horquilla{border:3px solid var(--acento);padding:var(--s-3);background:var(--fondo);}
+.horquilla .n{display:block;font-family:var(--display);font-size:2.6rem;
+  font-weight:700;line-height:1;color:var(--acento);margin-bottom:.15rem;}
+.horquilla .q{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);font-weight:700;}
+.horquilla p{margin:var(--s-2) 0 0;font-size:.9rem;color:var(--tinta-2);}
+
+/* antes de pedir presupuesto */
+.aviso{border-left:5px solid var(--cobre);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.aviso > b:first-child{display:block;font-family:var(--display);font-size:1.28rem;
+  font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.2rem;}
+.aviso p{margin:0;color:var(--tinta-2);font-size:.96rem;}
+
+/* que se hace aqui */
+.u-numerada > *{background:var(--fondo);border-color:var(--linea);}
+.u-numerada > *::before{color:var(--cobre);opacity:1;font-size:1.8rem;
+  font-family:var(--display);font-weight:700;}
+.svc > b:first-child{display:block;font-family:var(--display);font-size:1.22rem;
+  font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.3rem;}
+.svc p{margin:0;font-size:.94rem;color:var(--tinta-2);}
+
+/* terraza */
+.terraza{width:100%;max-width:440px;margin-inline:auto;color:var(--acento);}
+
+/* donde y horario */
+.donde{background:var(--acento);color:var(--acento-tinta);padding:var(--s-4);}
+.donde h2{color:#fff;}
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.95rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la UNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--cobre);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--cobre);color:#fff;font-weight:700;}
+.u-movil a+a{background:var(--acento);color:var(--acento-tinta);}
+
+.pie{background:var(--tinta);color:#9ba39c;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#d8a183;}
+.pie p{font-size:.94rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, sus plazos y sus trabajos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Manuel Díaz</b><span data-real>Carpintería de aluminio · Costa Rica 20</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#dia">El día de obra</a>
+      <a href="#precio">Qué entra</a>
+      <a href="#antes">Antes de pedir</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34913593657" data-real>913 59 36 57</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Taller propio en Hispanoamérica desde 1995</span>
+      <h1>Una ventana se cambia<br>en una mañana.<br><em class="cu">A la hora de comer<br>ya está cerrada.</em></h1>
+      <p>Casi nadie cambia las ventanas por el precio: las aplaza por miedo a la
+      obra, al polvo y al agujero en la pared. Así que aquí está el día entero
+      contado por horas, y lo que entra en el presupuesto sin cobrarse aparte.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="mailto:aluminiosmdiaz@yahoo.es?subject=Presupuesto%20de%20ventanas&amp;body=Hola%2C%20quer%C3%ADa%20un%20presupuesto.%20Medidas%20del%20hueco%3A%20___%20x%20___%20cm.%20Planta%3A%20___.%20Direcci%C3%B3n%3A" data-real>Pedir presupuesto por correo</a>
+        <a class="u-btn u-btn--linea" href="#dia">Ver el día de obra</a>
+      </p>
+    </div>
+    <div>
+      <svg class="perfil" viewBox="0 0 300 330" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" role="img" aria-label="Dibujo de la sección de una ventana de aluminio: los dos vidrios con su cámara de aire, el separador que la seca, las dos cáscaras de aluminio y las varillas de poliamida que las separan.">
+        <!-- doble vidrio -->
+        <rect x="120" y="16" width="14" height="134" stroke-width="3"/>
+        <rect x="172" y="16" width="14" height="134" stroke-width="3"/>
+        <!-- separador, al fondo de la cámara -->
+        <rect x="134" y="128" width="38" height="22" stroke-width="2.6"/>
+        <path d="M141 139 h4 M151 139 h4 M161 139 h4" stroke-width="2" opacity=".6"/>
+        <!-- cáscara de aluminio exterior -->
+        <path d="M74 150 h72 v66 h-40 v72 h-32 z" stroke-width="3.4"/>
+        <!-- cáscara de aluminio interior -->
+        <path d="M226 150 h-72 v66 h40 v72 h32 z" stroke-width="3.4"/>
+        <!-- varillas de poliamida, puenteando las dos cáscaras -->
+        <g stroke-width="2.6">
+          <rect x="146" y="162" width="8" height="22"/>
+          <rect x="146" y="192" width="8" height="22"/>
+          <path d="M146 168 l8 6 M146 178 l8 6 M146 198 l8 6 M146 208 l8 6" stroke-width="1.6" opacity=".6"/>
+        </g>
+        <!-- llamadas numeradas -->
+        <g stroke-width="2.2">
+          <circle cx="40" cy="44" r="14"/><path d="M54 44 H118"/>
+          <circle cx="260" cy="139" r="14"/><path d="M246 139 H158"/>
+          <circle cx="40" cy="252" r="14"/><path d="M54 252 H88"/>
+          <circle cx="260" cy="200" r="14"/><path d="M246 200 H158"/>
+        </g>
+        <g font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="currentColor" stroke="none">
+          <text x="40" y="50">1</text><text x="260" y="145">2</text>
+          <text x="40" y="258">3</text><text x="260" y="206">4</text>
+        </g>
+      </svg>
+      <ul class="leyenda">
+        <li><b>1</b><span>Los dos vidrios, y entre ellos la cámara de aire.</span></li>
+        <li><b>2</b><span>El separador, que es lo que seca esa cámara.</span></li>
+        <li><b>3</b><span>El aluminio de fuera, el que coge el frío.</span></li>
+        <li><b>4</b><span>Las varillas de plástico que cortan el puente del frío hacia dentro (rotura de puente térmico). Sin ellas, el marco suda.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Costa Rica, 20 · bajo</b></span>
+    <span data-real>Hispanoamérica · Chamartín · 28016 Madrid</span>
+    <span data-real>Mañanas y tardes · cerrado en agosto</span>
+    <a href="mailto:aluminiosmdiaz@yahoo.es" data-real><b>aluminiosmdiaz@yahoo.es</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. el día de la obra ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="dia">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que nadie del sector escribe</span>
+    <h2 style="max-width:20ch;margin-bottom:var(--s-2);">El día de obra, hora a hora.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Una ventana no es una
+    reforma. Es una mañana con el salón tapado con plástico y un rato de ruido.
+    Esto es el orden de un hueco normal, sin cambiar la persiana.</p>
+
+    <div class="u-grid u-4" style="margin-top:var(--s-4);" data-ejemplo>
+
+      <div class="hora">
+        <span class="h">9:00</span>
+        <svg viewBox="0 0 140 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" role="img" aria-label="Dibujo de la ventana vieja con su cajón de persiana, antes de empezar.">
+          <rect x="16" y="6" width="108" height="16"/>
+          <rect x="16" y="22" width="108" height="98" stroke-width="3.4"/>
+          <path d="M70 22 v98"/>
+          <path d="M16 62 h108"/>
+          <path d="M28 34 h30 M28 46 h18" stroke-width="2" opacity=".5"/>
+          <path d="M60 72 h6 M74 72 h6" stroke-width="4"/>
+        </svg>
+        <b>Se protege y se quita</b>
+        <p>Plástico en el suelo y en los muebles. La hoja vieja sale entera y el marco se corta.</p>
+      </div>
+
+      <div class="hora">
+        <span class="h">10:30</span>
+        <svg viewBox="0 0 140 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" role="img" aria-label="Dibujo del hueco abierto en la pared, con el plástico colgando y el jambaje picado.">
+          <rect x="16" y="6" width="108" height="16"/>
+          <path d="M16 22 v98 M124 22 v98 M16 120 h108" stroke-width="3.4"/>
+          <g stroke-width="1.8" opacity=".55">
+            <path d="M18 30 l10 -8 M18 44 l10 -8 M18 58 l10 -8 M18 72 l10 -8 M18 86 l10 -8 M18 100 l10 -8"/>
+            <path d="M112 30 l10 -8 M112 44 l10 -8 M112 58 l10 -8 M112 72 l10 -8 M112 86 l10 -8 M112 100 l10 -8"/>
+          </g>
+          <path d="M30 34 c14 10 28 -6 42 4 c14 10 26 -6 38 4" stroke-width="2.4" opacity=".7"/>
+        </svg>
+        <b>El hueco, limpio</b>
+        <p>Se pica lo justo y se aspira. Es el único rato en que la casa está abierta a la calle.</p>
+      </div>
+
+      <div class="hora">
+        <span class="h">11:30</span>
+        <svg viewBox="0 0 140 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" role="img" aria-label="Dibujo de la ventana nueva colocada en el hueco con las cuñas de aplomado en las esquinas.">
+          <rect x="16" y="6" width="108" height="16"/>
+          <rect x="16" y="22" width="108" height="98" stroke-width="3.4"/>
+          <rect x="28" y="32" width="84" height="78" stroke-width="3"/>
+          <path d="M70 32 v78"/>
+          <g stroke-width="2.6">
+            <path d="M18 34 l8 4 l-8 4 z"/><path d="M122 34 l-8 4 l8 4 z"/>
+            <path d="M18 100 l8 4 l-8 4 z"/><path d="M122 100 l-8 4 l8 4 z"/>
+          </g>
+        </svg>
+        <b>Se pone y se aploma</b>
+        <p>La ventana entra en el hueco y se calza con cuñas hasta que cierra sola.</p>
+      </div>
+
+      <div class="hora">
+        <span class="h">13:00</span>
+        <svg viewBox="0 0 140 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" role="img" aria-label="Dibujo de la ventana ya sellada, con el cordón de silicona alrededor y la pistola de sellar.">
+          <rect x="16" y="6" width="108" height="16"/>
+          <rect x="22" y="28" width="96" height="86" stroke-width="3.4"/>
+          <path d="M70 28 v86"/>
+          <path d="M16 22 h108 M16 22 v98 M124 22 v98 M16 120 h108"
+                stroke-width="2.6" stroke-dasharray="6 5" opacity=".75"/>
+          <g stroke-width="2.6">
+            <path d="M94 96 h26 v14 h-26 z"/>
+            <path d="M94 103 h-10"/>
+          </g>
+        </svg>
+        <b>Sellada por los dos lados</b>
+        <p>Silicona fuera, remate dentro y el escombro a la furgoneta. La casa queda cerrada.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. qué entra en el precio ===== -->
+<section class="u-seccion" id="precio">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <span class="u-ceja">Por qué dos presupuestos no se pueden comparar</span>
+      <h2 style="max-width:16ch;">Lo que va dentro<br>del precio.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);max-width:42ch;">
+      Dos presupuestos con la misma cifra pueden ser distintos en mil euros según
+      quién se lleve el escombro y quién remate el interior. Así que la lista va
+      escrita, y lo que no esté en ella se dice antes de empezar.</p>
+      <div class="horquilla" style="margin-top:var(--s-3);" data-ejemplo>
+        <span class="n">450 – 700 €</span>
+        <span class="q">Ventana de dos hojas, puesta</span>
+        <p>Horquilla de una ventana corriente de salón, del orden de 120 × 120 cm.
+        La cifra real depende del hueco, y se da después de medir.</p>
+      </div>
+    </div>
+    <ul class="entra" data-ejemplo>
+      <li>Medir el hueco en casa, sin cobrarlo</li>
+      <li>Quitar la ventana vieja y bajarla</li>
+      <li>Aplomar y calzar la nueva</li>
+      <li>Sellado por fuera contra el agua</li>
+      <li>Remate por dentro, para no tener que pintar</li>
+      <li>Retirada del escombro y de la ventana vieja</li>
+      <li>Ajuste de herrajes a los quince días, si hace falta</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 6. antes de pedir presupuesto ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="antes">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 style="max-width:14ch;">Antes de<br>pedir<br>presupuesto.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);max-width:38ch;">
+      Tres cosas que conviene saber aunque el trabajo lo haga otro. La tercera se
+      pasa por alto y es la que para una obra a mitad.</p>
+    </div>
+    <div>
+      <div class="aviso" data-ejemplo>
+        <b>Mida el hueco, no la ventana</b>
+        <p>De pared a pared por dentro, ancho y alto, y el fondo del alféizar. Con
+        esos tres números y la planta en la que vive se puede dar una horquilla
+        por teléfono antes de subir a medir de verdad.</p>
+      </div>
+      <div class="aviso" data-ejemplo>
+        <b>Diga si hay cajón de persiana</b>
+        <p>Cambiar solo la ventana y dejar el cajón viejo es la mitad del trabajo
+        y también la mitad del resultado: por ahí se cuela casi todo el frío. Se
+        mira y se dice, aunque la respuesta encarezca el presupuesto.</p>
+      </div>
+      <div class="aviso">
+        <b>Pregunte en su comunidad</b>
+        <p>Si cambia el color o el dibujo de lo que se ve desde la calle, o si
+        cierra una terraza, suele hacer falta el visto bueno de la comunidad, y
+        en algunos edificios también licencia del Ayuntamiento. Vale la pena
+        preguntarlo antes de encargar nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. qué se hace aquí ===== -->
+<section class="u-seccion">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Lo que sale del taller de Costa Rica.</h2>
+    <div class="u-grid u-3 u-numerada">
+      <div class="svc" data-real><b>Ventanas y puertas</b><p>De aluminio y de PVC, hechas a medida del hueco. Correderas, abatibles y oscilobatientes: la que cabe y la que conviene según a dónde dé.</p></div>
+      <div class="svc" data-real><b>Cerramientos de terraza</b><p>Cerrar una terraza o un tendedero para ganar una habitación. Es el trabajo que más cambia una casa por lo que cuesta.</p></div>
+      <div class="svc" data-real><b>Anodizados y lacados</b><p>El acabado del aluminio: anodizado en su color o lacado del tono que pida. Es lo que decide si la ventana pega con la fachada o canta.</p></div>
+    </div>
+    <div style="margin-top:var(--s-5);" class="u-grid u-partida">
+      <svg class="terraza" viewBox="0 0 440 232" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" role="img" aria-label="Dibujo del alzado de una terraza cerrada: el forjado arriba y abajo, la barandilla de obra y, encima, las cuatro hojas correderas de aluminio con las flechas de por dónde abren.">
+        <!-- forjado de arriba -->
+        <path d="M14 26 H426" stroke-width="5"/>
+        <g stroke-width="1.8" opacity=".5">
+          <path d="M18 24 l10 -12 M48 24 l10 -12 M78 24 l10 -12 M108 24 l10 -12 M138 24 l10 -12 M168 24 l10 -12 M198 24 l10 -12 M228 24 l10 -12 M258 24 l10 -12 M288 24 l10 -12 M318 24 l10 -12 M348 24 l10 -12 M378 24 l10 -12 M408 24 l10 -12"/>
+        </g>
+        <!-- suelo de la terraza -->
+        <path d="M14 204 H426" stroke-width="5"/>
+        <g stroke-width="1.8" opacity=".5">
+          <path d="M18 218 l10 -12 M48 218 l10 -12 M78 218 l10 -12 M108 218 l10 -12 M138 218 l10 -12 M168 218 l10 -12 M198 218 l10 -12 M228 218 l10 -12 M258 218 l10 -12 M288 218 l10 -12 M318 218 l10 -12 M348 218 l10 -12 M378 218 l10 -12 M408 218 l10 -12"/>
+        </g>
+        <!-- jambas -->
+        <path d="M24 26 V204 M416 26 V204" stroke-width="4"/>
+        <!-- barandilla de obra -->
+        <path d="M32 150 H408" stroke-width="4"/>
+        <path d="M52 150 V202 M82 150 V202 M112 150 V202 M142 150 V202 M172 150 V202 M202 150 V202 M232 150 V202 M262 150 V202 M292 150 V202 M322 150 V202 M352 150 V202 M382 150 V202" stroke-width="2.4" opacity=".85"/>
+        <!-- las cuatro hojas correderas -->
+        <path d="M32 36 H408" stroke-width="3"/>
+        <g stroke-width="3">
+          <path d="M32 36 V150 M126 36 V150 M220 36 V150 M314 36 V150 M408 36 V150"/>
+        </g>
+        <!-- por donde corren -->
+        <g stroke-width="2.8">
+          <path d="M150 96 H196 M162 88 l-12 8 l12 8"/>
+          <path d="M338 96 H292 M326 88 l12 8 l-12 8"/>
+        </g>
+        <g stroke-width="2" opacity=".45">
+          <path d="M48 84 h26 M48 92 h16"/>
+        </g>
+      </svg>
+      <div>
+        <h3 style="font-size:.7rem;letter-spacing:.2em;color:var(--cobre);
+                   font-family:var(--texto);font-weight:700;">Taller propio</h3>
+        <p style="margin-top:var(--s-2);color:var(--tinta-2);" data-real>El
+        aluminio se corta y se monta en el local de Costa Rica, no llega montado
+        de una fábrica. Por eso entra cualquier medida rara y por eso se puede
+        arreglar una ventana que ya está puesta en vez de venderle una nueva.</p>
+        <p style="color:var(--tinta-2);" data-ejemplo>Y por eso también se hacen
+        piezas sueltas: una mosquitera para un hueco que no es estándar, una hoja
+        de recambio o un herraje que ya no fabrica nadie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-revelar">
+    <div class="donde">
+      <span class="u-ceja" style="color:#e9a077;">A dos calles de casi todo el barrio</span>
+      <h2 style="max-width:22ch;" data-real>Calle de Costa Rica, 20.</h2>
+      <p style="max-width:52ch;" data-real>En el bajo, en Hispanoamérica, entre
+      Colombia y Bolivia. Se puede subir con el hueco medido en un papel y salir
+      con una cifra. Y si prefiere escribir, el correo está aquí abajo: llega al
+      taller igual.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" style="background:#fff;color:var(--acento);border-color:#fff;"
+           href="mailto:aluminiosmdiaz@yahoo.es?subject=Presupuesto%20de%20ventanas" data-real>Escribir al taller</a>
+        <a class="u-btn u-btn--linea" href="tel:+34913593657" data-real>913 59 36 57</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&amp;query=40.4582858%2C-3.6739661" data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div class="u-grid u-2" style="margin-top:var(--s-5);">
+      <div>
+        <h3 style="font-size:.7rem;letter-spacing:.2em;color:var(--cobre);
+                   font-family:var(--texto);font-weight:700;">Horario</h3>
+        <table class="horario" data-real>
+          <tr><th>Lunes</th><td>9:00 – 13:30 · 16:00 – 20:00</td></tr>
+          <tr><th>Martes</th><td>9:00 – 13:30 · 16:00 – 20:00</td></tr>
+          <tr><th>Miércoles</th><td>9:00 – 13:30 · 16:00 – 20:00</td></tr>
+          <tr><th>Jueves</th><td>9:00 – 13:30 · 16:00 – 20:00</td></tr>
+          <tr><th>Viernes</th><td>9:00 – 13:30 · 16:00 – 20:00</td></tr>
+          <tr><th>Sábado</th><td>Cerrado</td></tr>
+          <tr><th>Domingo</th><td>Cerrado</td></tr>
+        </table>
+        <p style="margin-top:var(--s-2);font-size:.88rem;color:var(--tinta-2);" data-real>
+        En agosto el taller cierra por vacaciones.</p>
+      </div>
+      <div>
+        <h2 style="font-size:1.8rem;">Cierra a mediodía,<br>y lo dice.</h2>
+        <p style="color:var(--tinta-2);margin-top:var(--s-2);">Un taller que cierra
+        de dos a cuatro y no lo pone en ningún sitio recibe llamadas a las tres y
+        pierde al que llamó. Por eso el horario partido está escrito arriba y
+        también en el código que lee Google.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      número, el teléfono, el correo, el horario partido, el cierre de agosto y
+      los tres trabajos del taller. Lo demás lo he puesto yo para enseñar la
+      forma: pulse el botón amarillo de arriba y se marca solo.</p>
+      <ul>
+        <li><b>Las horas del día de obra están inventadas.</b> Es la sección que
+        más vende de toda la página y la que tiene que dictar usted, porque
+        ningún hueco es igual que otro.</li>
+        <li><b>Los 450–700 € son una horquilla puesta por mí</b>, no suya. O se
+        cambia por la real o se quita: un número inventado en obra acaba en
+        discusión.</li>
+        <li><b>La lista de lo que entra en el precio hay que repasarla entera.</b>
+        Si algo de ahí usted lo cobra aparte, sobra de la lista.</li>
+        <li><b>Lo de la comunidad y la licencia es lo que se suele exigir</b>,
+        pero cambia según el edificio y el distrito: conviene que lo redacte
+        usted con sus palabras.</li>
+        <li><b>Sin nota de Google y sin opiniones:</b> no he encontrado reseñas
+        suyas con recuento, y una nota sin número de opiniones la penaliza
+        Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una escrita a mano para
+      cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del taller.</b> Es una propuesta sin
+      relación con la empresa ni con sus titulares, y tampoco con ninguna otra
+      carpintería de nombre parecido. El nombre, la dirección, el teléfono, el
+      correo y el horario salen de fichas públicas de empresas.</p>
+      <p><b>Ningún precio, ningún plazo y ninguna hora de esta página son datos
+      reales del taller:</b> están puestos para enseñar la maqueta y van
+      marcados. <b>Nada de lo escrito aquí es asesoramiento técnico ni legal</b>
+      sobre licencias u obras. <b>No se declara ninguna nota de Google</b> y <b>no
+      hay ninguna fotografía:</b> los seis dibujos están hechos a mano.</p>
+      <p>No se recoge ningún dato: los botones abren su propio correo o su
+      teléfono. Si el titular prefiere que esto se retire, escribe y se retira
+      hoy mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="mailto:aluminiosmdiaz@yahoo.es?subject=Presupuesto%20de%20ventanas">Escribir</a>
+  <a href="tel:+34913593657">Llamar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Manuel Díaz Carpintería de Aluminio",
+  "description":"Taller de carpintería de aluminio y PVC en la Calle de Costa Rica 20, Hispanoamérica, Madrid: ventanas, puertas, cerramientos de terraza, anodizados y lacados.",
+  "telephone":"+34913593657",
+  "email":"aluminiosmdiaz@yahoo.es",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Costa Rica, 20 (bajo)",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28016",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4582858,"longitude":-3.6739661},
+  "openingHours":["Mo-Fr 09:00-13:30","Mo-Fr 16:00-20:00"],
+  "url":"https://nachoie123.github.io/webdemos/carpinteria-aluminio-manuel-diaz/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

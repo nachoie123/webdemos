@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pescadería Antonio del Río · Mercado de San Enrique, puesto 6 · Tetuán, Madrid</title>
+<meta name="description" content="Propuesta de página web para Pescadería Antonio del Río, puesto 6 del Mercado de San Enrique, Cuatro Caminos, Tetuán, Madrid. Cómo se pide, qué corte se hace y encargos por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/pescaderia-antonio-del-rio/">
+<meta name="theme-color" content="#111c19">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23eef1ef%27/%3E%3Cpath d=%27M4 16 C10 9 20 9 25 16 C20 23 10 23 4 16 Z%27 fill=%27none%27 stroke=%27%23111c19%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M25 16 l4 -5 v10 z%27 fill=%27%23b83f2c%27/%3E%3Ccircle cx=%279.5%27 cy=%2715%27 r=%271.6%27 fill=%27%23111c19%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/pescaderia-antonio-del-rio/">
+<meta property="og:title" content="Pescadería Antonio del Río · Mercado de San Enrique, puesto 6 · Tetuán, Madrid">
+<meta property="og:description" content="Propuesta de página web para Pescadería Antonio del Río, puesto 6 del Mercado de San Enrique, Cuatro Caminos, Tetuán, Madrid. Cómo se pide, qué corte se hace y encargos por WhatsApp.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/pescaderia-antonio-del-rio/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Gantari:wght@400;500;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   El hielo picado a las nueve de la mañana: gris con matiz verde, no azul.
+   El único color cálido es el coral de la CARNE del pescado, y va solo en lo
+   que se pulsa y en los números. Nada de olas, anclas ni azul marino: ese es
+   el uniforme del sector y compite con el producto, que ya es plateado.    */
+:root{
+  --fondo:#eef1ef; --fondo-2:#dfe4e1; --tinta:#111c19; --tinta-2:#51625c;
+  --acento:#b83f2c; --acento-tinta:#fdf2ef; --linea:#c8d0cc;
+  --plata:#7e8f92;
+  --display:'Rozha One', Georgia, serif;
+  --texto:'Gantari', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.005em;
+  line-height:1.06;}
+h2{font-size:clamp(2rem,4.3vw,3.1rem);}
+h3{font-size:1.32rem;line-height:1.15;}
+em.co{font-style:normal;color:var(--acento);}
+
+/* --- parches de base.css (base.css NO se toca) --- */
+svg{display:block;}                         /* es inline: margin:auto no centra */
+.u-tira .u-wrap{display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:center;gap:var(--s-2) var(--s-4);}   /* el flex vive en la <section> */
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(238,241,239,.95);
+  backdrop-filter:blur(8px);border-bottom:2px solid var(--tinta);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.05;}
+.marca b{display:block;font-family:var(--display);font-size:1.28rem;font-weight:400;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:700;
+  text-transform:uppercase;color:var(--tinta-2);margin-top:.18rem;}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:980px){.cab .u-nav{display:none}}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:6fr 6fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;margin:.18em 0 .4em;}
+.hero p{color:var(--tinta-2);max-width:46ch;}
+.dib-mostrador{width:100%;max-width:440px;margin-inline:auto;}
+
+/* el guion de cómo se pide */
+.paso{background:var(--fondo);border:1px solid var(--linea);border-top:6px solid var(--acento);}
+.paso h3{margin-bottom:.4rem;}
+.paso p{margin:0;color:var(--tinta-2);font-size:.98rem;}
+.paso .di{display:block;font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;
+  font-weight:700;color:var(--acento);margin-bottom:.55rem;}
+
+/* el trabajo que se hace */
+.trab{list-style:none;margin:var(--s-2) 0 0;padding:0;}
+.trab li{display:grid;grid-template-columns:auto 1fr;gap:.9rem;
+  padding:.72rem 0;border-bottom:1px solid var(--linea);align-items:baseline;}
+.trab li b{font-family:var(--display);font-weight:400;font-size:1.12rem;
+  color:var(--tinta);white-space:nowrap;}
+.trab li span{color:var(--tinta-2);font-size:.96rem;}
+@media(max-width:560px){.trab li{grid-template-columns:1fr;gap:.15rem;}}
+.dib-cortes{width:100%;max-width:520px;margin-inline:auto;}
+.gratis{display:inline-block;background:var(--acento);color:var(--acento-tinta);
+  font-weight:700;font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;
+  padding:.4rem .8rem;margin-top:var(--s-2);}
+
+/* la lonja manda: sección oscura */
+.lonja{background:var(--tinta);color:#c3cfc9;}
+.lonja h2{color:#fff;}
+.lonja .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);align-items:center;}
+@media(max-width:860px){.lonja .u-wrap{grid-template-columns:1fr;}}
+.lonja p{margin-bottom:.9rem;}
+.lonja .hoy{border:2px solid var(--acento);padding:var(--s-3);background:#0b1512;}
+.lonja .hoy b{display:block;font-family:var(--display);font-size:1.5rem;color:#fff;
+  margin-bottom:.4rem;font-weight:400;}
+.lonja .hoy p:last-child{margin-bottom:0;}
+.lonja a.u-btn{margin-top:var(--s-2);}
+
+/* cocedero y congelado */
+.ficha{border:1px solid var(--linea);padding:var(--s-3);background:var(--fondo-2);}
+.ficha.dest{background:var(--acento);color:var(--acento-tinta);border-color:var(--acento);}
+.ficha.dest h3{color:#fff;}
+.ficha h3{margin-bottom:.5rem;}
+.ficha p:last-child{margin-bottom:0;}
+.ficha ul{margin:.5rem 0 0;padding-left:1.05rem;font-size:.97rem;}
+.ficha li{margin-bottom:.3rem;}
+
+/* encargos */
+.enc{border-left:4px solid var(--acento);padding-left:var(--s-3);margin-bottom:var(--s-3);}
+.enc > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:400;margin-bottom:.25rem;}
+.enc p{margin:0;color:var(--tinta-2);font-size:.98rem;}
+
+/* dónde */
+.dib-plano{width:100%;max-width:400px;margin-inline:auto;}
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:700;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+.horario tr.cerrado td{color:var(--acento);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:400;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.4rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:700;}
+.u-movil a+a{background:var(--tinta);color:#fff;}
+
+.pie{background:var(--tinta);color:#8b9d96;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#e7a596;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus cortes, sus encargos y su horario confirmado.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Antonio del Río</b><span data-real>Mercado de San Enrique · Puesto 6</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#pedir">Cómo se pide</a>
+      <a href="#corte">El corte</a>
+      <a href="#hoy">Lo de hoy</a>
+      <a href="#cocedero">Cocedero</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34606593936" data-real>606 59 39 36</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Pescados y mariscos · Puesto 6 · Mercado de San Enrique</span>
+      <h1>Aquí nadie tiene que<br>saber <em class="co">pedir pescado.</em></h1>
+      <p>Se pide en dos frases: para cuántos sois y cómo lo vais a hacer. La
+      espina, la cabeza, los lomos y el corte los decido yo, y no cuestan más.
+      Si os quedáis en blanco delante del mostrador, ese es mi trabajo, no el
+      vuestro.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="u-btn" href="https://wa.me/34606593936?text=Hola%2C%20quer%C3%ADa%20preguntar%20qu%C3%A9%20hay%20hoy%20en%20el%20puesto."
+           target="_blank" rel="noopener" data-real>Preguntar por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#pedir">Cómo se pide</a>
+      </p>
+    </div>
+
+    <!-- DIBUJO 1: el mostrador de hielo del puesto, de frente -->
+    <svg class="dib-mostrador" viewBox="0 0 440 300" fill="none" aria-labelledby="t-most" role="img">
+      <title id="t-most">Dibujo del mostrador de hielo del puesto: la bandeja inclinada, las piezas tumbadas, los cartones de precio y la balanza</title>
+      <!-- cartones de precio clavados -->
+      <g stroke="#111c19" stroke-width="2.5">
+        <path d="M78 66 v34" stroke="#7e8f92"/><rect x="52" y="42" width="54" height="26" fill="#fff"/>
+        <path d="M196 58 v42" stroke="#7e8f92"/><rect x="170" y="32" width="54" height="26" fill="#fff"/>
+        <path d="M330 70 v30" stroke="#7e8f92"/><rect x="304" y="46" width="54" height="26" fill="#fff"/>
+      </g>
+      <g stroke="#b83f2c" stroke-width="3.4" stroke-linecap="round">
+        <path d="M62 55 h22"/><path d="M62 62 h34"/>
+        <path d="M180 45 h22"/><path d="M180 52 h34"/>
+        <path d="M314 59 h22"/><path d="M314 66 h34"/>
+      </g>
+      <!-- bandeja inclinada -->
+      <path d="M22 196 L44 112 H418 L400 196 Z" fill="#dfe4e1" stroke="#111c19" stroke-width="3.5" stroke-linejoin="round"/>
+      <!-- hielo picado -->
+      <g stroke="#7e8f92" stroke-width="2" opacity=".85">
+        <path d="M60 178 l14 -9 l13 9"/><path d="M104 186 l13 -9 l13 9"/>
+        <path d="M150 176 l13 -9 l13 9"/><path d="M226 186 l13 -9 l13 9"/>
+        <path d="M290 178 l13 -9 l13 9"/><path d="M348 184 l13 -9 l13 9"/>
+        <path d="M188 168 l11 -8 l11 8"/><path d="M262 170 l11 -8 l11 8"/>
+      </g>
+      <!-- pieza grande tumbada -->
+      <g stroke="#111c19" stroke-width="3" stroke-linejoin="round">
+        <path d="M72 150 C104 126 168 126 200 150 C168 172 104 172 72 150 Z" fill="#eef1ef"/>
+        <path d="M200 150 l26 -15 v30 z" fill="#b83f2c" stroke="none"/>
+        <path d="M200 150 l26 -15 v30 z"/>
+        <path d="M120 133 c10 12 10 22 0 34" stroke="#7e8f92" stroke-width="2"/>
+        <path d="M148 130 c10 13 10 25 0 38" stroke="#7e8f92" stroke-width="2"/>
+      </g>
+      <circle cx="90" cy="147" r="3.4" fill="#111c19"/>
+      <!-- pieza pequeña -->
+      <g stroke="#111c19" stroke-width="2.6" stroke-linejoin="round">
+        <path d="M248 160 C270 144 306 144 328 160 C306 176 270 176 248 160 Z" fill="#eef1ef"/>
+        <path d="M328 160 l18 -11 v22 z" fill="#7e8f92" stroke="none"/>
+        <path d="M328 160 l18 -11 v22 z"/>
+      </g>
+      <circle cx="262" cy="158" r="2.8" fill="#111c19"/>
+      <!-- frente del mostrador -->
+      <path d="M22 196 H400 v46 H22 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3.5"/>
+      <path d="M22 242 H400" stroke="#111c19" stroke-width="3.5"/>
+      <g stroke="#c8d0cc" stroke-width="2"><path d="M116 196 v46"/><path d="M211 196 v46"/><path d="M306 196 v46"/></g>
+      <!-- balanza a la derecha -->
+      <g stroke="#111c19" stroke-width="3" stroke-linejoin="round">
+        <rect x="336" y="212" width="76" height="30" fill="#dfe4e1"/>
+        <path d="M344 212 v-16 h60 v16" fill="#fff"/>
+      </g>
+      <path d="M356 202 h10 M372 202 h18" stroke="#b83f2c" stroke-width="3.4" stroke-linecap="round"/>
+      <!-- patas -->
+      <g stroke="#111c19" stroke-width="3"><path d="M44 242 v34"/><path d="M378 242 v34"/></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Mercado de San Enrique · Puesto 6</b></span>
+    <span data-real>Calle de San Enrique · Cuatro Caminos · Tetuán</span>
+    <span data-real>Lunes a viernes 9:00–14:00 y 17:00–20:00</span>
+    <a href="tel:+34606593936" data-real><b>606 59 39 36</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. cómo se pide, en dos frases ===== -->
+<section class="u-seccion" id="pedir">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;margin-bottom:var(--s-2);">El mostrador no es un examen.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Mucha gente ha dejado de
+    comprar en el mostrador porque le preguntan «¿a lomos o a rodajas?» y no
+    sabe qué contestar, con cola detrás. Así que aquí va el guion entero. Son
+    dos frases y una de ellas la digo yo.</p>
+    <div class="u-grid u-3 u-numerada" style="margin-top:var(--s-4);">
+      <div class="paso">
+        <span class="di">Lo dices tú</span>
+        <h3>Para cuántos sois</h3>
+        <p>Cuatro, dos y un niño, seis el domingo. Con eso ya sé qué pieza coger
+        y de qué tamaño, sin que tengas que hablar de kilos.</p>
+      </div>
+      <div class="paso">
+        <span class="di">Lo dices tú</span>
+        <h3>Cómo lo vais a hacer</h3>
+        <p>Al horno, a la plancha, en la freidora de aire, un guiso, para los
+        peques. Es lo único que cambia el corte, y es lo único que hace falta.</p>
+      </div>
+      <div class="paso">
+        <span class="di">Lo digo yo</span>
+        <h3>Y lo demás</h3>
+        <p>Qué pescado sale mejor hoy, cómo se corta, si lleva espina o no y
+        cuánto pesa. Te lo digo antes de pesarlo, no después.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. qué se le hace al pescado + dibujo de los cortes ===== -->
+<section class="u-seccion u-sangrado" id="corte" style="background:var(--fondo-2);border-block:1px solid var(--linea);">
+  <div class="u-wrap u-grid u-desigual u-revelar" style="align-items:center;">
+    <div>
+      <span class="u-ceja" style="color:var(--acento);font-weight:700;">Lo que se hace aquí y no en el lineal</span>
+      <h2 style="max-width:16ch;">El pescado sale del puesto ya resuelto.</h2>
+      <p style="color:var(--tinta-2);">Un supermercado te vende una bandeja
+      cerrada. Aquí el pescado entra entero y sale como lo necesitas en tu
+      cocina. Ese trabajo es el negocio, no un extra.</p>
+      <ul class="trab">
+        <li><b>Descamado y limpio</b><span>Escama, tripa y agallas fuera. Nunca sale de otra manera.</span></li>
+        <li><b>A lomos</b><span>Dos lomos limpios, sin espina. Para plancha, horno o para los niños.</span></li>
+        <li><b>A rodajas</b><span>Del grosor que le pidas. Merluza, rape, bonito.</span></li>
+        <li><b>Abierto para el horno</b><span>En libro y con la espina dentro, que es donde está el sabor.</span></li>
+        <li><b>En tacos</b><span>Para el guiso, el arroz o la marmita.</span></li>
+        <li><b>La cabeza y la espina, aparte</b><span>Envueltas por separado para el caldo. No se tiran.</span></li>
+      </ul>
+      <span class="gratis">Ninguna de estas seis cosas se cobra</span>
+    </div>
+
+    <!-- DIBUJO 2: los cuatro cortes sobre el mismo pescado -->
+    <svg class="dib-cortes" viewBox="0 0 520 420" fill="none" aria-labelledby="t-cort" role="img">
+      <title id="t-cort">Dibujo de un pescado de perfil con las cuatro líneas de corte marcadas: a lomos, a rodajas, abierto para el horno y en tacos</title>
+      <g font-family="Gantari, Arial, sans-serif" font-size="14" font-weight="700" fill="#51625c" letter-spacing="1.6">
+        <text x="14" y="24">A LOMOS</text>
+        <text x="14" y="134">A RODAJAS</text>
+        <text x="14" y="244">ABIERTO PARA EL HORNO</text>
+        <text x="14" y="354">EN TACOS</text>
+      </g>
+
+      <!-- 1. a lomos: corte longitudinal -->
+      <g transform="translate(14,34)">
+        <path d="M6 38 C56 4 168 4 232 38 C168 72 56 72 6 38 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M232 38 l30 -19 v38 z" fill="#b83f2c"/>
+        <path d="M232 38 l30 -19 v38 z" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="30" cy="34" r="3.6" fill="#111c19"/>
+        <path d="M18 38 H236" stroke="#b83f2c" stroke-width="3.4" stroke-dasharray="11 8"/>
+        <path d="M300 22 h34 M300 54 h34" stroke="#111c19" stroke-width="3" stroke-linecap="round"/>
+        <path d="M290 38 h-22" stroke="#7e8f92" stroke-width="2.4"/>
+        <path d="M268 38 l10 -6 v12 z" fill="#7e8f92"/>
+      </g>
+
+      <!-- 2. a rodajas: cortes verticales -->
+      <g transform="translate(14,144)">
+        <path d="M6 38 C56 4 168 4 232 38 C168 72 56 72 6 38 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M232 38 l30 -19 v38 z" fill="#b83f2c"/>
+        <path d="M232 38 l30 -19 v38 z" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="30" cy="34" r="3.6" fill="#111c19"/>
+        <g stroke="#b83f2c" stroke-width="3.4" stroke-dasharray="9 7">
+          <path d="M76 12 v52"/><path d="M114 9 v58"/><path d="M152 10 v56"/><path d="M190 15 v46"/>
+        </g>
+        <g stroke="#111c19" stroke-width="3" fill="#eef1ef">
+          <circle cx="312" cy="24" r="17"/><circle cx="348" cy="38" r="17"/><circle cx="312" cy="52" r="17"/>
+        </g>
+        <path d="M290 38 h-22" stroke="#7e8f92" stroke-width="2.4"/>
+        <path d="M268 38 l10 -6 v12 z" fill="#7e8f92"/>
+      </g>
+
+      <!-- 3. abierto en libro -->
+      <g transform="translate(14,254)">
+        <path d="M6 38 C56 4 168 4 232 38 C168 72 56 72 6 38 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M232 38 l30 -19 v38 z" fill="#b83f2c"/>
+        <path d="M232 38 l30 -19 v38 z" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="30" cy="34" r="3.6" fill="#111c19"/>
+        <path d="M24 26 C74 8 166 8 220 26" stroke="#b83f2c" stroke-width="3.4" stroke-dasharray="11 8"/>
+        <g transform="translate(292,0)">
+          <path d="M4 38 C34 16 92 16 118 34 C92 24 34 24 4 38 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M4 40 C34 62 92 62 118 44 C92 54 34 54 4 40 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M14 39 H110" stroke="#7e8f92" stroke-width="2.6"/>
+          <g stroke="#7e8f92" stroke-width="1.8">
+            <path d="M34 39 l-4 -7"/><path d="M52 39 l-4 -7"/><path d="M70 39 l-4 -7"/><path d="M88 39 l-4 -7"/>
+            <path d="M34 39 l-4 7"/><path d="M52 39 l-4 7"/><path d="M70 39 l-4 7"/><path d="M88 39 l-4 7"/>
+          </g>
+        </g>
+        <path d="M290 38 h-22" stroke="#7e8f92" stroke-width="2.4"/>
+        <path d="M268 38 l10 -6 v12 z" fill="#7e8f92"/>
+      </g>
+
+      <!-- 4. en tacos -->
+      <g transform="translate(14,364)">
+        <path d="M6 30 C56 -4 168 -4 232 30 C168 64 56 64 6 30 Z" fill="#eef1ef" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M232 30 l30 -19 v38 z" fill="#b83f2c"/>
+        <path d="M232 30 l30 -19 v38 z" stroke="#111c19" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="30" cy="26" r="3.6" fill="#111c19"/>
+        <g stroke="#b83f2c" stroke-width="3.4" stroke-dasharray="7 6">
+          <path d="M78 4 v52"/><path d="M122 2 v56"/><path d="M166 4 v52"/>
+          <path d="M40 30 H212"/>
+        </g>
+        <g stroke="#111c19" stroke-width="3" fill="#eef1ef">
+          <rect x="296" y="10" width="26" height="26"/><rect x="330" y="10" width="26" height="26"/>
+          <rect x="313" y="42" width="26" height="26"/>
+        </g>
+        <path d="M290 30 h-22" stroke="#7e8f92" stroke-width="2.4"/>
+        <path d="M268 30 l10 -6 v12 z" fill="#7e8f92"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 6. lo que hay hoy: la sección honesta ===== -->
+<section class="lonja u-seccion u-sangrado" id="hoy">
+  <div class="u-wrap u-revelar">
+    <div>
+      <span class="u-ceja" style="color:#e7a596;font-weight:700;">Por qué no hay lista de precios</span>
+      <h2 style="max-width:18ch;">A las cinco de la mañana yo tampoco sé lo que voy a tener.</h2>
+      <p>Todas las webs de pescadería ponen un catálogo con sus precios. Está
+      mal al día siguiente, porque el precio no lo pongo yo: lo pone la subasta.
+      Un temporal en el Cantábrico y el rape se va al doble.</p>
+      <p>Así que aquí no hay lista. Hay algo más útil: se pregunta y se contesta
+      el mismo día, con lo que ha entrado de verdad y a cómo está.</p>
+    </div>
+    <div class="hoy">
+      <b>Lo de hoy, por WhatsApp</b>
+      <p style="font-size:.97rem;">Escriba al puesto y le llega lo que hay
+      esta mañana y el precio del kilo. Si le cuadra, se lo aparta y lo recoge
+      cuando pase.</p>
+      <p style="font-size:.97rem;">Y si no sabe qué pedir, dígale para cuántos
+      son y cómo lo va a cocinar. Eso basta.</p>
+      <a class="u-btn" href="https://wa.me/34606593936?text=Hola%2C%20%C2%BFqu%C3%A9%20hay%20hoy%20en%20el%20puesto%3F"
+         target="_blank" rel="noopener" data-real>Escribir al 606 59 39 36</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. cocedero + congelado ===== -->
+<section class="u-seccion" id="cocedero">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-2);">Dos cosas que el lineal no puede hacer.</h2>
+    <div class="u-grid u-2" style="margin-top:var(--s-4);">
+      <div class="ficha dest">
+        <h3>Cocedero propio</h3>
+        <p>Se cuece aquí, en el puesto, al punto de sal y con el tiempo que pide
+        cada bicho. Usted lo recoge frío y listo para la bandeja: no tiene que
+        poner una olla en casa ni acertar con los minutos.</p>
+        <ul data-ejemplo>
+          <li>Gambas, langostinos y carabineros</li>
+          <li>Nécoras, bueyes y centollos</li>
+          <li>Pulpo, cocido y cortado si lo quiere</li>
+        </ul>
+      </div>
+      <div class="ficha">
+        <h3>Congelado, dicho de frente</h3>
+        <p>El marisco se congela en el barco, a la hora de subirlo a bordo.
+        Muchas veces está mejor que lo que lleva cuatro días en un mostrador, y
+        cuesta bastante menos.</p>
+        <p style="margin-top:.7rem;">Aquí hay de los dos y se dice cuál es cuál
+        antes de envolverlo. Para una fritura de un martes suele salir mejor el
+        congelado; para una merluza al horno del domingo, el del día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. encargos y domicilio ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);border-block:1px solid var(--linea);">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar" style="align-items:start;">
+    <div>
+      <h2 style="max-width:16ch;margin-bottom:var(--s-3);">Lo que conviene encargar con tiempo.</h2>
+      <div data-ejemplo>
+        <div class="enc"><b>Nochebuena y fin de año</b>
+          <p>El marisco de diciembre se aparta en noviembre. Quien lo encarga
+          paga el precio que había, no el de la semana del 22.</p></div>
+        <div class="enc"><b>Bandejas de marisco cocido</b>
+          <p>Montadas aquí y recogidas frías el mismo día. Se dice cuántos
+          comen y se calcula.</p></div>
+        <div class="enc"><b>Piezas grandes enteras</b>
+          <p>Un rodaballo, un besugo, una lubina de ración por comensal. Se pide
+          a la lonja con dos o tres días.</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="ficha" style="background:var(--fondo);">
+        <h3>A casa</h3>
+        <p>El puesto reparte a domicilio. El coste depende de lo que sea y de
+        dónde vaya, y se dice antes de cerrar el pedido, nunca después.</p>
+        <p style="margin-top:.7rem;color:var(--tinta-2);font-size:.96rem;">Los
+        encargos se hacen por teléfono o por WhatsApp a cualquier hora, aunque
+        el puesto esté cerrado. Se contestan cuando abre.</p>
+        <p style="margin-top:.9rem;"><a class="u-btn u-btn--linea" href="tel:+34915700323" data-real>Fijo del puesto · 91 570 03 23</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. dónde y horario ===== -->
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar" style="align-items:center;">
+    <div>
+      <span class="u-ceja" style="color:var(--acento);font-weight:700;">Cómo llegar</span>
+      <h2 style="max-width:15ch;">Dentro del mercado, puesto 6.</h2>
+      <p style="color:var(--tinta-2);">Un puesto no tiene puerta a la calle: se
+      entra al Mercado de San Enrique, en Cuatro Caminos, y está en el pasillo
+      de la izquierda. Es la única pescadería del mercado, así que no tiene
+      pérdida.</p>
+      <table class="horario" data-real>
+        <caption class="u-ceja" style="text-align:left;margin-bottom:.3rem;">Horario</caption>
+        <tbody>
+          <tr><th>Lunes a viernes</th><td>9:00–14:00 · 17:00–20:00</td></tr>
+          <tr><th>Sábado</th><td>9:00–14:30</td></tr>
+          <tr class="cerrado"><th>Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:var(--s-3);">
+        <a class="u-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Pescader%C3%ADa%20Antonio%20del%20R%C3%ADo%2C%20Calle%20de%20San%20Enrique%2C%20Madrid"
+           target="_blank" rel="noopener" data-real>Abrir en Google Maps</a>
+      </p>
+    </div>
+
+    <!-- DIBUJO 3: el plano del mercado con el puesto 6 marcado -->
+    <svg class="dib-plano" viewBox="0 0 400 330" fill="none" aria-labelledby="t-plano" role="img">
+      <title id="t-plano">Plano del Mercado de San Enrique con la entrada por la calle y el puesto 6 marcado en el pasillo de la izquierda</title>
+      <rect x="20" y="24" width="360" height="266" fill="#eef1ef" stroke="#111c19" stroke-width="3.5"/>
+      <!-- entrada -->
+      <path d="M160 290 H240" stroke="#eef1ef" stroke-width="8"/>
+      <path d="M160 290 v14 M240 290 v14" stroke="#111c19" stroke-width="3.5"/>
+      <text x="200" y="322" text-anchor="middle" font-family="Gantari, Arial, sans-serif"
+            font-size="13" font-weight="700" fill="#51625c" letter-spacing="1.4">CALLE DE SAN ENRIQUE</text>
+      <!-- pasillo central -->
+      <path d="M170 50 H230 V282 H170 Z" fill="#dfe4e1"/>
+      <g stroke="#7e8f92" stroke-width="2" stroke-dasharray="8 8"><path d="M200 60 V274"/></g>
+      <!-- fila derecha de puestos -->
+      <g stroke="#111c19" stroke-width="2.6" fill="#dfe4e1">
+        <rect x="244" y="52" width="118" height="50"/><rect x="244" y="110" width="118" height="50"/>
+        <rect x="244" y="168" width="118" height="50"/><rect x="244" y="226" width="118" height="50"/>
+      </g>
+      <!-- fila izquierda -->
+      <g stroke="#111c19" stroke-width="2.6" fill="#dfe4e1">
+        <rect x="38" y="52" width="118" height="50"/>
+        <rect x="38" y="168" width="118" height="50"/><rect x="38" y="226" width="118" height="50"/>
+      </g>
+      <!-- el puesto 6, destacado -->
+      <rect x="38" y="110" width="118" height="50" fill="#b83f2c" stroke="#111c19" stroke-width="3.5"/>
+      <text x="97" y="131" text-anchor="middle" font-family="Rozha One, Georgia, serif"
+            font-size="22" fill="#fdf2ef">6</text>
+      <text x="97" y="150" text-anchor="middle" font-family="Gantari, Arial, sans-serif"
+            font-size="11" font-weight="700" fill="#fdf2ef" letter-spacing="1.2">PESCADERÍA</text>
+      <!-- recorrido desde la entrada -->
+      <g stroke="#b83f2c" stroke-width="3" stroke-dasharray="9 7" stroke-linecap="round">
+        <path d="M200 278 V140 H166"/>
+      </g>
+      <path d="M166 140 l12 -7 v14 z" fill="#b83f2c"/>
+      <circle cx="200" cy="278" r="5" fill="#b83f2c"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 10. la única nota ===== -->
+<section class="u-seccion--apretada">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Todas las salvedades, juntas y aquí</b>
+      <p style="margin:0 0 .5rem;color:var(--tinta-2);">Para no repetirlo en
+      cada apartado, esto es lo que he inventado y lo que he comprobado. Al
+      pulsar el botón amarillo de arriba se marca sobre la página: rayado rojo
+      lo inventado, recuadro verde lo verificado.</p>
+      <ul>
+        <li><b>El nombre, el puesto 6, la calle, los dos teléfonos y el horario
+        son suyos</b>, sacados de la ficha del Mercado de San Enrique y de la
+        ficha pública del puesto.</li>
+        <li><b>El horario conviene confirmarlo:</b> la web del mercado da
+        jornada partida y un directorio la da seguida. He puesto la del mercado.</li>
+        <li><b>El número de la calle no lo pongo</b> porque las fuentes no
+        coinciden y en un mercado el portal no es lo que busca nadie: se busca
+        el número de puesto.</li>
+        <li><b>Las listas del cocedero y los encargos son inventadas</b>, igual
+        que el pasillo exacto del plano. Dígame los suyos y se cambian.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado un recuento de opiniones
+        suyo, y una nota sin número de reseñas la penaliza Google. Por eso
+        tampoco hay sección de opiniones.</li>
+        <li><b>No hay ni una fotografía.</b> Los tres dibujos —el mostrador, los
+        cortes y el plano— están hechos a mano para este puesto.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera, porque el
+      puesto no tiene web y la ficha del mercado se queda muy corta. Si le
+      sirve, hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la pescadería.</b> Es una propuesta sin
+      relación oficial con el puesto, con sus titulares ni con el Mercado de San
+      Enrique. El nombre, el número de puesto, la calle y los teléfonos salen de
+      fichas públicas.</p>
+      <p><b>No se declara ninguna nota de Google</b> y <b>no hay ninguna
+      fotografía:</b> los tres dibujos están hechos a mano. Los surtidos, los
+      encargos y el plano son inventados y están marcados en la página.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular prefiere que esto se retire, escribe y se retira
+      hoy mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34606593936?text=Hola%2C%20%C2%BFqu%C3%A9%20hay%20hoy%20en%20el%20puesto%3F" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Pescader%C3%ADa%20Antonio%20del%20R%C3%ADo%2C%20Calle%20de%20San%20Enrique%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Store",
+  "name":"Pescadería Antonio del Río",
+  "alternateName":"Pescados y Mariscos Antonio del Río",
+  "description":"Pescadería y marisquería en el puesto 6 del Mercado de San Enrique, Cuatro Caminos, Tetuán, Madrid. Pescado y marisco fresco y congelado, cocedero propio, corte a medida y reparto a domicilio.",
+  "telephone":"+34606593936",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Mercado de San Enrique, Calle de San Enrique, puesto 6",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28020",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4559904,"longitude":-3.7002768},
+  "openingHours":["Mo-Fr 09:00-14:00","Mo-Fr 17:00-20:00","Sa 09:00-14:30"],
+  "url":"https://nachoie123.github.io/webdemos/pescaderia-antonio-del-rio/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El Dedal de Sandra · Arreglos de ropa en Ramón y Cajal 19, Chamartín</title>
+<meta name="description" content="Propuesta de página web para El Dedal de Sandra, taller de arreglos de ropa en la Avenida de Ramón y Cajal 19, Chamartín, Madrid. Tarifa orientativa, plazos y consulta por WhatsApp con una foto.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/el-dedal-de-sandra/">
+<meta name="theme-color" content="#2f5d73">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f7f3ec%27/%3E%3Cpath d=%27M11 28 V13 a5 5 0 0 1 10 0 v15 z%27 fill=%27none%27 stroke=%27%232f5d73%27 stroke-width=%273%27/%3E%3Cpath d=%27M11 23 h10%27 stroke=%27%23c9a227%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/el-dedal-de-sandra/">
+<meta property="og:title" content="El Dedal de Sandra · Arreglos de ropa en Ramón y Cajal 19, Chamartín">
+<meta property="og:description" content="Propuesta de página web para El Dedal de Sandra, taller de arreglos de ropa en la Avenida de Ramón y Cajal 19, Chamartín, Madrid. Tarifa orientativa, plazos y consulta por WhatsApp con una foto.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/el-dedal-de-sandra/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Commissioner:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Jaboncillo de sastre sobre papel de patrón. La tiza de marcar viene en azul
+   y en amarillo, y el papel de los moldes es crudo. La firma de la página es
+   la línea discontinua: un hilván es una línea de puntos.                   */
+:root{
+  --fondo:#f7f3ec; --fondo-2:#e9e1d3; --tinta:#221e1b; --tinta-2:#6a6159;
+  --acento:#2f5d73; --acento-tinta:#f1f7f9; --linea:#d8cfbe;
+  --tiza:#c9a227;
+  --display:'Frank Ruhl Libre', Georgia, serif;
+  --texto:'Commissioner', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;
+  line-height:1.06;}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);}
+h3{font-size:1.35rem;font-weight:500;}
+.u-ceja{color:var(--acento);font-weight:600;}
+em.tz{font-style:normal;color:var(--acento);
+  border-bottom:3px dashed var(--tiza);padding-bottom:.06em;}
+
+/* el hilván: separador de puntadas, reutilizado en toda la página */
+.hilvan{height:10px;background:
+  repeating-linear-gradient(90deg,var(--tinta-2) 0 16px,transparent 16px 30px);
+  opacity:.35;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(247,243,236,.95);
+  backdrop-filter:blur(8px);border-bottom:2px dashed var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.28rem;font-weight:700;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:900px){.tel-cab{display:none}}
+
+/* hero */
+.hero{background:var(--fondo);border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.05rem,4.2vw,3.45rem);line-height:1.08;margin:.18em 0 .36em;}
+.hero p{color:var(--tinta-2);max-width:46ch;}
+.mapa{width:100%;max-width:300px;margin-inline:auto;color:var(--acento);}
+.leyenda{list-style:none;margin:var(--s-2) 0 0;padding:0;font-size:.85rem;
+  color:var(--tinta-2);}
+.leyenda li{display:flex;gap:.6rem;align-items:baseline;padding:.22rem 0;}
+.leyenda b{font-family:var(--display);color:var(--acento);font-weight:700;
+  min-width:1.3em;}
+
+/* tarifa */
+.u-precios .n{white-space:normal;max-width:24ch;font-weight:500;}
+.u-precios .p{color:var(--acento);font-weight:700;
+  font-variant-numeric:tabular-nums;}
+.u-precios li{border-bottom-style:dashed;}
+
+/* pasos de la foto */
+.u-numerada > *{border-style:dashed;background:var(--fondo);}
+.u-numerada > *::before{color:var(--acento);opacity:1;font-weight:700;}
+.paso h3{margin-bottom:.4rem;}
+.paso p{margin:0;color:var(--tinta-2);font-size:.96rem;}
+
+/* plazos */
+.plazo{border-top:6px solid var(--acento);padding-top:var(--s-2);}
+.plazo b{display:block;font-family:var(--display);font-size:2.6rem;font-weight:700;
+  line-height:1;color:var(--acento);font-variant-numeric:tabular-nums;}
+.plazo span{display:block;font-size:.72rem;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:600;margin:.35rem 0 .5rem;}
+.plazo p{margin:0;font-size:.95rem;color:var(--tinta-2);}
+
+/* lo que no compensa */
+.no{border-left:4px solid var(--tiza);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.no > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:700;margin-bottom:.25rem;}
+.no p{margin:0;color:var(--tinta-2);font-size:.97rem;}
+
+/* los tres bajos */
+.bajo{text-align:center;}
+.bajo .dib{width:100%;max-width:170px;margin:0 auto var(--s-2);color:var(--acento);}
+.bajo b{display:block;font-family:var(--display);font-size:1.2rem;font-weight:700;}
+.bajo p{max-width:30ch;margin:.35rem auto 0;color:var(--tinta-2);font-size:.95rem;}
+
+/* la prueba */
+.prueba{background:var(--acento);color:var(--acento-tinta);padding:var(--s-4);
+  align-items:center;}
+.prueba h2{color:#fff;}
+.prueba .dib{width:100%;max-width:310px;margin-inline:auto;color:#cfe4ec;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px dashed var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+.cerrado{color:var(--tiza);font-weight:600;}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo);border:2px dashed var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:700;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#a79c92;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#9fc6d4;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, sus plazos y lo que hace y no hace.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>El Dedal de Sandra</b><span data-real>Arreglos de ropa · Ramón y Cajal 19 · Chamartín</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#tarifa">Qué cuesta</a>
+      <a href="#foto">Mande una foto</a>
+      <a href="#plazos">Cuánto tarda</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34686338910" data-real>686 33 89 10</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Taller de arreglos · Avenida de Ramón y Cajal 19 · Chamartín</span>
+      <h1>Ese pantalón que no se pone<br>porque <em class="tz">le sobran cuatro dedos.</em></h1>
+      <p>Nadie llama a preguntar por un arreglo, porque explicar por teléfono
+      que «me sobra tela aquí detrás» no se puede. Así que la prenda se queda
+      un mes más en el armario.</p>
+      <p>Aquí están los precios escritos, los días que tarda y un número al que
+      mandar una foto. Con eso ya se sabe si merece la pena bajar.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34686338910?text=Hola%2C%20le%20mando%20una%20foto%20de%20una%20prenda%20para%20ver%20si%20tiene%20arreglo."
+           target="_blank" rel="noopener" data-real>Mandar la foto por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#tarifa">Ver lo que cuesta</a>
+      </p>
+    </div>
+    <div>
+      <svg class="mapa" viewBox="0 0 280 330" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" role="img" aria-label="Dibujo de una americana con las cuatro costuras por las que se puede arreglar">
+        <!-- mangas -->
+        <path d="M66 66 L38 84 L22 214 L58 226 L70 140 Z"/>
+        <path d="M214 66 L242 84 L258 214 L222 226 L210 140 Z"/>
+        <!-- cuerpo -->
+        <path d="M66 66 L110 46 L140 88 L170 46 L214 66 L218 160 L214 292 L66 292 L62 160 Z"/>
+        <!-- solapas y cierre -->
+        <path d="M110 46 L120 128 L140 88" stroke-width="3"/>
+        <path d="M170 46 L160 128 L140 88" stroke-width="3"/>
+        <path d="M140 88 L140 292" stroke-width="2" opacity=".5"/>
+        <circle cx="140" cy="168" r="4" stroke-width="3"/>
+        <circle cx="140" cy="196" r="4" stroke-width="3"/>
+        <!-- líneas de tiza: por dónde se mete -->
+        <g stroke="#c9a227" stroke-width="4" stroke-dasharray="9 8" stroke-linecap="round">
+          <path d="M68 68 C92 100 92 136 84 162"/>
+          <path d="M96 164 L100 292"/>
+          <path d="M184 164 L180 292"/>
+          <path d="M26 200 L56 210"/>
+          <path d="M66 268 L214 268"/>
+        </g>
+        <!-- números -->
+        <g fill="#2f5d73" stroke="none" font-family="Georgia, serif" font-size="17" font-weight="700">
+          <circle cx="84" cy="120" r="14" fill="#f7f3ec" stroke="#2f5d73" stroke-width="3"/>
+          <text x="84" y="126" text-anchor="middle">1</text>
+          <circle cx="100" cy="232" r="14" fill="#f7f3ec" stroke="#2f5d73" stroke-width="3"/>
+          <text x="100" y="238" text-anchor="middle">2</text>
+          <circle cx="40" cy="240" r="14" fill="#f7f3ec" stroke="#2f5d73" stroke-width="3"/>
+          <text x="40" y="246" text-anchor="middle">3</text>
+          <circle cx="240" cy="268" r="14" fill="#f7f3ec" stroke="#2f5d73" stroke-width="3"/>
+          <text x="240" y="274" text-anchor="middle">4</text>
+        </g>
+      </svg>
+      <ul class="leyenda" data-ejemplo>
+        <li><b>1</b><span>La sisa. Es el límite: si sobra de hombro, la prenda no es suya.</span></li>
+        <li><b>2</b><span>Los costados. Por aquí entra una talla, no dos.</span></li>
+        <li><b>3</b><span>La manga, por el puño o por el hombro. No cuesta lo mismo.</span></li>
+        <li><b>4</b><span>El bajo, que se marca con la prenda puesta.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Avenida de Ramón y Cajal, 19</b></span>
+    <span data-real>Chamartín · 28016 Madrid</span>
+    <span data-real>Lunes a viernes 10:00–14:00 y 16:00–20:00</span>
+    <a href="tel:+34686338910" data-real><b>686 33 89 10</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. la tarifa ===== -->
+<section class="u-seccion" id="tarifa">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Lo que cuesta,<br>antes de bajar.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Un arreglo se
+      presupuesta viendo la prenda, eso no cambia. Pero saber si son nueve euros
+      o son cuarenta decide si la bolsa sale del armario.</p>
+      <p style="color:var(--tinta-2);">Por eso la horquilla lleva su motivo al
+      lado: un vaquero con la vuelta original hay que descoserla y volver a
+      montarla, y eso son dos trabajos, no uno.</p>
+    </div>
+    <ul class="u-precios" data-ejemplo>
+      <li><span class="n">Bajo de pantalón de vestir</span><span class="d">A máquina o invisible a mano</span><span class="p">9 €</span></li>
+      <li><span class="n">Bajo de vaquero</span><span class="d">Conservando la vuelta y la puntada originales</span><span class="p">14 €</span></li>
+      <li><span class="n">Meter de cintura</span><span class="d">Por el centro de atrás, con la trabilla</span><span class="p">12 €</span></li>
+      <li><span class="n">Estrechar perneras</span><span class="d">De rodilla al bajo, las dos</span><span class="p">14 €</span></li>
+      <li><span class="n">Manga de americana, por el puño</span><span class="d">Si no lleva botones abiertos</span><span class="p">16 €</span></li>
+      <li><span class="n">Manga de americana, por el hombro</span><span class="d">Hay que desmontar la sisa y el forro</span><span class="p">28 €</span></li>
+      <li><span class="n">Cremallera de pantalón</span><span class="d">Cambio completo, cremallera incluida</span><span class="p">12 €</span></li>
+      <li><span class="n">Cremallera de plumífero</span><span class="d">Según el largo y si es de doble carro</span><span class="p">22–30 €</span></li>
+      <li><span class="n">Coger un vestido de costados</span><span class="d">Con prueba puesta antes de rematar</span><span class="p">18 €</span></li>
+      <li><span class="n">Forro de americana</span><span class="d">Forro nuevo entero, tela aparte</span><span class="p">45 €</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 5. mande una foto ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="foto">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-2);">Una foto vale el viaje.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Antes de coger la bolsa y
+    bajar, mande tres cosas al WhatsApp. Contestar no cuesta nada y no
+    compromete: a veces la respuesta es «esto no se lo haga».</p>
+    <div class="u-grid u-3 u-numerada" style="margin-top:var(--s-4);" data-ejemplo>
+      <div class="paso">
+        <h3>La prenda estirada</h3>
+        <p>En el suelo o encima de la cama, entera y sin dobleces. Con luz de
+        ventana se ve la costura.</p>
+      </div>
+      <div class="paso">
+        <h3>Usted con ella puesta</h3>
+        <p>De frente y de lado. Es la única forma de saber si lo que sobra es de
+        cintura o es de cadera.</p>
+      </div>
+      <div class="paso">
+        <h3>Qué le molesta</h3>
+        <p>Escrito a su manera: «me baila la cintura», «me sobran cuatro dedos
+        de largo». Así se entiende mejor que con medidas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. plazos ===== -->
+<section class="u-seccion" id="plazos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-4);">Para cuándo lo tiene.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="plazo">
+        <b>3</b><span>días laborables</span>
+        <p>El plazo normal de un bajo, una cintura o una cremallera. Se deja por
+        la mañana y se recoge a los tres días.</p>
+      </div>
+      <div class="plazo">
+        <b>24</b><span>horas, si corre</span>
+        <p>Para mañana a la misma hora, con cinco euros más. Depende de lo que
+        haya esa semana en la mesa: se dice al momento, no después.</p>
+      </div>
+      <div class="plazo">
+        <b>2</b><span>semanas para una boda</span>
+        <p>Un traje o un vestido de evento lleva dos pruebas. Traerlo la víspera
+        es lo que sale mal.</p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.93rem;color:var(--tinta-2);max-width:60ch;">
+      Se avisa por WhatsApp cuando está listo, para no bajar a mirar. Y si al
+      probárselo en casa algo no cuadra, se retoca sin cobrar otra vez.</p>
+  </div>
+</section>
+
+<div class="hilvan" aria-hidden="true"></div>
+
+<!-- ===== 7. lo que no compensa ===== -->
+<section class="u-seccion">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div data-ejemplo>
+      <div class="no">
+        <b>Estrechar un abrigo de hombros</b>
+        <p>Hay que desmontar las dos mangas y el forro entero. Pasa de sesenta
+        euros y casi nunca vale lo que costó el abrigo.</p>
+      </div>
+      <div class="no">
+        <b>Alargar un bajo ya cortado</b>
+        <p>Si la tela se cortó, no hay de dónde sacarla. Se puede ganar un dedo
+        soltando la vuelta, y se nota la marca del doblez anterior.</p>
+      </div>
+      <div class="no">
+        <b>Bajar dos tallas una chaqueta</b>
+        <p>Una talla entra. Dos deforman la sisa y el cuello se separa de la
+        nuca: queda peor que grande.</p>
+      </div>
+      <div class="no">
+        <b>Subir la cintura de un vaquero por detrás</b>
+        <p>Con bolsillos de ojal detrás hay que descoserlos y vuelven a coserse
+        torcidos. Se mete por los costados o no se mete.</p>
+      </div>
+    </div>
+    <div>
+      <span class="u-ceja">Conviene decirlo</span>
+      <h2>Hay cosas que<br>es mejor<br>no arreglar.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Decir que no a
+      tiempo ahorra un disgusto y sesenta euros. Aquí van los cuatro casos que
+      más entran por la puerta y más veces salen con un no.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. los tres bajos ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">No todos los bajos son el mismo bajo.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+    Es la diferencia entre nueve y catorce euros, y se ve desde un metro.</p>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="bajo">
+        <svg class="dib" viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" role="img" aria-label="Bajo cosido a máquina: pespunte visible en la vuelta">
+          <path d="M20 64 H140 V96 H20 Z" fill="currentColor" opacity=".1" stroke="none"/>
+          <path d="M20 10 H140 V96 H20 Z"/>
+          <path d="M20 64 H140" stroke-width="3" opacity=".55"/>
+          <path d="M20 80 H140" stroke="#c9a227" stroke-width="4" stroke-dasharray="10 7" stroke-linecap="round"/>
+          <path d="M30 22 L48 40 M52 22 L70 40 M74 22 L92 40" stroke-width="2" opacity=".25"/>
+        </svg>
+        <b>A máquina</b>
+        <p>El pespunte se ve por fuera. Es el de toda la vida y el más rápido.</p>
+      </div>
+
+      <div class="bajo">
+        <svg class="dib" viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" role="img" aria-label="Bajo invisible a mano: puntadas sueltas que no se ven por fuera">
+          <path d="M20 64 H140 V96 H20 Z" fill="currentColor" opacity=".1" stroke="none"/>
+          <path d="M20 10 H140 V96 H20 Z"/>
+          <path d="M20 64 H140" stroke-width="3" opacity=".55"/>
+          <g stroke="#c9a227" stroke-width="4" stroke-linecap="round">
+            <path d="M32 76 L38 84"/><path d="M62 76 L68 84"/>
+            <path d="M92 76 L98 84"/><path d="M122 76 L128 84"/>
+          </g>
+          <path d="M30 22 L48 40 M52 22 L70 40 M74 22 L92 40" stroke-width="2" opacity=".25"/>
+        </svg>
+        <b>Invisible, a mano</b>
+        <p>Cuatro puntadas cada dos dedos. Por fuera no se ve nada. Es el de un
+        pantalón de vestir.</p>
+      </div>
+
+      <div class="bajo">
+        <svg class="dib" viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" role="img" aria-label="Bajo de vaquero: se corta por arriba y se vuelve a montar la vuelta original con su doble pespunte">
+          <path d="M20 68 H140 V96 H20 Z" fill="currentColor" opacity=".1" stroke="none"/>
+          <path d="M20 10 H140 V96 H20 Z"/>
+          <path d="M20 40 H140" stroke="#c9a227" stroke-width="4" stroke-dasharray="6 9" stroke-linecap="round"/>
+          <path d="M8 34 L20 40 L8 46" stroke="#c9a227" stroke-width="3" fill="none"/>
+          <path d="M20 68 H140" stroke-width="3" opacity=".55"/>
+          <path d="M20 80 H140" stroke-width="3"/>
+          <path d="M20 88 H140" stroke-width="3"/>
+        </svg>
+        <b>Con la vuelta original</b>
+        <p>Se corta por arriba, se descose la vuelta del vaquero y se vuelve a
+        montar con su doble pespunte.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la prueba ===== -->
+<section class="u-seccion">
+  <div class="u-wrap u-revelar">
+    <div class="prueba u-grid u-desigual">
+      <div>
+        <span class="u-ceja" style="color:#ffd9a3;">Lo que no se puede hacer por internet</span>
+        <h2 style="max-width:20ch;">El bajo se marca con usted puesto.</h2>
+        <p style="max-width:50ch;" data-ejemplo>Y con el zapato que vaya a
+        llevar, no con zapatillas. Dos centímetros de tacón cambian el largo, y
+        un pantalón que barre el suelo no tiene vuelta atrás.</p>
+        <p style="max-width:50ch;" data-ejemplo>Por eso se prueba antes de
+        rematar. Es también la razón de que un arreglo no se entregue el mismo
+        día, aunque parezca cosa de diez minutos.</p>
+      </div>
+      <svg class="dib" viewBox="0 0 280 240" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" role="img" aria-label="Dibujo de una pernera sobre un zapato, con la marca de tiza del largo y un alfiler">
+        <!-- zapato de calle, visto de lado: va debajo y asoma por fuera -->
+        <path d="M118 170 C106 182 98 194 100 202 L100 214 H250 C254 205 244 197 226 191 C206 185 190 180 178 172 L172 166 Z"/>
+        <path d="M100 208 H248" stroke-width="3"/>
+        <path d="M100 202 H132" stroke-width="3"/>
+        <path d="M132 202 V214" stroke-width="3"/>
+        <path d="M160 180 C172 188 186 193 202 196" stroke-width="2" opacity=".5"/>
+        <!-- pernera: cae por encima del zapato y lo tapa -->
+        <path d="M84 8 H186 L180 176 H90 Z" fill="#2f5d73"/>
+        <path d="M84 42 H186" stroke-width="2" opacity=".35"/>
+        <!-- la marca de tiza del largo -->
+        <path d="M80 152 H190" stroke="#c9a227" stroke-width="5" stroke-dasharray="11 8" stroke-linecap="round"/>
+        <path d="M118 140 L138 164 M138 140 L118 164" stroke="#c9a227" stroke-width="4" stroke-linecap="round"/>
+        <!-- alfiler -->
+        <path d="M194 146 L240 120" stroke-width="3"/>
+        <circle cx="246" cy="117" r="8" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-2 u-revelar">
+    <div>
+      <span class="u-ceja">Dónde está</span>
+      <h2 style="max-width:18ch;" data-real>Avenida de Ramón y Cajal, 19.</h2>
+      <p style="color:var(--tinta-2);max-width:44ch;" data-real>Chamartín, 28016
+      Madrid. El teléfono es un móvil, así que se le puede escribir igual que
+      llamar.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34686338910?text=Hola%2C%20le%20mando%20una%20foto%20de%20una%20prenda%20para%20ver%20si%20tiene%20arreglo."
+           target="_blank" rel="noopener" data-real>WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34686338910" data-real>686 33 89 10</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&amp;query=El+Dedal+de+Sandra+Madrid&amp;query_place_id=ChIJH9ATy9koQg0RnMCvEG1HJVo"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-real>
+        <tr><th>Lunes</th><td>10:00 – 14:00 y 16:00 – 20:00</td></tr>
+        <tr><th>Martes</th><td>10:00 – 14:00 y 16:00 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 14:00 y 16:00 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 14:00 y 16:00 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 14:00 y 16:00 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Domingo</th><td class="cerrado">Cerrado</td></tr>
+      </table>
+      <p style="font-size:.9rem;color:var(--tinta-2);margin-top:var(--s-2);">
+      El corte del mediodía está escrito a propósito: bajar a las tres con la
+      bolsa y encontrarlo cerrado es la visita que más se pierde.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle, el móvil y
+      el horario. Los precios, los plazos y los ejemplos me los he inventado
+      yo: pulse el botón amarillo de arriba y se marcan solos en rojo.</p>
+      <ul>
+        <li><b>La tarifa es el corazón de la página</b> y hay que ponerla real
+        antes de enseñársela a nadie. Tal como está, solo enseña la forma.</li>
+        <li><b>El horario sale de su ficha de Google</b> (lunes a viernes con
+        corte de 14 a 16, sábado por la mañana). Si ha cambiado, se cambia.</li>
+        <li><b>El número del portal, el 19, también sale de su ficha.</b> En el
+        mapa de OpenStreetMap el local aparece en la misma avenida pero sin
+        número: si no es el 19, dígamelo y lo corrijo.</li>
+        <li><b>Sin nota de Google:</b> he visto su valoración en directorios que
+        la copian, pero no el recuento de reseñas verificado, y una nota sin
+        número de opiniones la penaliza Google. Así que no se declara.</li>
+        <li><b>No hay ni una fotografía.</b> Los cinco dibujos están hechos a
+        mano para esta página: la americana con sus cuatro costuras, los tres
+        bajos y la pernera con el zapato.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del taller.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares, y tampoco con ningún otro
+      taller de arreglos de nombre parecido. El nombre, la calle, el horario y
+      el móvil salen de fichas públicas.</p>
+      <p><b>Los precios, los plazos y los casos que se cuentan están
+      inventados</b> y van marcados. <b>No se declara ninguna nota de
+      Google</b>, <b>no se afirma quién trabaja aquí ni desde cuándo</b> y
+      <b>no hay ninguna fotografía:</b> los cinco dibujos están hechos a mano.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular prefiere que esto se retire, escribe y se retira
+      hoy mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34686338910?text=Hola%2C%20le%20mando%20una%20foto%20de%20una%20prenda%20para%20ver%20si%20tiene%20arreglo." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=El+Dedal+de+Sandra+Madrid&amp;query_place_id=ChIJH9ATy9koQg0RnMCvEG1HJVo" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"El Dedal de Sandra",
+  "description":"Taller de arreglos de ropa en la Avenida de Ramón y Cajal 19, Chamartín, Madrid. Bajos, cinturas, mangas, cremalleras y forros.",
+  "telephone":"+34686338910",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Avenida de Ramón y Cajal, 19",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28016",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.45186,"longitude":-3.67353},
+  "openingHours":["Mo-Fr 10:00-14:00","Mo-Fr 16:00-20:00","Sa 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/el-dedal-de-sandra/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Novelor Joyeros · Taller de joyería y relojería en Mauricio Legendre 7, Madrid</title>
+<meta name="description" content="Propuesta de página web para Novelor Joyeros, joyería y relojería con taller propio en la galería de Mauricio Legendre 7, Chamartín, Madrid. Arreglos con precio y días de plazo.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/novelor-joyeros/">
+<meta name="theme-color" content="#7a5a1e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f4f1ea%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%237a5a1e%27 stroke-width=%273%27/%3E%3Crect x=%2713%27 y=%272%27 width=%276%27 height=%275%27 fill=%27%238c2f39%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/novelor-joyeros/">
+<meta property="og:title" content="Novelor Joyeros · Taller de joyería y relojería en Mauricio Legendre 7, Madrid">
+<meta property="og:description" content="Propuesta de página web para Novelor Joyeros: los arreglos del taller con su precio y sus días, y cómo se pesa el oro delante del cliente.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/novelor-joyeros/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Albert+Sans:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Latón mate y papel de joyero. El metal de un taller está oxidado y rayado,
+   así que nada de negro con dorado brillante: eso es el uniforme del lujo, y
+   aquí no se vende lujo, se vende que le arreglen una cosa. El rojo es el del
+   punzón de contraste y solo marca.                                        */
+:root{
+  --fondo:#f4f1ea; --fondo-2:#e7e1d4; --tinta:#191b21; --tinta-2:#5c5d66;
+  --acento:#7a5a1e; --acento-tinta:#fdfbf4; --linea:#cdc5b2;
+  --punzon:#8c2f39;
+  --oscuro:#24272e;
+  --display:'Cinzel', 'Times New Roman', serif;
+  --texto:'Albert Sans', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;
+  letter-spacing:.012em;line-height:1.16;}
+h2{font-size:clamp(1.7rem,3.4vw,2.6rem);}
+h3{font-size:1.18rem;letter-spacing:.02em;}
+em.pz{font-style:normal;color:var(--punzon);}
+.u-ceja{color:var(--acento);font-weight:600;}
+.sub{color:var(--tinta-2);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(244,241,234,.96);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca > b:first-child{display:block;font-family:var(--display);font-size:1.18rem;
+  font-weight:600;letter-spacing:.06em;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);margin-top:.15rem;}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:900px){.tel-cab,.cab .u-nav{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{align-items:center;gap:clamp(24px,4vw,56px);}
+.hero h1{font-size:clamp(1.9rem,4vw,3.15rem);line-height:1.14;margin:.2em 0 .45em;}
+.hero p{max-width:46ch;}
+.dib{width:100%;color:var(--acento);}
+.dib .rj{color:var(--punzon);}
+
+/* la tira: el flex vive en la seccion, asi que los datos se pegaban entre si */
+.u-tira .u-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;
+  align-items:center;gap:var(--s-2) var(--s-4);}
+.u-tira .u-wrap > *{white-space:nowrap;}
+@media(max-width:860px){
+  .u-tira .u-wrap{justify-content:center;text-align:center;}
+  .u-tira .u-wrap > *{white-space:normal;}
+}
+
+/* tabla de arreglos */
+.u-precios li{gap:var(--s-3);}
+.u-precios .n{font-family:var(--texto);font-size:1.02rem;font-weight:600;
+  white-space:normal;flex:1;}
+.u-precios .p{font-family:var(--display);font-size:1.15rem;font-weight:600;
+  font-variant-numeric:tabular-nums;color:var(--acento);}
+.u-precios .dias{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tinta-2);white-space:nowrap;min-width:9.5rem;text-align:right;}
+@media(max-width:620px){
+  .u-precios li{flex-wrap:wrap;}
+  .u-precios .dias{min-width:0;text-align:left;flex-basis:100%;order:3;}
+}
+
+/* hoy mismo */
+.hoy{border-top:3px solid var(--acento);padding-top:var(--s-2);}
+.hoy > b:first-child{display:block;font-family:var(--display);font-size:1.12rem;
+  font-weight:600;margin-bottom:.3rem;}
+.hoy p{margin:0;font-size:.96rem;color:var(--tinta-2);}
+
+/* pasos de la tasación */
+.u-numerada > *{background:var(--fondo);}
+.u-numerada > *::before{font-weight:600;}
+
+/* bloque oscuro del oro */
+.oro{background:var(--oscuro);color:#ded7c6;}
+.oro h2{color:#fff;}
+.oro .dib{color:#c9a961;}
+.oro .dib .rj{color:#e08b8b;}
+.oro .u-dato{border-top-color:#41454e;}
+.oro .u-dato dt{color:#9aa0ab;}
+
+/* relojería */
+.marcas{list-style:none;margin:var(--s-2) 0 0;padding:0;display:flex;
+  flex-wrap:wrap;gap:.45rem;}
+.marcas li{border:1px solid var(--linea);padding:.32rem .7rem;font-size:.78rem;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--tinta-2);}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.5rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo);border-left:6px solid var(--punzon);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.15rem;
+  font-weight:600;margin-bottom:.5rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.4rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--oscuro);color:#fff;}
+
+.pie{background:var(--oscuro);color:#a1a6b0;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#d7b978;}
+.pie p{font-size:.95rem;line-height:1.62;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: los precios del taller y los plazos los he inventado yo.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Novelor Joyeros</b><span data-real>Mauricio Legendre 7 · Plaza de Castilla</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#arreglos">Arreglos</a>
+      <a href="#tasar">Tasación</a>
+      <a href="#oro">Oro</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34913142154" data-real>91 314 21 54</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero: el taller, no la vitrina ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap u-grid u-desigual-inv">
+    <div>
+      <span class="u-ceja" data-real>Joyería, platería y relojería · Galería de Mauricio Legendre 7</span>
+      <h1>El taller está<br><em class="pz">detrás del mostrador.</em></h1>
+      <p class="sub">Su alianza no se manda a ningún sitio. Se ajusta aquí, en el
+      banco de trabajo que hay al otro lado de esa puerta, y la hace la misma
+      persona que se la coge.</p>
+      <p class="sub">Abajo están los arreglos con lo que cuestan y los días que
+      tardan. Es lo que nadie escribe y lo único que usted quería saber.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="u-btn" href="tel:+34913142154" data-real>Llamar al 91 314 21 54</a>
+        <a class="u-btn u-btn--linea" href="#arreglos">Ver los arreglos</a>
+      </p>
+    </div>
+
+    <!-- DIBUJO 1: el mandril cónico con la alianza y el maceto -->
+    <svg class="dib" viewBox="0 0 270 250" fill="none" stroke="currentColor"
+         stroke-width="4" stroke-linejoin="round" stroke-linecap="round"
+         role="img" aria-label="Un mandril cónico de joyero con una alianza puesta y un maceto al lado">
+      <!-- el cono del mandril -->
+      <path d="M73 21 L209 212 L203 216 L47 43 Z" stroke-width="5"/>
+      <ellipse cx="60" cy="32" rx="17" ry="7" transform="rotate(51.3 60 32)" stroke-width="5"/>
+      <!-- marcas de tallas grabadas en el cono -->
+      <g stroke-width="3" opacity=".5">
+        <path d="M76 64 l12 -9"/><path d="M92 85 l11 -8"/><path d="M108 106 l10 -8"/>
+        <path d="M140 148 l9 -7"/><path d="M156 169 l8 -6"/><path d="M172 190 l7 -6"/>
+      </g>
+      <!-- la alianza, de canto sobre el cono -->
+      <g class="rj" stroke="currentColor">
+        <ellipse cx="126" cy="114" rx="27" ry="10" transform="rotate(-38.7 126 114)" stroke-width="5"/>
+        <ellipse cx="126" cy="114" rx="20" ry="6" transform="rotate(-38.7 126 114)" stroke-width="3"/>
+      </g>
+      <!-- el maceto de nailon -->
+      <g stroke-width="5">
+        <rect x="150" y="34" width="66" height="27" rx="4"/>
+        <path d="M183 34 v27" stroke-width="3" opacity=".45"/>
+        <path d="M216 47 L258 82"/>
+      </g>
+      <!-- el banco -->
+      <path d="M18 232 h234" stroke-width="5"/>
+      <path d="M40 232 v14 M232 232 v14" stroke-width="4" opacity=".5"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Mauricio Legendre, 7</b></span>
+    <span data-real>Castilla · Chamartín · 28046 Madrid</span>
+    <span data-real>Cerrado a mediodía</span>
+    <a href="tel:+34913142154" data-real><b>91 314 21 54</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. los arreglos: precio y días ===== -->
+<section class="u-seccion" id="arreglos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-2);">Lo que cuesta y lo que tarda.</h2>
+    <p class="u-medida sub">Nadie llama a una joyería a preguntar cuánto vale
+    soldar una cadena, porque da apuro. Se busca a las once de la noche, no se
+    encuentra, y al día siguiente se va a la primera que salga. Escribirlo es
+    quedarse con esa búsqueda.</p>
+
+    <ul class="u-precios" style="margin-top:var(--s-4);" data-ejemplo>
+      <li><span class="n">Cambiar la pila de un reloj</span><span class="p">8 €</span><span class="dias">en el momento</span></li>
+      <li><span class="n">Ajustar una alianza, una talla arriba o abajo</span><span class="p">desde 20 €</span><span class="dias">2 días</span></li>
+      <li><span class="n">Soldar una cadena de oro partida</span><span class="p">desde 25 €</span><span class="dias">2 días</span></li>
+      <li><span class="n">Cierre de mosquetón nuevo</span><span class="p">desde 18 €</span><span class="dias">3 días</span></li>
+      <li><span class="n">Enfilar un collar de perlas</span><span class="p">desde 35 €</span><span class="dias">4 días</span></li>
+      <li><span class="n">Baño de rodio en oro blanco</span><span class="p">desde 40 €</span><span class="dias">5 días</span></li>
+      <li><span class="n">Grabado a mano en el interior del aro</span><span class="p">desde 15 €</span><span class="dias">3 días</span></li>
+      <li><span class="n">Volver a engastar una piedra que se cayó</span><span class="p">desde 30 €</span><span class="dias">5 días</span></li>
+      <li><span class="n">Acortar la correa o el armis de un reloj</span><span class="p">5 €</span><span class="dias">en el momento</span></li>
+      <li><span class="n">Limpiar y pulir una pieza de plata</span><span class="p">desde 12 €</span><span class="dias">2 días</span></li>
+    </ul>
+
+    <h3 style="margin-top:var(--s-5);">Sin dejar la joya</h3>
+    <p class="sub" style="max-width:52ch;">Hay cosas que se hacen mientras usted
+    espera de pie en el mostrador.</p>
+    <div class="u-grid u-3" style="margin-top:var(--s-3);">
+      <div class="hoy"><b>La pila</b><p data-ejemplo>Se abre, se cambia, se
+      comprueba la junta y se cierra. Diez minutos.</p></div>
+      <div class="hoy"><b>La correa</b><p data-ejemplo>Quitar eslabones para que
+      el reloj deje de bailar en la muñeca.</p></div>
+      <div class="hoy"><b>Decirle qué es</b><p data-real>Mirar una pieza con la
+      lupa y decirle qué metal es y qué tiene. Esto no se cobra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. cómo se tasa ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="tasar">
+  <div class="u-wrap u-revelar">
+    <div class="u-grid u-desigual" style="align-items:center;margin-bottom:var(--s-4);">
+      <!-- DIBUJO 2: la lupa sobre el punzón del interior del aro -->
+      <svg class="dib" viewBox="0 0 300 190" fill="none" stroke="currentColor"
+           stroke-width="4" stroke-linejoin="round" stroke-linecap="round"
+           role="img" aria-label="Una lupa de joyero sobre los punzones grabados en el interior de un aro">
+        <!-- el aro abierto, visto por dentro -->
+        <path d="M22 62 C70 26 214 26 268 62" stroke-width="5"/>
+        <path d="M22 106 C70 70 214 70 268 106" stroke-width="5"/>
+        <path d="M22 62 v44 M268 62 v44" stroke-width="5"/>
+        <!-- los punzones grabados -->
+        <g stroke-width="3">
+          <rect x="92" y="58" width="42" height="22" rx="2"/>
+          <rect x="146" y="53" width="30" height="22" rx="2"/>
+          <rect x="188" y="55" width="26" height="22" rx="11"/>
+          <path d="M196 60 l5 6 l5 -6" stroke-width="2.5"/>
+          <path d="M198 71 h9" stroke-width="2.5"/>
+        </g>
+        <text x="113" y="75" font-family="Cinzel, serif" font-size="17"
+              font-weight="600" text-anchor="middle" fill="currentColor"
+              stroke="none">750</text>
+        <text x="161" y="70" font-family="Cinzel, serif" font-size="14"
+              font-weight="600" text-anchor="middle" fill="currentColor"
+              stroke="none">JL</text>
+        <!-- la lupa -->
+        <g class="rj" stroke="currentColor">
+          <circle cx="132" cy="112" r="52" stroke-width="5"/>
+          <circle cx="132" cy="112" r="42" stroke-width="2.5" opacity=".45"/>
+          <path d="M170 148 L214 176" stroke-width="7"/>
+          <path d="M209 162 l18 12" stroke-width="5"/>
+        </g>
+      </svg>
+      <div>
+        <span class="u-ceja">La caja que dejó la abuela</span>
+        <h2 style="max-width:18ch;">Se mira, se pesa y usted decide.</h2>
+        <p class="sub" style="margin-top:var(--s-2);">El miedo no es que le den
+        poco. Es no tener forma de saber si le están dando poco. Por eso el
+        orden importa más que el número.</p>
+      </div>
+    </div>
+
+    <div class="u-grid u-3 u-numerada">
+      <div>
+        <h3>El punzón, con lupa</h3>
+        <p class="sub" data-real>Dentro del aro hay unos números diminutos.
+        <b>750</b> es oro de 18 quilates, <b>925</b> es plata de ley, y si no hay
+        nada grabado tampoco pasa nada: se comprueba de otra manera.</p>
+      </div>
+      <div>
+        <h3>La báscula, girada</h3>
+        <p class="sub" data-ejemplo>Se pesa pieza a pieza con la pantalla hacia
+        usted. Lo que no es oro se aparta a un lado y se dice por qué, en vez de
+        meterlo todo en el mismo montón.</p>
+      </div>
+      <div>
+        <h3>Un número, y a pensarlo</h3>
+        <p class="sub" data-ejemplo>Se le dice una cifra y ahí acaba. Si prefiere
+        consultarlo o mirar en otro sitio, se lo lleva tan entero como vino y no
+        hay que dar explicaciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. compra de oro ===== -->
+<section class="oro u-seccion u-sangrado" id="oro">
+  <div class="u-wrap u-revelar">
+    <div class="u-grid u-partida" style="gap:clamp(24px,4vw,56px);">
+      <div>
+        <span class="u-ceja" style="color:#c9a961;">Compra de oro</span>
+        <h2 style="max-width:20ch;">El precio del gramo, escrito y del día de hoy.</h2>
+        <p style="margin-top:var(--s-2);">El gramo de oro cambia todos los días
+        con el mercado. Una casa seria dice a cuánto lo paga hoy y de dónde sale
+        esa cifra; lo demás es pedirle que se fíe a ciegas.</p>
+        <div class="u-grid u-3" style="margin-top:var(--s-4);gap:var(--s-3);">
+          <dl class="u-dato" data-ejemplo><dt>Oro de 18 k</dt><dd>00,00 €/g</dd></dl>
+          <dl class="u-dato" data-ejemplo><dt>Oro de 14 k</dt><dd>00,00 €/g</dd></dl>
+          <dl class="u-dato" data-ejemplo><dt>Plata de ley</dt><dd>0,00 €/g</dd></dl>
+        </div>
+        <p style="margin-top:var(--s-3);font-size:.93rem;color:#9aa0ab;"
+           data-ejemplo>Las tres cifras están en blanco a propósito. Una cifra
+        inventada en esta casilla es exactamente el problema que esta sección
+        viene a resolver.</p>
+      </div>
+
+      <!-- DIBUJO 3: la balanza de dos platillos con la pesa -->
+      <svg class="dib" viewBox="0 0 280 210" fill="none" stroke="currentColor"
+           stroke-width="4" stroke-linejoin="round" stroke-linecap="round"
+           role="img" aria-label="Una balanza de joyero de dos platillos, con una alianza en uno y las pesas en el otro">
+        <!-- pie y columna -->
+        <path d="M92 190 h96 l-10 12 H102 Z" stroke-width="5"/>
+        <path d="M140 190 V58" stroke-width="6"/>
+        <circle cx="140" cy="52" r="7" stroke-width="5"/>
+        <!-- brazo inclinado -->
+        <path d="M46 40 L234 66" stroke-width="5"/>
+        <path d="M140 52 L138 45" stroke-width="4"/>
+        <!-- tirantes y platillo izquierdo -->
+        <path d="M46 40 L22 78 M46 40 L70 78" stroke-width="3"/>
+        <ellipse cx="46" cy="82" rx="30" ry="9" stroke-width="5"/>
+        <!-- tirantes y platillo derecho -->
+        <path d="M234 66 L210 104 M234 66 L258 104" stroke-width="3"/>
+        <ellipse cx="234" cy="108" rx="30" ry="9" stroke-width="5"/>
+        <!-- la alianza en el platillo izquierdo -->
+        <g class="rj" stroke="currentColor">
+          <ellipse cx="46" cy="72" rx="15" ry="6" stroke-width="4"/>
+        </g>
+        <!-- las pesas en el derecho -->
+        <g stroke-width="4">
+          <path d="M222 98 h24 l-3 -14 h-18 Z"/>
+          <path d="M228 84 h12" stroke-width="3"/>
+        </g>
+        <!-- graduación del brazo -->
+        <g stroke-width="2.5" opacity=".45">
+          <path d="M80 45 v-8"/><path d="M110 49 v-8"/><path d="M170 57 v-8"/><path d="M200 61 v-8"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. relojería ===== -->
+<section class="u-seccion" id="relojeria">
+  <div class="u-wrap u-revelar">
+    <div class="u-grid u-desigual-inv" style="align-items:center;">
+      <div>
+        <span class="u-ceja">Relojería</span>
+        <h2 style="max-width:20ch;">Un reloj parado casi nunca está roto.</h2>
+        <p class="sub" style="margin-top:var(--s-2);">Nueve de cada diez veces es
+        la pila, y con ella hay que cambiar la junta de goma: si se pone la pila
+        y se deja la junta vieja, el reloj deja de ser estanco y el agua entra
+        por donde antes no entraba.</p>
+        <p class="sub">Correas, armis, cristales y puesta en hora de los que
+        llevan calendario y nadie sabe ajustar.</p>
+        <h3 style="margin-top:var(--s-4);font-size:1rem;">Marcas que aquí se conocen</h3>
+        <ul class="marcas" data-ejemplo>
+          <li>Maurice Lacroix</li><li>Sandoz</li><li>Viceroy</li>
+          <li>Time Force</li><li>Bassel</li><li>Platería Pedro Durán</li>
+          <li>Majorica</li><li>Gayubo</li>
+        </ul>
+      </div>
+
+      <!-- DIBUJO 4: la trasera del reloj abierta, con la junta y la pila -->
+      <svg class="dib" viewBox="0 0 250 200" fill="none" stroke="currentColor"
+           stroke-width="4" stroke-linejoin="round" stroke-linecap="round"
+           role="img" aria-label="La trasera de un reloj abierta, con la junta de goma, la pila y el abridor de muescas">
+        <!-- caja -->
+        <circle cx="112" cy="100" r="76" stroke-width="5"/>
+        <!-- muescas del fondo de rosca -->
+        <g stroke-width="5">
+          <path d="M112 24 v12"/><path d="M112 164 v12"/>
+          <path d="M36 100 h12"/><path d="M176 100 h12"/>
+          <path d="M58 46 l9 9"/><path d="M166 154 l-9 -9"/>
+          <path d="M58 154 l9 -9"/><path d="M166 46 l-9 9"/>
+        </g>
+        <!-- la junta de goma -->
+        <circle class="rj" cx="112" cy="100" r="58" stroke="currentColor" stroke-width="6"/>
+        <circle cx="112" cy="100" r="50" stroke-width="2.5" opacity=".4"/>
+        <!-- la pila -->
+        <circle cx="112" cy="100" r="27" stroke-width="5"/>
+        <path d="M100 100 h24" stroke-width="4"/>
+        <path d="M112 88 v24" stroke-width="4"/>
+        <!-- asas de la correa -->
+        <path d="M84 30 l-8 -22 M140 30 l8 -22" stroke-width="5"/>
+        <path d="M84 170 l-8 22 M140 170 l8 22" stroke-width="5"/>
+        <!-- el abridor de muescas -->
+        <g stroke-width="5">
+          <path d="M206 42 v104" stroke-width="6"/>
+          <path d="M196 42 h20" />
+          <path d="M198 146 v18 h16 v-18"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. horario y dónde ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-revelar u-grid u-2">
+    <div>
+      <h2 style="margin-bottom:var(--s-2);">Cuándo está abierto.</h2>
+      <table class="horario">
+        <tbody data-real>
+          <tr><th>Lunes</th><td>10:00–14:00 · 17:00–20:00</td></tr>
+          <tr><th>Martes</th><td>10:00–14:00 · 17:00–20:00</td></tr>
+          <tr><th>Miércoles</th><td>10:00–14:00 · 17:00–20:00</td></tr>
+          <tr><th>Jueves</th><td>10:00–14:00 · 17:00–20:00</td></tr>
+          <tr><th>Viernes</th><td>10:00–14:00 · 17:00–20:00</td></tr>
+          <tr><th>Sábado</th><td>10:00–14:00</td></tr>
+          <tr><th>Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <p class="sub" style="margin-top:var(--s-3);font-size:.93rem;">Para un
+      arreglo conviene llamar antes: así se sabe si hace falta dejar la pieza o
+      se resuelve en el mostrador.</p>
+    </div>
+    <div>
+      <h2 style="margin-bottom:var(--s-2);">Dónde está la puerta.</h2>
+      <dl class="u-dato" data-real>
+        <dt>Dirección</dt>
+        <dd><b>Calle de Mauricio Legendre, 7</b><br>28046 Madrid · Castilla, Chamartín</dd>
+      </dl>
+      <dl class="u-dato" style="margin-top:var(--s-3);" data-real>
+        <dt>Cómo se llega</dt>
+        <dd>Dentro de la galería comercial del número 7, la misma del portal en
+        el que están la carnicería y la copistería. A un paso de Plaza de
+        Castilla.</dd>
+      </dl>
+      <dl class="u-dato" style="margin-top:var(--s-3);" data-real>
+        <dt>Teléfono</dt>
+        <dd><a href="tel:+34913142154" style="text-decoration:none;font-weight:600;">91 314 21 54</a></dd>
+      </dl>
+      <p style="margin-top:var(--s-4);">
+        <a class="u-btn" href="https://www.google.com/maps/search/?api=1&amp;query=40.46938%2C-3.68693"
+           target="_blank" rel="noopener" data-real>Abrir en Google Maps</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Qué hay aquí de verdad y qué me he inventado yo</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      portal, el teléfono y el horario. Todo lo que lleva precio lo he puesto yo
+      a ojo: pulse el botón amarillo de arriba y se marca solo, en rojo lo
+      inventado y en verde lo que he podido comprobar.</p>
+      <ul>
+        <li><b>La tabla de arreglos es el corazón de la página</b> y las cifras
+        son mías, no suyas. Con sus precios y sus plazos reales, esta página
+        deja de ser una maqueta.</li>
+        <li><b>No sé si compran oro.</b> He dejado la sección montada y las tres
+        casillas del gramo en blanco. Si no lo hacen, se quita entera y no pasa
+        nada.</li>
+        <li><b>Las marcas</b> las he sacado de su antigua web, la de
+        novelor.es, que lleva caída desde hace años. Puede que ya no sean esas.</li>
+        <li><b>El horario</b> sale del censo callejero de OpenStreetMap, hecho a
+        pie de calle en 2021. Conviene confirmarlo.</li>
+        <li><b>Sin nota de Google y sin opiniones:</b> no he encontrado reseñas
+        suyas verificadas, y una nota sin recuento la penaliza Google. Antes de
+        inventar una, prefiero dejar el hueco.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una escrita a mano para
+      cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera, después de ver
+      que en Google su tienda aparece partida en tres fichas con tres nombres
+      distintos y ningún sitio propio al que apuntar. Si le sirve, hablamos. Si
+      no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la joyería.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la dirección, el
+      teléfono y el horario salen de fichas públicas y de su propia web
+      anterior.</p>
+      <p><b>Sin relación tampoco con ninguna de las marcas citadas</b>, que se
+      mencionan solo porque ellos mismos las nombraban en su web. En particular,
+      <b>esta página no tiene nada que ver con la firma de platería Pedro Durán
+      ni con Durán Joyeros.</b></p>
+      <p><b>Los precios, los plazos y el precio del gramo son inventados</b> y
+      están marcados. <b>No se declara ninguna nota de Google</b> y <b>no hay ni
+      una fotografía:</b> los cuatro dibujos están hechos a mano, uno a uno.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o su
+      mapa. Si el titular prefiere que esto se retire, escribe y se retira hoy
+      mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34913142154">Llamar</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=40.46938%2C-3.68693" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"JewelryStore",
+  "name":"Novelor Joyeros",
+  "description":"Joyería, platería y relojería con taller propio en la galería comercial de Mauricio Legendre 7, Castilla, Chamartín, Madrid. Arreglos, ajuste de alianzas, soldadura de cadenas, enfilado, baños de rodio, grabado y cambio de pila.",
+  "telephone":"+34913142154",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Mauricio Legendre, 7",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.46938,"longitude":-3.68693},
+  "openingHours":["Mo-Fr 10:00-14:00","Mo-Fr 17:00-20:00","Sa 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/novelor-joyeros/",
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Taller de joyería y relojería",
+    "itemListElement":[
+      {"@type":"Service","name":"Cambio de pila de reloj"},
+      {"@type":"Service","name":"Ajuste de talla de alianzas"},
+      {"@type":"Service","name":"Soldadura de cadenas de oro"},
+      {"@type":"Service","name":"Enfilado de collares y pulseras"},
+      {"@type":"Service","name":"Baño de rodio en oro blanco"},
+      {"@type":"Service","name":"Grabado a mano"},
+      {"@type":"Service","name":"Engaste de piedras"}
+    ]
+  }
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

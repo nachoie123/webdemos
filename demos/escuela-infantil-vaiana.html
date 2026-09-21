@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Escuela Infantil Vaiana · Calle del Padre Rubio 14, Tetuán, Madrid</title>
+<meta name="description" content="Propuesta de página web para la Escuela Infantil Vaiana, escuela infantil privada de 0 a 3 años en la calle del Padre Rubio 14, Almenara, Tetuán, Madrid. Plazas por aula, horario de puertas y la cuenta de fin de mes.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/escuela-infantil-vaiana/">
+<meta name="theme-color" content="#2f6b57">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fbf7f0%27/%3E%3Cpath d=%27M8 27 V15 a8 8 0 0 1 16 0 v12%27 fill=%27none%27 stroke=%27%232f6b57%27 stroke-width=%273%27/%3E%3Ccircle cx=%2716%27 cy=%2719%27 r=%273%27 fill=%27%23c4622f%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/escuela-infantil-vaiana/">
+<meta property="og:title" content="Escuela Infantil Vaiana · Calle del Padre Rubio 14, Tetuán, Madrid">
+<meta property="og:description" content="Propuesta de página web para la Escuela Infantil Vaiana, de 0 a 3 años en Padre Rubio 14, Tetuán. Plazas por aula, horario de puertas y la cuenta de fin de mes.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/escuela-infantil-vaiana/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700&family=Commissioner:wght@400;500;700&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Verde de patio y terracota sobre papel crudo. Ni arcoíris ni globos: quien
+   lee esta página es un padre cansado a las once de la noche, no un niño de
+   dos años. Paleta de adulto, cálida y mate.                               */
+:root{
+  --fondo:#fbf7f0; --fondo-2:#efe6d8; --tinta:#24201c; --tinta-2:#6b6257;
+  --acento:#2f6b57; --acento-tinta:#f4faf7; --linea:#ddd2c1;
+  --calido:#c4622f;
+  --display:'Gabarito','Trebuchet MS',sans-serif;
+  --texto:'Commissioner','Helvetica Neue',Arial,sans-serif;
+  --radio:14px;
+}
+body{font-size:17.5px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.018em;
+  line-height:1.06;}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);}
+h3{font-size:1.3rem;}
+em.ve{font-style:normal;color:var(--acento);}
+em.te{font-style:normal;color:var(--calido);}
+.u-ceja{color:var(--calido);font-weight:700;}
+.sub{color:var(--tinta-2);}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(251,247,240,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.1;}
+.marca b{display:block;font-family:var(--display);font-size:1.28rem;font-weight:700;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.2em;font-weight:700;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:700;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.1rem;border-radius:999px;
+  font-size:.9rem;white-space:nowrap;}
+@media(max-width:940px){.tel-cab{display:none}}
+@media(max-width:660px){.cab .u-nav{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(170deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:6fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:940px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.6rem);line-height:1.04;margin:.2em 0 .38em;}
+.hero p{max-width:46ch;}
+.plano{width:100%;max-width:420px;margin-inline:auto;color:var(--acento);}
+.plano text{font-family:var(--texto);font-size:10.5px;font-weight:500;
+  fill:var(--tinta-2);stroke:none;letter-spacing:.01em;}
+
+/* aulas */
+.aula{border:1px solid var(--linea);border-top:5px solid var(--acento);
+  border-radius:var(--radio);padding:var(--s-3);background:var(--fondo);}
+.aula.lleno{border-top-color:var(--tinta-2);opacity:.82;}
+.aula h3{margin-bottom:.15rem;}
+.aula .edad{display:block;font-size:.72rem;letter-spacing:.17em;font-weight:700;
+  text-transform:uppercase;color:var(--calido);margin-bottom:var(--s-2);}
+.puntos{width:100%;max-width:230px;color:var(--acento);margin:var(--s-2) 0 .4rem;}
+.aula.lleno .puntos{color:var(--tinta-2);}
+.tope{font-size:.88rem;color:var(--tinta-2);margin:0 0 var(--s-2);}
+.estado{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;padding:.34em .9em;border-radius:999px;
+  background:var(--acento);color:var(--acento-tinta);}
+.estado.no{background:var(--fondo-2);color:var(--tinta-2);}
+
+/* la cinta del día */
+.cinta{width:100%;color:var(--acento);}
+.cinta text{font-family:var(--texto);fill:var(--tinta);}
+.cinta .hh{font-size:15px;font-weight:700;fill:var(--calido);}
+.cinta .qq{font-size:14px;font-weight:500;fill:var(--tinta-2);}
+.cinta .amp{fill:var(--calido);opacity:.13;}
+
+/* la cuenta */
+.cuenta{list-style:none;margin:0;padding:0;}
+.cuenta li{display:flex;align-items:baseline;gap:var(--s-2);padding:.72rem 0;
+  border-bottom:1px solid var(--linea);}
+.cuenta .c{flex:1;font-weight:500;}
+.cuenta .c small{display:block;font-weight:400;font-size:.84rem;color:var(--tinta-2);}
+.cuenta .e{font-family:var(--display);font-size:1.25rem;font-weight:700;
+  white-space:nowrap;font-variant-numeric:tabular-nums;}
+.cuenta li.total{border-bottom:0;border-top:3px solid var(--acento);
+  margin-top:.5rem;padding-top:1rem;}
+.cuenta li.total .e{font-size:2.1rem;color:var(--acento);}
+.caja{background:var(--acento);color:var(--acento-tinta);border-radius:var(--radio);
+  padding:var(--s-4);}
+.caja h2,.caja h3{color:#fff;}
+.caja a{color:#ffd9c2;}
+
+/* pasos de adaptación */
+.u-numerada > *{border-color:var(--linea);border-radius:var(--radio);
+  background:var(--fondo);}
+.u-numerada > *::before{color:var(--calido);opacity:1;font-weight:700;}
+
+/* fiebre */
+.regla{border-left:4px solid var(--calido);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.regla > b:first-child{display:block;font-family:var(--display);font-size:1.22rem;
+  font-weight:700;margin-bottom:.2rem;}
+
+/* casillero */
+.casi{width:100%;max-width:330px;color:var(--acento);}
+.casi text{font-family:var(--texto);font-size:11px;font-weight:500;
+  fill:var(--tinta-2);stroke:none;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.5rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:500;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+.caja .horario th,.caja .horario td{border-bottom-color:#4d8a74;}
+.caja .horario td{color:#cfe6dc;}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo);border:1px solid var(--linea);
+  border-left:7px solid var(--calido);border-radius:var(--radio);padding:var(--s-4);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:700;margin-bottom:.5rem;}
+.nota ul{margin:.5rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.4rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:999px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:700;}
+.u-movil a+a{background:var(--calido);color:#fff;}
+
+.pie{background:var(--tinta);color:#a9a095;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#e2b79b;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus plazas reales, sus cuotas y su horario.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Escuela Infantil Vaiana</b><span data-real>Padre Rubio 14 · Almenara · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#aulas">Las plazas</a>
+      <a href="#dia">El día</a>
+      <a href="#cuenta">Lo que cuesta</a>
+      <a href="#visita">La visita</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34616864417" data-real>616 86 44 17</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Escuela infantil privada de 0 a 3 años · Tetuán</span>
+      <h1>Aquí pone si queda plaza.<br>Y <em class="ve">cuánto es todo junto.</em></h1>
+      <p class="sub">Las dos preguntas que nadie contesta por teléfono sin que
+      suene raro. Están las dos escritas más abajo, con el aula, la edad y la
+      cuenta sumada a fin de mes.</p>
+      <p class="sub">La puerta se abre a las 7:30 y la última salida es a las
+      18:00. Si con eso le cuadra el trabajo, sigue leyendo; si no, ya se ha
+      ahorrado la llamada.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="u-btn" href="https://wa.me/34616864417?text=Hola%2C%20quer%C3%ADa%20ver%20la%20escuela%20y%20preguntar%20si%20queda%20plaza."
+           target="_blank" rel="noopener" data-real>Pedir visita por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#aulas">Ver las plazas</a>
+      </p>
+    </div>
+
+    <!-- DIBUJO 1: la planta del centro, para saber qué se pide ver en la visita -->
+    <svg class="plano" viewBox="0 0 300 244" fill="none" stroke="currentColor"
+         stroke-width="2.4" role="img" aria-label="Plano esquemático de una escuela infantil: tres aulas, cocina, sala de descanso, entrada y patio" data-ejemplo>
+      <rect x="8" y="8" width="284" height="228" rx="6" stroke-width="3.4"/>
+      <path d="M112 8 V236 M192 8 V236"/>
+      <path d="M8 90 H112 M8 165 H112"/>
+      <path d="M112 80 H192 M112 150 H192"/>
+      <text x="18" y="30">Aula de 0 a 1</text>
+      <text x="18" y="112">Aula de 1 a 2</text>
+      <text x="18" y="187">Aula de 2 a 3</text>
+      <text x="121" y="30">Cocina</text>
+      <text x="121" y="100">Descanso</text>
+      <text x="121" y="172">Entrada</text>
+      <text x="201" y="30">Patio</text>
+      <!-- puerta de la calle -->
+      <path d="M152 236 v-26" stroke-width="2"/>
+      <path d="M152 210 a26 26 0 0 1 26 26" stroke-width="1.6" opacity=".5"/>
+      <!-- fogones de la cocina -->
+      <g stroke-width="1.8" opacity=".7">
+        <rect x="126" y="40" width="46" height="26" rx="3"/>
+        <circle cx="137" cy="53" r="4"/><circle cx="161" cy="53" r="4"/>
+      </g>
+      <!-- cunas en la sala de descanso -->
+      <g stroke-width="1.8" opacity=".7">
+        <rect x="126" y="110" width="26" height="14" rx="3"/>
+        <rect x="158" y="110" width="26" height="14" rx="3"/>
+        <rect x="126" y="130" width="26" height="14" rx="3"/>
+      </g>
+      <!-- patio: arbol y arenero -->
+      <g stroke-width="2">
+        <circle cx="242" cy="86" r="26"/>
+        <path d="M242 112 v34"/>
+        <path d="M206 186 h72 v40 h-72 z" stroke-dasharray="6 5"/>
+        <text x="213" y="211">Arenero</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle del Padre Rubio, 14</b></span>
+    <span data-real>Almenara · Tetuán · 28029 Madrid</span>
+    <span data-ejemplo>Puertas de 7:30 a 18:00</span>
+    <a href="tel:+34616864417" data-real><b>616 86 44 17</b></a>
+    <span data-real>Centro 28065577</span>
+  </div>
+</section>
+
+<!-- ===== 4. las plazas, aula por aula ===== -->
+<section class="u-seccion" id="aulas">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:20ch;margin-bottom:var(--s-2);">Tres aulas. Esto es lo que cabe en cada una.</h2>
+    <p class="u-medida sub">«Grupos reducidos» no significa nada. El número sí:
+    la Comunidad de Madrid fija cuántos niños como máximo puede haber en cada
+    aula según la edad, y son estos. Los puntos dibujados son ese tope.</p>
+    <div class="u-grid u-3" style="margin-top:var(--s-4);">
+
+      <div class="aula">
+        <h3>Bebés</h3>
+        <span class="edad">de 0 a 1 año</span>
+        <!-- DIBUJO 2a: el tope legal del aula, punto a punto -->
+        <svg class="puntos" viewBox="0 0 226 30" fill="currentColor" role="img"
+             aria-label="Ocho puntos: ocho niños como máximo" data-real>
+          <circle cx="13" cy="15" r="9"/><circle cx="40" cy="15" r="9"/>
+          <circle cx="67" cy="15" r="9"/><circle cx="94" cy="15" r="9"/>
+          <circle cx="121" cy="15" r="9"/><circle cx="148" cy="15" r="9"/>
+          <circle cx="175" cy="15" r="9"/><circle cx="202" cy="15" r="9"/>
+        </svg>
+        <p class="tope" data-real><b>8 niños</b> como máximo por aula.</p>
+        <span class="estado" data-ejemplo>Queda 1 plaza</span>
+      </div>
+
+      <div class="aula">
+        <h3>Medianos</h3>
+        <span class="edad">de 1 a 2 años</span>
+        <!-- DIBUJO 2b -->
+        <svg class="puntos" viewBox="0 0 226 58" fill="currentColor" role="img"
+             aria-label="Catorce puntos: catorce niños como máximo" data-real>
+          <g><circle cx="13" cy="14" r="9"/><circle cx="44" cy="14" r="9"/>
+          <circle cx="75" cy="14" r="9"/><circle cx="106" cy="14" r="9"/>
+          <circle cx="137" cy="14" r="9"/><circle cx="168" cy="14" r="9"/>
+          <circle cx="199" cy="14" r="9"/></g>
+          <g><circle cx="13" cy="44" r="9"/><circle cx="44" cy="44" r="9"/>
+          <circle cx="75" cy="44" r="9"/><circle cx="106" cy="44" r="9"/>
+          <circle cx="137" cy="44" r="9"/><circle cx="168" cy="44" r="9"/>
+          <circle cx="199" cy="44" r="9"/></g>
+        </svg>
+        <p class="tope" data-real><b>14 niños</b> como máximo por aula.</p>
+        <span class="estado" data-ejemplo>Quedan 3 plazas</span>
+      </div>
+
+      <div class="aula lleno">
+        <h3>Mayores</h3>
+        <span class="edad">de 2 a 3 años</span>
+        <!-- DIBUJO 2c -->
+        <svg class="puntos" viewBox="0 0 231 54" fill="currentColor" role="img"
+             aria-label="Veinte puntos: veinte niños como máximo" data-real>
+          <g><circle cx="12" cy="13" r="8"/><circle cx="35" cy="13" r="8"/>
+          <circle cx="58" cy="13" r="8"/><circle cx="81" cy="13" r="8"/>
+          <circle cx="104" cy="13" r="8"/><circle cx="127" cy="13" r="8"/>
+          <circle cx="150" cy="13" r="8"/><circle cx="173" cy="13" r="8"/>
+          <circle cx="196" cy="13" r="8"/><circle cx="219" cy="13" r="8"/></g>
+          <g><circle cx="12" cy="39" r="8"/><circle cx="35" cy="39" r="8"/>
+          <circle cx="58" cy="39" r="8"/><circle cx="81" cy="39" r="8"/>
+          <circle cx="104" cy="39" r="8"/><circle cx="127" cy="39" r="8"/>
+          <circle cx="150" cy="39" r="8"/><circle cx="173" cy="39" r="8"/>
+          <circle cx="196" cy="39" r="8"/><circle cx="219" cy="39" r="8"/></g>
+        </svg>
+        <p class="tope" data-real><b>20 niños</b> como máximo por aula.</p>
+        <span class="estado no" data-ejemplo>Completa. Hay lista</span>
+      </div>
+
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.93rem;" class="sub">
+      Los topes son los de la normativa de la Comunidad de Madrid para el primer
+      ciclo. Cuántos hay hoy en cada aula se dice por teléfono el mismo día, y
+      se puede contar durante la visita.</p>
+  </div>
+</section>
+
+<!-- ===== 5. el día, hora a hora ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="dia">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;">El día entero, de puerta a puerta.</h2>
+    <p class="u-medida sub" style="margin-top:var(--s-2);">Lo naranja de los
+    extremos es el horario ampliado: el tramo que decide si llega a la oficina y
+    si le da tiempo a recogerlo.</p>
+
+    <!-- DIBUJO 3: la cinta horaria del centro, con los dos tramos ampliados -->
+    <svg class="cinta" viewBox="0 0 900 150" fill="none" role="img"
+         aria-label="Línea del día de 7:30 a 18:00 con las horas de entrada, patio, comida, siesta, merienda y salida"
+         style="margin-top:var(--s-4);" data-ejemplo>
+      <rect class="amp" x="40" y="58" width="117" height="26" stroke="none"/>
+      <rect class="amp" x="782" y="58" width="78" height="26" stroke="none"/>
+      <path d="M40 71 H860" stroke="currentColor" stroke-width="3"/>
+      <g stroke="currentColor" stroke-width="3">
+        <path d="M40 58 v26"/><path d="M157 58 v26"/><path d="M313 58 v26"/>
+        <path d="M391 58 v26"/><path d="M469 58 v26"/><path d="M626 58 v26"/>
+        <path d="M782 58 v26"/><path d="M860 58 v26"/>
+      </g>
+      <g class="hh" text-anchor="middle">
+        <text x="40" y="42">7:30</text><text x="157" y="42">9:00</text>
+        <text x="313" y="42">11:00</text><text x="391" y="42">12:00</text>
+        <text x="469" y="42">13:00</text><text x="626" y="42">15:00</text>
+        <text x="782" y="42">17:00</text><text x="860" y="42">18:00</text>
+      </g>
+      <g class="qq" text-anchor="middle">
+        <text x="40" y="108">Se abre</text><text x="157" y="108">Entrada</text>
+        <text x="313" y="108">Patio</text><text x="391" y="108">Comida</text>
+        <text x="469" y="108">Siesta</text><text x="626" y="108">Merienda</text>
+        <text x="782" y="108">Salida</text><text x="860" y="108">Cierre</text>
+      </g>
+      <g class="qq" text-anchor="middle" opacity=".8">
+        <text x="98" y="136">ampliado</text>
+        <text x="821" y="136">ampliado</text>
+      </g>
+    </svg>
+
+    <div class="u-grid u-2" style="margin-top:var(--s-5);">
+      <div class="regla" data-ejemplo>
+        <b>Si llega tarde a recogerlo</b>
+        <p class="sub">Se avisa por WhatsApp y el niño espera con la educadora
+        que cierra. Pasa, y no hace falta pedir perdón cada vez.</p>
+      </div>
+      <div class="regla" data-ejemplo>
+        <b>Si un día no viene</b>
+        <p class="sub">Un mensaje antes de las 9:30 y se descuenta la comida de
+        ese día. Sin justificante y sin llamada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. la cuenta de fin de mes ===== -->
+<section class="u-seccion" id="cuenta">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>La cuenta,<br>sumada<br>delante.</h2>
+      <p class="sub" style="margin-top:var(--s-3);">Nadie publica el total. Se
+      publica la cuota, y luego aparecen el comedor, la matrícula, el material y
+      la ropa de cama. El padre que compara cinco escuelas no puede comparar
+      nada.</p>
+      <p class="sub">Aquí van los conceptos uno a uno y el total abajo. Si
+      sobran líneas, se quitan; si falta alguna, se añade.</p>
+      <p class="sub" style="font-size:.93rem;">Muchas familias lo pagan con el
+      cheque guardería de su empresa, y las madres trabajadoras con hijos
+      menores de tres años pueden aplicar la deducción estatal por gastos de
+      custodia. Conviene confirmarlo con su asesoría.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="cuenta">
+        <li><span class="c">Matrícula<small>Una vez al empezar, en septiembre</small></span><span class="e">180 €</span></li>
+        <li><span class="c">Cuota mensual<small>De 9:00 a 17:00, aula de 1 a 2 años</small></span><span class="e">395 €</span></li>
+        <li><span class="c">Comedor<small>Cocina propia, menú del día</small></span><span class="e">95 €</span></li>
+        <li><span class="c">Horario ampliado<small>De 7:30 a 9:00 y de 17:00 a 18:00</small></span><span class="e">55 €</span></li>
+        <li><span class="c">Material y ropa de cama<small>Un pago al trimestre</small></span><span class="e">40 €</span></li>
+        <li class="total"><span class="c">Un mes corriente<small>Sin la matrícula y sin el trimestral</small></span><span class="e">545 €</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. la adaptación ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="adaptacion">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">Los primeros días son así.</h2>
+    <p class="u-medida sub">Es la parte que más se pregunta y la que menos se
+    escribe. Ni se cobra aparte ni se acorta si el niño lo lleva mal.</p>
+    <div class="u-grid u-3 u-numerada" style="margin-top:var(--s-4);" data-ejemplo>
+      <div>
+        <h3>Dos días de una hora</h3>
+        <p class="sub">Entra con usted dentro del aula. Conoce el sitio, no se
+        queda solo y se va antes de que se canse.</p>
+      </div>
+      <div>
+        <h3>Tres días de media mañana</h3>
+        <p class="sub">Se queda sin usted hasta el patio. Si llora más de veinte
+        minutos, se le llama y se recoge. Sin discusión.</p>
+      </div>
+      <div>
+        <h3>La semana siguiente, entera</h3>
+        <p class="sub">Primera comida y primera siesta aquí. A partir de ahí, el
+        horario que tenga contratado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. cuando se pone malo + qué se trae ===== -->
+<section class="u-seccion" id="fiebre">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div data-ejemplo>
+      <h2 style="max-width:18ch;margin-bottom:var(--s-3);">Cuando se pone malo a las once.</h2>
+      <div class="regla">
+        <b>38 grados: se llama</b>
+        <p class="sub">Se avisa al primer teléfono de la ficha y, si no
+        contesta, al segundo. No se espera a ver si baja.</p>
+      </div>
+      <div class="regla">
+        <b>Hora y media para venir</b>
+        <p class="sub">Mientras tanto el niño está en la sala de descanso, con
+        alguien al lado. Se dice la temperatura exacta y a qué hora se tomó.</p>
+      </div>
+      <div class="regla">
+        <b>Medicación, solo con receta</b>
+        <p class="sub">Con el envase, el nombre del niño y la pauta escrita. Sin
+        receta no se da nada, aunque sea un antitérmico de los de siempre.</p>
+      </div>
+      <div class="regla">
+        <b>Volver: 24 horas sin fiebre</b>
+        <p class="sub">Es lo que protege al resto del aula, y también al suyo la
+        próxima vez.</p>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--calido);font-family:var(--texto);font-weight:700;
+                 margin-bottom:var(--s-3);">Lo que se deja en su percha</h3>
+      <!-- DIBUJO 4: el casillero de la entrada con la bolsa de cambio -->
+      <svg class="casi" viewBox="0 0 330 200" fill="none" stroke="currentColor"
+           stroke-width="2.6" role="img"
+           aria-label="Casillero de entrada con tres huecos, perchas, una mochila y una bolsa de ropa de cambio" data-ejemplo>
+        <rect x="10" y="44" width="310" height="146" rx="5" stroke-width="3.4"/>
+        <path d="M113 44 V190 M217 44 V190"/>
+        <path d="M10 130 H320" opacity=".55"/>
+        <!-- perchas -->
+        <g stroke-width="2.2">
+          <path d="M46 44 v-14 a16 16 0 0 1 32 0 v14"/>
+          <path d="M150 44 v-14 a16 16 0 0 1 32 0 v14"/>
+          <path d="M254 44 v-14 a16 16 0 0 1 32 0 v14"/>
+        </g>
+        <!-- mochila en el primer hueco -->
+        <g stroke-width="2.2">
+          <rect x="34" y="62" width="56" height="58" rx="10"/>
+          <path d="M48 62 v-10 a14 14 0 0 1 28 0 v10"/>
+          <path d="M34 92 h56"/>
+        </g>
+        <!-- bolsa de ropa de cambio -->
+        <g stroke-width="2.2">
+          <path d="M140 68 h52 l8 52 h-68 z"/>
+          <path d="M154 68 a12 12 0 0 1 24 0"/>
+        </g>
+        <!-- babero -->
+        <g stroke-width="2.2">
+          <path d="M248 70 a18 18 0 0 0 36 0 c14 6 18 20 18 30 a24 24 0 0 1 -72 0 c0 -10 4 -24 18 -30 z"/>
+        </g>
+        <!-- etiquetas con el nombre -->
+        <g stroke-width="2" opacity=".75">
+          <rect x="30" y="142" width="64" height="20" rx="4"/>
+          <rect x="134" y="142" width="64" height="20" rx="4"/>
+          <rect x="238" y="142" width="64" height="20" rx="4"/>
+          <path d="M40 152 h30" stroke-width="1.6"/>
+          <path d="M144 152 h30" stroke-width="1.6"/>
+          <path d="M248 152 h30" stroke-width="1.6"/>
+        </g>
+        <text x="30" y="182">Mochila</text>
+        <text x="134" y="182">Muda</text>
+        <text x="238" y="182">Babero</text>
+      </svg>
+      <p class="sub" style="margin-top:var(--s-3);font-size:.95rem;" data-ejemplo>
+        Todo marcado con el nombre, hasta el chupete. Lo que se moja se va a
+        casa el mismo día en la bolsa, y al siguiente vuelve seco.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. pedir la visita ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="visita">
+  <div class="u-wrap u-revelar">
+    <div class="caja u-grid u-partida" style="gap:var(--s-4);">
+      <div>
+        <span class="u-ceja" style="color:#ffc6a6;">La página no decide nada</span>
+        <h2 style="max-width:18ch;">Venga a verlo con el niño.</h2>
+        <p style="max-width:44ch;color:#d9ece4;" data-ejemplo>Dura unos veinte
+        minutos, se entra en las aulas y no hay que decidir nada ese día. Mejor a
+        media mañana, que es cuando el centro está en marcha y se ve de verdad
+        cómo suena.</p>
+        <p style="margin-top:var(--s-3);display:flex;gap:.7rem;flex-wrap:wrap;">
+          <a class="u-btn" style="background:#fff;color:var(--acento);border-color:#fff;"
+             href="https://wa.me/34616864417?text=Hola%2C%20quer%C3%ADa%20ver%20la%20escuela%20y%20preguntar%20si%20queda%20plaza."
+             target="_blank" rel="noopener" data-real>WhatsApp</a>
+          <a class="u-btn u-btn--linea" href="tel:+34913149804" data-real>91 314 98 04</a>
+          <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Escuela%20Infantil%20Vaiana%2C%20Calle%20del%20Padre%20Rubio%2014%2C%2028029%20Madrid"
+             data-real>Cómo llegar</a>
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                   color:#ffc6a6;font-family:var(--texto);font-weight:700;">Puertas</h3>
+        <table class="horario" data-ejemplo>
+          <tr><th>Lunes</th><td>7:30 – 18:00</td></tr>
+          <tr><th>Martes</th><td>7:30 – 18:00</td></tr>
+          <tr><th>Miércoles</th><td>7:30 – 18:00</td></tr>
+          <tr><th>Jueves</th><td>7:30 – 18:00</td></tr>
+          <tr><th>Viernes</th><td>7:30 – 18:00</td></tr>
+          <tr><th>Sábado</th><td>Cerrado</td></tr>
+          <tr><th>Domingo</th><td>Cerrado</td></tr>
+        </table>
+        <p style="margin-top:var(--s-3);font-size:.93rem;color:#d9ece4;" data-ejemplo>
+          Abierto todo el año, también en julio y agosto.</p>
+      </div>
+    </div>
+
+    <div class="u-grid u-desigual" style="margin-top:var(--s-5);">
+      <div>
+        <h3 style="margin-bottom:var(--s-2);" data-real>El nombre viejo todavía manda en Google</h3>
+        <p class="sub" data-real>En la ficha del Ayuntamiento de Madrid y en los
+        buscadores de escuelas, este centro sigue apareciendo con el nombre
+        anterior y con una dirección de internet que ya no carga: el dominio
+        está a la venta. Quien busca la escuela por su nombre de ahora encuentra
+        directorios, no a ustedes.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:var(--s-2);" data-real>Centro autorizado 28065577</h3>
+        <p class="sub" data-real>Es el código de la Comunidad de Madrid, y
+        cualquiera puede comprobarlo. Escribirlo cuesta una línea y separa una
+        escuela autorizada de todo lo demás. El local está en la planta calle y
+        es accesible para sillas y carritos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Qué es cierto aquí y qué me he inventado</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle con su
+      número, los dos teléfonos y el código de centro. Todo lo demás lo he
+      rellenado yo para que se vea la forma: pulse el botón amarillo de arriba y
+      se marca solo con línea discontinua.</p>
+      <ul>
+        <li><b>Las plazas y las cuotas están inventadas</b>, y son justo lo que
+        hace útil la página. Con sus números reales dentro, esta web contesta
+        sola las dos llamadas que más se repiten.</li>
+        <li><b>El horario y el plano no son suyos:</b> el horario lo he copiado
+        de los directorios y el plano es un esquema mío. Los dos hay que
+        cambiarlos.</li>
+        <li><b>Los topes de niños por aula sí son reales</b> —8, 14 y 20— y
+        salen de la normativa de primer ciclo de la Comunidad de Madrid.</li>
+        <li><b>No hay ninguna promesa sobre el niño</b>, ninguna titulación
+        afirmada y ningún nombre de educadora: eso lo escriben ustedes o no se
+        escribe.</li>
+        <li><b>Sin nota de Google y sin fotos.</b> Una nota sin recuento la
+        penaliza Google, y de un centro infantil no publico imágenes: los cuatro
+        dibujos están hechos a mano.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera, porque al
+      buscar la escuela me salió un dominio en venta. Si les sirve, hablamos. Si
+      no, la borro y no vuelven a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la escuela.</b> Es una propuesta sin
+      relación con el centro ni con sus titulares, y tampoco con ninguna otra
+      escuela de nombre parecido. El nombre, la dirección, los teléfonos y el
+      código de centro salen de fichas públicas.</p>
+      <p><b>No se afirma ninguna titulación ni habilitación</b> de nadie, <b>no
+      se hace ninguna promesa sobre ningún niño</b> y <b>no aparece ninguna
+      fotografía</b>, ni de menores ni de banco de imágenes: los cuatro dibujos
+      están hechos a mano. Las plazas, las cuotas y el horario son inventados y
+      están marcados.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular prefiere que esto se retire, escribe y se retira
+      hoy mismo.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34616864417?text=Hola%2C%20quer%C3%ADa%20ver%20la%20escuela%20y%20preguntar%20si%20queda%20plaza." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Escuela%20Infantil%20Vaiana%2C%20Calle%20del%20Padre%20Rubio%2014%2C%2028029%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ChildCare",
+  "name":"Escuela Infantil Vaiana",
+  "description":"Escuela infantil privada de primer ciclo, de 0 a 3 años, en la calle del Padre Rubio 14, Almenara, Tetuán, Madrid.",
+  "telephone":"+34616864417",
+  "identifier":"28065577",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle del Padre Rubio, 14",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28029",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4704066,"longitude":-3.6920236},
+  "openingHours":["Mo-Fr 07:30-18:00"],
+  "isAccessibleForFree":false,
+  "url":"https://nachoie123.github.io/webdemos/escuela-infantil-vaiana/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver lo inventado' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

@@ -36,7 +36,26 @@ TANDA_1 = [
     "kmaspues", "pasteleria-acueducto", "podologia-milagros-chana-lopez",
 ]
 
-COLOR = {1: "#6d4b76", 2: "#4a7a12"}   # ciruela · lima oscurecida para que lea
+# La tanda 2 son las 21 que estaban el 21/09/2026 por la manana. Se congela
+# aqui a proposito: si se dejara como «todo lo que no es tanda 1», cada demo
+# nueva caeria dentro de ella y la tanda 3 saldria siempre vacia.
+TANDA_2 = [
+    "asesoria-madrid-centro", "barberia-cholo-y-peluqueria-de-caballero",
+    "bm1997-sl-copisteria", "cafeteria-el-espinar", "carniceria-nicar",
+    "cesar-reparaciones", "clinica-dental-castellana", "colora-estetica",
+    "fitness-feda-madrid", "flores-yohana-alonso-s-l",
+    "kushala-centro-de-yoga-y-bienestar", "pablo-albalate",
+    "persianas-redondo", "reparaciones-el-experto", "shyba-peluqueria-canina",
+    "sigma", "slay", "superfruta-valencia", "talleres-j-l",
+    "tintoreria-alvarez", "veterinario-madvetel",
+]
+
+# ciruela · lima oscurecida · naranja. El naranja es la tanda del 21/09/2026 de
+# noche, y esa lleva una regla que las otras dos no tenian: **solo entra el
+# negocio al que se le puede ESCRIBIR**, o sea movil con WhatsApp o correo
+# publicado. A un fijo no se le manda un mensaje, y Nacho pidio esta tanda
+# entera para escribir, no para llamar.
+COLOR = {1: "#6d4b76", 2: "#4a7a12", 3: "#c2410c"}
 
 
 def leer(nombre):
@@ -44,8 +63,14 @@ def leer(nombre):
     return f.read_text("utf-8").strip() if f.exists() else None
 
 
-def fila(p, textos):
-    """Una linea de la lista. Devuelve (html, tiene_via)."""
+def fila(p, textos, solo_escribir=False):
+    """Una linea de la lista. Devuelve (html, tiene_via).
+
+    `solo_escribir` es para la tanda 3: ahi entra unicamente el negocio al que
+    se le puede mandar un mensaje, asi que ofrecer «Llamar» sobraria. Es la
+    diferencia entre una lista para trabajar de noche y una para trabajar a
+    las once de la manana, que son dos tardes distintas.
+    """
     slug, nom = p["slug"], p["nombre"]
     wa, correo = leer(f"wa-{slug}.txt"), leer(f"email-{slug}.txt")
     texto = leer(f"texto-{slug}.txt")
@@ -57,7 +82,7 @@ def fila(p, textos):
         vias.append(f'<a class="wa" href="{html.escape(wa, quote=True)}">WhatsApp</a>'
                     f'<span class="tel">{n.group(1) if n else tel}</span>')
         via = True
-    elif tel:
+    elif tel and not solo_escribir:
         # Fijo: no hay WhatsApp que abrir. Se llama, y el mensaje se copia
         # para leerlo por telefono o mandarlo por correo.
         vias.append(f'<a class="tel-a" href="tel:+34{tel}">Llamar {tel}</a>')
@@ -88,15 +113,18 @@ def main():
     huerfanas = sorted(publicadas - {p["slug"] for p in con_demo})
 
     tandas = {1: [p for p in con_demo if p["slug"] in TANDA_1],
-              2: [p for p in con_demo if p["slug"] not in TANDA_1]}
+              2: [p for p in con_demo if p["slug"] in TANDA_2],
+              3: [p for p in con_demo
+                  if p["slug"] not in TANDA_1 and p["slug"] not in TANDA_2]}
 
     textos, bloques, sin_via = {}, [], []
-    for n, titulo in ((1, "Las de antes"), (2, "Tanda nueva")):
+    for n, titulo in ((1, "Las de antes"), (2, "Segunda tanda"),
+                      (3, "Tanda del 21/09 · solo para escribir")):
         if not tandas[n]:
             continue
         filas = []
         for p in tandas[n]:
-            f, via = fila(p, textos)
+            f, via = fila(p, textos, solo_escribir=(n == 3))
             filas.append(f)
             if not via:
                 sin_via.append(p["slug"])
@@ -125,6 +153,8 @@ li{{margin:.9rem 0;padding-bottom:.9rem;border-bottom:1px solid #eee}}
 .env{{color:#1f7a4c;font-size:.8rem}}
 h2.t1,ul.t1 .vias a{{color:{COLOR[1]}}}
 h2.t2,ul.t2 .vias a{{color:{COLOR[2]}}}
+h2.t3,ul.t3 .vias a{{color:{COLOR[3]}}}
+ul.t3 .vias a{{font-weight:600}}
 .aviso{{color:#666;font-size:.92rem}}
 .pie{{color:#999;font-size:.82rem;margin-top:2.5rem}}
 textarea{{position:fixed;left:-9999px;top:0}}
@@ -134,7 +164,9 @@ textarea{{position:fixed;left:-9999px;top:0}}
 Con fijo no hay WhatsApp: se llama, y «copiar mensaje» te deja el texto en el
 portapapeles. <b>Tú le das a enviar.</b> Los colores separan las de antes
 (<span style="color:{COLOR[1]}">ciruela</span>) de la tanda nueva
-(<span style="color:{COLOR[2]}">lima</span>).</p>
+(<span style="color:{COLOR[2]}">lima</span>) y la del 21/09 por la noche
+(<span style="color:{COLOR[3]}">naranja</span>), que son las diez elegidas
+porque a todas se les puede <b>escribir</b>: WhatsApp o correo, sin llamar.</p>
 {''.join(bloques)}
 <p class="pie">Generado por <code>sistema/enviar.py</code> desde
 <code>prospectos.json</code>. Cuando mandes una, pon <code>"enviado"</code> en
