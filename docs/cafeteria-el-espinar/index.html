@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cafetería El Espinar · Castellana 127, Cuzco, Madrid</title>
+<meta name="description" content="Propuesta de página web para Cafetería El Espinar, en el Paseo de la Castellana 127, Cuzco, Tetuán, Madrid. Desayunos de reunión y comidas por encargo para oficinas.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/cafeteria-el-espinar/">
+<meta name="theme-color" content="#2b1f18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f5f0e6%27/%3E%3Cpath d=%27M7 13 h15 v7 a7 7 0 0 1 -7 7 h-1 a7 7 0 0 1 -7 -7 z%27 fill=%27none%27 stroke=%27%232b1f18%27 stroke-width=%272.6%27/%3E%3Cpath d=%27M22 15 a4 4 0 0 1 0 8%27 fill=%27none%27 stroke=%27%232b1f18%27 stroke-width=%272.6%27/%3E%3Cpath d=%27M12 9 v-4 M17 9 v-4%27 stroke=%27%23b0442c%27 stroke-width=%272.6%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/cafeteria-el-espinar/">
+<meta property="og:title" content="Cafetería El Espinar · Castellana 127, Cuzco, Madrid">
+<meta property="og:description" content="Propuesta de página web para Cafetería El Espinar, en el Paseo de la Castellana 127, Cuzco, Tetuán, Madrid. Desayunos de reunión y comidas por encargo para oficinas.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/cafeteria-el-espinar/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Sarabun:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   Crema de mantel y marrón de café, con un teja tostado. El bar de al lado
+   (SIGMA, en el 123) es negro y amarillo y va del día entero; éste cierra los
+   fines de semana y vive del encargo, así que es cálido y tranquilo.      */
+:root{
+  --fondo:#f5f0e6; --fondo-2:#e7dfd0; --tinta:#2b1f18; --tinta-2:#6b5c50;
+  --acento:#b0442c; --acento-tinta:#fdf1ec; --linea:#d6cbb8;
+  --display:'EB Garamond', Georgia, serif;
+  --texto:'Sarabun', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.005em;
+  line-height:1.12;}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+h3{font-size:1.4rem;}
+em.te{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+.cab{position:sticky;top:0;z-index:40;background:rgba(245,240,230,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--tinta);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:600;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.1;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.band{width:100%;max-width:260px;margin-inline:auto;color:var(--tinta);}
+.band .va{color:var(--acento);}
+
+/* el encargo: avisos por hora */
+.enc{width:100%;border-collapse:collapse;margin-top:var(--s-3);}
+.enc th{text-align:left;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta-2);font-weight:600;padding:0 .8rem .5rem;
+  border-bottom:2px solid var(--tinta);}
+.enc td{padding:.85rem .8rem;border-bottom:1px solid var(--linea);vertical-align:top;
+  font-size:.96rem;}
+.enc td:first-child{font-family:var(--display);font-size:1.4rem;font-weight:600;
+  width:12rem;}
+.enc td:last-child{white-space:nowrap;text-align:right;font-weight:600;
+  color:var(--acento);width:11rem;}
+@media(max-width:760px){
+  .enc thead{display:none;}
+  .enc td{display:block;border-bottom:0;padding:.3rem .8rem;text-align:left!important;}
+  .enc tr{display:block;border-bottom:1px solid var(--linea);padding-block:.6rem;}
+  .enc td:first-child,.enc td:last-child{width:auto;}
+}
+
+/* menú */
+.menu{background:var(--tinta);color:#e0d7cd;padding:var(--s-4);}
+.menu h2{color:#fff;}
+.menu .eu{font-family:var(--display);font-size:clamp(2.6rem,8vw,4.6rem);
+  font-weight:600;color:var(--acento);line-height:.95;display:block;}
+.menu ul{list-style:none;margin:var(--s-3) 0 0;padding:0;}
+.menu li{padding:.55rem 0;border-bottom:1px solid #46362c;}
+.menu li b{color:#fff;}
+
+/* celebraciones */
+.cel{border-top:2px solid var(--acento);padding-top:var(--s-2);}
+.cel > b:first-child{display:block;font-family:var(--display);font-size:1.35rem;
+  font-weight:600;margin-bottom:.25rem;}
+
+/* por qué cerramos */
+.fin{background:var(--fondo-2);border-left:6px solid var(--acento);padding:var(--s-4);}
+.fin h2{margin-bottom:var(--s-2);}
+
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+.nota{background:var(--fondo-2);border-left:6px solid var(--tinta);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:600;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#9a8b7f;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#f0a189;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan su carta, sus precios y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>El Espinar</b><span data-real>Cafetería · Castellana 127 · Cuzco</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#encargo">Para la oficina</a>
+      <a href="#menu">El menú</a>
+      <a href="#celebra">Celebraciones</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34910240819" data-real>910 24 08 19</a>
+  </div>
+</header>
+
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Cafetería · Paseo de la Castellana 127 · junto al metro de Cuzco</span>
+      <h1>La reunión es a las nueve.<br><em class="te">El desayuno puede estar arriba a las nueve menos cuarto.</em></h1>
+      <p>Abrimos a las siete, antes que nadie en la manzana. Una llamada el día
+      antes y la bandeja sube a la planta: café, zumo y tostadas para los que
+      sean.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="tel:+34910240819" data-real>Encargar · 910 24 08 19</a>
+        <a class="u-btn u-btn--linea" href="#encargo">Ver qué se encarga</a>
+      </p>
+    </div>
+    <svg class="band" viewBox="0 0 240 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <path d="M26 140 h188 v14 a10 10 0 0 1 -10 10 H36 a10 10 0 0 1 -10 -10 z"/>
+      <path d="M14 140 h212" stroke-width="7"/>
+      <g class="va" stroke="currentColor" stroke-width="4">
+        <path d="M70 40 c0 -10 8 -10 8 -20"/>
+        <path d="M88 40 c0 -10 8 -10 8 -20"/>
+      </g>
+      <path d="M56 62 h56 v30 a18 18 0 0 1 -18 18 h-20 a18 18 0 0 1 -18 -18 z"/>
+      <path d="M112 70 a15 15 0 0 1 0 26"/>
+      <ellipse cx="84" cy="124" rx="40" ry="8"/>
+      <path d="M140 92 h56 v22 a10 10 0 0 1 -10 10 h-36 a10 10 0 0 1 -10 -10 z"/>
+      <path d="M140 92 c6 -12 50 -12 56 0" stroke-width="4"/>
+      <path d="M152 108 h32" stroke-width="3" opacity=".5"/>
+    </svg>
+  </div>
+</section>
+
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana, 127</b></span>
+    <span data-real>Castillejos · Tetuán · 28046 Madrid</span>
+    <span data-real>Lunes a jueves 7:00–21:00</span>
+    <a href="tel:+34910240819" data-real><b>910 24 08 19</b></a>
+  </div>
+</section>
+
+<section class="u-seccion" id="encargo">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que de verdad hace falta en una torre de oficinas</span>
+    <h2 style="max-width:24ch;margin:.2em 0 var(--s-2);">Con cuánto hay que avisar.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Nadie encarga nada si no
+    sabe si llega a tiempo. Aquí está, con la antelación al lado de cada cosa.</p>
+    <table class="enc" data-ejemplo>
+      <thead><tr><th>Qué</th><th>Qué lleva</th><th>Avisando con</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Bandeja de desayuno</td>
+          <td>Café en termo, zumo y tostadas o bollería. Vasos, servilletas y
+          azúcar incluidos. Se sube a la planta.</td>
+          <td>El día antes</td>
+        </tr>
+        <tr>
+          <td>Café para una reunión larga</td>
+          <td>Termo de dos litros, agua y algo de picar. Se recoge el termo
+          después.</td>
+          <td>2 horas antes</td>
+        </tr>
+        <tr>
+          <td>Comida para llevar arriba</td>
+          <td>El menú del día en fiambrera, a la hora que digan. Cuchara,
+          tenedor y pan.</td>
+          <td>Antes de las 11:00</td>
+        </tr>
+        <tr>
+          <td>Mesa para el equipo</td>
+          <td>De seis a veinte, abajo. Se aparta la zona del fondo y se sirve
+          el menú.</td>
+          <td>Por la mañana</td>
+        </tr>
+        <tr>
+          <td>Celebración</td>
+          <td>Jubilación, cumpleaños o despedida. Bandejas frías, tarta y
+          bebida.</td>
+          <td>Dos o tres días</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="menu">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div class="menu" data-ejemplo>
+      <span class="eu">12,50 €</span>
+      <h2 style="font-size:1.5rem;margin-top:.4rem;">Menú del día</h2>
+      <ul>
+        <li><b>Primero y segundo</b> · cinco a elegir de cada</li>
+        <li><b>Pan, bebida y postre o café</b> · incluidos</li>
+        <li><b>Para llevar arriba</b> · el mismo precio, en fiambrera</li>
+        <li><b>Se sirve</b> · de 13:00 a 16:00</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Y el desayuno,<br>desde las siete.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Abrimos antes que
+      nadie en la manzana. A las siete ya hay café hecho y la plancha
+      encendida, que es cuando entran los primeros.</p>
+      <p style="color:var(--tinta-2);" data-ejemplo>Tostada con tomate, con
+      aceite, con jamón o pincho de tortilla. Y si siempre toma lo mismo, no
+      hace falta que lo pida: ya se sabe.</p>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion" id="celebra">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>Las tartas<br>de despedida.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Cuando alguien se
+      jubila o se va de la empresa, siempre acaba habiendo una tarta y nadie
+      sabe dónde encargarla con dos días. Aquí sí.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="cel">
+        <b>Jubilaciones y despedidas</b>
+        <p>Bandejas frías, tarta con lo que quieran escrito encima y bebida.
+        Abajo o subido a la planta.</p>
+      </div>
+      <div class="cel" style="margin-top:var(--s-3);">
+        <b>Cumpleaños de oficina</b>
+        <p>Algo pequeño para diez o doce, a media mañana, sin montar nada.</p>
+      </div>
+      <div class="cel" style="margin-top:var(--s-3);">
+        <b>Una comida de equipo</b>
+        <p>Con el menú de siempre o con un cerrado para todos. Se habla el día
+        antes y se deja cerrado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion u-sangrado" id="finde">
+  <div class="u-wrap u-revelar">
+    <div class="fin">
+      <span class="u-ceja">Conviene decirlo claro</span>
+      <h2 style="max-width:24ch;">Los fines de semana cerramos.</h2>
+      <p style="max-width:52ch;" data-real>De lunes a jueves de siete de la
+      mañana a nueve de la noche, y los viernes hasta las siete. Sábado y
+      domingo, cerrado.</p>
+      <p style="max-width:52ch;margin-bottom:0;">No es por falta de ganas: es
+      que aquí el cliente son las oficinas de al lado, y el sábado las torres
+      están vacías. Más vale decirlo que hacer que alguien se plante en la
+      puerta un domingo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 data-real>Castellana, 127.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Castillejos · Tetuán · 28046 Madrid. A menos de cien metros de la boca
+        de metro de Cuzco.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34910240819" data-real>910 24 08 19</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Cafeter%C3%ADa%20El%20Espinar%2C%20Paseo%20de%20la%20Castellana%20127%2C%20Madrid"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-real>
+        <tr><th>Lunes</th><td>7:00 – 21:00</td></tr>
+        <tr><th>Martes</th><td>7:00 – 21:00</td></tr>
+        <tr><th>Miércoles</th><td>7:00 – 21:00</td></tr>
+        <tr><th>Jueves</th><td>7:00 – 21:00</td></tr>
+        <tr><th>Viernes</th><td>7:30 – 19:00</td></tr>
+        <tr><th>Sábado</th><td>Cerrado</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      número, el teléfono y el horario. La carta, los precios y las antelaciones
+      están inventados: pulse el botón amarillo de arriba y se marcan solos.</p>
+      <ul>
+        <li><b>La tabla de antelaciones es el corazón de la página</b> y hay que
+        ponerla con sus tiempos. Nadie encarga nada si no sabe si llega.</li>
+        <li><b>Una pregunta que me interesa de verdad:</b> ¿el nombre viene del
+        pueblo de Segovia? Si alguien de la casa es de allí, ésa es la mejor
+        historia que tiene y no la está contando nadie. No la he puesto porque
+        no me consta.</li>
+        <li><b>Falta lo suyo:</b> su carta, sus precios y fotos — la barra a las
+        siete, una bandeja montada y el comedor.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado un recuento fiable.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién les escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      mismo en Cuzco. Hago páginas para negocios del barrio: una página escrita
+      a mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si les sirve,
+      hablamos. Si no, la borro y no vuelven a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la cafetería.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la dirección, el
+      teléfono y el horario salen de fichas públicas. La carta, los precios y
+      las antelaciones están inventados y marcados.</p>
+      <p><b>No se afirma nada sobre el origen del nombre</b> ni sobre quiénes
+      son los dueños. <b>No se declara ninguna nota de Google</b> y <b>no hay
+      ninguna fotografía:</b> el dibujo está hecho a mano para esta
+      propuesta.</p>
+      <p>No se recoge ningún dato: el botón abre su propio teléfono. Si los
+      titulares quieren que esto desaparezca, escriben y desaparece el mismo
+      día.</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34910240819">Encargar</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Cafeter%C3%ADa%20El%20Espinar%2C%20Paseo%20de%20la%20Castellana%20127%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"Cafetería El Espinar",
+  "description":"Cafetería en el Paseo de la Castellana 127, Cuzco, Tetuán, Madrid. Desayunos, menú del día y comidas por encargo para oficinas.",
+  "telephone":"+34910240819",
+  "servesCuisine":"Española",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana, 127",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4581073,"longitude":-3.6914736},
+  "openingHours":["Mo-Th 07:00-21:00","Fr 07:30-19:00"],
+  "url":"https://nachoie123.github.io/webdemos/cafeteria-el-espinar/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
