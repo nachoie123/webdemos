@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shyba · Capitán Blanco Argibay 133, Valdeacederas, Madrid</title>
+<meta name="description" content="Propuesta de página web para Shyba, peluquería canina y felina de bajo estrés en la calle del Capitán Blanco Argibay 133, Valdeacederas, Tetuán, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/shyba-peluqueria-canina/">
+<meta name="theme-color" content="#a04a63">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f5f1ee%27/%3E%3Cellipse cx=%2716%27 cy=%2721%27 rx=%276%27 ry=%275%27 fill=%27%23a04a63%27/%3E%3Ccircle cx=%278%27 cy=%2714%27 r=%272.6%27 fill=%27%23a04a63%27/%3E%3Ccircle cx=%2714%27 cy=%2711%27 r=%272.6%27 fill=%27%23a04a63%27/%3E%3Ccircle cx=%2720%27 cy=%2711%27 r=%272.6%27 fill=%27%23a04a63%27/%3E%3Ccircle cx=%2726%27 cy=%2714%27 r=%272.6%27 fill=%27%23a04a63%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/shyba-peluqueria-canina/">
+<meta property="og:title" content="Shyba · Capitán Blanco Argibay 133, Valdeacederas, Madrid">
+<meta property="og:description" content="Propuesta de página web para Shyba, peluquería canina y felina de bajo estrés en la calle del Capitán Blanco Argibay 133, Valdeacederas, Tetuán, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/shyba-peluqueria-canina/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Cabin:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Malva y crema. Ni pastel de tienda de mascotas ni azul de clínica: el sitio
+   se llama «de bajo estrés» y la página tiene que estar tranquila también.
+   Tipografía de libro, mucho aire y una sola cosa fuerte por pantalla.     */
+:root{
+  --fondo:#f5f1ee; --fondo-2:#e8e1dc; --tinta:#241d1f; --tinta-2:#655a5c;
+  --acento:#a04a63; --acento-tinta:#fdf3f6; --linea:#d8cec9;
+  --gris:#9b918e;
+  --display:'Crimson Pro', Georgia, serif;
+  --texto:'Cabin', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;
+  line-height:1.1;}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+h3{font-size:1.4rem;}
+em.ma{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(245,241,238,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:600;
+  letter-spacing:.04em;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.18em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con la jaula tachada */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.5vw,3.7rem);line-height:1.08;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.jaula{width:100%;max-width:250px;margin-inline:auto;color:var(--gris);}
+.jaula .tach{color:var(--acento);}
+
+/* lo que NO se hace */
+.no{border-top:2px solid var(--linea);padding-top:var(--s-3);}
+.no > b:first-child{display:block;font-family:var(--display);font-size:1.45rem;
+  font-weight:600;margin-bottom:.35rem;}
+.no .eti{display:inline-block;font-size:.66rem;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:600;color:var(--acento);
+  border:1px solid var(--acento);padding:.2rem .55rem;margin-bottom:.6rem;}
+
+/* la sesión, paso a paso */
+.sesion{counter-reset:s;}
+.sesion > div{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;
+  gap:var(--s-2);padding:var(--s-3) 0;border-bottom:1px solid var(--linea);}
+.sesion > div::before{content:counter(s);font-family:var(--display);
+  font-size:2rem;font-weight:600;color:var(--acento);line-height:1;}
+.sesion b{display:block;font-family:var(--display);font-size:1.3rem;font-weight:600;
+  margin-bottom:.2rem;}
+
+/* precios */
+.u-precios li{flex-wrap:wrap;border-bottom-color:var(--linea);}
+.u-precios .d{flex-basis:100%;order:3;margin-top:.15rem;}
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);color:var(--acento);font-weight:600;}
+
+/* gatos */
+.gatos{background:var(--acento);color:var(--acento-tinta);padding:var(--s-4);}
+.gatos h2{color:#fff;}
+.gatos .dib{width:100%;max-width:130px;color:#fbe3ea;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:600;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#9a8f91;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#efa9bd;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, sus tiempos y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>SHYBA</b><span data-real>Peluquería canina y felina · Valdeacederas</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#bajo">Qué es bajo estrés</a>
+      <a href="#sesion">La sesión</a>
+      <a href="#precios">Precios</a>
+      <a href="#gatos">Gatos</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34674916946" data-real>674 91 69 46</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Peluquería canina y felina de bajo estrés · Capitán Blanco Argibay 133</span>
+      <h1>«De bajo estrés»<br>no es una frase bonita.<br><em class="ma">Es una lista de cosas que aquí no se hacen.</em></h1>
+      <p>Empezando por la más importante: aquí no hay secadora de jaula. Ahí
+      abajo está la lista entera, con nombre y apellidos, para que pueda
+      compararla con cualquier otro sitio.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34674916946?text=Hola%2C%20quer%C3%ADa%20cita%20para%20mi%20perro."
+           target="_blank" rel="noopener" data-real>Pedir cita por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#bajo">Ver la lista</a>
+      </p>
+    </div>
+    <svg class="jaula" viewBox="0 0 220 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" aria-hidden="true">
+      <rect x="34" y="46" width="152" height="112"/>
+      <path d="M62 46 v112"/><path d="M90 46 v112"/><path d="M118 46 v112"/>
+      <path d="M146 46 v112"/>
+      <path d="M34 92 h152" stroke-width="3" opacity=".6"/>
+      <path d="M34 158 h152" stroke-width="7"/>
+      <circle cx="176" cy="30" r="10" stroke-width="4"/>
+      <path d="M170 30 h12" stroke-width="4"/>
+      <g class="tach" stroke="currentColor">
+        <circle cx="110" cy="102" r="76" stroke-width="9"/>
+        <path d="M56 48 L164 156" stroke-width="9"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Capitán Blanco Argibay, 133</b></span>
+    <span data-real>Valdeacederas · Tetuán · 28029 Madrid</span>
+    <span data-ejemplo>Martes a sábado 10:00–19:00</span>
+    <a href="tel:+34674916946" data-real><b>674 91 69 46</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. la lista ===== -->
+<section class="u-seccion" id="bajo">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-2);">Lo que aquí no se hace.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-4);">
+      Un perro no puede contar cómo le ha ido. Por eso lo único honesto es
+      decir, por escrito, qué pasa mientras usted no está.</p>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="no">
+        <span class="eti">No</span>
+        <b>Secadora de jaula</b>
+        <p>Se seca a mano, uno a uno. Es más lento y es la diferencia entre un
+        baño y un mal rato de cuarenta minutos.</p>
+      </div>
+      <div class="no">
+        <span class="eti">No</span>
+        <b>Bozal por sistema</b>
+        <p>Solo si el animal lo necesita y se avisa antes. Si no se deja tocar,
+        se para y se prueba otro día.</p>
+      </div>
+      <div class="no">
+        <span class="eti">No</span>
+        <b>Horas esperando turno</b>
+        <p>Se cita a una hora y se trabaja con ese animal. No se queda encerrado
+        esperando a que le toque.</p>
+      </div>
+      <div class="no">
+        <span class="eti">No</span>
+        <b>Sala llena de perros</b>
+        <p>Uno cada vez. Para un animal miedoso, la sala de espera es peor que
+        las tijeras.</p>
+      </div>
+      <div class="no">
+        <span class="eti">No</span>
+        <b>Cortar a toda costa</b>
+        <p>Si el día no va bien, se hace lo imprescindible y se cobra solo eso.
+        Se termina otro día.</p>
+      </div>
+      <div class="no">
+        <span class="eti">Sí</span>
+        <b>Una foto a mitad</b>
+        <p>Se manda por WhatsApp. No es un adorno: es lo que deja tranquilo a
+        quien está en el trabajo pensando en su perro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. la sesión ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="sesion">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Qué pasa<br>mientras<br>usted no está.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Entre hora y media
+      y tres horas, según el pelo y el carácter. Se avisa por WhatsApp cuando
+      está listo, ni antes ni después.</p>
+    </div>
+    <div class="sesion" data-ejemplo>
+      <div><div><b>Se le conoce</b><p>Cinco minutos de olfatear el sitio antes
+      de tocarle nada. Si viene por primera vez, se cuenta cómo es en casa.</p></div></div>
+      <div><div><b>Cepillado y nudos</b><p>Antes del agua, siempre. Un nudo
+      mojado ya no se deshace, se corta.</p></div></div>
+      <div><div><b>Baño</b><p>Con el producto que le toque según piel y pelo, y
+      con el agua templada, no fría.</p></div></div>
+      <div><div><b>Secado a mano</b><p>Lo más largo y lo que más diferencia hay.
+      Sin jaula y sin aire a presión en la cara.</p></div></div>
+      <div><div><b>Corte, uñas y oídos</b><p>Al final, con el animal ya seco y
+      tranquilo. Las uñas solo si se dejan.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. precios ===== -->
+<section class="u-seccion" id="precios">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>Por tamaño<br>y por pelo.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">No hay un precio
+      único porque no hay un perro único: un caniche de cinco kilos lleva más
+      tiempo que un galgo de treinta.</p>
+      <p style="color:var(--tinta-2);">Pero un tramo sí se puede dar, y es lo
+      que hace que alguien coja el teléfono en vez de seguir mirando.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Pequeño, pelo corto</span><span class="d">Baño, uñas y oídos.</span><span class="p">desde 25 €</span></li>
+        <li><span class="n">Pequeño, pelo largo</span><span class="d">Con corte de raza o a máquina.</span><span class="p">desde 38 €</span></li>
+        <li><span class="n">Mediano</span><span class="d">Baño y corte.</span><span class="p">desde 45 €</span></li>
+        <li><span class="n">Grande</span><span class="d">Baño, secado y cepillado.</span><span class="p">desde 55 €</span></li>
+        <li><span class="n">Deslanado</span><span class="d">Para los que sueltan pelo todo el año.</span><span class="p">desde 40 €</span></li>
+        <li><span class="n">Solo uñas</span><span class="d">Sin cita, si hay hueco.</span><span class="p">8 €</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. gatos ===== -->
+<section class="u-seccion u-sangrado" id="gatos">
+  <div class="u-wrap u-revelar">
+    <div class="gatos u-grid u-desigual">
+      <div>
+        <span class="u-ceja" style="color:#f7c8d6;">Y esto casi nadie lo hace</span>
+        <h2 style="max-width:18ch;">También gatos.</h2>
+        <p style="max-width:48ch;">Quien tiene un gato que necesita corte lleva
+        años oyendo que no. Aquí sí, con cita aparte y sin perros alrededor: el
+        día que viene un gato, la sala es suya.</p>
+        <p style="max-width:48ch;" data-ejemplo>Nudos, pelo enredado, deslanado
+        y corte higiénico. Si no se deja, se para: un gato no se sujeta a la
+        fuerza.</p>
+      </div>
+      <svg class="dib" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M32 58 L28 22 L58 42"/>
+        <path d="M108 58 L112 22 L82 42"/>
+        <path d="M70 40 c-24 0 -40 16 -40 38 c0 22 18 36 40 36 c22 0 40 -14 40 -36 c0 -22 -16 -38 -40 -38 z"/>
+        <circle cx="54" cy="76" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="86" cy="76" r="4" fill="currentColor" stroke="none"/>
+        <path d="M70 90 l-5 5 h10 z" fill="currentColor" stroke="none"/>
+        <path d="M70 95 v8"/>
+        <path d="M62 100 c4 4 12 4 16 0" stroke-width="4"/>
+        <path d="M24 84 h-18" stroke-width="3"/><path d="M26 94 h-18" stroke-width="3"/>
+        <path d="M116 84 h18" stroke-width="3"/><path d="M114 94 h18" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>Capitán Blanco<br>Argibay, 133.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Valdeacederas · Tetuán · 28029 Madrid. A pie de calle, subiendo hacia
+        Bravo Murillo.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34674916946?text=Hola%2C%20quer%C3%ADa%20cita%20para%20mi%20perro."
+           target="_blank" rel="noopener" data-real>Pedir cita</a>
+        <a class="u-btn u-btn--linea" href="tel:+34674916946" data-real>674 91 69 46</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Shyba%20peluquer%C3%ADa%20canina%2C%20Capit%C3%A1n%20Blanco%20Argibay%20133%2C%20Madrid"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>Cerrado</td></tr>
+        <tr><th>Martes</th><td>10:00 – 19:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 19:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 19:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 19:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 15:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      número y el teléfono. Los precios, los tiempos, el horario y las dos
+      listas están inventados: pulse el botón amarillo de arriba y se marcan
+      solos.</p>
+      <ul>
+        <li><b>La lista de «lo que aquí no se hace» es el corazón de la
+        página</b> y hay que rehacerla con sus palabras. Yo la he escrito desde
+        fuera; usted sabe cuál es de verdad su forma de trabajar.</li>
+        <li><b>Falta lo suyo:</b> sus precios, sus tiempos reales y sus fotos —
+        sobre todo la del sitio donde se seca, que es lo que demuestra que no
+        hay jaula.</li>
+        <li><b>Ningún texto promete nada</b> sobre la piel, el pelo ni el
+        carácter del animal. Se describe lo que se hace y punto.</li>
+        <li><b>Sin nota de Google:</b> las que he encontrado están en
+        agregadores que se copian entre sí, sin recuento fiable.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del negocio.</b> Es una propuesta sin
+      relación con él ni con sus titulares. El nombre, la dirección y el
+      teléfono salen de fichas públicas. Los precios, los tiempos, el horario y
+      las listas están inventados y marcados.</p>
+      <p><b>Ningún texto promete ningún resultado</b> sobre la piel, el pelo ni
+      el comportamiento del animal, y nada de lo escrito sustituye a un
+      veterinario. <b>No se declara ninguna nota de Google</b> y <b>no hay
+      ninguna fotografía:</b> los dos dibujos están hechos a mano.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34674916946?text=Hola%2C%20quer%C3%ADa%20cita%20para%20mi%20perro." target="_blank" rel="noopener">Pedir cita</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Shyba%20peluquer%C3%ADa%20canina%2C%20Capit%C3%A1n%20Blanco%20Argibay%20133%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"PetGroomer",
+  "name":"Shyba — Peluquería canina y felina de bajo estrés",
+  "description":"Peluquería canina y felina de bajo estrés en la calle del Capitán Blanco Argibay 133, Valdeacederas, Tetuán, Madrid.",
+  "telephone":"+34674916946",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle del Capitán Blanco Argibay, 133",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28029",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.46759,"longitude":-3.70600},
+  "openingHours":["Tu-Fr 10:00-19:00","Sa 10:00-15:00"],
+  "url":"https://nachoie123.github.io/webdemos/shyba-peluqueria-canina/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

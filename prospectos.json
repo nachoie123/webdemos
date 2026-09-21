@@ -533,21 +533,21 @@
   },
   {
     "slug": "shyba-peluqueria-canina",
-    "nombre": "Shyba",
+    "nombre": "Shyba — Peluquería canina y felina de bajo estrés",
     "categoria": "Bienestar",
     "tipo": "Peluquería canina",
     "telefono": "674916946",
     "maps": null,
-    "estado_web": "por verificar",
-    "web_actual": null,
+    "estado_web": "floja",
+    "web_actual": "https://shyba.ueniweb.com/",
     "coords": "40.46759,-3.70600",
     "calle_osm": "Calle del Capitán Blanco Argibay",
     "gancho": "Del barrido OSM ampliado (21/09/2026): peluquería canina con telefono y sin website en OSM. VERIFICAR antes de gastar demo.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/shyba-peluqueria-canina/",
     "enviado": null,
     "respuesta": null,
-    "nota_web": "Anadido por barrido Overpass 1500 m el 21/09/2026. SIN verificar."
+    "nota_web": "VERIFICADO 21/09/2026: shyba.es da 404. Web viva = plantilla UENI de 1.742.347 bytes (1,7 MB) en subdominio ajeno. SEGUNDO caso UENI tras Kushala. Portal 133 CONFIRMADO: el reverse devuelve el nombre del negocio Y el numero. Gancho: «de bajo estres» es su producto y no significa nada sin explicarlo; ademas coge GATOS, que casi nadie hace. Ver datos/shyba-peluqueria-canina.md"
   },
   {
     "slug": "persianas-redondo",
