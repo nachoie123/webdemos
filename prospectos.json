@@ -476,9 +476,10 @@
     "web_actual": null,
     "gancho": "Sin web; landing sencilla con servicios y horarios.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/bm1997-sl-copisteria/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "VERIFICADO 21/09/2026: sin web. Calle de los Cuatro Amigos, Almenara, 28020 (el reverse devuelve «BM, Calle de los Cuatro Amigos»; un directorio dice 28012 y esta MAL). Portal: ninguna fuente lo da. TELEFONO FIJO y SIN WhatsApp conocido — en una copisteria eso es un problema real y va preguntado. Aparece en listas de «copisterias baratas de Madrid»: su posicionamiento es el precio, por eso la demo lleva CALCULADORA. Ver datos/bm1997-sl-copisteria.md"
   },
   {
     "slug": "pablo-albalate",
