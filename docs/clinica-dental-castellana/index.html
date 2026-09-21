@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clínica Dental Castellana · Paseo de la Castellana, Castillejos, Madrid</title>
+<meta name="description" content="Propuesta de página web para Clínica Dental Castellana, en el Paseo de la Castellana, Castillejos, Tetuán, Madrid. Presupuesto por escrito y desglosado.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/clinica-dental-castellana/">
+<meta name="theme-color" content="#1d262b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%231d262b%27/%3E%3Cpath d=%27M16 7 c-6 0 -8 4 -8 8 c0 6 3 10 5 10 c2 0 2 -4 3 -4 c1 0 1 4 3 4 c2 0 5 -4 5 -10 c0 -4 -2 -8 -8 -8 z%27 fill=%27none%27 stroke=%27%23d2574a%27 stroke-width=%272.4%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/clinica-dental-castellana/">
+<meta property="og:title" content="Clínica Dental Castellana · Paseo de la Castellana, Castillejos, Madrid">
+<meta property="og:description" content="Propuesta de página web para Clínica Dental Castellana, en el Paseo de la Castellana, Castillejos, Tetuán, Madrid. Presupuesto por escrito y desglosado.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/clinica-dental-castellana/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Overpass:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   Pizarra y coral. Ni azul clínico ni blanco de folleto de seguro: eso es lo
+   que usan las franquicias que tiene enfrente. El coral es el color de lo que
+   se pulsa; el resto es papel de radiografía.                              */
+:root{
+  --fondo:#e9eef0; --fondo-2:#dae1e4; --tinta:#1d262b; --tinta-2:#5a666d;
+  --acento:#d2574a; --acento-tinta:#fff2f0; --linea:#c4ccd0;
+  --pizarra:#2b3841;
+  --display:'Spectral', Georgia, serif;
+  --texto:'Overpass', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;
+  line-height:1.08;}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+h3{font-size:1.45rem;}
+em.co{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(233,238,240,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.4rem;font-weight:600;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con la panorámica */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);line-height:1.06;max-width:17ch;
+  margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:46ch;}
+.pano{width:100%;max-width:620px;margin:var(--s-4) auto 0;display:block;
+  color:var(--pizarra);}
+.pano .mal{color:var(--acento);}
+
+/* la primera visita */
+.paso{border-top:3px solid var(--pizarra);padding-top:var(--s-3);}
+.paso > b:first-child{display:block;font-family:var(--display);font-size:1.5rem;
+  font-weight:600;margin-bottom:.35rem;}
+.paso .min{display:inline-block;margin-top:var(--s-2);font-size:.72rem;
+  letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+  background:var(--pizarra);color:var(--fondo);padding:.3rem .75rem;}
+
+/* el presupuesto desglosado */
+.presu{background:#fff;border:1px solid var(--linea);padding:var(--s-3);}
+.presu h3{font-size:1.2rem;margin-bottom:var(--s-2);}
+.presu table{width:100%;border-collapse:collapse;font-size:.95rem;}
+.presu td{padding:.5rem 0;border-bottom:1px dotted var(--linea);}
+.presu td:last-child{text-align:right;font-variant-numeric:tabular-nums;
+  white-space:nowrap;font-weight:600;}
+.presu tr.tot td{border-bottom:0;border-top:2px solid var(--pizarra);
+  padding-top:.7rem;font-family:var(--display);font-size:1.15rem;}
+.presu .pie2{margin-top:var(--s-2);font-size:.88rem;color:var(--tinta-2);}
+
+/* lo que aquí no se hace */
+.no{background:var(--pizarra);color:#c7d0d5;padding:var(--s-4);}
+.no h2{color:#fff;}
+.no .it{border-top:1px solid #435158;padding-top:var(--s-2);margin-top:var(--s-3);}
+.no .it > b:first-child{display:block;font-family:var(--display);font-size:1.35rem;
+  font-weight:600;color:var(--acento);margin-bottom:.3rem;}
+
+/* dolor */
+.dolor{border-left:4px solid var(--acento);padding-left:var(--s-3);}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.3rem;
+  font-weight:600;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--pizarra);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#97a2a8;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#ffab9f;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, su horario y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Clínica Dental Castellana</b><span data-real>Paseo de la Castellana · Castillejos</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#primera">La primera visita</a>
+      <a href="#presupuesto">El presupuesto</a>
+      <a href="#nohay">Lo que no se hace</a>
+      <a href="#donde">Cita</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34915707078" data-real>91 570 70 78</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <span class="u-ceja" data-real>Clínica dental · Paseo de la Castellana · Castillejos</span>
+    <h1>Aquí no hay comercial.<br><em class="co">Le atiende el dentista.</em></h1>
+    <p>En las cadenas de la Castellana, quien enseña el presupuesto suele ser un
+    asesor que cobra por vender planes. Aquí el presupuesto lo explica quien va a
+    hacer el trabajo, línea por línea y por escrito.</p>
+    <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+      <a class="u-btn" href="tel:+34915707078" data-real>Pedir cita · 91 570 70 78</a>
+      <a class="u-btn u-btn--linea" href="#presupuesto">Ver cómo es el presupuesto</a>
+    </p>
+    <svg class="pano" viewBox="0 0 620 210" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true">
+      <path d="M40 60 C40 150 150 196 310 196 C470 196 580 150 580 60" stroke-width="1.6" opacity=".35"/>
+      <g>
+        <path d="M118 78 c-10 0 -15 7 -13 16 l5 22 c1 6 8 6 9 0 l2 -10 c1 -4 5 -4 6 0 l2 10 c1 6 8 6 9 0 l5 -22 c2 -9 -3 -16 -13 -16 z"/>
+        <path d="M166 66 c-11 0 -16 7 -14 17 l5 24 c1 6 8 6 9 0 l2 -11 c1 -4 5 -4 6 0 l2 11 c1 6 8 6 9 0 l5 -24 c2 -10 -3 -17 -14 -17 z"/>
+        <path d="M216 58 c-11 0 -16 7 -14 17 l5 25 c1 6 8 6 9 0 l2 -11 c1 -4 5 -4 6 0 l2 11 c1 6 8 6 9 0 l5 -25 c2 -10 -3 -17 -14 -17 z"/>
+        <path d="M268 54 c-10 0 -15 6 -14 15 l4 26 c1 6 8 6 9 0 l2 -11 c1 -4 5 -4 6 0 l2 11 c1 6 8 6 9 0 l4 -26 c1 -9 -4 -15 -14 -15 z"/>
+        <path class="mal" d="M320 54 c-10 0 -15 6 -14 15 l4 26 c1 6 8 6 9 0 l2 -11 c1 -4 5 -4 6 0 l2 11 c1 6 8 6 9 0 l4 -26 c1 -9 -4 -15 -14 -15 z" stroke="currentColor" stroke-width="3.4"/>
+        <path d="M372 58 c-11 0 -16 7 -14 17 l5 25 c1 6 8 6 9 0 l2 -11 c1 -4 5 -4 6 0 l2 11 c1 6 8 6 9 0 l5 -25 c2 -10 -3 -17 -14 -17 z"/>
+        <path d="M422 66 c-11 0 -16 7 -14 17 l5 24 c1 6 8 6 9 0 l2 -11 c1 -4 5 -4 6 0 l2 11 c1 6 8 6 9 0 l5 -24 c2 -10 -3 -17 -14 -17 z"/>
+        <path d="M470 78 c-10 0 -15 7 -13 16 l5 22 c1 6 8 6 9 0 l2 -10 c1 -4 5 -4 6 0 l2 10 c1 6 8 6 9 0 l5 -22 c2 -9 -3 -16 -13 -16 z"/>
+      </g>
+      <g class="mal" stroke="currentColor" stroke-width="2.4">
+        <circle cx="320" cy="72" r="6"/>
+        <path d="M320 34 v10"/>
+        <path d="M300 30 h40" stroke-width="1.6" opacity=".6"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana</b></span>
+    <span data-real>Castillejos · Tetuán · 28046 Madrid</span>
+    <span data-ejemplo>L–V 10:00–14:00 y 16:00–20:30</span>
+    <a href="tel:+34915707078" data-real><b>91 570 70 78</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. la primera visita ===== -->
+<section class="u-seccion" id="primera">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que de verdad frena la cita</span>
+    <h2 style="max-width:24ch;margin:.2em 0 var(--s-4);">No es el miedo al sillón. Es no saber la factura.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="paso">
+        <b>Se mira y se habla</b>
+        <p>Qué le molesta, desde cuándo y qué le han hecho antes. Sin prisa y
+        antes de tocar nada.</p>
+        <span class="min">Unos 15 minutos</span>
+      </div>
+      <div class="paso">
+        <b>La radiografía</b>
+        <p>Una panorámica, para ver lo que no se ve. Va incluida en la primera
+        visita y la copia se la lleva usted.</p>
+        <span class="min">Unos 10 minutos</span>
+      </div>
+      <div class="paso">
+        <b>El presupuesto en la mano</b>
+        <p>Por escrito, por líneas y con lo que se puede esperar separado de lo
+        que corre prisa. Se lo lleva a casa.</p>
+        <span class="min">Unos 15 minutos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. el presupuesto ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="presupuesto">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Por líneas,<br>no por «packs».</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Un presupuesto de
+      una sola cifra no se puede comparar, ni discutir, ni aplazar por partes.
+      Por eso se dan así en las cadenas.</p>
+      <p style="color:var(--tinta-2);">Desglosado se ve qué corre prisa, qué
+      puede esperar y qué se puede quitar. Y se puede llevar a otra clínica a
+      contrastar, que es justo lo que hay que poder hacer.</p>
+    </div>
+    <div class="presu" data-ejemplo>
+      <h3>Así se entrega</h3>
+      <table>
+        <tr><td>Primera visita y panorámica</td><td>0 €</td></tr>
+        <tr><td>Limpieza (tartrectomía)</td><td>55 €</td></tr>
+        <tr><td>Empaste, muela 36 — <i>corre prisa</i></td><td>65 €</td></tr>
+        <tr><td>Empaste, muela 47 — <i>corre prisa</i></td><td>65 €</td></tr>
+        <tr><td>Funda, muela 36 — <i>puede esperar</i></td><td>320 €</td></tr>
+        <tr class="tot"><td>Lo que corre prisa</td><td>185 €</td></tr>
+      </table>
+      <p class="pie2">Las cifras son inventadas y sirven solo para enseñar la
+      forma. Lo que importa es la última fila: separar lo urgente de lo que
+      puede esperar es lo que hace que alguien empiece en vez de aplazarlo
+      todo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. lo que aquí no se hace ===== -->
+<section class="u-seccion" id="nohay">
+  <div class="u-wrap u-revelar">
+    <div class="no">
+      <span class="u-ceja">La diferencia con lo que tiene enfrente</span>
+      <h2 style="max-width:22ch;">Lo que aquí no se hace.</h2>
+      <div class="it" data-ejemplo>
+        <b>No hay asesor de tratamientos</b>
+        <p style="margin:0;">Nadie que cobre por venderle un plan. El
+        presupuesto lo explica quien va a hacer el trabajo.</p>
+      </div>
+      <div class="it" data-ejemplo>
+        <b>No se vende financiación en el sillón</b>
+        <p style="margin:0;">Si hace falta repartir el pago, se reparte entre
+        visitas. Sin firmar un préstamo con nadie el mismo día.</p>
+      </div>
+      <div class="it" data-ejemplo>
+        <b>No se hacen revisiones «gratis» que acaban en presupuesto</b>
+        <p style="margin:0;">La primera visita es una visita de verdad, con
+        radiografía, y se le dice si no necesita nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. ¿me va a doler? ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="dolor">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>«¿Me va<br>a doler?»</h2>
+    </div>
+    <div class="dolor" data-ejemplo>
+      <p>La respuesta honesta es que depende de lo que haya que hacer, y que no
+      se puede prometer que no. Lo que sí se puede decir es cómo se trabaja
+      aquí:</p>
+      <p>Se anestesia antes de empezar y se espera a que haga efecto de verdad,
+      aunque eso cueste diez minutos de sillón. Si en algún momento molesta, se
+      levanta la mano y se para: no hay que aguantar nada.</p>
+      <p>Y si viene con miedo al dentista —que es más común de lo que parece—,
+      dígalo al pedir la cita. Se reserva más tiempo y se empieza solo por
+      mirar, sin tocar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 data-real>En el Paseo<br>de la Castellana.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Castillejos · Tetuán · 28046 Madrid. Entre Cuzco y Plaza de Castilla.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34915707078" data-real>91 570 70 78</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica%20Dental%20Castellana%2C%20Paseo%20de%20la%20Castellana%2C%20Madrid"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 14:00 · 16:00 – 20:30</td></tr>
+        <tr><th>Martes</th><td>10:00 – 14:00 · 16:00 – 20:30</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 14:00 · 16:00 – 20:30</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 14:00 · 16:00 – 20:30</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Sábado</th><td>Cerrado</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle y el
+      teléfono. El horario, los tiempos, el presupuesto y lo que aparece en la
+      sección oscura están inventados: pulse el botón amarillo de arriba y se
+      marcan solos.</p>
+      <ul>
+        <li><b>No hay ni una sola opinión en esta página</b>, ni siquiera
+        marcada como ejemplo. En una clínica un testimonio inventado no me
+        parece de recibo. Cuando quieran, van las suyas reales de Google.</li>
+        <li><b>Ningún texto promete un resultado</b>, y la parte del dolor dice
+        expresamente que no se puede prometer que no duela.</li>
+        <li><b>El portal:</b> un directorio dice el 177 y el mapa me lleva al
+        179. No pongo ninguno hasta que me lo confirmen.</li>
+        <li><b>Sin nota de Google:</b> solo la he encontrado en un agregador de
+        los que se copian entre sí, y sin recuento contrastado no se declara.</li>
+        <li><b>Y lo más importante:</b> «Castellana» y «dental» juntos hay
+        muchísimos en Madrid. He comprobado uno a uno que ninguna de esas webs
+        lleva su teléfono. <b>Si tienen web y no la he encontrado, díganmelo y
+        borro esto el mismo día.</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién les escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si les sirve,
+      hablamos. Si no, la borro y no vuelven a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la clínica.</b> Es una propuesta sin
+      relación con el centro ni con sus titulares, y tampoco con ninguna otra
+      clínica de nombre parecido. El nombre, la calle y el teléfono salen de
+      fichas públicas.</p>
+      <p><b>Ningún texto de esta página promete un resultado de salud</b> ni
+      sustituye a una consulta. <b>No se declara ninguna nota de Google</b> y
+      <b>no hay ninguna opinión</b>, tampoco inventada. <b>No hay ninguna
+      fotografía:</b> el dibujo está hecho a mano para esta propuesta.</p>
+      <p>No se recoge ningún dato: el botón abre su propio teléfono. Si los
+      titulares quieren que esto desaparezca, escriben y desaparece el mismo
+      día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34915707078">Llamar</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica%20Dental%20Castellana%2C%20Paseo%20de%20la%20Castellana%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Dentist",
+  "name":"Clínica Dental Castellana",
+  "description":"Clínica dental en el Paseo de la Castellana, Castillejos, Tetuán, Madrid.",
+  "telephone":"+34915707078",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4629651,"longitude":-3.6902101},
+  "openingHours":["Mo-Th 10:00-14:00","Mo-Th 16:00-20:30","Fr 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/clinica-dental-castellana/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

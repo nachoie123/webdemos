@@ -316,9 +316,10 @@
     "web_actual": null,
     "gancho": "4.8★ y sin web; landing profesional con calendario de citas online.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/clinica-dental-castellana/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web propia, VERIFICADO contra 5 homonimos (castellanaclinicadental.es tiene el 914115567, no el suyo; tambien Sanitas Milenium, Castellana 100, Elite Dental). TELEFONO FIJO: no entra en enviar.html. Portal 177 vs 179 segun fuente: no se pone. Ver datos/clinica-dental-castellana.md"
   },
   {
     "slug": "veterinario-madvetel",
