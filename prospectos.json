@@ -570,21 +570,21 @@
   },
   {
     "slug": "superfruta-valencia",
-    "nombre": "Superfruta Valencia 1",
+    "nombre": "Superfruta Valencia 1 (Ullah y Sema, C.B.)",
     "categoria": "Alimentación",
     "tipo": "Frutería",
     "telefono": "632254986",
     "maps": null,
-    "estado_web": "por verificar",
+    "estado_web": "none",
     "web_actual": null,
     "coords": "40.45678,-3.70454",
     "calle_osm": "Calle de Lope de Haro 34",
     "gancho": "Del barrido OSM ampliado (21/09/2026): frutería con telefono y sin website en OSM. VERIFICAR antes de gastar demo.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/superfruta-valencia/",
     "enviado": null,
     "respuesta": null,
-    "nota_web": "Anadido por barrido Overpass 1500 m el 21/09/2026. SIN verificar."
+    "nota_web": "VERIFICADO 21/09/2026: sin web. Lope de Haro 34 CONFIRMADO (el reverse devuelve «Superfruta Valencia 1, 34»). Razon social es una C.B. familiar, NO cadena — aunque el barrido de Overpass para buscar otras tiendas fallo, asi que el mensaje lo pregunta. GANCHO VERIFICADO: abre los 365 dias, 10-21, festivos incluidos, y no esta escrito en ningun sitio. Ver datos/superfruta-valencia.md"
   },
   {
     "slug": "carniceria-nicar",
