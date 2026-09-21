@@ -362,14 +362,14 @@
     "tipo": "Taller mecánico",
     "telefono": "913152730",
     "maps": "https://www.google.com/maps/place/Talleres+J.L./data=!4m7!3m6!1s0xd42290ee618b051:0xfc0f1c82cddb9b44!8m2!3d40.4671186!4d-3.6963461",
-    "estado_web": "propia",
-    "web_actual": "https://www.talleresjl.es/",
+    "estado_web": "none",
+    "web_actual": null,
     "gancho": "4.8★ sin web; landing con servicios, horarios y formulario de \"pide cita para tu coche\".",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/talleres-j-l/",
     "enviado": null,
     "respuesta": null,
-    "nota_web": "Web propia real, anticuada pero suya. Replantear el gancho antes de ofrecer nada."
+    "nota_web": "CORREGIDO 21/09/2026. La ficha decia «web propia real, anticuada pero suya» y es FALSO: talleresjl.es responde 200 pero su <title> es «Alfredo Iglesias Morales» y su description dice «taller ... en ZARAGOZA». Es otro taller, en otra ciudad. Talleres J.L. NO tiene web. Moraleja: abrir la web y leer el <title>, no fiarse del 200. Calle de Jose 9 (Paginas Amarillas; el reverse solo confirma la calle). TELEFONO FIJO. Ver datos/talleres-j-l.md"
   },
   {
     "slug": "autonorte-saez",
