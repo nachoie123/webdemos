@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tintorería Álvarez · Mauricio Legendre, Almenara, Madrid</title>
+<meta name="description" content="Propuesta de página web para Tintorería Álvarez, en la calle de Mauricio Legendre, Almenara, Tetuán, Madrid. Qué hacer con una mancha antes de traerla.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/tintoreria-alvarez/">
+<meta name="theme-color" content="#5a6b34">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f4f3ec%27/%3E%3Cpath d=%27M16 5 a3 3 0 0 1 3 3 c0 2 -3 2 -3 4%27 fill=%27none%27 stroke=%27%235a6b34%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M16 12 L5 24 h22 z%27 fill=%27none%27 stroke=%27%235a6b34%27 stroke-width=%272.6%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/tintoreria-alvarez/">
+<meta property="og:title" content="Tintorería Álvarez · Mauricio Legendre, Almenara, Madrid">
+<meta property="og:description" content="Propuesta de página web para Tintorería Álvarez, en la calle de Mauricio Legendre, Almenara, Tetuán, Madrid. Qué hacer con una mancha antes de traerla.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/tintoreria-alvarez/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Faustina:wght@500;700&family=Red+Hat+Text:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   base.css — esqueleto de las demos de webdemos
+   NO tiene identidad visual. Solo huesos: rejilla, escalas y
+   comportamientos que las webs premiadas comparten.
+   Cada demo define sus tokens en su propio <style> y los huesos
+   se adaptan. Dos demos con esta base NO se parecen.
+   ============================================================ */
+
+:root{
+  /* --- los 9 tokens que cada demo DEBE redefinir --- */
+  --fondo:#fff; --fondo-2:#f5f5f5; --tinta:#111; --tinta-2:#555;
+  --acento:#c00; --acento-tinta:#fff; --linea:#e2e2e2;
+  --display:Georgia, serif; --texto:system-ui, sans-serif;
+
+  /* --- escala tipografica fluida (no tocar) --- */
+  --t-xs:.75rem; --t-s:.875rem; --t-m:1.0625rem;
+  --t-l:clamp(1.25rem,1.6vw + .8rem,1.6rem);
+  --t-xl:clamp(1.9rem,3.2vw + .8rem,3rem);
+  --t-2xl:clamp(2.8rem,7vw + .4rem,6rem);      /* titular de hero */
+  --t-3xl:clamp(3.5rem,12vw,9rem);             /* numero/palabra suelta */
+
+  /* --- ritmo vertical (no tocar) --- */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2.5rem;
+  --s-5:4rem; --s-6:6rem; --s-7:clamp(5rem,10vw,9rem);
+  --ancho:1180px;          /* contenedor ancho: NUNCA bajar de 1100 */
+  --ancho-texto:62ch;      /* solo para parrafos largos */
+  --radio:0px;             /* la demo decide: 0 = editorial, 999px = amable */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:var(--texto); font-size:var(--t-m); line-height:1.6;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px;}
+::selection{background:var(--acento);color:var(--acento-tinta);}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;
+  letter-spacing:-.02em;margin:0;text-wrap:balance;}
+h1{font-size:var(--t-2xl);}
+h2{font-size:var(--t-xl);}
+h3{font-size:var(--t-l);letter-spacing:-.01em;}
+p{margin:0 0 var(--s-2);}
+
+/* ---------- contenedores ---------- */
+.u-wrap{width:100%;max-width:var(--ancho);margin-inline:auto;
+  padding-inline:clamp(20px,5vw,48px);}
+.u-sangrado{width:100%;}                        /* a sangre, de borde a borde */
+.u-medida{max-width:var(--ancho-texto);}
+.u-seccion{padding-block:var(--s-7);}
+.u-seccion--apretada{padding-block:var(--s-5);}
+
+/* ---------- rejillas: la variedad vive aqui ---------- */
+.u-grid{display:grid;gap:clamp(20px,3vw,40px);}
+.u-2{grid-template-columns:repeat(2,1fr);}
+.u-3{grid-template-columns:repeat(3,1fr);}
+.u-4{grid-template-columns:repeat(4,1fr);}
+.u-partida{grid-template-columns:1fr 1fr;align-items:center;gap:0;}  /* mitad foto, mitad texto */
+.u-desigual{grid-template-columns:5fr 7fr;}     /* asimetria: el antidoto al look IA */
+.u-desigual-inv{grid-template-columns:7fr 5fr;}
+@media(max-width:860px){
+  .u-2,.u-3,.u-4,.u-partida,.u-desigual,.u-desigual-inv{grid-template-columns:1fr;}
+}
+
+/* ---------- hero a sangre con texto encima ---------- */
+.u-hero{position:relative;min-height:min(86svh,760px);display:flex;
+  align-items:flex-end;overflow:hidden;}
+.u-hero__fondo{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;}
+.u-hero__velo{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.66),rgba(0,0,0,.12) 55%,transparent);}
+.u-hero__txt{position:relative;padding-block:var(--s-5);}
+
+/* ---------- piezas sueltas ---------- */
+.u-ceja{font-family:var(--texto);font-size:var(--t-xs);letter-spacing:.22em;
+  text-transform:uppercase;display:block;margin-bottom:var(--s-2);opacity:.85;}
+.u-btn{display:inline-flex;align-items:center;gap:.55em;
+  padding:.95em 1.6em;border-radius:var(--radio);text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--acento);color:var(--acento-tinta);border:1px solid var(--acento);
+  transition:transform .15s ease,opacity .15s ease;}
+.u-btn:hover{transform:translateY(-2px);}
+.u-btn--linea{background:transparent;color:currentColor;border-color:currentColor;}
+.u-nav{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center;
+  font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;}
+.u-nav a{text-decoration:none;}
+.u-dato{border-top:1px solid var(--linea);padding-top:var(--s-2);}
+.u-dato dt{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-2);margin-bottom:.35em;}
+.u-dato dd{margin:0;font-size:var(--t-m);}
+
+/* ---------- barra fija de movil: llamar / como llegar ---------- */
+.u-movil{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  grid-template-columns:1fr 1fr;
+  padding-bottom:env(safe-area-inset-bottom,0);}
+.u-movil a{padding:1.05em;text-align:center;text-decoration:none;
+  font-size:var(--t-s);letter-spacing:.08em;text-transform:uppercase;}
+@media(max-width:760px){.u-movil{display:grid;} body{padding-bottom:4.2rem;}}
+
+/* ---------- respeto ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   BLOQUE RESTAURANTE — anadido 20/09/2026 despues de estudiar
+   shenxien.es (Paseo de la Castellana 241). Ver sistema/moldes/
+   restaurante.md para el orden de secciones y las formulas de texto.
+   ============================================================ */
+
+/* hero a pantalla completa, texto centrado sobre foto oscurecida */
+.u-hero--pleno{min-height:100svh;align-items:center;text-align:center;}
+.u-hero--pleno .u-hero__velo{
+  background:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.45) 45%,rgba(0,0,0,.82));}
+.u-hero--pleno .u-hero__txt{width:100%;}
+.u-hero--pleno h1{max-width:none;margin-inline:auto;letter-spacing:.06em;}
+.u-hero--pleno .u-ceja{letter-spacing:.34em;}
+.u-descubrir{position:absolute;bottom:var(--s-4);left:50%;transform:translateX(-50%);
+  font-size:var(--t-xs);letter-spacing:.3em;text-transform:uppercase;opacity:.6;
+  text-decoration:none;display:grid;justify-items:center;gap:var(--s-2);}
+.u-descubrir::before{content:"";width:1px;height:46px;background:currentColor;opacity:.5;}
+
+/* franja de datos justo debajo del hero: oferta / nota / direccion / telefono */
+.u-tira{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2) var(--s-4);
+  padding-block:var(--s-3);font-size:var(--t-xs);letter-spacing:.16em;
+  text-transform:uppercase;border-block:1px solid var(--linea);}
+.u-tira a{text-decoration:none;}
+
+/* cifras grandes: 4,4 · 279 · -10€ · 150+ */
+.u-cifras{text-align:center;}
+.u-cifras b{display:block;font-family:var(--display);font-size:var(--t-xl);line-height:1;}
+.u-cifras span{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tinta-2);}
+
+/* tarjetas numeradas 01 / 02 / 03 */
+.u-numerada{counter-reset:n;}
+.u-numerada > *{counter-increment:n;padding:var(--s-4);border:1px solid var(--linea);}
+.u-numerada > *::before{content:"0" counter(n);display:block;font-family:var(--display);
+  font-size:var(--t-xl);line-height:1;color:var(--acento);opacity:.55;margin-bottom:var(--s-3);}
+
+/* la carta: fila plato-precio, sin PDF, sin tarjetas */
+.u-precios{list-style:none;margin:0;padding:0;}
+.u-precios li{display:flex;align-items:baseline;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:1px solid var(--linea);}
+.u-precios .n{font-family:var(--display);font-size:var(--t-l);white-space:nowrap;}
+.u-precios .d{flex:1;font-size:var(--t-s);color:var(--tinta-2);}
+.u-precios .p{font-family:var(--display);font-size:var(--t-l);color:var(--acento);
+  white-space:nowrap;}
+@media(max-width:620px){.u-precios li{flex-wrap:wrap;} .u-precios .d{flex-basis:100%;order:3;}}
+.u-pestanas{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-4);
+  font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;}
+.u-pestanas button{font:inherit;letter-spacing:inherit;text-transform:inherit;
+  background:none;border:0;border-bottom:1px solid transparent;padding:.4em 0;
+  color:var(--tinta-2);cursor:pointer;}
+.u-pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--acento);}
+
+/* resenas reales, con nombre y de donde salen */
+.u-cita{padding:var(--s-4);border:1px solid var(--linea);}
+.u-cita blockquote{margin:0 0 var(--s-3);font-family:var(--display);
+  font-size:var(--t-l);line-height:1.35;}
+.u-cita cite{font-style:normal;font-size:var(--t-xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);}
+
+/* revelado al hacer scroll — necesita el JS de moldes/restaurante.md */
+.u-revelar{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease;}
+.u-revelar.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.u-revelar{opacity:1;transform:none;}}
+
+
+/* ---------- identidad: SOLO esta demo ----------
+   Almidón y oliva. El fondo es el color de una camisa recién planchada y el
+   verde es el del uniforme de trabajo. El teja aparece solo en la columna de
+   «lo que NO hay que hacer», que es la que salva prendas.                  */
+:root{
+  --fondo:#f4f3ec; --fondo-2:#e6e4d8; --tinta:#22241c; --tinta-2:#5f6353;
+  --acento:#5a6b34; --acento-tinta:#f3f7ea; --linea:#d1cfc0;
+  --teja:#c4552f;
+  --display:'Faustina', Georgia, serif;
+  --texto:'Red Hat Text', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;
+  line-height:1.08;}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+h3{font-size:1.4rem;}
+em.ol{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--teja);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(244,243,236,.95);
+  backdrop-filter:blur(8px);border-bottom:2px solid var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.4rem;font-weight:700;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con la funda */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.6rem);line-height:1.06;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.funda{width:100%;max-width:230px;margin-inline:auto;color:var(--acento);}
+.funda .mancha{color:var(--teja);}
+
+/* la tabla de manchas */
+.man{width:100%;border-collapse:collapse;margin-top:var(--s-3);}
+.man th{text-align:left;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta-2);font-weight:600;padding:0 .8rem .5rem;
+  border-bottom:2px solid var(--tinta);}
+.man td{padding:.75rem .8rem;border-bottom:1px solid var(--linea);
+  vertical-align:top;font-size:.96rem;}
+.man td:first-child{font-family:var(--display);font-weight:700;font-size:1.1rem;
+  white-space:nowrap;width:9rem;}
+.man td.si{color:var(--acento);}
+.man td.no{color:var(--teja);}
+@media(max-width:760px){
+  .man thead{display:none;}
+  .man td{display:block;border-bottom:0;padding:.3rem .8rem;}
+  .man tr{display:block;border-bottom:1px solid var(--linea);padding-block:.6rem;}
+  .man td:first-child{width:auto;}
+  .man td.si::before{content:"Sí: ";font-weight:600;}
+  .man td.no::before{content:"No: ";font-weight:600;}
+}
+
+/* precios */
+.u-precios li{flex-wrap:wrap;border-bottom-color:var(--linea);}
+.u-precios .d{flex-basis:100%;order:3;margin-top:.15rem;}
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);color:var(--acento);font-weight:700;}
+
+/* plazos */
+.plazo{border-top:4px solid var(--acento);padding-top:var(--s-2);}
+.plazo b{display:block;font-family:var(--display);font-size:2rem;font-weight:700;
+  line-height:1;color:var(--acento);}
+.plazo span{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;color:var(--tinta-2);margin:.3rem 0 .4rem;}
+
+/* lo que nadie sabe, con dibujo */
+.otro{text-align:center;}
+.otro .dib{width:100%;max-width:100px;margin:0 auto var(--s-2);color:var(--tinta);}
+.otro b{display:block;font-family:var(--display);font-size:1.3rem;font-weight:700;}
+.otro p{max-width:26ch;margin:.35rem auto 0;color:var(--tinta-2);}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--teja);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:700;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--tinta);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#999b8d;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#b6cc85;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios, sus plazos y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Tintorería Álvarez</b><span data-real>Mauricio Legendre · Almenara · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#mancha">La mancha</a>
+      <a href="#precios">Precios</a>
+      <a href="#plazos">Cuándo lo tengo</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34913153279" data-real>91 315 32 79</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Tintorería y arreglos · Calle de Mauricio Legendre · Almenara</span>
+      <h1>Una mancha tiene reloj.<br><em class="ol">Y lo peor que puede hacer es frotarla.</em></h1>
+      <p>Frotar y echar agua caliente son los dos errores que fijan la mancha
+      para siempre. Ahí abajo está qué hacer con cada una antes de traerla — y
+      eso vale aunque no venga.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="tel:+34913153279" data-real>Llamar · 91 315 32 79</a>
+        <a class="u-btn u-btn--linea" href="#mancha">Ver qué hacer con la mancha</a>
+      </p>
+    </div>
+    <svg class="funda" viewBox="0 0 200 260" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <path d="M100 18 a12 12 0 0 1 12 12 c0 8 -12 8 -12 16"/>
+      <path d="M100 46 L34 92 c-6 4 -8 10 -8 16 v130 h148 V108 c0 -6 -2 -12 -8 -16 z"/>
+      <path d="M100 46 V238" stroke-width="2.5" opacity=".45"/>
+      <path d="M26 122 h148" stroke-width="2.5" opacity=".35"/>
+      <g class="mancha" stroke="currentColor">
+        <path d="M128 168 c10 -4 20 2 20 12 c0 9 -8 16 -18 14 c-9 -2 -13 -12 -8 -19 z" stroke-width="4"/>
+        <circle cx="146" cy="196" r="4" stroke-width="3"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Mauricio Legendre</b></span>
+    <span data-real>Almenara · Tetuán · Madrid</span>
+    <span data-ejemplo>L–V 10:00–14:00 y 17:00–20:00</span>
+    <a href="tel:+34913153279" data-real><b>91 315 32 79</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. la tabla de manchas ===== -->
+<section class="u-seccion" id="mancha">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo más útil que puede leer aquí, y es gratis</span>
+    <h2 style="max-width:26ch;margin:.2em 0 var(--s-2);">Qué hacer y qué no, antes de traerla.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Nadie busca «tintorería».
+    Busca «cómo quitar vino de un vestido» a las once de la noche. Esto no es
+    para resolverlo en casa: es para que la prenda llegue aquí en condiciones de
+    salvarse.</p>
+    <table class="man" data-ejemplo>
+      <thead><tr><th>La mancha</th><th>Sí</th><th>No</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Vino tinto</td>
+          <td class="si">Secar dando toquecitos con papel y traerla cuanto antes, aún húmeda.</td>
+          <td class="no">Sal, agua caliente ni vino blanco. Fijan el color.</td>
+        </tr>
+        <tr>
+          <td>Aceite o grasa</td>
+          <td class="si">Retirar el exceso con una cuchara y traerla en seco.</td>
+          <td class="no">Agua ni jabón de manos. Extienden el cerco.</td>
+        </tr>
+        <tr>
+          <td>Sangre</td>
+          <td class="si">Agua fría y venir el mismo día.</td>
+          <td class="no">Agua caliente jamás: cuaja la mancha en el tejido.</td>
+        </tr>
+        <tr>
+          <td>Bolígrafo</td>
+          <td class="si">Traerla tal cual, con la mancha seca.</td>
+          <td class="no">Alcohol ni laca. Corren la tinta y hacen la mancha más grande.</td>
+        </tr>
+        <tr>
+          <td>Sudor y desodorante</td>
+          <td class="si">Decirlo al dejarla: se trata aparte antes de limpiar.</td>
+          <td class="no">Lejía. Amarillea el blanco para siempre.</td>
+        </tr>
+        <tr>
+          <td>Cualquiera, si duda</td>
+          <td class="si">Traerla sin tocar y contar qué era.</td>
+          <td class="no">Frotar. Es lo que rompe la fibra y deja el cerco.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);">
+      Aquí no se promete que una mancha salga: eso depende del tejido, del
+      tiempo que lleve y de lo que se le haya hecho antes. Lo que sí se puede
+      decir es que cuanto antes entre, más posibilidades tiene.</p>
+  </div>
+</section>
+
+<!-- ===== 5. precios ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="precios">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>Prenda<br>por prenda.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Ninguna tintorería
+      publica los precios, y es lo segundo que busca la gente después de la
+      mancha. Quien no encuentra una cifra se va a la de la esquina.</p>
+      <p style="color:var(--tinta-2);">Y hay una fila que vale por todas las
+      demás: el edredón. Casi nadie sabe que se puede traer, y es lo que más
+      alivio da cuando llega el frío.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Camisa</span><span class="d">Lavada y planchada.</span><span class="p">3,50 €</span></li>
+        <li><span class="n">Pantalón</span><span class="d">De vestir o vaquero.</span><span class="p">6 €</span></li>
+        <li><span class="n">Traje de dos piezas</span><span class="d">Chaqueta y pantalón.</span><span class="p">14 €</span></li>
+        <li><span class="n">Abrigo</span><span class="d">Paño o plumas.</span><span class="p">15 €</span></li>
+        <li><span class="n">Vestido</span><span class="d">Según largo y tejido.</span><span class="p">desde 12 €</span></li>
+        <li><span class="n">Edredón nórdico</span><span class="d">Cama de 150. Se entrega en bolsa.</span><span class="p">18 €</span></li>
+        <li><span class="n">Cortinas</span><span class="d">Por metro cuadrado.</span><span class="p">9 €</span></li>
+        <li><span class="n">Alfombra</span><span class="d">Se recoge y se trae a casa.</span><span class="p">desde 30 €</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. plazos ===== -->
+<section class="u-seccion" id="plazos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">¿Cuándo lo tengo?</h2>
+    <div class="u-grid u-3" data-ejemplo>
+      <div class="plazo">
+        <b>24 h</b>
+        <span>Lo normal</span>
+        <p>Si entra antes de las 12:00, al día siguiente por la tarde está.</p>
+      </div>
+      <div class="plazo">
+        <b>Mismo día</b>
+        <span>Con recargo</span>
+        <p>Camisas y trajes, si entra a primera hora. Cuesta 3 € más y hay que
+        avisar al dejarlo.</p>
+      </div>
+      <div class="plazo">
+        <b>3 – 5 días</b>
+        <span>Lo grande</span>
+        <p>Edredones, cortinas, alfombras y trajes de novia. Se llama en cuanto
+        está.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. lo que nadie sabe que también se hace ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="otro">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-4);">Lo que también se hace<br>y casi nadie sabe.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="otro">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M96 14 L36 74"/>
+          <path d="M28 82 l-6 18 18 -6 z"/>
+          <ellipse cx="98" cy="12" rx="9" ry="5" transform="rotate(-45 98 12)"/>
+          <path d="M84 26 c-14 6 -22 20 -18 34" stroke-width="2.5" opacity=".5"/>
+        </svg>
+        <b>Arreglos y costura</b>
+        <p>Bajos, cremalleras, meter de cintura y descosidos.</p>
+      </div>
+
+      <div class="otro">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 38 h92 a8 8 0 0 1 8 8 v34 a8 8 0 0 1 -8 8 H14 a8 8 0 0 1 -8 -8 V46 a8 8 0 0 1 8 -8 z"/>
+          <path d="M34 38 v50" stroke-width="2.5" opacity=".5"/>
+          <path d="M60 38 v50" stroke-width="2.5" opacity=".5"/>
+          <path d="M86 38 v50" stroke-width="2.5" opacity=".5"/>
+        </svg>
+        <b>Edredones y mantas</b>
+        <p>Se entregan en bolsa, listos para guardar hasta el invierno.</p>
+      </div>
+
+      <div class="otro">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 22 h92" stroke-width="5"/>
+          <path d="M26 22 v76 c0 6 -4 8 -8 8"/>
+          <path d="M46 22 v76 c0 6 4 8 8 8"/>
+          <path d="M66 22 v76 c0 6 -4 8 -8 8"/>
+          <path d="M86 22 v76 c0 6 4 8 8 8"/>
+        </svg>
+        <b>Cortinas y alfombras</b>
+        <p>Se descuelgan, se limpian y se vuelven a colgar.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 data-real>En Mauricio<br>Legendre.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Almenara · Tetuán · Madrid. Junto a la estación de Chamartín, a pie de
+        calle.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34913153279" data-real>91 315 32 79</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Tintorer%C3%ADa%20%C3%81lvarez%2C%20Mauricio%20Legendre%2C%20Madrid"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Martes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la calle y el
+      teléfono. Los precios, los plazos y la lista de arreglos están inventados:
+      pulse el botón amarillo de arriba y se marcan solos.</p>
+      <ul>
+        <li><b>La tabla de manchas hay que revisarla con usted</b>, línea por
+        línea. Está escrita con prudencia y siempre acaba en «tráigala», pero lo
+        que va ahí lo sabe usted mejor que yo.</li>
+        <li><b>Aquí no se promete que ninguna mancha salga.</b> Depende del
+        tejido, del tiempo y de lo que se le haya hecho antes.</li>
+        <li><b>El portal:</b> un directorio dice el 5 y el mapa dice el 7. No
+        pongo ninguno hasta que me lo diga.</li>
+        <li><b>Y esto le interesa:</b> en un directorio aparece dos veces, una
+        en Chamartín-Castilla y otra en Tetuán-Almenara. Si es la misma tienda
+        duplicada, le está partiendo las opiniones en dos fichas. ¿Son dos
+        locales o es un error?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la tintorería.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la calle y el
+      teléfono salen de fichas públicas. Los precios, los plazos, el horario y
+      las listas están inventados y marcados.</p>
+      <p><b>Ningún texto promete que una mancha concreta se elimine</b>, y la
+      tabla no propone ningún remedio casero: solo qué evitar antes de traer la
+      prenda. <b>No se declara ninguna nota de Google</b> y <b>no hay ninguna
+      fotografía:</b> los cuatro dibujos están hechos a mano.</p>
+      <p>No se recoge ningún dato: el botón abre su propio teléfono. Si el
+      titular quiere que esto desaparezca, escribe y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34913153279">Llamar</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Tintorer%C3%ADa%20%C3%81lvarez%2C%20Mauricio%20Legendre%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"DryCleaningOrLaundry",
+  "name":"Tintorería Álvarez",
+  "description":"Tintorería y arreglos de ropa en la calle de Mauricio Legendre, Almenara, Tetuán, Madrid.",
+  "telephone":"+34913153279",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Mauricio Legendre",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.46932,"longitude":-3.68695},
+  "openingHours":["Mo-Fr 10:00-14:00","Mo-Fr 17:00-20:00","Sa 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/tintoreria-alvarez/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
