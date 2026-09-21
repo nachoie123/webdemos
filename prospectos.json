@@ -554,18 +554,19 @@
     "nombre": "Persianas Redondo",
     "categoria": "Servicios y comercio",
     "tipo": "Persianas y toldos",
-    "telefono": "915712819",
+    "telefono": "699029965",
     "maps": null,
-    "estado_web": "por verificar",
+    "estado_web": "none",
     "web_actual": null,
     "coords": "40.45704,-3.70278",
     "calle_osm": "Calle de Lope de Haro 7",
     "gancho": "Del barrido OSM ampliado (21/09/2026): persianas y toldos con telefono y sin website en OSM. VERIFICAR antes de gastar demo.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/persianas-redondo/",
     "enviado": null,
     "respuesta": null,
-    "nota_web": "Anadido por barrido Overpass 1500 m el 21/09/2026. SIN verificar."
+    "nota_web": "VERIFICADO 21/09/2026: sin web (persianasredondo.com/.es no responden). Lope de Haro 7 CONFIRMADO: el reverse devuelve nombre Y numero, mas Paginas Amarillas. TIENE MOVIL ademas del fijo (OSM trae los dos), asi que SI entra en enviar.html. Horario de OSM. Gancho: la cinta rota y la urgencia de seguridad. Ver datos/persianas-redondo.md",
+    "telefono_fijo": "915712819"
   },
   {
     "slug": "superfruta-valencia",

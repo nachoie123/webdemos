@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Persianas Redondo · Lope de Haro 7, Berruguete, Madrid</title>
+<meta name="description" content="Propuesta de página web para Persianas Redondo, persianas, toldos y motorización en la calle de Lope de Haro 7, Berruguete, Tetuán, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/persianas-redondo/">
+<meta name="theme-color" content="#3c4148">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%233c4148%27/%3E%3Cg fill=%27%23f4f2ee%27%3E%3Crect x=%275%27 y=%276%27 width=%2722%27 height=%273%27/%3E%3Crect x=%275%27 y=%2711%27 width=%2722%27 height=%273%27/%3E%3Crect x=%275%27 y=%2716%27 width=%2722%27 height=%273%27/%3E%3C/g%3E%3Crect x=%2714%27 y=%2721%27 width=%273%27 height=%277%27 fill=%27%23a5652c%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/persianas-redondo/">
+<meta property="og:title" content="Persianas Redondo · Lope de Haro 7, Berruguete, Madrid">
+<meta property="og:description" content="Propuesta de página web para Persianas Redondo, persianas, toldos y motorización en la calle de Lope de Haro 7, Berruguete, Tetuán, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/persianas-redondo/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lexend:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Listón y sombra. El caramelo es el color de la madera de una persiana vieja
+   y el gris pizarra el de la caja del recogedor. Tipografía condensada, de
+   rótulo de taller.                                                        */
+:root{
+  --fondo:#f4f2ee; --fondo-2:#e6e2da; --tinta:#1f2124; --tinta-2:#5e6167;
+  --acento:#a5652c; --acento-tinta:#fdf4ea; --linea:#d3cec4;
+  --sombra:#3c4148;
+  --display:'Oswald', 'Arial Narrow', sans-serif;
+  --texto:'Lexend', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.01em;
+  line-height:1.06;text-transform:uppercase;}
+h2{font-size:clamp(2.1rem,4.8vw,3.5rem);}
+h3{font-size:1.4rem;}
+em.ca{font-style:normal;color:var(--acento);}
+.u-ceja{color:var(--acento);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:var(--sombra);color:var(--fondo);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.7rem;padding-bottom:.7rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.45rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.02em;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;opacity:.75;}
+.cab .u-nav a{color:var(--fondo);opacity:.85;}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.5rem 1rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con la persiana */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:5px solid var(--sombra);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.04;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.pers{width:100%;max-width:240px;margin-inline:auto;color:var(--sombra);}
+.pers .cinta{color:var(--acento);}
+
+/* las averías */
+.ave{width:100%;border-collapse:collapse;margin-top:var(--s-3);}
+.ave th{text-align:left;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta-2);font-weight:600;padding:0 .8rem .5rem;
+  border-bottom:3px solid var(--sombra);}
+.ave td{padding:.8rem;border-bottom:1px solid var(--linea);vertical-align:top;
+  font-size:.96rem;}
+.ave td:first-child{font-family:var(--display);font-weight:700;font-size:1.1rem;
+  text-transform:uppercase;width:11rem;}
+.ave td:nth-child(3),.ave td:nth-child(4){white-space:nowrap;font-weight:600;
+  text-align:right;}
+.ave td:nth-child(3){color:var(--acento);}
+.ave td:nth-child(4){color:var(--tinta-2);}
+@media(max-width:760px){
+  .ave thead{display:none;}
+  .ave td{display:block;border-bottom:0;padding:.3rem .8rem;text-align:left!important;}
+  .ave tr{display:block;border-bottom:1px solid var(--linea);padding-block:.6rem;}
+  .ave td:first-child{width:auto;}
+}
+
+/* urgencia */
+.urg{background:var(--sombra);color:#d5d9dd;padding:var(--s-4);}
+.urg h2{color:#fff;}
+
+/* motorizar */
+.mot{border-left:5px solid var(--acento);padding-left:var(--s-3);margin-bottom:var(--s-3);}
+.mot > b:first-child{display:block;font-family:var(--display);font-size:1.35rem;
+  font-weight:700;text-transform:uppercase;margin-bottom:.25rem;}
+
+/* toldos, con dibujo */
+.tol{text-align:center;}
+.tol .dib{width:100%;max-width:110px;margin:0 auto var(--s-2);color:var(--sombra);}
+.tol b{display:block;font-family:var(--display);font-size:1.3rem;font-weight:700;
+  text-transform:uppercase;}
+.tol p{max-width:26ch;margin:.35rem auto 0;color:var(--tinta-2);}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--acento);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:700;text-transform:uppercase;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--sombra);color:var(--fondo);}
+
+.pie{background:var(--tinta);color:#95989e;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#e0a763;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus precios y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Persianas Redondo</b><span data-real>Lope de Haro 7 · Berruguete · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#averias">Averías</a>
+      <a href="#motor">Motorizar</a>
+      <a href="#toldos">Toldos</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34699029965" data-real>699 02 99 65</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Persianas, toldos y motorización · Lope de Haro 7</span>
+      <h1>Se ha roto la cinta.<br><em class="ca">No hace falta cambiar la persiana.</em></h1>
+      <p>Es la avería más común de todas y la que peor se resuelve: mucha gente
+      pide presupuesto para una persiana nueva sin saber que cambiar la cinta es
+      media hora. Mándenos una foto por WhatsApp y le decimos qué es.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34699029965?text=Hola%2C%20os%20mando%20una%20foto%20de%20la%20persiana%3A"
+           target="_blank" rel="noopener" data-real>Mandar foto por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34915712819" data-real>91 571 28 19</a>
+      </p>
+    </div>
+    <svg class="pers" viewBox="0 0 220 240" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+      <rect x="24" y="16" width="172" height="208"/>
+      <rect x="24" y="16" width="172" height="26" fill="currentColor" stroke="none" opacity=".85"/>
+      <g stroke-width="3">
+        <path d="M32 54 h156"/><path d="M32 68 h156"/><path d="M32 82 h156"/>
+        <path d="M32 96 h156"/><path d="M32 110 h156"/><path d="M32 124 h156"/>
+      </g>
+      <path d="M32 132 h156" stroke-width="6"/>
+      <g stroke-width="2" opacity=".3">
+        <path d="M32 150 h156"/><path d="M32 170 h156"/><path d="M32 190 h156"/>
+      </g>
+      <g class="cinta" stroke="currentColor">
+        <path d="M196 42 v70" stroke-width="6"/>
+        <path d="M196 112 c-8 10 -22 6 -24 18 c-2 10 8 16 6 26" stroke-width="6"/>
+        <circle cx="180" cy="162" r="5" fill="currentColor" stroke="none"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle de Lope de Haro, 7</b></span>
+    <span data-real>Berruguete · Tetuán · 28039 Madrid</span>
+    <span data-ejemplo>L–V 10:00–14:00 y 17:00–20:00</span>
+    <a href="tel:+34915712819" data-real><b>91 571 28 19</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. las averías ===== -->
+<section class="u-seccion" id="averias">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que entra por teléfono cada día</span>
+    <h2 style="max-width:24ch;margin:.2em 0 var(--s-2);">Qué le pasa a su persiana.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Casi todo lo que parece
+    grave es una pieza de diez euros. Aquí está qué es cada cosa, qué cuesta y
+    cuánto tarda, para que sepa a qué atenerse antes de llamar.</p>
+    <table class="ave" data-ejemplo>
+      <thead><tr><th>Lo que pasa</th><th>Lo que es</th><th>Desde</th><th>Tarda</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>La cinta se ha roto</td>
+          <td>Cinta y, si está gastado, el muelle del recogedor.</td>
+          <td>40 €</td><td>30 min</td>
+        </tr>
+        <tr>
+          <td>Sube pero no se queda</td>
+          <td>El recogedor ha perdido fuerza. Se cambia el mecanismo.</td>
+          <td>55 €</td><td>45 min</td>
+        </tr>
+        <tr>
+          <td>Se ha salido de la guía</td>
+          <td>Se abre la caja, se recoloca y se revisa el eje.</td>
+          <td>50 €</td><td>45 min</td>
+        </tr>
+        <tr>
+          <td>Hay lamas partidas</td>
+          <td>Se sustituyen solo las rotas si la persiana está bien.</td>
+          <td>70 €</td><td>1 h</td>
+        </tr>
+        <tr>
+          <td>Entra frío por la caja</td>
+          <td>Aislar el cajón. Se nota en la factura de la luz.</td>
+          <td>90 €</td><td>1 h</td>
+        </tr>
+        <tr>
+          <td>Ya no compensa</td>
+          <td>Persiana entera, con guías nuevas. Se dice cuándo toca.</td>
+          <td>desde 180 €</td><td>medio día</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== 5. la urgencia ===== -->
+<section class="u-seccion u-sangrado" id="urgencia">
+  <div class="u-wrap u-revelar">
+    <div class="urg u-grid u-desigual">
+      <div>
+        <span class="u-ceja" style="color:#e0a763;">Lo que nadie escribe</span>
+        <h2 style="max-width:20ch;">Si no baja, esta noche la casa se queda sin cerrar.</h2>
+      </div>
+      <div data-ejemplo>
+        <p>Una persiana atascada arriba no es una incomodidad: es una ventana
+        que no se puede cerrar, en un bajo o en un primero. Eso no espera al
+        martes.</p>
+        <p>Llame o mande la foto y, si es de las averías de arriba, se intenta
+        el mismo día. Si no se puede, se deja la persiana bajada y asegurada y
+        se vuelve al día siguiente con la pieza.</p>
+        <p style="margin:0;"><b style="color:#fff;">Y si vive solo o es mayor,
+        dígalo al llamar:</b> esas van primero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. motorizar ===== -->
+<section class="u-seccion" id="motor">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Se puede<br>motorizar<br>sin obra.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Es lo que menos
+      nos piden y lo que más sorprende cuando se cuenta: no hay que picar
+      pared ni cambiar la persiana.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="mot">
+        <b>Sobre la que ya tiene</b>
+        <p>Se quita la cinta, se pone un motor dentro del eje y se tapa el
+        hueco del recogedor. La persiana es la misma.</p>
+      </div>
+      <div class="mot">
+        <b>Con mando o con el móvil</b>
+        <p>Con mando a distancia basta. Si quiere que suba sola al amanecer o
+        con el móvil desde fuera, también se puede.</p>
+      </div>
+      <div class="mot">
+        <b>Para quien ya no puede tirar</b>
+        <p>Es la razón por la que la mayoría lo pide: una cadera, un hombro, o
+        una persiana grande que pesa demasiado.</p>
+      </div>
+      <div class="mot">
+        <b>Una ventana o toda la casa</b>
+        <p>Se puede empezar por la del salón y seguir cuando quiera. No hay que
+        hacerlo todo de golpe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. toldos ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="toldos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-4);">Y para el sol.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="tol">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 30 h100"/>
+          <path d="M14 30 L30 76 h60 L106 30"/>
+          <path d="M30 76 l8 12 8 -12 8 12 8 -12 8 12 8 -12" stroke-width="3"/>
+          <path d="M60 30 v46" stroke-width="2.5" opacity=".4"/>
+        </svg>
+        <b>Toldos</b>
+        <p>De brazo, de cofre y de punto recto. Con manivela o con motor.</p>
+      </div>
+
+      <div class="tol">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 34 h88 v10 h-88 z"/>
+          <path d="M22 44 v62"/><path d="M98 44 v62"/>
+          <g stroke-width="3"><path d="M30 34 v-12"/><path d="M60 34 v-12"/><path d="M90 34 v-12"/></g>
+          <path d="M22 70 h76" stroke-width="2.5" opacity=".4"/>
+        </svg>
+        <b>Pérgolas</b>
+        <p>Incluidas las bioclimáticas, con lamas que giran.</p>
+      </div>
+
+      <div class="tol">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="16" y="24" width="88" height="24" rx="6"/>
+          <path d="M28 48 v40"/><path d="M92 48 v40"/>
+          <path d="M28 88 h64" stroke-width="6"/>
+          <path d="M60 24 v-8" stroke-width="3"/>
+        </svg>
+        <b>Cofres</b>
+        <p>El toldo se guarda dentro de una caja cerrada y no coge suciedad.</p>
+      </div>
+
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);"
+       data-ejemplo>Para un toldo en fachada suele hacer falta el visto bueno de
+       la comunidad, y a veces que sea del color que ya hay en el edificio. Se
+       mira antes de encargar nada.</p>
+  </div>
+</section>
+
+<!-- ===== 8. dónde y horario ===== -->
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2 data-real>Lope de Haro, 7.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Berruguete · Tetuán · 28039 Madrid. A pie de calle, con taller
+        detrás.</p>
+      <p style="color:var(--tinta-2);" data-ejemplo>Se va a domicilio a medir y
+      a reparar, y medir no se cobra.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="https://wa.me/34699029965?text=Hola%2C%20os%20mando%20una%20foto%20de%20la%20persiana%3A"
+           target="_blank" rel="noopener" data-real>Mandar foto</a>
+        <a class="u-btn u-btn--linea" href="tel:+34915712819" data-real>91 571 28 19</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Persianas%20Redondo%2C%20Lope%20de%20Haro%207%2C%20Madrid"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--acento);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Martes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>10:00 – 14:00</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      número y los dos teléfonos. Los precios, los tiempos y el horario están
+      inventados: pulse el botón amarillo de arriba y se marcan solos.</p>
+      <ul>
+        <li><b>La tabla de averías es el corazón de la página</b> y hay que
+        rehacerla con sus precios y sus tiempos. Tal como está solo enseña la
+        forma.</li>
+        <li><b>Falta lo suyo:</b> fotos del taller, de un cajón abierto y de un
+        toldo puesto. Un toldo instalado vende más que cualquier texto.</li>
+        <li><b>El horario</b> lo he sacado del mapa, donde figura hasta las
+        20:00, pero un directorio dice 20:30. ¿Cuál es?</li>
+        <li><b>Sin nota de Google:</b> no he encontrado un recuento fiable de
+        opiniones, y una nota sin número la penaliza Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      en Madrid. Hago páginas para negocios del barrio: una página escrita a
+      mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial del negocio.</b> Es una propuesta sin
+      relación con él ni con sus titulares. El nombre, la dirección y los
+      teléfonos salen de fichas públicas. Los precios, los tiempos, el horario y
+      las listas están inventados y marcados.</p>
+      <p><b>No se declara ninguna nota de Google</b> ni se menciona ninguna
+      marca comercial. <b>No hay ninguna fotografía:</b> los cuatro dibujos
+      están hechos a mano para esta propuesta.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34699029965?text=Hola%2C%20os%20mando%20una%20foto%20de%20la%20persiana%3A" target="_blank" rel="noopener">Mandar foto</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Persianas%20Redondo%2C%20Lope%20de%20Haro%207%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Persianas Redondo",
+  "description":"Persianas, reparación, toldos, pérgolas y motorización en la calle de Lope de Haro 7, Berruguete, Tetuán, Madrid.",
+  "telephone":"+34915712819",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Lope de Haro, 7",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28039",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.45704,"longitude":-3.70278},
+  "openingHours":["Mo-Fr 10:00-14:00","Mo-Fr 17:00-20:00","Sa 10:00-14:00"],
+  "url":"https://nachoie123.github.io/webdemos/persianas-redondo/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
