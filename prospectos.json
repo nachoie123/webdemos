@@ -481,20 +481,20 @@
   },
   {
     "slug": "pablo-albalate",
-    "nombre": "Pablo Albalate",
+    "nombre": "Pablo Albalate — Sastrería y camisería a medida",
     "categoria": "Servicios y comercio",
-    "tipo": "Tienda de ropa",
+    "tipo": "Sastreria y cameseria a medida",
     "telefono": "914586576",
     "maps": null,
-    "estado_web": "por verificar",
+    "estado_web": "none",
     "web_actual": null,
     "gancho": "Del barrido OSM 21/09/2026: Calle Profesor Waksman 8, con telefono y sin website en OSM. VERIFICAR con tiene_web.py + WebSearch antes de gastar demo.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/pablo-albalate/",
     "enviado": null,
     "respuesta": null,
     "coords": "40.45592,-3.68901",
-    "nota_web": "Anadido por barrido de OpenStreetMap (Overpass) el 21/09/2026 para reponer candidatos. SIN verificar."
+    "nota_web": "VERIFICADO 21/09/2026: sin web (pabloalbalate.com/.es no resuelven). NO es una tienda de ropa: es SASTRERIA y camiseria A MEDIDA (camisas, trajes y chaques). Profesor Waksman 8 bajo, Hispanoamerica, 28036. TELEFONO FIJO: no entra en enviar.html. Ver datos/pablo-albalate.md"
   },
   {
     "slug": "la-morenita",

@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pablo Albalate · Profesor Waksman 8, Hispanoamérica, Madrid</title>
+<meta name="description" content="Propuesta de página web para Pablo Albalate, sastrería y camisería a medida en la calle Profesor Waksman 8, Hispanoamérica, Chamartín, Madrid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/pablo-albalate/">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23faf9f6%27/%3E%3Cpath d=%27M16 4 v24%27 stroke=%27%23121212%27 stroke-width=%272%27/%3E%3Cpath d=%27M6 28 h20%27 stroke=%27%23121212%27 stroke-width=%272%27/%3E%3Cpath d=%27M10 10 h12%27 stroke=%27%23121212%27 stroke-width=%272%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/pablo-albalate/">
+<meta property="og:title" content="Pablo Albalate · Profesor Waksman 8, Hispanoamérica, Madrid">
+<meta property="og:description" content="Propuesta de página web para Pablo Albalate, sastrería y camisería a medida en la calle Profesor Waksman 8, Hispanoamérica, Chamartín, Madrid.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/pablo-albalate/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   La única de las 27 sin ningún color. Blanco de papel de patrón, negro de
+   tinta y un gris de tiza de sastre. En una sastrería el color lo pone el
+   tejido, no la página: aquí no hay tejido, así que no hay color.         */
+:root{
+  --fondo:#faf9f6; --fondo-2:#eceae5; --tinta:#121212; --tinta-2:#5c5c5a;
+  --acento:#121212; --acento-tinta:#faf9f6; --linea:#d5d3cc;
+  --tiza:#8b8b88;
+  --display:'Italiana', Georgia, serif;
+  --texto:'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;
+  line-height:1.1;}
+h2{font-size:clamp(2.2rem,5vw,3.8rem);}
+h3{font-size:1.45rem;}
+em.ti{font-style:normal;color:var(--tiza);}
+.u-ceja{color:var(--tinta-2);font-weight:600;}
+
+.cab{position:sticky;top:0;z-index:40;background:rgba(250,249,246,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--tinta);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.8rem;padding-bottom:.8rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.6rem;font-weight:400;
+  letter-spacing:.09em;text-transform:uppercase;}
+.marca span{display:block;font-size:.58rem;letter-spacing:.22em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--tinta);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+.hero{background:var(--fondo);border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.08;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.mani{width:100%;max-width:230px;margin-inline:auto;color:var(--tinta);}
+.mani .cinta{color:var(--tiza);}
+
+/* el calendario hacia atrás */
+.cuenta{counter-reset:c;}
+.cuenta > div{display:grid;grid-template-columns:8.5rem 1fr;gap:var(--s-3);
+  padding:var(--s-3) 0;border-top:1px solid var(--linea);align-items:baseline;}
+.cuenta > div:last-child{border-bottom:1px solid var(--linea);}
+.cuenta .cuando{font-family:var(--display);font-size:1.6rem;line-height:1.05;}
+.cuenta .cuando small{display:block;font-family:var(--texto);font-size:.64rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--tiza);
+  font-weight:600;margin-top:.3rem;}
+.cuenta b{display:block;font-weight:600;margin-bottom:.15rem;}
+@media(max-width:620px){.cuenta > div{grid-template-columns:1fr;gap:.4rem;}}
+
+/* las pruebas */
+.prueba{border-top:1px solid var(--tinta);padding-top:var(--s-3);}
+.prueba .num{font-family:var(--display);font-size:2.4rem;line-height:1;
+  display:block;margin-bottom:.3rem;}
+.prueba b{display:block;font-weight:600;margin-bottom:.2rem;}
+
+/* desde */
+.u-precios li{flex-wrap:wrap;border-bottom-color:var(--linea);}
+.u-precios .d{flex-basis:100%;order:3;margin-top:.15rem;}
+.u-precios .n{font-weight:600;}
+.u-precios .p{font-family:var(--display);font-size:1.35rem;color:var(--tinta);}
+
+/* arreglos: la franja negra */
+.arr{background:var(--tinta);color:#cfcec9;padding:var(--s-4);}
+.arr h2{color:#fff;}
+.arr .li{border-top:1px solid #333;padding-top:var(--s-2);margin-top:var(--s-2);}
+.arr .li b{color:#fff;}
+
+/* qué se hace, con dibujo */
+.of{text-align:center;}
+.of .dib{width:100%;max-width:96px;margin:0 auto var(--s-2);color:var(--tinta);}
+.of b{display:block;font-family:var(--display);font-size:1.4rem;}
+.of p{max-width:25ch;margin:.35rem auto 0;color:var(--tinta-2);}
+
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+.nota{background:var(--fondo-2);border-left:6px solid var(--tinta);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.35rem;
+  margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--tinta);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--fondo-2);color:var(--tinta);}
+
+.pie{background:var(--tinta);color:#8f8f8c;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#fff;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus plazos, sus precios y sus fotos.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Pablo Albalate</b><span data-real>Sastrería y camisería a medida · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#cuando">Cuándo venir</a>
+      <a href="#pruebas">Las pruebas</a>
+      <a href="#desde">Desde</a>
+      <a href="#arreglos">Arreglos</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34914586576" data-real>91 458 65 76</a>
+  </div>
+</header>
+
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Sastrería y camisería a medida · Profesor Waksman 8 · Madrid</span>
+      <h1>Se casa en junio.<br><em class="ti">Tiene que venir en marzo.</em></h1>
+      <p>Un traje a medida no se hace en una semana: son varias pruebas y
+      semanas de taller. Nadie lo sabe hasta que es tarde, así que aquí está el
+      calendario, contado hacia atrás desde el día.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="tel:+34914586576" data-real>Pedir cita · 91 458 65 76</a>
+        <a class="u-btn u-btn--linea" href="#cuando">Ver el calendario</a>
+      </p>
+    </div>
+    <svg class="mani" viewBox="0 0 200 260" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <path d="M100 26 c-9 0 -15 6 -15 13 c0 6 4 9 4 13 l-32 14 c-9 4 -13 11 -12 20 l8 56 c1 8 6 12 14 12 h66 c8 0 13 -4 14 -12 l8 -56 c1 -9 -3 -16 -12 -20 l-32 -14 c0 -4 4 -7 4 -13 c0 -7 -6 -13 -15 -13 z"/>
+      <path d="M100 194 v28"/>
+      <path d="M72 246 h56" stroke-width="6"/>
+      <path d="M86 222 l-14 24"/><path d="M114 222 l14 24"/>
+      <g class="cinta" stroke="currentColor">
+        <path d="M46 116 c22 12 86 12 108 0" stroke-width="5"/>
+        <path d="M46 116 c-10 6 -14 18 -8 26" stroke-width="5"/>
+        <path d="M38 142 l-8 14" stroke-width="5"/>
+        <g stroke-width="2.5">
+          <path d="M62 120 v8"/><path d="M78 124 v8"/><path d="M94 125 v8"/>
+          <path d="M110 125 v8"/><path d="M126 123 v8"/><path d="M142 119 v8"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Calle Profesor Waksman, 8 · bajo</b></span>
+    <span data-real>Hispanoamérica · Chamartín · 28036 Madrid</span>
+    <span data-ejemplo>Lunes a viernes 10:00–14:00 y 17:00–20:00</span>
+    <a href="tel:+34914586576" data-real><b>91 458 65 76</b></a>
+  </div>
+</section>
+
+<section class="u-seccion" id="cuando">
+  <div class="u-wrap u-revelar">
+    <span class="u-ceja">Lo que nadie sabe hasta que es tarde</span>
+    <h2 style="max-width:22ch;margin:.2em 0 var(--s-2);">El calendario, contado hacia atrás.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);margin-bottom:var(--s-3);">
+      Tomando como ejemplo una boda. Si va con menos margen, dígalo al llamar:
+      a veces se puede, pero conviene saberlo desde el primer día y no a dos
+      semanas.</p>
+    <div class="cuenta" data-ejemplo>
+      <div>
+        <span class="cuando">3 meses antes<small>La primera cita</small></span>
+        <div><b>Se habla y se toman medidas</b>
+        <p style="margin:0;">Qué boda es, a qué hora, dónde. De ahí sale el
+        tejido y el corte, no al revés. Una hora larga, sin prisa.</p></div>
+      </div>
+      <div>
+        <span class="cuando">2 meses antes<small>Primera prueba</small></span>
+        <div><b>El traje, hilvanado</b>
+        <p style="margin:0;">Se prueba cosido a mano con hilvanes, para ver el
+        volumen. Da un poco de impresión y es totalmente normal.</p></div>
+      </div>
+      <div>
+        <span class="cuando">1 mes antes<small>Segunda prueba</small></span>
+        <div><b>Ya parece un traje</b>
+        <p style="margin:0;">Se ajustan hombro, cintura y largos. Aquí se
+        deciden los detalles: botones, forro, bolsillos.</p></div>
+      </div>
+      <div>
+        <span class="cuando">2 semanas antes<small>Última prueba</small></span>
+        <div><b>El remate</b>
+        <p style="margin:0;">Se afina lo que quede y se deja margen por si
+        adelgaza o engorda, que en los meses antes de una boda pasa.</p></div>
+      </div>
+      <div>
+        <span class="cuando">La semana de<small>Entrega</small></span>
+        <div><b>Se recoge planchado y en funda</b>
+        <p style="margin:0;">Con instrucciones de cómo guardarlo esos días para
+        que llegue sin una arruga.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="pruebas">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-4);">Qué se hace aquí.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="of">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+          <path d="M40 18 l40 22 v58 a6 6 0 0 1 -6 6 H46 a6 6 0 0 1 -6 -6 V40 z"/>
+          <path d="M40 18 c6 10 34 10 40 0" stroke-width="3"/>
+          <path d="M60 34 v62" stroke-width="2.5"/>
+          <g stroke-width="2.5"><path d="M56 48 h8"/><path d="M56 64 h8"/><path d="M56 80 h8"/></g>
+        </svg>
+        <b>Camisa a medida</b>
+        <p>La puerta más fácil: cuello, puño y largo exactos.</p>
+      </div>
+
+      <div class="of">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+          <path d="M34 22 L60 40 L86 22 l20 14 -10 22 v46 H24 V58 L14 36 z"/>
+          <path d="M60 40 V104" stroke-width="2.5"/>
+          <path d="M34 22 L48 62 L60 40" stroke-width="2.5"/>
+          <path d="M86 22 L72 62 L60 40" stroke-width="2.5"/>
+        </svg>
+        <b>Traje a medida</b>
+        <p>Dos o tres piezas. Con patrón propio, no ajustando uno hecho.</p>
+      </div>
+
+      <div class="of">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+          <path d="M38 20 L60 36 L82 20 l18 14 -8 20 -10 -6 v14 l14 42 H84 L60 62 L36 104 H24 l14 -42 V48 l-10 6 -8 -20 z"/>
+          <path d="M60 36 v26" stroke-width="2.5"/>
+        </svg>
+        <b>Chaqué</b>
+        <p>Para una boda de mañana. Con chaleco y todo lo que lleva.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion" id="desde">
+  <div class="u-wrap u-grid u-desigual-inv u-revelar">
+    <div>
+      <h2>Desde<br>cuánto.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">Mucha gente cree
+      que «a medida» es inalcanzable y ni entra a preguntar. Un «desde» escrito
+      rompe eso solo, aunque el precio final dependa del tejido.</p>
+      <p style="color:var(--tinta-2);">Y la camisa es la puerta barata: por poco
+      más de lo que cuesta una buena de tienda, hecha para usted.</p>
+    </div>
+    <div data-ejemplo>
+      <ul class="u-precios">
+        <li><span class="n">Camisa a medida</span><span class="d">A partir de tres unidades, mejor precio.</span><span class="p">desde 90 €</span></li>
+        <li><span class="n">Pantalón a medida</span><span class="d">Con una prueba.</span><span class="p">desde 220 €</span></li>
+        <li><span class="n">Traje de dos piezas</span><span class="d">Tres pruebas. El tejido, aparte.</span><span class="p">desde 950 €</span></li>
+        <li><span class="n">Chaqué completo</span><span class="d">Chaqué, chaleco y pantalón.</span><span class="p">desde 1.300 €</span></li>
+        <li><span class="n">Primera cita y medidas</span><span class="d">Hablar, ver tejidos y tomar medidas.</span><span class="p">sin coste</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion u-sangrado" id="arreglos">
+  <div class="u-wrap u-revelar">
+    <div class="arr u-grid u-desigual">
+      <div>
+        <span class="u-ceja" style="color:#9a9a96;">Y la mitad de la clientela viene por esto</span>
+        <h2 style="max-width:20ch;">También se arregla lo que ya tiene.</h2>
+        <p style="max-width:46ch;">No hace falta encargar un traje para entrar
+        por la puerta. Media sastrería vive de meter una chaqueta que sienta
+        mal, y casi ninguna lo pone delante.</p>
+      </div>
+      <div data-ejemplo>
+        <div class="li"><b>Meter o sacar una chaqueta</b>
+        <p style="margin:0;">De cintura, de hombro o de manga. Un traje que le
+        sentaba bien hace tres años vuelve a sentar bien.</p></div>
+        <div class="li"><b>Bajos y cintura de pantalón</b>
+        <p style="margin:0;">Con vuelta o sin ella, y a la altura del zapato
+        que vaya a llevar.</p></div>
+        <div class="li"><b>Un traje heredado</b>
+        <p style="margin:0;">El de su padre o su abuelo. Se mira si da de sí y
+        se dice de frente si merece la pena.</p></div>
+        <div class="li"><b>Forros, botones y cremalleras</b>
+        <p style="margin:0;">Lo pequeño también, y en pocos días.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2 data-real>Profesor<br>Waksman, 8.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-real>
+        Bajo · Hispanoamérica · Chamartín · 28036 Madrid. A dos calles del
+        Santiago Bernabéu.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" href="tel:+34914586576" data-real>91 458 65 76</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Pablo%20Albalate%2C%20Profesor%20Waksman%208%2C%20Madrid"
+           data-real>Cómo llegar</a>
+      </p>
+      <p style="color:var(--tinta-2);margin-top:var(--s-3);" data-ejemplo>
+        Mejor con cita: si viene sin avisar puede haber una prueba en marcha, y
+        una prueba no se interrumpe.</p>
+    </div>
+    <div>
+      <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                 color:var(--tiza);font-family:var(--texto);font-weight:600;">Horario</h3>
+      <table class="horario" data-ejemplo>
+        <tr><th>Lunes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Martes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Miércoles</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Jueves</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Viernes</th><td>10:00 – 14:00 · 17:00 – 20:00</td></tr>
+        <tr><th>Sábado</th><td>Cerrado</td></tr>
+        <tr><th>Domingo</th><td>Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección y el
+      teléfono, y que hace camisas, trajes y chaqués a medida. Los plazos, los
+      precios, el horario y las listas están inventados: pulse el botón amarillo
+      de arriba y se marcan solos.</p>
+      <ul>
+        <li><b>El calendario es el corazón de la página</b> y hay que ponerlo
+        con sus plazos reales. Yo he escrito los de un traje de boda al uso;
+        usted sabe cuántas pruebas hace y cuánto tarda su taller.</li>
+        <li><b>No he nombrado ni un tejido ni una marca.</b> No hay fuente
+        fiable de con qué trabaja, y decirlo sin saberlo sería mentir sobre su
+        producto. Dígamelo y lo pongo.</li>
+        <li><b>Falta lo suyo:</b> fotos del taller, de un traje hilvanado a
+        mitad y de la pared de tejidos. En este oficio la foto del proceso vende
+        más que la del traje acabado.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado un recuento fiable.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      al lado. Hago páginas para negocios del barrio: una página escrita a mano
+      para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la sastrería.</b> Es una propuesta sin
+      relación con el negocio ni con sus titulares. El nombre, la dirección y el
+      teléfono salen de fichas públicas. Los plazos, los precios, el horario y
+      las listas están inventados y marcados.</p>
+      <p><b>No se nombra ninguna marca de tejido ni ningún proveedor</b>, ni se
+      afirma ninguna procedencia. <b>No se declara ninguna nota de Google</b> y
+      <b>no hay ninguna fotografía:</b> los cuatro dibujos están hechos a mano
+      para esta propuesta.</p>
+      <p>No se recoge ningún dato: el botón abre su propio teléfono. Si el
+      titular quiere que esto desaparezca, escribe y desaparece el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="tel:+34914586576">Pedir cita</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Pablo%20Albalate%2C%20Profesor%20Waksman%208%2C%20Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ClothingStore",
+  "name":"Pablo Albalate",
+  "description":"Sastrería y camisería a medida en la calle Profesor Waksman 8, Hispanoamérica, Chamartín, Madrid.",
+  "telephone":"+34914586576",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle Profesor Waksman, 8",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28036",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.45592,"longitude":-3.68901},
+  "openingHours":["Mo-Fr 10:00-14:00","Mo-Fr 17:00-20:00"],
+  "url":"https://nachoie123.github.io/webdemos/pablo-albalate/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>
