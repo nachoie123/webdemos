@@ -332,9 +332,10 @@
     "web_actual": null,
     "gancho": "Sin web ni ficha desarrollada; landing con servicios y reserva de cita para mascotas.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/veterinario-madvetel/",
     "enviado": null,
-    "respuesta": null
+    "respuesta": null,
+    "nota_web": "Sin web (madvetel.com/.es no responden). Castellana 125 segun directorio, encaja con el 123 de SIGMA (portal contiguo) pero una sola fuente directa: no se declara. TELEFONO FIJO: no entra en enviar.html. OJO homonimo: madvet.es es el Grupo MadVet de Aluche/Majadahonda, otra cosa. Ver datos/veterinario-madvetel.md"
   },
   {
     "slug": "podologia-milagros-chana-lopez",
