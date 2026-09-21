@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es" data-marcas="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asesoría Madrid Centro · Paseo de la Castellana 141, Cuzco, Madrid</title>
+<meta name="description" content="Propuesta de página web para Asesoría Madrid Centro, gestoría en el Paseo de la Castellana 141, Castillejos, Tetuán, Madrid. Cuota mensual y calendario de plazos.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://nachoie123.github.io/webdemos/asesoria-madrid-centro/">
+<meta name="theme-color" content="#1b2a6b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23f3f0e8%27/%3E%3Crect x=%275%27 y=%277%27 width=%2722%27 height=%2720%27 fill=%27none%27 stroke=%27%231b2a6b%27 stroke-width=%273%27/%3E%3Ccircle cx=%2716%27 cy=%2718%27 r=%276%27 fill=%27none%27 stroke=%27%23c0392b%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://nachoie123.github.io/webdemos/asesoria-madrid-centro/">
+<meta property="og:title" content="Asesoría Madrid Centro · Paseo de la Castellana 141, Cuzco, Madrid">
+<meta property="og:description" content="Propuesta de página web para Asesoría Madrid Centro, gestoría en el Paseo de la Castellana 141, Castillejos, Tetuán, Madrid. Cuota mensual y calendario de plazos.">
+<meta property="og:image" content="https://nachoie123.github.io/webdemos/asesoria-madrid-centro/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Mukta:wght@400;500;600&display=swap">
+<style>
+/* @base */
+
+/* ---------- identidad: SOLO esta demo ----------
+   Tinta de bolígrafo y sello rojo sobre papel crudo. Ni azul corporativo ni
+   gráficos de barras subiendo: esto es papeleo, y el papeleo tiene un color
+   propio que es el del sello del registro.                                 */
+:root{
+  --fondo:#f3f0e8; --fondo-2:#e5e0d3; --tinta:#161a2e; --tinta-2:#5c6170;
+  --acento:#1b2a6b; --acento-tinta:#eef0fb; --linea:#d2ccbc;
+  --sello:#c0392b;
+  --display:'Literata', Georgia, serif;
+  --texto:'Mukta', 'Helvetica Neue', Arial, sans-serif;
+  --radio:0px;
+}
+body{font-size:17px;}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;
+  line-height:1.1;}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);}
+h3{font-size:1.4rem;}
+em.se{font-style:normal;color:var(--sello);}
+.u-ceja{color:var(--sello);font-weight:600;}
+
+/* cabecera */
+.cab{position:sticky;top:0;z-index:40;background:rgba(243,240,232,.95);
+  backdrop-filter:blur(8px);border-bottom:2px solid var(--acento);}
+.cab .u-wrap{display:flex;align-items:center;gap:var(--s-3);
+  padding-top:.75rem;padding-bottom:.75rem;}
+.marca{margin-right:auto;text-decoration:none;color:inherit;line-height:1.08;}
+.marca b{display:block;font-family:var(--display);font-size:1.3rem;font-weight:600;}
+.marca span{display:block;font-size:.6rem;letter-spacing:.19em;font-weight:600;
+  text-transform:uppercase;color:var(--tinta-2);}
+.tel-cab{font-weight:600;text-decoration:none;color:var(--acento-tinta);
+  background:var(--acento);padding:.55rem 1.05rem;font-size:.92rem;white-space:nowrap;}
+@media(max-width:860px){.tel-cab{display:none}}
+
+/* hero con el calendario */
+.hero{background:linear-gradient(180deg,var(--fondo) 0%,var(--fondo-2) 100%);
+  border-bottom:1px solid var(--linea);}
+.hero .u-wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-4);
+  align-items:center;}
+@media(max-width:860px){.hero .u-wrap{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.1rem,4.3vw,3.5rem);line-height:1.08;margin:.16em 0 .34em;}
+.hero p{color:var(--tinta-2);max-width:44ch;}
+.cal{width:100%;max-width:250px;margin-inline:auto;color:var(--acento);}
+.cal .ro{color:var(--sello);}
+
+/* cuotas */
+.cuota{border:2px solid var(--acento);padding:var(--s-3);background:var(--fondo);}
+.cuota.dest{background:var(--acento);color:var(--acento-tinta);}
+.cuota.dest h3{color:#fff;}
+.cuota .n{font-family:var(--display);font-size:2.6rem;font-weight:600;line-height:1;
+  display:block;margin:.3rem 0 .2rem;}
+.cuota .mes{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta-2);font-weight:600;}
+.cuota.dest .mes{color:#b9c2ee;}
+.cuota ul{list-style:none;margin:var(--s-2) 0 0;padding:0;font-size:.95rem;}
+.cuota li{padding:.35rem 0;border-top:1px solid var(--linea);}
+.cuota.dest li{border-top-color:#3a4a8f;}
+
+/* calendario de plazos */
+.plazos{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:var(--s-3);}
+.plazo{background:var(--fondo-2);padding:var(--s-3);border-top:6px solid var(--sello);}
+.plazo b{display:block;font-family:var(--display);font-size:2.2rem;font-weight:600;
+  line-height:1;color:var(--sello);}
+.plazo span{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;margin:.3rem 0 .5rem;}
+.plazo p{margin:0;font-size:.92rem;color:var(--tinta-2);}
+@media(max-width:860px){.plazos{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.plazos{grid-template-columns:1fr;}}
+
+/* cambiarse / contestar */
+.bloque{border-left:4px solid var(--acento);padding-left:var(--s-3);
+  margin-bottom:var(--s-3);}
+.bloque > b:first-child{display:block;font-family:var(--display);font-size:1.35rem;
+  font-weight:600;margin-bottom:.25rem;}
+
+/* qué se lleva, con dibujo */
+.doc{text-align:center;}
+.doc .dib{width:100%;max-width:96px;margin:0 auto var(--s-2);color:var(--acento);}
+.doc b{display:block;font-family:var(--display);font-size:1.25rem;font-weight:600;}
+.doc p{max-width:26ch;margin:.35rem auto 0;color:var(--tinta-2);}
+
+/* dónde está de verdad */
+.donde{background:var(--acento);color:var(--acento-tinta);padding:var(--s-4);}
+.donde h2{color:#fff;}
+
+/* horario */
+.horario{width:100%;border-collapse:collapse;margin-top:var(--s-2);}
+.horario th,.horario td{text-align:left;padding:.55rem 0;
+  border-bottom:1px solid var(--linea);font-size:.97rem;}
+.horario th{font-weight:600;}
+.horario td{text-align:right;font-variant-numeric:tabular-nums;color:var(--tinta-2);}
+
+/* la ÚNICA nota */
+.nota{background:var(--fondo-2);border-left:6px solid var(--sello);padding:var(--s-3);}
+.nota > b:first-child{display:block;font-family:var(--display);font-size:1.25rem;
+  font-weight:600;margin-bottom:.4rem;}
+.nota ul{margin:.4rem 0 0;padding-left:1.1rem;}
+.nota li{margin-bottom:.35rem;}
+
+/* barra de demo y marcas */
+.demobar{background:#ffd60a;color:#1a1400;font-size:.88rem;}
+.demobar .u-wrap{display:flex;gap:var(--s-2);align-items:center;
+  justify-content:space-between;padding:.6rem var(--s-2);flex-wrap:wrap;}
+.demobar button{background:#1a1400;color:#ffd60a;border:0;padding:.42rem .85rem;
+  font:inherit;font-weight:700;cursor:pointer;border-radius:4px;}
+[data-marcas="on"] [data-ejemplo]{outline:2px dashed #b3261e;outline-offset:5px;}
+[data-marcas="on"] [data-real]{outline:2px solid #1f7a4c;outline-offset:6px;}
+
+.u-movil a{background:var(--acento);color:var(--acento-tinta);font-weight:600;}
+.u-movil a+a{background:var(--sello);color:#fff;}
+
+.pie{background:var(--tinta);color:#9599ab;}
+.pie h3{color:#fff;margin-bottom:var(--s-1);}
+.pie a{color:#a8b4ee;}
+.pie p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- ===== barra de demo (obligatoria) ===== -->
+<div class="demobar">
+  <div class="u-wrap">
+    <span><b>Demo, no es su web oficial.</b> Propuesta hecha por Nacho San Benito. Es una maqueta sin personalizar: faltan sus cuotas, sus servicios y su horario.</span>
+    <button id="toggle-marcas" type="button">Ver qué es de ejemplo</button>
+  </div>
+</div>
+
+<!-- ===== 1. cabecera ===== -->
+<header class="cab">
+  <div class="u-wrap">
+    <a class="marca" href="#"><b>Asesoría Madrid Centro</b><span data-real>Castellana 141 · Cuzco · Madrid</span></a>
+    <nav class="u-nav" aria-label="Principal">
+      <a href="#cuotas">Cuánto cuesta</a>
+      <a href="#plazos">Las fechas</a>
+      <a href="#cambiar">Cambiarse</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="tel-cab" href="tel:+34645488951" data-real>645 48 89 51</a>
+  </div>
+</header>
+
+<!-- ===== 2. hero ===== -->
+<section class="hero u-seccion u-sangrado">
+  <div class="u-wrap">
+    <div>
+      <span class="u-ceja" data-real>Asesoría y gestoría · Paseo de la Castellana 141 · Cuzco</span>
+      <h1>Una asesoría que dice<br><em class="se">lo que cobra.</em></h1>
+      <p>Ninguna publica la cuota. Aquí está, ahí abajo, con lo que entra y lo
+      que no. Y también las cuatro fechas del año que no se pueden pasar, por si
+      lo único que buscaba era eso.</p>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <a class="u-btn" href="https://wa.me/34645488951?text=Hola%2C%20soy%20aut%C3%B3nomo%20y%20quer%C3%ADa%20preguntar%20por%20la%20cuota."
+           target="_blank" rel="noopener" data-real>Preguntar por WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="#cuotas">Ver las cuotas</a>
+      </p>
+    </div>
+    <svg class="cal" viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" aria-hidden="true">
+      <rect x="20" y="36" width="180" height="164"/>
+      <path d="M20 82 h180" stroke-width="6"/>
+      <path d="M62 20 v32"/><path d="M158 20 v32"/>
+      <g stroke-width="4" opacity=".45">
+        <path d="M46 106 h20"/><path d="M84 106 h20"/><path d="M154 106 h20"/>
+        <path d="M46 140 h20"/><path d="M84 140 h20"/><path d="M122 140 h20"/><path d="M154 140 h20"/>
+        <path d="M46 174 h20"/><path d="M84 174 h20"/><path d="M122 174 h20"/><path d="M154 174 h20"/>
+      </g>
+      <g class="ro" stroke="currentColor">
+        <circle cx="132" cy="106" r="22" stroke-width="6"/>
+        <path d="M124 100 v12" stroke-width="5"/>
+        <path d="M136 98 c-6 0 -8 4 -8 8 c0 5 8 5 8 10 c0 3 -3 4 -6 3" stroke-width="5"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. tira de datos ===== -->
+<section class="u-tira u-sangrado">
+  <div class="u-wrap">
+    <span data-real><b>Paseo de la Castellana, 141</b></span>
+    <span data-real>Castillejos · Tetuán · 28046 Madrid</span>
+    <span data-ejemplo>Lunes a viernes 9:00–18:00</span>
+    <a href="tel:+34645488951" data-real><b>645 48 89 51</b></a>
+  </div>
+</section>
+
+<!-- ===== 4. las cuotas ===== -->
+<section class="u-seccion" id="cuotas">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:24ch;margin-bottom:var(--s-2);">La cuota, delante. No «consúltenos».</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Quien no encuentra una
+    cifra no llama a preguntarla: llama a la siguiente. Poner la cuota no es
+    competir por barato, es dejar de perder la llamada.</p>
+    <div class="u-grid u-3" style="margin-top:var(--s-4);" data-ejemplo>
+      <div class="cuota">
+        <h3>Autónomo</h3>
+        <span class="n">55 €</span>
+        <span class="mes">al mes + IVA</span>
+        <ul>
+          <li>IVA e IRPF trimestrales</li>
+          <li>Renta anual incluida</li>
+          <li>Altas, bajas y cambios</li>
+          <li>Hasta 60 facturas al mes</li>
+        </ul>
+      </div>
+      <div class="cuota dest">
+        <h3>Autónomo con empleados</h3>
+        <span class="n">95 €</span>
+        <span class="mes">al mes + IVA · hasta 3</span>
+        <ul>
+          <li>Todo lo anterior</li>
+          <li>Nóminas y seguros sociales</li>
+          <li>Contratos y finiquitos</li>
+          <li>15 € por empleado de más</li>
+        </ul>
+      </div>
+      <div class="cuota">
+        <h3>Sociedad limitada</h3>
+        <span class="n">150 €</span>
+        <span class="mes">al mes + IVA</span>
+        <ul>
+          <li>Contabilidad completa</li>
+          <li>Impuesto de sociedades</li>
+          <li>Cuentas anuales y libros</li>
+          <li>Registro Mercantil</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. las fechas ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="plazos">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:26ch;margin-bottom:var(--s-2);">Las cuatro fechas que no se pasan.</h2>
+    <p class="u-medida" style="color:var(--tinta-2);">Están aquí aunque no sea
+    cliente. Si lo único que buscaba era saber cuándo vence el trimestre, ya se
+    lo lleva.</p>
+    <div class="plazos" data-ejemplo>
+      <div class="plazo"><b>20</b><span>de enero</span><p>Cuarto trimestre del año anterior. IVA e IRPF. Y los resúmenes anuales, hasta el 31.</p></div>
+      <div class="plazo"><b>20</b><span>de abril</span><p>Primer trimestre. Justo antes de que empiece la campaña de la Renta.</p></div>
+      <div class="plazo"><b>20</b><span>de julio</span><p>Segundo trimestre. El que más se olvida, porque cae en vacaciones.</p></div>
+      <div class="plazo"><b>20</b><span>de octubre</span><p>Tercer trimestre. A partir de aquí ya se puede ir cerrando el año.</p></div>
+    </div>
+    <p style="margin-top:var(--s-3);font-size:.92rem;color:var(--tinta-2);">
+      Si el 20 cae en sábado, domingo o festivo, pasa al siguiente día hábil. Y
+      si se domicilia el pago, hay que presentarlo cinco días antes.</p>
+  </div>
+</section>
+
+<!-- ===== 6. cambiarse y que contesten ===== -->
+<section class="u-seccion" id="cambiar">
+  <div class="u-wrap u-grid u-desigual u-revelar">
+    <div>
+      <h2>Las dos cosas<br>que frenan<br>de verdad.</h2>
+      <p style="color:var(--tinta-2);margin-top:var(--s-2);">No son el precio ni
+      los servicios. Son éstas, y casi nadie las escribe.</p>
+    </div>
+    <div data-ejemplo>
+      <div class="bloque">
+        <b>«¿Me puedo cambiar a mitad de año?»</b>
+        <p>Sí. Se pide a la gestoría anterior lo presentado hasta la fecha, se
+        firma la representación ante Hacienda y se sigue desde el trimestre en
+        curso. No hay que esperar a enero y no se pierde nada.</p>
+      </div>
+      <div class="bloque">
+        <b>«¿Me van a coger el teléfono?»</b>
+        <p>Es la queja número uno del sector, y por eso aquí va escrito el
+        compromiso: <b>se contesta el mismo día laborable</b>. Si llama a las
+        cinco, tiene respuesta antes de irse a casa. Y si es algo que corre,
+        WhatsApp.</p>
+      </div>
+      <div class="bloque">
+        <b>«¿Y si me llega algo de Hacienda?»</b>
+        <p>Se trae y se mira el mismo día, sea cliente o no. Un requerimiento
+        tiene plazo, y lo que hace daño no es el requerimiento: es dejarlo dos
+        semanas en el cajón.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. qué hay que traer ===== -->
+<section class="u-seccion u-sangrado" style="background:var(--fondo-2);" id="traer">
+  <div class="u-wrap u-revelar">
+    <h2 style="max-width:22ch;margin-bottom:var(--s-4);">Lo que hace falta cada mes.</h2>
+    <div class="u-grid u-3" data-ejemplo>
+
+      <div class="doc">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M26 12 h46 l22 22 v74 h-68 z"/>
+          <path d="M72 12 v22 h22"/>
+          <path d="M40 58 h40" stroke-width="3"/>
+          <path d="M40 72 h40" stroke-width="3"/>
+          <path d="M40 86 h24" stroke-width="3"/>
+        </svg>
+        <b>Las facturas que emite</b>
+        <p>En PDF o foto. Numeradas y sin saltos.</p>
+      </div>
+
+      <div class="doc">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M24 16 h72 v88 l-12 -8 -12 8 -12 -8 -12 8 -12 -8 -12 8 z"/>
+          <path d="M40 44 h40" stroke-width="3"/>
+          <path d="M40 60 h40" stroke-width="3"/>
+          <path d="M40 76 h22" stroke-width="3"/>
+        </svg>
+        <b>Los gastos</b>
+        <p>Tickets, suministros y todo lo que lleve su NIF.</p>
+      </div>
+
+      <div class="doc">
+        <svg class="dib" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="14" y="26" width="92" height="62"/>
+          <path d="M14 46 h92" stroke-width="3"/>
+          <circle cx="42" cy="66" r="9" stroke-width="3"/>
+          <path d="M62 62 h30" stroke-width="3"/>
+          <path d="M62 74 h20" stroke-width="3"/>
+        </svg>
+        <b>El extracto del banco</b>
+        <p>Del mes entero. Es lo que cuadra todo lo demás.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. dónde está de verdad ===== -->
+<section class="u-seccion" id="donde">
+  <div class="u-wrap u-revelar">
+    <div class="donde">
+      <span class="u-ceja" style="color:#ff9d92;">Conviene decirlo claro</span>
+      <h2 style="max-width:24ch;" data-real>Estamos en Cuzco, no en el centro.</h2>
+      <p style="max-width:52ch;" data-real>Paseo de la Castellana 141, entre
+      Cuzco y Plaza de Castilla. A un paso del metro de Cuzco y con las torres
+      enfrente. Si viene del centro, son quince minutos en la línea 10.</p>
+      <p style="margin-top:var(--s-3);display:flex;gap:.8rem;flex-wrap:wrap;">
+        <a class="u-btn" style="background:#fff;color:var(--acento);border-color:#fff;"
+           href="https://wa.me/34645488951?text=Hola%2C%20soy%20aut%C3%B3nomo%20y%20quer%C3%ADa%20preguntar%20por%20la%20cuota."
+           target="_blank" rel="noopener" data-real>WhatsApp</a>
+        <a class="u-btn u-btn--linea" href="tel:+34645488951" data-real>645 48 89 51</a>
+        <a class="u-btn u-btn--linea" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/Asesoria+Madrid+Centro/data=!4m7!3m6!1s0xd42291b70efffff:0x7fc99550e308697!8m2!3d40.4598186!4d-3.6906525"
+           data-real>Cómo llegar</a>
+      </p>
+    </div>
+    <div class="u-grid u-desigual-inv" style="margin-top:var(--s-5);">
+      <div>
+        <h3 style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+                   color:var(--sello);font-family:var(--texto);font-weight:600;">Horario</h3>
+        <table class="horario" data-ejemplo>
+          <tr><th>Lunes</th><td>9:00 – 18:00</td></tr>
+          <tr><th>Martes</th><td>9:00 – 18:00</td></tr>
+          <tr><th>Miércoles</th><td>9:00 – 18:00</td></tr>
+          <tr><th>Jueves</th><td>9:00 – 18:00</td></tr>
+          <tr><th>Viernes</th><td>9:00 – 15:00</td></tr>
+          <tr><th>Sábado</th><td>Cerrado</td></tr>
+          <tr><th>Domingo</th><td>Cerrado</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2 style="font-size:1.8rem;">Sin venir,<br>también.</h2>
+        <p style="color:var(--tinta-2);margin-top:var(--s-2);" data-ejemplo>
+          Casi todo se puede llevar por WhatsApp y correo: las facturas en foto,
+          las firmas con certificado digital. Venir a la oficina es para la
+          primera vez y para cuando algo se tuerce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. la ÚNICA nota ===== -->
+<section class="u-seccion--apretada u-sangrado" style="background:var(--fondo-2);">
+  <div class="u-wrap u-revelar">
+    <div class="nota">
+      <b>Esto es una maqueta y se nota a propósito</b>
+      <p style="margin-bottom:.6rem;">Suyos son el nombre, la dirección con su
+      número y el teléfono. Las cuotas, el horario, los compromisos de respuesta
+      y las listas están inventados: pulse el botón amarillo de arriba y se
+      marcan solos.</p>
+      <ul>
+        <li><b>Las cuotas son el corazón de la página</b> y hay que ponerlas
+        reales antes de enseñársela a nadie. Tal cual están, solo enseñan la
+        forma.</li>
+        <li><b>No se afirma ninguna titulación ni colegiación</b>, que en este
+        sector es lo más delicado. Eso lo escribe usted o no se escribe.</li>
+        <li><b>Las cuatro fechas del calendario sí son ciertas</b> —el 20 de
+        enero, abril, julio y octubre— pero conviene que las revise igualmente.</li>
+        <li><b>Sin nota de Google:</b> no he encontrado opiniones suyas, y una
+        nota sin recuento la penaliza Google.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. quién eres + pie legal ===== -->
+<footer class="pie u-seccion--apretada u-sangrado">
+  <div class="u-wrap u-grid u-2">
+    <div>
+      <h3>Quién le escribe</h3>
+      <p>Soy Nacho San Benito, desarrollador web freelance, y estudio el doble
+      grado de Administración de Empresas e Informática en IE University, aquí
+      mismo en Cuzco. Hago páginas para negocios del barrio: una página escrita
+      a mano para cada sitio, sin plantilla.</p>
+      <p>Esta propuesta la he hecho sin que nadie me la pidiera. Si le sirve,
+      hablamos. Si no, la borro y no vuelve a saber de mí.</p>
+      <p><a href="tel:+34682020547">682 02 05 47</a> · <a href="mailto:ignaciosanbenitop@gmail.com">ignaciosanbenitop@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Aviso legal</h3>
+      <p><b>Esta no es la web oficial de la asesoría.</b> Es una propuesta sin
+      relación con el despacho ni con sus titulares, y tampoco con ninguna otra
+      asesoría de nombre parecido. El nombre, la dirección y el teléfono salen
+      de fichas públicas.</p>
+      <p><b>Nada de lo escrito aquí es asesoramiento fiscal ni laboral</b>, y
+      <b>no se afirma ninguna titulación, colegiación ni habilitación</b> de
+      nadie. Las cuotas y los compromisos son inventados y están marcados.
+      <b>No se declara ninguna nota de Google</b> y <b>no hay ninguna
+      fotografía:</b> los cuatro dibujos están hechos a mano.</p>
+      <p>No se recoge ningún dato: los botones abren su propio teléfono o
+      WhatsApp. Si el titular quiere que esto desaparezca, escribe y desaparece
+      el mismo día.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== barra fija de móvil ===== -->
+<nav class="u-movil" aria-label="Acciones rápidas">
+  <a href="https://wa.me/34645488951?text=Hola%2C%20soy%20aut%C3%B3nomo%20y%20quer%C3%ADa%20preguntar%20por%20la%20cuota." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.google.com/maps/place/Asesoria+Madrid+Centro/data=!4m7!3m6!1s0xd42291b70efffff:0x7fc99550e308697!8m2!3d40.4598186!4d-3.6906525" target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AccountingService",
+  "name":"Asesoría Madrid Centro",
+  "description":"Asesoría y gestoría para autónomos y sociedades en el Paseo de la Castellana 141, Castillejos, Tetuán, Madrid.",
+  "telephone":"+34645488951",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Paseo de la Castellana, 141",
+    "addressLocality":"Madrid",
+    "addressRegion":"Madrid",
+    "postalCode":"28046",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":40.4598186,"longitude":-3.6906525},
+  "openingHours":["Mo-Th 09:00-18:00","Fr 09:00-15:00"],
+  "url":"https://nachoie123.github.io/webdemos/asesoria-madrid-centro/"
+}
+</script>
+
+<script>
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible');
+    io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.u-revelar').forEach(function(el){ io.observe(el); });
+
+var bt = document.getElementById('toggle-marcas');
+bt.addEventListener('click', function(){
+  var on = document.documentElement.getAttribute('data-marcas') === 'on';
+  document.documentElement.setAttribute('data-marcas', on ? 'off' : 'on');
+  bt.textContent = on ? 'Ver qué es de ejemplo' : 'Ocultar las marcas';
+});
+</script>
+</body>
+</html>

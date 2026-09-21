@@ -438,14 +438,14 @@
     "tipo": "Asesoría / gestoría",
     "telefono": "645488951",
     "maps": "https://www.google.com/maps/place/Asesoria+Madrid+Centro/data=!4m7!3m6!1s0xd42291b70efffff:0x7fc99550e308697!8m2!3d40.4598186!4d-3.6906525",
-    "estado_web": "dudoso",
+    "estado_web": "none",
     "web_actual": "https://www.asesoriacentro.es/",
     "gancho": "Negocio nuevo sin web todavía; landing corporativa con formulario de solicitud de cita.",
     "email": null,
-    "demo": null,
+    "demo": "https://nachoie123.github.io/webdemos/asesoria-madrid-centro/",
     "enviado": null,
     "respuesta": null,
-    "nota_web": "VERIFICADO 21/09/2026: asesoriacentro.es existe pero sus telefonos (724xxx, 787xxx) NO coinciden con el 645488951 del prospecto. Es un HOMONIMO. El prospecto sigue sin web, pero confirmar antes de mandar."
+    "nota_web": "VERIFICADO 21/09/2026: sin web. asesoriacentro.es es homonimo (telefonos 724xxx/787xxx, no el 645488951). Castellana 141 CONFIRMADO por el reverse (devuelve el portal). HALLAZGO: se llama «Madrid Centro» y esta en Cuzco, a 4 km del centro; el nombre le resta en las dos direcciones. Va en el mensaje. Ver datos/asesoria-madrid-centro.md"
   },
   {
     "slug": "imprime-y-mas-s-l",
